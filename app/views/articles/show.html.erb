@@ -1,0 +1,30 @@
+<h1>Articles#show</h1>
+<p>Find me in app/views/articles/show.html.erb</p>
+<p>
+  <b>Название новости:</b>
+  <%=h @article.title %>
+</p>
+
+<p>
+  <b>Текст:</b>
+  <%=h @article.body %>
+</p>
+
+<p>
+  <b>Дата публикации:</b>
+  <%=h @article.publicated_date %>
+</p>
+
+<p>
+  <b>Приоритет:</b>
+  <%=h @article.priority %>
+</p>
+
+<p>
+  <b>Изображение:</b>
+  <%=h @article.image %>
+</p>
+
+
+<%= link_to 'Изменить', edit_article_path(@article) %> |
+<%= link_to 'Назад', articles_path %>

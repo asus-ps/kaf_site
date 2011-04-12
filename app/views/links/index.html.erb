@@ -1,0 +1,34 @@
+<h1>Links#index</h1>
+<p>Find me in app/views/links/index.html.erb</p>
+<p>
+  <% form_for (@newlink) do |f| %>
+    <% f.error_messages %>
+<p>
+  <%= f.text_field :url %>
+  <br>
+  <%= f.text_area :description %>
+
+    <%= f.submit 'Добавить' %>
+
+
+</p>
+  <% end %>
+</p>
+
+<p>
+<table>
+  <tr>
+    <th>Ресурс</th>
+    <th>Описание</th>
+  </tr>
+
+  <% @links.each do |kfl| %>
+    <tr>
+      <td><%=h kfl.url %> </td>
+      <td><%=h kfl.description %> </td>
+      <td><%= link_to 'Edit', edit_link_path(kfl) %></td>
+      <td><%= link_to 'Destroy', kfl, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <%  end %>
+</table>
+</p>

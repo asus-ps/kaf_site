@@ -1,0 +1,23 @@
+<h1>Comments#new</h1>
+<p>Find me in app/views/comments/new.html.erb</p>
+<% form_for(@comment) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    Автор:<br />
+    <%= f.text_field :name_author %>
+  </p>
+  <p>
+    E-mail<br />
+    <%= f.text_field :email_author %>
+  </p>
+  <p>
+    Комментарий:<br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit 'Добавить' %>
+  </p>
+<% end %>
+
+<%= link_to 'Назад', comments_path %>

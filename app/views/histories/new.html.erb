@@ -1,0 +1,20 @@
+<h1>Histories#new</h1>
+<p>Find me in app/views/histories/new.html.erb</p>
+
+
+<% form_for(@historie) do |c| %>
+  <%= c.error_messages %>
+
+<p>
+  <b>История:</b>
+  <%= c.text_area :body %>
+</p>
+
+<p>
+  <b>Изображение</b>
+  <%= c.text_field :image %>
+</p>
+<p>
+  <%= c.submit 'Записать' %>
+</p>
+<% end %>

@@ -1,0 +1,32 @@
+<h1>Внесите информацию о контактах</h1>
+<p>Find me in app/views/contacts/new.html.erb</p>
+
+
+<% form_for(@contact) do |c| %>
+  <%= c.error_messages %>
+
+<p>
+  <b>Адрес:</b>
+  <%= c.text_field :address %>
+</p>
+
+<p>
+  <b>Телефоны:</b>
+  <%= c.text_field :phones %>
+</p>
+<p>
+  <b>E-mail:</b>
+  <%= c.text_field :email %>
+</p>
+<p>
+  <b>Сайт:</b>
+  <%= c.text_field :url %>
+</p>
+<p>
+  <b>Изображение:</b>
+  <%= c.text_field :image %>
+</p>
+<p>
+  <%= c.submit 'Записать' %>
+</p>
+<% end %>

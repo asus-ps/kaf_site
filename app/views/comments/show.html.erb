@@ -1,0 +1,20 @@
+<h1>Comments#show</h1>
+<p>Find me in app/views/comments/show.html.erb</p>
+<p>
+  <b>Автор:</b>
+  <%=h @comment.name_author %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @comment.email_author %>
+</p>
+
+<p>
+  <b>Текст:</b>
+  <%=h @comment.body %>
+</p>
+
+
+<%= link_to 'Изменить', edit_comment_path(@comment) %> |
+<%= link_to 'Назад', comments_path %>
