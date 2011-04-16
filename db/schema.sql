@@ -12,12 +12,13 @@ CREATE  TABLE IF NOT EXISTS `kafedra`.`people` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `last_name` VARCHAR(63) NOT NULL ,
   `first_name` VARCHAR(63) NOT NULL ,
-  `patronymic_name` VARCHAR(63) NULL ,
-  `birthday` DATE NULL ,
+  `patronymic_name` VARCHAR(63) NOT NULL ,
+  `birthday` DATE NOT NULL ,
   `phone` VARCHAR(63) NULL ,
   `email` VARCHAR(63) NULL ,
   `nature` CHAR(1) NOT NULL ,
   `photo` VARCHAR(255) NULL ,
+  `info` TEXT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -28,10 +29,10 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `kafedra`.`specialities` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `code` VARCHAR(63) NULL ,
-  `name` VARCHAR(127) NULL ,
+  `code` VARCHAR(63) NOT NULL ,
+  `name` VARCHAR(127) NOT NULL ,
   `short_name` VARCHAR(63) NULL ,
-  `count_years` INT NULL ,
+  `count_years` INT NOT NULL ,
   `in_diploma` VARCHAR(127) NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
@@ -43,11 +44,10 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `kafedra`.`students` (
   `person_id` INT NOT NULL ,
-  `info` TEXT NULL ,
-  `year_income` INT NULL ,
-  `specialitie_id` INT NOT NULL ,
+  `year_income` INT NOT NULL ,
+  `speciality_id` INT NOT NULL ,
   INDEX `fk_students_persons1` (`person_id` ASC) ,
-  INDEX `fk_students_specialities1` (`specialitie_id` ASC) ,
+  INDEX `fk_students_specialities1` (`speciality_id` ASC) ,
   PRIMARY KEY (`person_id`) ,
   CONSTRAINT `fk_students_persons1`
     FOREIGN KEY (`person_id` )
@@ -55,7 +55,7 @@ CREATE  TABLE IF NOT EXISTS `kafedra`.`students` (
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_students_specialities1`
-    FOREIGN KEY (`specialitie_id` )
+    FOREIGN KEY (`speciality_id` )
     REFERENCES `kafedra`.`specialities` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -69,7 +69,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE  TABLE IF NOT EXISTS `kafedra`.`positions` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(127) NOT NULL ,
-  `short_name` VARCHAR(67) NULL ,
+  `short_name` VARCHAR(63) NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -81,7 +81,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE  TABLE IF NOT EXISTS `kafedra`.`degrees` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(127) NOT NULL ,
-  `short_name` VARCHAR(67) NULL ,
+  `short_name` VARCHAR(63) NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -92,7 +92,6 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `kafedra`.`teachers` (
   `person_id` INT NOT NULL ,
-  `info` TEXT NULL ,
   `position_id` INT NOT NULL ,
   `degree_id` INT NOT NULL ,
   INDEX `fk_teachers_persons1` (`person_id` ASC) ,
@@ -160,8 +159,8 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `kafedra`.`diplomas` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(255) NULL ,
-  `protection_year` INT NULL ,
+  `name` VARCHAR(255) NOT NULL ,
+  `protection_year` INT NOT NULL ,
   `summary` TEXT NULL ,
   `student_id` INT NOT NULL ,
   `teacher_id` INT NOT NULL ,
@@ -187,8 +186,8 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `kafedra`.`contacts` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `address` VARCHAR(255) NULL ,
-  `phones` VARCHAR(255) NULL ,
+  `address` VARCHAR(255) NOT NULL ,
+  `phones` VARCHAR(255) NOT NULL ,
   `email` VARCHAR(255) NULL ,
   `url` VARCHAR(255) NULL ,
   `image` VARCHAR(255) NULL ,
@@ -214,8 +213,8 @@ ENGINE = InnoDB;
 CREATE  TABLE IF NOT EXISTS `kafedra`.`comments` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `body` TEXT NOT NULL ,
-  `author_name` VARCHAR(63) NULL ,
-  `author_email` VARCHAR(63) NULL ,
+  `author_name` VARCHAR(63) NOT NULL ,
+  `author_email` VARCHAR(63) NOT NULL ,
   `published_at` DATETIME NOT NULL ,
   `article_id` INT NOT NULL ,
   PRIMARY KEY (`id`) ,
