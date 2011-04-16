@@ -1,108 +1,259 @@
-delimiter $$
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE DATABASE `kafedra` /*!40100 DEFAULT CHARACTER SET utf8 */$$
+CREATE SCHEMA IF NOT EXISTS `kafedra` DEFAULT CHARACTER SET utf8 ;
+USE `kafedra` ;
 
-
-CREATE TABLE `comments` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `text_comm` text NOT NULL,
-  `name_author` varchar(50) DEFAULT NULL,
-  `email_author` varchar(50) DEFAULT NULL,
-  `id_theme` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
-CREATE TABLE `contacts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `adres` varchar(255) NOT NULL,
-  `phones` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `site` varchar(255) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
-CREATE TABLE `dipl_themes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_stud` int(11) NOT NULL,
-  `name_dipl` varchar(255) DEFAULT NULL,
-  `year` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
-CREATE TABLE `disciplines` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name_disc` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8$$
+-- -----------------------------------------------------
+-- Table `kafedra`.`people`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`people` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `last_name` VARCHAR(63) NOT NULL ,
+  `first_name` VARCHAR(63) NOT NULL ,
+  `patronymic_name` VARCHAR(63) NULL ,
+  `birthday` DATE NULL ,
+  `phone` VARCHAR(63) NULL ,
+  `email` VARCHAR(63) NULL ,
+  `nature` CHAR(1) NOT NULL ,
+  `photo` VARCHAR(255) NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
-CREATE TABLE `histories` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `hist_text` text NOT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
+-- -----------------------------------------------------
+-- Table `kafedra`.`specialities`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`specialities` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `code` VARCHAR(63) NULL ,
+  `name` VARCHAR(127) NULL ,
+  `short_name` VARCHAR(63) NULL ,
+  `count_years` INT NULL ,
+  `in_diploma` VARCHAR(127) NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
-CREATE TABLE `kafnews` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title_new` varchar(255) NOT NULL,
-  `text_new` text NOT NULL,
-  `date_pub` datetime NOT NULL,
-  `prioritet` int(11) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
+-- -----------------------------------------------------
+-- Table `kafedra`.`students`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`students` (
+  `person_id` INT NOT NULL ,
+  `info` TEXT NULL ,
+  `year_income` INT NULL ,
+  `specialitie_id` INT NOT NULL ,
+  INDEX `fk_students_persons1` (`person_id` ASC) ,
+  INDEX `fk_students_specialities1` (`specialitie_id` ASC) ,
+  PRIMARY KEY (`person_id`) ,
+  CONSTRAINT `fk_students_persons1`
+    FOREIGN KEY (`person_id` )
+    REFERENCES `kafedra`.`people` (`id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_students_specialities1`
+    FOREIGN KEY (`specialitie_id` )
+    REFERENCES `kafedra`.`specialities` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`positions`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`positions` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(127) NOT NULL ,
+  `short_name` VARCHAR(67) NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`degrees`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`degrees` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(127) NOT NULL ,
+  `short_name` VARCHAR(67) NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`teachers`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`teachers` (
+  `person_id` INT NOT NULL ,
+  `info` TEXT NULL ,
+  `position_id` INT NOT NULL ,
+  `degree_id` INT NOT NULL ,
+  INDEX `fk_teachers_persons1` (`person_id` ASC) ,
+  PRIMARY KEY (`person_id`) ,
+  INDEX `fk_teachers_positions1` (`position_id` ASC) ,
+  INDEX `fk_teachers_degrees1` (`degree_id` ASC) ,
+  CONSTRAINT `fk_teachers_persons1`
+    FOREIGN KEY (`person_id` )
+    REFERENCES `kafedra`.`people` (`id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_teachers_positions1`
+    FOREIGN KEY (`position_id` )
+    REFERENCES `kafedra`.`positions` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_teachers_degrees1`
+    FOREIGN KEY (`degree_id` )
+    REFERENCES `kafedra`.`degrees` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`articles`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`articles` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `title` VARCHAR(255) NOT NULL ,
+  `body` TEXT NOT NULL ,
+  `published_at` DATETIME NOT NULL ,
+  `priority` INT NULL ,
+  `image` VARCHAR(255) NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`disciplines`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`disciplines` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(127) NOT NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`links`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`links` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `url` VARCHAR(255) NOT NULL ,
+  `description` TEXT NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`diplomas`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`diplomas` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(255) NULL ,
+  `protection_year` INT NULL ,
+  `summary` TEXT NULL ,
+  `student_id` INT NOT NULL ,
+  `teacher_id` INT NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_diplomas_students1` (`student_id` ASC) ,
+  INDEX `fk_diplomas_teachers1` (`teacher_id` ASC) ,
+  CONSTRAINT `fk_diplomas_students1`
+    FOREIGN KEY (`student_id` )
+    REFERENCES `kafedra`.`students` (`person_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_diplomas_teachers1`
+    FOREIGN KEY (`teacher_id` )
+    REFERENCES `kafedra`.`teachers` (`person_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`contacts`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`contacts` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `address` VARCHAR(255) NULL ,
+  `phones` VARCHAR(255) NULL ,
+  `email` VARCHAR(255) NULL ,
+  `url` VARCHAR(255) NULL ,
+  `image` VARCHAR(255) NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`histories`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`histories` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `body` TEXT NOT NULL ,
+  `image` VARCHAR(255) NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`comments`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`comments` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `body` TEXT NOT NULL ,
+  `author_name` VARCHAR(63) NULL ,
+  `author_email` VARCHAR(63) NULL ,
+  `published_at` DATETIME NOT NULL ,
+  `article_id` INT NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_comments_articles1` (`article_id` ASC) ,
+  CONSTRAINT `fk_comments_articles1`
+    FOREIGN KEY (`article_id` )
+    REFERENCES `kafedra`.`articles` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `kafedra`.`disciplines_teachers`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `kafedra`.`disciplines_teachers` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `discipline_id` INT NOT NULL ,
+  `teacher_id` INT NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_teachers_disciplines_disciplines` (`discipline_id` ASC) ,
+  INDEX `fk_disciplines_teachers_teachers1` (`teacher_id` ASC) ,
+  CONSTRAINT `fk_teachers_disciplines_disciplines`
+    FOREIGN KEY (`discipline_id` )
+    REFERENCES `kafedra`.`disciplines` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_disciplines_teachers_teachers1`
+    FOREIGN KEY (`teacher_id` )
+    REFERENCES `kafedra`.`teachers` (`person_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 
-CREATE TABLE `persons` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `l_name` varchar(45) DEFAULT NULL,
-  `f_name` varchar(45) DEFAULT NULL,
-  `p_name` varchar(45) DEFAULT NULL,
-  `birth` date DEFAULT NULL,
-  `phone` varchar(30) DEFAULT NULL,
-  `email` varchar(60) DEFAULT NULL,
-  `nature` char(1) DEFAULT NULL,
-  `photo` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
-
-CREATE TABLE `specials` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cod` varchar(20) DEFAULT NULL,
-  `name_spec` varchar(100) DEFAULT NULL,
-  `sokr_spec` varchar(20) DEFAULT NULL,
-  `name_dipl` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
-
-CREATE TABLE `students` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_pers` int(11) DEFAULT NULL,
-  `id_spec` int(11) DEFAULT NULL,
-  `course` int(11) DEFAULT NULL,
-  `info` text,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
-
-CREATE TABLE `teachers` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_pers` varchar(45) DEFAULT NULL,
-  `info` text,
-  `uch_step` varchar(100) DEFAULT NULL,
-  `position` varchar(60) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
-CREATE TABLE `kaflinks` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `sitelink` varchar(255) DEFAULT NULL,
-  `opisanie` text,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
