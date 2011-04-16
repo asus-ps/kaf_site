@@ -12,7 +12,7 @@
 
 <p>
   <b>Дата публикации:</b>
-  <%=h @article.publicated_date %>
+  <%=h @article.published_at %>
 </p>
 
 <p>
@@ -24,7 +24,20 @@
   <b>Изображение:</b>
   <%=h @article.image %>
 </p>
-
-
 <%= link_to 'Изменить', edit_article_path(@article) %> |
 <%= link_to 'Назад', articles_path %>
+<p>
+<% for comment in @article.comments %>
+<div>
+  <%= comment.name_author %><br>
+<%= comment.email_author %><br>
+<%= comment.body %>
+</div>
+<% end %>
+</p>
+<%= form_tag :action => "comment", :id => @article %>
+  <%= text_field "comment", "name_author" %>
+  <%= text_field "comment", "email_author" %><br>
+  <%= text_area "comment", "body" %>
+<%= submit_tag "Comment!" %>
+</form>

@@ -9,8 +9,8 @@
 
 <% @comments.each do |art| %>
   <tr>
-    <td><%=h art.name_author %></td>
-    <td><%=h art.email_author %></td>
+    <td><%=h art.author_name %></td>
+    <td><%=h art.author_email %></td>
     <td><%=h art.body %></td>
     <td><%= link_to 'Show', art %></td>
     <td><%= link_to 'Edit', edit_comment_path(art) %></td>

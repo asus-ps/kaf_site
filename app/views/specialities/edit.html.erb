@@ -1,0 +1,32 @@
+<h1>Specialities#edit</h1>
+<p>Find me in app/views/specialities/edit.html.erb</p>
+
+<% form_for(@speciality) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    Код:<br />
+    <%= f.text_field :code %>
+  </p>
+  <p>
+    Название:<br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    Сокращение:<br />
+    <%= f.text_field :short_name %>
+  </p>
+  <p>
+    Количество лет:<br />
+    <%= f.text_field :count_years %>
+  </p>
+  <p>
+    По диплому:<br />
+    <%= f.text_field :in_diploma %>
+  </p>
+  <p>
+    <%= f.submit 'Изменить' %>
+  </p>
+<% end %>
+
+<%= link_to 'Назад', articles_path %>

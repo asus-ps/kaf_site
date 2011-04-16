@@ -1,0 +1,34 @@
+<p>
+  <% form_for (@newdegree) do |f| %>
+    <% f.error_messages %>
+<p>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.text_field :short_name %>
+
+    <%= f.submit 'Изменить' %>
+
+
+</p>
+  <% end %>
+</p>
+
+<p>
+<table>
+  <tr>
+    <th>Индекс</th>
+    <th>Степень</th>
+    <th>Сокращение</th>
+  </tr>
+
+  <% @degrees.each do |d| %>
+    <tr>
+      <td><%=h d.id %> </td>
+      <td><%=h d.name %> </td>
+      <td><%=h d.short_name %> </td>
+      <td><%= link_to 'Edit', edit_degree_path(d) %></td>
+      <td><%= link_to 'Destroy', d, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <%  end %>
+</table>
+</p>

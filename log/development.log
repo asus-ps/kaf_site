@@ -4083,3 +4083,2368 @@ Processing CommentsController#index (for 127.0.0.1 at 2011-04-12 23:50:35) [GET]
 Rendering comments/index
   [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
 Completed in 64ms (View: 29, DB: 2) | 200 OK [http://localhost/comments]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-14 14:28:08) [GET]
+Rendering admin/index
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HistoriesController#index (for 127.0.0.1 at 2011-04-14 14:28:18) [GET]
+  [4;36;1mHistorie Load (33.2ms)[0m   [0;1mSELECT `histories`.id FROM `histories` LIMIT 1[0m
+  [4;35;1mHistorie Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `histories`[0m
+  [4;36;1mHistorie Load (1.0ms)[0m   [0;1mSELECT * FROM `histories` WHERE (`histories`.`id` = 1) [0m
+Rendering histories/index
+Completed in 128ms (View: 7, DB: 36) | 200 OK [http://localhost/histories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-14 14:28:23) [GET]
+  [4;36;1mArticle Load (11.7ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 49ms (View: 6, DB: 12) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinksController#index (for 127.0.0.1 at 2011-04-14 14:28:27) [GET]
+  [4;36;1mLink Load (15.6ms)[0m   [0;1mSELECT * FROM `links` [0m
+  [4;35;1mLink Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `links`[0m
+Rendering links/index
+Completed in 81ms (View: 6, DB: 18) | 200 OK [http://localhost/links]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2011-04-14 14:28:30) [GET]
+  [4;35;1mContact Load (29.3ms)[0m   [0mSELECT `contacts`.id FROM `contacts` LIMIT 1[0m
+  [4;36;1mContact Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (1.0ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendering contacts/index
+Completed in 121ms (View: 6, DB: 32) | 200 OK [http://localhost/contacts]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2011-04-14 14:28:33) [GET]
+  [4;35;1mComment Load (8.8ms)[0m   [0mSELECT * FROM `comments` [0m
+Rendering comments/index
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 78ms (View: 34, DB: 11) | 200 OK [http://localhost/comments]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinksController#index (for 127.0.0.1 at 2011-04-14 14:28:37) [GET]
+  [4;36;1mLink Load (1.0ms)[0m   [0;1mSELECT * FROM `links` [0m
+  [4;35;1mLink Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `links`[0m
+Rendering links/index
+Completed in 78ms (View: 3, DB: 4) | 200 OK [http://localhost/links]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-14 14:35:50) [GET]
+Rendering admin/index
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 14:35:51) [GET]
+Rendering students/index
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://localhost/students]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-14 14:43:18) [GET]
+Rendering admin/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 14:43:19) [GET]
+Rendering students/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://localhost/students]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-14 14:45:54) [GET]
+Rendering admin/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 14:45:55) [GET]
+Rendering students/index
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://localhost/students]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-14 14:54:39) [GET]
+Rendering admin/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 14:54:40) [GET]
+  [4;36;1mSQL (126.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mStudent Columns (19.5ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+
+NoMethodError (undefined method `belong_to' for #<Class:0xf741b58>):
+  app/models/student.rb:3
+  app/controllers/students_controller.rb:3:in `index'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.3ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-14 14:55:33) [GET]
+Rendering admin/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 14:55:34) [GET]
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/students_controller.rb:6:in `index'
+  app/controllers/students_controller.rb:4:in `index'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 14:56:08) [GET]
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/students_controller.rb:6:in `index'
+  app/controllers/students_controller.rb:4:in `index'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 14:56:48) [GET]
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+Rendering students/index
+Completed in 44ms (View: 4, DB: 2) | 200 OK [http://localhost/students]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 14:58:58) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+Rendering students/index
+Completed in 38ms (View: 4, DB: 0) | 200 OK [http://localhost/students]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 14:58:59) [GET]
+Rendering students/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/students/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 15:04:02) [GET]
+  [4;35;1mStudent Load (1.0ms)[0m   [0mSELECT * FROM `students` [0m
+Rendering students/index
+Completed in 37ms (View: 1, DB: 1) | 200 OK [http://localhost/students]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 15:04:03) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined method `person' for #<ActionView::Helpers::FormBuilder:0xf7102b0>) on line #8 of app/views/students/new.html.erb:
+5: 
+6:   <p>
+7:     Автор:<br />
+8:     <%= f.person.text_field :last_name %>
+9:   </p>
+10:   <p>
+11:     E-mail<br />
+
+    app/views/students/new.html.erb:8
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:12:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 15:04:39) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined method `last_name' for #<Student:0xf4e7830>) on line #8 of app/views/students/new.html.erb:
+5: 
+6:   <p>
+7:     Автор:<br />
+8:     <%= f.text_field :last_name %>
+9:   </p>
+10:   <p>
+11:     E-mail<br />
+
+    app/views/students/new.html.erb:8
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:12:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 15:05:13) [GET]
+  [4;35;1mStudent Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+Rendering students/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/students/new.html.erb:
+1: <h1>Students#new</h1>
+2: <p>Find me in app/views/students/new.html.erb</p>
+3: <% form_for(@student.person) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:12:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 15:06:05) [GET]
+  [4;35;1mStudent Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined local variable or method `person' for #<ActionView::Base:0xf505278>) on line #8 of app/views/students/new.html.erb:
+5: 
+6:   <p>
+7:     Автор:<br />
+8:     <%= person.text_field :last_name %>
+9:   </p>
+10:   <p>
+11:     E-mail<br />
+
+    app/views/students/new.html.erb:8
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:12:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 15:07:48) [GET]
+  [4;35;1mStudent Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined local variable or method `person' for #<ActionView::Base:0xf4faee0>) on line #8 of app/views/students/new.html.erb:
+5: 
+6:   <p>
+7:     Автор:<br />
+8:     <%=h person.text_field :last_name %>
+9:   </p>
+10:   <p>
+11:     E-mail<br />
+
+    app/views/students/new.html.erb:8
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:12:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 15:08:15) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined method `person' for #<ActionView::Helpers::FormBuilder:0xf7141c8>) on line #8 of app/views/students/new.html.erb:
+5: 
+6:   <p>
+7:     Автор:<br />
+8:     <%=h f.person.text_field :last_name %>
+9:   </p>
+10:   <p>
+11:     E-mail<br />
+
+    app/views/students/new.html.erb:8
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:12:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 15:08:16) [GET]
+  [4;35;1mStudent Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined method `person' for #<ActionView::Helpers::FormBuilder:0xf733e78>) on line #8 of app/views/students/new.html.erb:
+5: 
+6:   <p>
+7:     Автор:<br />
+8:     <%=h f.person.text_field :last_name %>
+9:   </p>
+10:   <p>
+11:     E-mail<br />
+
+    app/views/students/new.html.erb:8
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:12:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 15:26:32) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+Rendering students/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/students/new.html.erb:
+1: <h1>Students#new</h1>
+2: <p>Find me in app/views/students/new.html.erb</p>
+3: <% form_for(@student.person) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:12:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-14 16:43:02) [GET]
+Rendering admin/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 16:43:03) [GET]
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+Rendering students/index
+Completed in 45ms (View: 1, DB: 1) | 200 OK [http://localhost/students]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 16:43:04) [GET]
+  [4;36;1mStudent Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+Rendering students/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/students/new.html.erb:
+1: <h1>Students#new</h1>
+2: <p>Find me in app/views/students/new.html.erb</p>
+3: <% form_for(@student.person) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:12:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 16:51:32) [GET]
+  [4;36;1mStudent Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mMysql::Error: Table 'kafedra.people' doesn't exist: SHOW FIELDS FROM `people`[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'kafedra.people' doesn't exist: SHOW FIELDS FROM `people`):
+  app/controllers/students_controller.rb:12:in `new'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 16:52:35) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mMysql::Error: Table 'kafedra.people' doesn't exist: SELECT * FROM `people` [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'kafedra.people' doesn't exist: SELECT * FROM `people` ):
+  app/controllers/students_controller.rb:12:in `new'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-14 21:09:42) [GET]
+Rendering students/new
+
+ActionView::TemplateError (undefined method `person' for nil:NilClass) on line #3 of app/views/students/new.html.erb:
+1: <h1>Students#new</h1>
+2: <p>Find me in app/views/students/new.html.erb</p>
+3: <% form_for(@student.person) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/students/new.html.erb:3
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.3ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-14 21:10:16) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` [0m
+Rendering students/index
+Completed in 48ms (View: 0, DB: 1) | 200 OK [http://localhost/students]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-14 21:10:27) [GET]
+Rendering admin/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-14 21:10:33) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 40ms (View: 5, DB: 2) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-14 21:36:26) [GET]
+Rendering admin/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-14 21:36:27) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 66ms (View: 1, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-04-14 21:36:30) [GET]
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering articles/new
+Completed in 44ms (View: 7, DB: 3) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-04-14 21:36:56) [POST]
+  Parameters: {"article"=>{"publicated_date"=>"1999-05-12 12:23:00", "body"=>"Ntrcn ytj,sxyfqyj ckj;ty", "title"=>"Новая новость", "priority"=>"1", "image"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mArticle Columns (4.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`publicated_date`, `title`, `body`, `priority`, `image`) VALUES('1999-05-12 12:23:00', 'Новая новость', 'Ntrcn ytj,sxyfqyj ckj;ty', 1, '')[0m
+  [4;36;1mSQL (55.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 128ms (DB: 62) | 302 Found [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 21:36:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 128ms (View: 34, DB: 4) | 200 OK [http://localhost/articles/1]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-04-14 21:37:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+Rendering articles/edit
+Completed in 77ms (View: 9, DB: 7) | 200 OK [http://localhost/articles/1/edit]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-04-14 21:37:16) [PUT]
+  Parameters: {"article"=>{"publicated_date"=>"1999-05-12 12:23:00", "body"=>"Ntrcn ytj,sxyfqyj ckj;ty", "title"=>"Новая новость", "priority"=>"1", "image"=>""}, "commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 67ms (DB: 6) | 302 Found [http://localhost/articles/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 21:37:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 123ms (View: 29, DB: 6) | 200 OK [http://localhost/articles/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 21:37:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 130ms (View: 35, DB: 6) | 200 OK [http://localhost/articles/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2011-04-14 21:37:39) [POST]
+  Parameters: {"comment"=>{"body"=>"hello"}, "commit"=>"Comment!", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+
+ActiveRecord::RecordNotFound (Couldn't find Article without an ID):
+  app/controllers/articles_controller.rb:74:in `comment'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 21:40:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 135ms (View: 35, DB: 6) | 200 OK [http://localhost/articles/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2011-04-14 21:40:22) [POST]
+  Parameters: {"comment"=>{"name_author"=>"111", "body"=>"121221", "email_author"=>"222"}, "commit"=>"Comment!", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+
+ActiveRecord::RecordNotFound (Couldn't find Article without an ID):
+  app/controllers/articles_controller.rb:74:in `comment'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2011-04-14 21:43:08) [POST]
+  Parameters: {"comment"=>{"name_author"=>"111", "body"=>"121221", "email_author"=>"222"}, "commit"=>"Comment!", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+
+ActiveRecord::RecordNotFound (Couldn't find Article without an ID):
+  app/controllers/articles_controller.rb:74:in `comment'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2011-04-14 21:43:13) [POST]
+  Parameters: {"comment"=>{"name_author"=>"111", "body"=>"121221", "email_author"=>"222"}, "commit"=>"Comment!", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+
+ActiveRecord::RecordNotFound (Couldn't find Article without an ID):
+  app/controllers/articles_controller.rb:74:in `comment'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.3ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2011-04-14 21:57:08) [POST]
+  Parameters: {"comment"=>{"name_author"=>"111", "body"=>"121221", "email_author"=>"222"}, "commit"=>"Comment!", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+
+ActiveRecord::RecordNotFound (Couldn't find Article without an ID):
+  app/controllers/articles_controller.rb:74:in `comment'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 21:58:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 139ms (View: 34, DB: 6) | 200 OK [http://localhost/articles/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-14 21:59:11) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 71ms (View: 31, DB: 4) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-04-14 21:59:12) [GET]
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering articles/new
+Completed in 42ms (View: 4, DB: 3) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-04-14 21:59:26) [POST]
+  Parameters: {"article"=>{"publicated_date"=>"1999-05-12 12:23:01", "body"=>"hello", "title"=>"hello", "priority"=>"3", "image"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mArticle Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (1.0ms)[0m   [0mINSERT INTO `articles` (`publicated_date`, `title`, `body`, `priority`, `image`) VALUES('1999-05-12 12:23:01', 'hello', 'hello', 3, '')[0m
+  [4;36;1mSQL (33.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles/2
+Completed in 88ms (DB: 39) | 302 Found [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 21:59:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 127ms (View: 31, DB: 6) | 200 OK [http://localhost/articles/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2011-04-14 21:59:46) [POST]
+  Parameters: {"comment"=>{"name_author"=>"hello", "body"=>"hello", "email_author"=>"hello"}, "commit"=>"Comment!", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"2"}
+  [4;35;1mArticle Columns (5.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`name_author`, `body`, `email_author`, `article_id`) VALUES('hello', 'hello', 'hello', 2)[0m
+  [4;36;1mSQL (32.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles/2
+Completed in 150ms (DB: 42) | 302 Found [http://localhost/articles/comment/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 21:59:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (7.8ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+  [4;36;1mComment Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 175ms (View: 58, DB: 17) | 200 OK [http://localhost/articles/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2011-04-14 22:00:11) [POST]
+  Parameters: {"comment"=>{"name_author"=>"bue", "body"=>"bue", "email_author"=>"bue"}, "commit"=>"Comment!", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"2"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;36;1mComment Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.0ms)[0m   [0;1mINSERT INTO `comments` (`name_author`, `body`, `email_author`, `article_id`) VALUES('bue', 'bue', 'bue', 2)[0m
+  [4;35;1mSQL (27.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles/2
+Completed in 154ms (DB: 36) | 302 Found [http://localhost/articles/comment/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 22:00:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+  [4;35;1mComment Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 157ms (View: 59, DB: 9) | 200 OK [http://localhost/articles/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-14 22:21:01) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 71ms (View: 33, DB: 4) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 22:21:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 132ms (View: 31, DB: 6) | 200 OK [http://localhost/articles/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2011-04-14 22:21:12) [POST]
+  Parameters: {"comment"=>{"name_author"=>"dfdfdf", "body"=>"fdfdf", "email_author"=>"dfdf"}, "commit"=>"Comment!", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;35;1mArticle Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (1.0ms)[0m   [0mINSERT INTO `comments` (`name_author`, `body`, `email_author`, `article_id`) VALUES('dfdfdf', 'fdfdf', 'dfdf', 1)[0m
+  [4;36;1mSQL (127.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 226ms (DB: 135) | 302 Found [http://localhost/articles/comment/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 22:21:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+  [4;36;1mComment Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 154ms (View: 58, DB: 8) | 200 OK [http://localhost/articles/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-14 22:21:28) [GET]
+  [4;36;1mArticle Load (2.9ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 78ms (View: 33, DB: 7) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 22:21:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+  [4;35;1mComment Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 158ms (View: 62, DB: 7) | 200 OK [http://localhost/articles/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 22:26:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+  [4;35;1mComment Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 163ms (View: 63, DB: 10) | 200 OK [http://localhost/articles/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 22:27:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+  [4;35;1mComment Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 162ms (View: 62, DB: 9) | 200 OK [http://localhost/articles/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2011-04-14 22:27:40) [POST]
+  Parameters: {"comment"=>{"name_author"=>"Админ", "body"=>"Давввввввввввввввввввввввввввввввввввввввввв\r\nвавлоплова\r\nваовлоавлаов", "email_author"=>"Привет"}, "commit"=>"Comment!", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"2"}
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;35;1mComment Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`name_author`, `body`, `email_author`, `article_id`) VALUES('Админ', 'Давввввввввввввввввввввввввввввввввввввввввв\r\nвавлоплова\r\nваовлоавлаов', 'Привет', 2)[0m
+  [4;36;1mSQL (28.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles/2
+Completed in 145ms (DB: 38) | 302 Found [http://localhost/articles/comment/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-14 22:27:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+  [4;36;1mComment Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 168ms (View: 61, DB: 10) | 200 OK [http://localhost/articles/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 15:18:28) [GET]
+Rendering admin/index
+Completed in 18ms (View: 17, DB: 1) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-16 15:18:31) [GET]
+  [4;36;1mArticle Load (46.9ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 225ms (View: 81, DB: 50) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-16 15:18:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;35;1mComment Load (22.5ms)[0m   [0mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;36;1mComment Load (15.6ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+  [4;35;1mComment Columns (4.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 223ms (View: 69, DB: 48) | 200 OK [http://localhost/articles/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-16 15:18:39) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 70ms (View: 32, DB: 5) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-04-16 15:18:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering articles/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+  [4;36;1mComment Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 162ms (View: 61, DB: 9) | 200 OK [http://localhost/articles/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-16 15:19:01) [GET]
+  [4;36;1mStudent Load (34.2ms)[0m   [0;1mSELECT * FROM `students` [0m
+Rendering students/index
+Completed in 74ms (View: 6, DB: 35) | 200 OK [http://localhost/students]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:19:02) [GET]
+  [4;36;1mStudent Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mMysql::Error: Table 'kafedra.people' doesn't exist: SHOW FIELDS FROM `people`[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'kafedra.people' doesn't exist: SHOW FIELDS FROM `people`):
+  app/controllers/students_controller.rb:12:in `new'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:20:33) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+Completed in 87ms (View: 8, DB: 6) | 200 OK [http://localhost/students/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:22:05) [GET]
+  [4;36;1mStudent Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mPerson Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+Completed in 80ms (View: 7, DB: 9) | 200 OK [http://localhost/students/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:22:44) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined method `person' for #<ActionView::Helpers::FormBuilder:0x960d158>) on line #8 of app/views/students/new.html.erb:
+5: 
+6:   <p>
+7:     Фамилия:<br />
+8:     <%=h f.person.text_field :last_name %>
+9:   </p>
+10:   <p>
+11:     Имя<br />
+
+    app/views/students/new.html.erb:8
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:13:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:24:14) [GET]
+  [4;36;1mStudent Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+Completed in 89ms (View: 8, DB: 7) | 200 OK [http://localhost/students/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2011-04-16 15:24:28) [POST]
+  Parameters: {"person"=>{"patronymic_name"=>"Владимирович", "last_name"=>"Симонов", "nature"=>"s", "first_name"=>"Павел"}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+
+NameError (uninitialized constant PeopleController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2011-04-16 15:25:17) [POST]
+  Parameters: {"person"=>{"patronymic_name"=>"Владимирович", "last_name"=>"Симонов", "nature"=>"s", "first_name"=>"Павел"}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+
+ActionController::UnknownAction (No action responded to create. Actions: index):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-16 15:33:59) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` [0m
+Rendering students/index
+Completed in 46ms (View: 1, DB: 1) | 200 OK [http://localhost/students]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:34:00) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+Completed in 76ms (View: 5, DB: 7) | 200 OK [http://localhost/students/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2011-04-16 15:34:14) [POST]
+  Parameters: {"person"=>{"patronymic_name"=>"Владимирович", "last_name"=>"Симонов", "nature"=>"s", "first_name"=>"Павел"}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mPerson Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Create (1.0ms)[0m   [0;1mINSERT INTO `people` (`photo`, `last_name`, `patronymic_name`, `birthday`, `phone`, `nature`, `first_name`, `email`) VALUES(NULL, 'Симонов', 'Владимирович', NULL, NULL, 's', 'Павел', NULL)[0m
+  [4;35;1mSQL (34.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/1
+Completed in 80ms (DB: 39) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2011-04-16 15:34:14) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and index):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2011-04-16 15:36:55) [POST]
+  Parameters: {"person"=>{"patronymic_name"=>"Витальевич", "last_name"=>"Емельянов", "nature"=>"s", "first_name"=>"Игорь"}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mPerson Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Create (0.0ms)[0m   [0;1mINSERT INTO `people` (`photo`, `last_name`, `patronymic_name`, `birthday`, `phone`, `nature`, `first_name`, `email`) VALUES(NULL, 'Емельянов', 'Витальевич', NULL, NULL, 's', 'Игорь', NULL)[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/students
+Completed in 87ms (DB: 46) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-16 15:36:55) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` [0m
+Rendering students/index
+Completed in 37ms (View: 1, DB: 1) | 200 OK [http://localhost/students]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-04-16 15:39:38) [GET]
+  [4;35;1mStudent Load (1.0ms)[0m   [0mSELECT * FROM `students` [0m
+Rendering students/index
+Completed in 37ms (View: 2, DB: 2) | 200 OK [http://localhost/students]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:39:39) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined method `year_income' for #<Person:0x963c348>) on line #8 of app/views/students/new.html.erb:
+5: 
+6:   <p>
+7:     Год поступления:<br />
+8:     <%=h f.text_field :year_income %>
+9:   </p>
+10:   <p>
+11:     Фамилия:<br />
+
+    app/views/students/new.html.erb:8
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:13:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:40:28) [GET]
+  [4;36;1mStudent Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+ERROR: compiling _run_erb_app47views47students47new46html46erb RAISED compile error
+c:/rupr/work/kaf_test/app/views/students/new.html.erb:29: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47students47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Students#new</h1>\n<p>Find me in app/views/students/new.html.erb</p>\n"
+
+;  form_for(@student)  ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  \n  <p>\n    \320\244\320\260\320\274\320\270\320\273\320\270\321\217:<br />\n    "
+
+
+
+
+; @output_buffer.concat((h f.text_field :last_name ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    \320\230\320\274\321\217<br />\n    "
+
+
+
+; @output_buffer.concat((h f.text_field :first_name ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    \320\236\321\202\321\207\320\265\321\201\321\202\320\262\320\276:<br />\n    "
+
+
+
+; @output_buffer.concat((h f.text_field :patronymic_name ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    \320\237\321\200\320\265\320\277\320\276\320\264 \320\270\320\273\320\270 \321\201\321\202\321\203\320\264\320\265\320\275\321\202:<br />\n    "
+
+
+
+; @output_buffer.concat((h f.text_field :nature ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Добавить' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Назад', students_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/rupr/work/kaf_test/app/views/students/new.html.erb:29:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/rupr/work/kaf_test/app/controllers/students_controller.rb:13:in `new'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/rupr/work/kaf_test/app/views/students/new.html.erb:29: syntax error, unexpected kENSURE, expecting $end) on line #29 of app/views/students/new.html.erb:
+26: <% end %>
+27: 
+28: <%= link_to 'Назад', students_path %>
+
+    app/views/students/new.html.erb:29:in `compile!'
+    app/controllers/students_controller.rb:13:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:41:00) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x94a7b40>) on line #4 of app/views/students/new.html.erb:
+1: <h1>Students#new</h1>
+2: <p>Find me in app/views/students/new.html.erb</p>
+3: <% form_for(@student) do  %>
+4:   <%= f.error_messages %>
+5: 
+6:   
+7:   <p>
+
+    app/views/students/new.html.erb:4
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:13:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:41:50) [GET]
+  [4;36;1mStudent Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined method `error_messages' for #<Student:0x94584d8>) on line #4 of app/views/students/new.html.erb:
+1: <h1>Students#new</h1>
+2: <p>Find me in app/views/students/new.html.erb</p>
+3: <% form_for(@student) do  %>
+4:   <%= @student.error_messages %>
+5: 
+6:   
+7:   <p>
+
+    app/views/students/new.html.erb:4
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:13:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-04-16 15:42:09) [GET]
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Rendering students/new
+
+ActionView::TemplateError (undefined method `text_field' for #<Student:0x9458958>) on line #9 of app/views/students/new.html.erb:
+6:   
+7:   <p>
+8:     Фамилия:<br />
+9:     <%=h @student.text_field :last_name %>
+10:   </p>
+11:   <p>
+12:     Имя<br />
+
+    app/views/students/new.html.erb:9
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:13:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 15:46:13) [GET]
+Rendering admin/index
+
+ActionView::TemplateError (undefined local variable or method `degrees_path' for #<ActionView::Base:0x96fa7a0>) on line #10 of app/views/admin/index.html.erb:
+7: <%= link_to 'История', histories_path %>
+8: <%= link_to 'Комментарии', comments_path %>
+9: <%= link_to 'Студенты', students_path %>
+10: <%= link_to 'Учёные степени', degrees_path %>
+
+    app/views/admin/index.html.erb:10
+    app/controllers/admin_controller.rb:3:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 15:49:13) [GET]
+Rendering admin/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 15:49:28) [GET]
+Rendering admin/index
+
+ActionView::TemplateError (undefined local variable or method `degree_path' for #<ActionView::Base:0x94ee610>) on line #10 of app/views/admin/index.html.erb:
+7: <%= link_to 'История', histories_path %>
+8: <%= link_to 'Комментарии', comments_path %>
+9: <%= link_to 'Студенты', students_path %>
+10: #<%= link_to 'Учёные степени', degree_path %>
+
+    app/views/admin/index.html.erb:10
+    app/controllers/admin_controller.rb:3:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2011-04-16 15:49:32) [GET]
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering comments/index
+Completed in 60ms (View: 5, DB: 2) | 200 OK [http://localhost/comments]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 15:49:47) [GET]
+Rendering admin/index
+
+ActionView::TemplateError (undefined local variable or method `new_degree_path' for #<ActionView::Base:0x973a130>) on line #10 of app/views/admin/index.html.erb:
+7: <%= link_to 'История', histories_path %>
+8: <%= link_to 'Комментарии', comments_path %>
+9: <%= link_to 'Студенты', students_path %>
+10: #<%= link_to 'Учёные степени', new_degree_path %>
+
+    app/views/admin/index.html.erb:10
+    app/controllers/admin_controller.rb:3:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 15:51:00) [GET]
+Rendering admin/index
+
+ActionView::TemplateError (undefined method `redirect_to' for #<ActionView::Base:0x9593ce8>) on line #10 of app/views/admin/index.html.erb:
+7: <%= link_to 'История', histories_path %>
+8: <%= link_to 'Комментарии', comments_path %>
+9: <%= link_to 'Студенты', students_path %>
+10: <%= link_to 'Учёные степени', redirect_to(articles_url) %>
+
+    app/views/admin/index.html.erb:10
+    app/controllers/admin_controller.rb:3:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (80.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 15:51:15) [GET]
+Rendering admin/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-16 15:51:17) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 71ms (View: 5, DB: 2) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 15:51:29) [GET]
+Rendering admin/index
+
+ActionView::TemplateError (undefined local variable or method `degrees_url' for #<ActionView::Base:0x9737238>) on line #10 of app/views/admin/index.html.erb:
+7: <%= link_to 'История', histories_path %>
+8: <%= link_to 'Комментарии', comments_path %>
+9: <%= link_to 'Студенты', students_path %>
+10: <%= link_to 'Учёные степени', degrees_url %>
+
+    app/views/admin/index.html.erb:10
+    app/controllers/admin_controller.rb:3:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 15:51:49) [GET]
+Rendering admin/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DegreesController#index (for 127.0.0.1 at 2011-04-16 15:51:50) [GET]
+Rendering degrees/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/degrees]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DegreesController#index (for 127.0.0.1 at 2011-04-16 16:04:32) [GET]
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` [0m
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+Rendering degrees/index
+Completed in 77ms (View: 8, DB: 3) | 200 OK [http://localhost/degrees]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DegreesController#index (for 127.0.0.1 at 2011-04-16 16:05:51) [GET]
+  [4;35;1mDegree Load (0.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering degrees/index
+Completed in 87ms (View: 8, DB: 4) | 200 OK [http://localhost/degrees]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DegreesController#create (for 127.0.0.1 at 2011-04-16 16:06:05) [POST]
+  Parameters: {"commit"=>"Добавить", "degree"=>{"name"=>"кандидат технических наук", "short_name"=>"к.т.н."}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDegree Create (1.0ms)[0m   [0;1mINSERT INTO `degrees` (`name`, `short_name`) VALUES('кандидат технических наук', 'к.т.н.')[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/degrees
+Completed in 74ms (DB: 39) | 302 Found [http://localhost/degrees]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DegreesController#index (for 127.0.0.1 at 2011-04-16 16:06:05) [GET]
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering degrees/index
+
+ActionView::TemplateError (undefined method `url' for #<Degree:0x971e2c0>) on line #29 of app/views/degrees/index.html.erb:
+26:   <% @degrees.each do |d| %>
+27:     <tr>
+28:       <td><%=h d.id %> </td>
+29:       <td><%=h d.url %> </td>
+30:       <td><%=h d.description %> </td>
+31:       <td><%= link_to 'Edit', edit_degree_path(d) %></td>
+32:       <td><%= link_to 'Destroy', d, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/degrees/index.html.erb:29
+    app/views/degrees/index.html.erb:26:in `each'
+    app/views/degrees/index.html.erb:26
+    app/controllers/degrees_controller.rb:5:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DegreesController#index (for 127.0.0.1 at 2011-04-16 16:07:09) [GET]
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` [0m
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+Rendering degrees/index
+Completed in 81ms (View: 8, DB: 3) | 200 OK [http://localhost/degrees]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DegreesController#edit (for 127.0.0.1 at 2011-04-16 16:07:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+Rendering degrees/edit
+Completed in 102ms (View: 9, DB: 5) | 200 OK [http://localhost/degrees/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DegreesController#update (for 127.0.0.1 at 2011-04-16 16:07:24) [PUT]
+  Parameters: {"commit"=>"Изменить", "degree"=>{"name"=>"кандидат технических наук", "short_name"=>"к. т. н."}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;35;1mDegree Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDegree Update (9.8ms)[0m   [0;1mUPDATE `degrees` SET `short_name` = 'к. т. н.' WHERE `id` = 1[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/degrees
+Completed in 110ms (DB: 45) | 302 Found [http://localhost/degrees/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DegreesController#index (for 127.0.0.1 at 2011-04-16 16:07:24) [GET]
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering degrees/index
+Completed in 69ms (View: 5, DB: 4) | 200 OK [http://localhost/degrees]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 16:12:50) [GET]
+Rendering admin/index
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#index (for 127.0.0.1 at 2011-04-16 16:12:51) [GET]
+Rendering positions/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/positions]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 16:19:34) [GET]
+Rendering admin/index
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#index (for 127.0.0.1 at 2011-04-16 16:19:35) [GET]
+  [4;36;1mPosition Load (1.0ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendering positions/index
+Completed in 81ms (View: 8, DB: 5) | 200 OK [http://localhost/positions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#create (for 127.0.0.1 at 2011-04-16 16:19:46) [POST]
+  Parameters: {"position"=>{"name"=>"доцент", "short_name"=>"доц."}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mPosition Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPosition Create (0.0ms)[0m   [0mINSERT INTO `positions` (`name`, `short_name`) VALUES('доцент', 'доц.')[0m
+  [4;36;1mSQL (36.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/positions
+Completed in 78ms (DB: 39) | 302 Found [http://localhost/positions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#index (for 127.0.0.1 at 2011-04-16 16:19:47) [GET]
+  [4;36;1mPosition Load (1.0ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendering positions/index
+Completed in 69ms (View: 5, DB: 4) | 200 OK [http://localhost/positions]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#edit (for 127.0.0.1 at 2011-04-16 16:19:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPosition Load (1.0ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mPosition Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (1.0ms)[0m   [0mSELECT * FROM `positions` WHERE (`positions`.`id` = 1) [0m
+Rendering positions/edit
+Completed in 102ms (View: 10, DB: 6) | 200 OK [http://localhost/positions/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#update (for 127.0.0.1 at 2011-04-16 16:20:00) [PUT]
+  Parameters: {"position"=>{"name"=>"доцент", "short_name"=>"доц,"}, "commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;35;1mPosition Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (1.0ms)[0m   [0;1mSELECT * FROM `positions` WHERE (`positions`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPosition Update (1.0ms)[0m   [0;1mUPDATE `positions` SET `short_name` = 'доц,' WHERE `id` = 1[0m
+  [4;35;1mSQL (28.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/positions
+Completed in 99ms (DB: 33) | 302 Found [http://localhost/positions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#index (for 127.0.0.1 at 2011-04-16 16:20:00) [GET]
+  [4;35;1mPosition Load (1.0ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mPosition Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendering positions/index
+Completed in 70ms (View: 5, DB: 4) | 200 OK [http://localhost/positions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#edit (for 127.0.0.1 at 2011-04-16 16:20:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPosition Load (0.0ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (2.0ms)[0m   [0;1mSELECT * FROM `positions` WHERE (`positions`.`id` = 1) [0m
+Rendering positions/edit
+Completed in 107ms (View: 6, DB: 6) | 200 OK [http://localhost/positions/1/edit]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#update (for 127.0.0.1 at 2011-04-16 16:20:05) [PUT]
+  Parameters: {"position"=>{"name"=>"доцент", "short_name"=>"доц."}, "commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;36;1mPosition Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (1.0ms)[0m   [0mSELECT * FROM `positions` WHERE (`positions`.`id` = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPosition Update (0.0ms)[0m   [0mUPDATE `positions` SET `short_name` = 'доц.' WHERE `id` = 1[0m
+  [4;36;1mSQL (28.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/positions
+Completed in 97ms (DB: 34) | 302 Found [http://localhost/positions/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PositionsController#index (for 127.0.0.1 at 2011-04-16 16:20:06) [GET]
+  [4;36;1mPosition Load (1.0ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendering positions/index
+Completed in 68ms (View: 5, DB: 4) | 200 OK [http://localhost/positions]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 16:25:36) [GET]
+Rendering admin/index
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 16:25:43) [GET]
+Rendering admin/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 16:25:47) [GET]
+Rendering admin/index
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2011-04-16 16:25:49) [GET]
+Rendering disciplines/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/disciplines]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2011-04-16 16:30:42) [GET]
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+Rendering disciplines/index
+Completed in 83ms (View: 7, DB: 5) | 200 OK [http://localhost/disciplines]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#create (for 127.0.0.1 at 2011-04-16 16:31:02) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "discipline"=>{"name"=>"Теория разработки программного обеспечения"}}
+  [4;36;1mDiscipline Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDiscipline Create (1.0ms)[0m   [0;1mINSERT INTO `disciplines` (`name`) VALUES('Теория разработки программного обеспечения')[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/disciplines
+Completed in 78ms (DB: 37) | 302 Found [http://localhost/disciplines]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2011-04-16 16:31:02) [GET]
+  [4;35;1mDiscipline Load (0.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+Rendering disciplines/index
+
+ActionView::TemplateError (undefined local variable or method `d' for #<ActionView::Base:0x93c9348>) on line #26 of app/views/disciplines/index.html.erb:
+23: 
+24:   <% @disciplines.each do |p| %>
+25:     <tr>
+26:       <td><%=h d.id %> </td>
+27:       <td><%=h d.name %> </td>
+28:       <td><%= link_to 'Edit', edit_discipline_path(d) %></td>
+29:       <td><%= link_to 'Destroy', d, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/disciplines/index.html.erb:26
+    app/views/disciplines/index.html.erb:24:in `each'
+    app/views/disciplines/index.html.erb:24
+    app/controllers/disciplines_controller.rb:5:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2011-04-16 16:31:24) [GET]
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+Rendering disciplines/index
+Completed in 85ms (View: 9, DB: 4) | 200 OK [http://localhost/disciplines]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#create (for 127.0.0.1 at 2011-04-16 16:31:41) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "discipline"=>{"name"=>"Объектно-ориентированное программирование"}}
+  [4;35;1mDiscipline Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDiscipline Create (0.0ms)[0m   [0mINSERT INTO `disciplines` (`name`) VALUES('Объектно-ориентированное программирование')[0m
+  [4;36;1mSQL (30.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/disciplines
+Completed in 73ms (DB: 34) | 302 Found [http://localhost/disciplines]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2011-04-16 16:31:41) [GET]
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+Rendering disciplines/index
+Completed in 73ms (View: 6, DB: 4) | 200 OK [http://localhost/disciplines]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#edit (for 127.0.0.1 at 2011-04-16 16:31:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDiscipline Load (0.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+Rendering disciplines/edit
+Completed in 103ms (View: 11, DB: 6) | 200 OK [http://localhost/disciplines/2/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#update (for 127.0.0.1 at 2011-04-16 16:32:16) [PUT]
+  Parameters: {"commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"2", "discipline"=>{"name"=>"Объектно-ориентированное программирование"}}
+  [4;35;1mDiscipline Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/disciplines
+Completed in 69ms (DB: 4) | 302 Found [http://localhost/disciplines/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2011-04-16 16:32:16) [GET]
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+Rendering disciplines/index
+Completed in 71ms (View: 6, DB: 4) | 200 OK [http://localhost/disciplines]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-04-16 16:40:29) [GET]
+Rendering admin/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#index (for 127.0.0.1 at 2011-04-16 16:40:30) [GET]
+Rendering specialities/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/specialities]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#index (for 127.0.0.1 at 2011-04-16 16:50:56) [GET]
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` [0m
+Rendering specialities/index
+Completed in 43ms (View: 5, DB: 1) | 200 OK [http://localhost/specialities]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#index (for 127.0.0.1 at 2011-04-16 16:54:13) [GET]
+  [4;35;1mSpeciality Load (0.0ms)[0m   [0mSELECT * FROM `specialities` [0m
+Rendering specialities/index
+Completed in 37ms (View: 2, DB: 0) | 200 OK [http://localhost/specialities]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#new (for 127.0.0.1 at 2011-04-16 16:54:15) [GET]
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Rendering specialities/new
+Completed in 45ms (View: 8, DB: 3) | 200 OK [http://localhost/specialities/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#create (for 127.0.0.1 at 2011-04-16 16:54:46) [POST]
+  Parameters: {"commit"=>"Добавить", "speciality"=>{"name"=>"Информатика и вычислительная техника", "code"=>"230100", "count_years"=>"4", "short_name"=>"ИВТ", "in_diploma"=>"Бакалавр техники и технологии"}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSpeciality Create (0.0ms)[0m   [0mINSERT INTO `specialities` (`name`, `code`, `count_years`, `short_name`, `in_diploma`) VALUES('Информатика и вычислительная техника', '230100', 4, 'ИВТ', 'Бакалавр техники и технологии')[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/specialities/1
+Completed in 73ms (DB: 35) | 302 Found [http://localhost/specialities]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#show (for 127.0.0.1 at 2011-04-16 16:54:46) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionView::MissingTemplate (Missing template specialities/show.erb in view path app/views):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#new (for 127.0.0.1 at 2011-04-16 16:55:41) [GET]
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Rendering specialities/new
+Completed in 45ms (View: 4, DB: 4) | 200 OK [http://localhost/specialities/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-16 16:55:44) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 74ms (View: 6, DB: 1) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-16 16:55:46) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 38ms (View: 1, DB: 1) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-04-16 16:55:48) [GET]
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering articles/new
+
+ActionView::TemplateError (undefined method `publicated_date' for #<Article:0x9366c48>) on line #17 of app/views/articles/new.html.erb:
+14:   </p>
+15:   <p>
+16:     Дата публикации:<br />
+17:     <%= f.text_field :publicated_date %>
+18:   </p>
+19:   <p>
+20:     Приоритет:<br />
+
+    app/views/articles/new.html.erb:17
+    app/views/articles/new.html.erb:4
+    app/controllers/articles_controller.rb:16:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-04-16 16:58:24) [GET]
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering articles/new
+Completed in 57ms (View: 7, DB: 4) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-04-16 16:58:29) [GET]
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering articles/new
+Completed in 44ms (View: 4, DB: 3) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-04-16 16:58:40) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 43ms (View: 5, DB: 2) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#new (for 127.0.0.1 at 2011-04-16 16:58:47) [GET]
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Rendering specialities/new
+Completed in 44ms (View: 4, DB: 3) | 200 OK [http://localhost/specialities/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#index (for 127.0.0.1 at 2011-04-16 16:58:54) [GET]
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` [0m
+Rendering specialities/index
+  [4;36;1mSpeciality Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+Completed in 70ms (View: 31, DB: 5) | 200 OK [http://localhost/specialities]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#edit (for 127.0.0.1 at 2011-04-16 16:58:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSpeciality Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+Rendering specialities/edit
+Completed in 74ms (View: 9, DB: 5) | 200 OK [http://localhost/specialities/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#update (for 127.0.0.1 at 2011-04-16 16:58:59) [PUT]
+  Parameters: {"commit"=>"Изменить", "speciality"=>{"name"=>"Информатика и вычислительная техника", "code"=>"230100", "count_years"=>"4", "short_name"=>"ИВТ", "in_diploma"=>"Бакалавр техники и технологии"}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;35;1mSpeciality Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/specialities/1
+Completed in 71ms (DB: 5) | 302 Found [http://localhost/specialities/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#show (for 127.0.0.1 at 2011-04-16 16:58:59) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionView::MissingTemplate (Missing template specialities/show.erb in view path app/views):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#update (for 127.0.0.1 at 2011-04-16 17:05:02) [PUT]
+  Parameters: {"commit"=>"Изменить", "speciality"=>{"name"=>"Информатика и вычислительная техника", "code"=>"230100", "count_years"=>"4", "short_name"=>"ИВТ", "in_diploma"=>"Бакалавр техники и технологии"}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/specialities
+Completed in 75ms (DB: 5) | 302 Found [http://localhost/specialities/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#index (for 127.0.0.1 at 2011-04-16 17:05:02) [GET]
+  [4;36;1mSpeciality Load (0.0ms)[0m   [0;1mSELECT * FROM `specialities` [0m
+Rendering specialities/index
+  [4;35;1mSpeciality Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Completed in 71ms (View: 31, DB: 5) | 200 OK [http://localhost/specialities]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#new (for 127.0.0.1 at 2011-04-16 17:05:05) [GET]
+  [4;35;1mSpeciality Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Rendering specialities/new
+Completed in 42ms (View: 4, DB: 5) | 200 OK [http://localhost/specialities/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#create (for 127.0.0.1 at 2011-04-16 17:05:42) [POST]
+  Parameters: {"commit"=>"Добавить", "speciality"=>{"name"=>"Программное обеспечение вычислительной техники", "code"=>"102203", "count_years"=>"5", "short_name"=>"ПОВТ", "in_diploma"=>"Инженер программист"}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mSpeciality Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSpeciality Create (1.0ms)[0m   [0mINSERT INTO `specialities` (`name`, `code`, `count_years`, `short_name`, `in_diploma`) VALUES('Программное обеспечение вычислительной техники', '102203', 5, 'ПОВТ', 'Инженер программист')[0m
+  [4;36;1mSQL (35.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/specialities
+Completed in 78ms (DB: 40) | 302 Found [http://localhost/specialities]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#index (for 127.0.0.1 at 2011-04-16 17:05:42) [GET]
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` [0m
+Rendering specialities/index
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Completed in 73ms (View: 33, DB: 4) | 200 OK [http://localhost/specialities]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#edit (for 127.0.0.1 at 2011-04-16 17:05:49) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+Rendering specialities/edit
+Completed in 71ms (View: 5, DB: 5) | 200 OK [http://localhost/specialities/2/edit]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#update (for 127.0.0.1 at 2011-04-16 17:05:51) [PUT]
+  Parameters: {"commit"=>"Изменить", "speciality"=>{"name"=>"Программное обеспечение вычислительной техники", "code"=>"102203", "count_years"=>"5", "short_name"=>"ПОВТ", "in_diploma"=>"Инженер программист"}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"2"}
+  [4;36;1mSpeciality Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/specialities
+Completed in 69ms (DB: 7) | 302 Found [http://localhost/specialities/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#index (for 127.0.0.1 at 2011-04-16 17:05:51) [GET]
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` [0m
+Rendering specialities/index
+  [4;36;1mSpeciality Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+Completed in 75ms (View: 35, DB: 4) | 200 OK [http://localhost/specialities]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#show (for 127.0.0.1 at 2011-04-16 17:05:52) [GET]
+  Parameters: {"id"=>"2"}
+
+ActionView::MissingTemplate (Missing template specialities/show.erb in view path app/views):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#index (for 127.0.0.1 at 2011-04-16 17:06:19) [GET]
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` [0m
+Rendering specialities/index
+  [4;36;1mSpeciality Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+Completed in 80ms (View: 38, DB: 4) | 200 OK [http://localhost/specialities]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#new (for 127.0.0.1 at 2011-04-16 17:06:41) [GET]
+  [4;36;1mSpeciality Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+Rendering specialities/new
+Completed in 43ms (View: 4, DB: 4) | 200 OK [http://localhost/specialities/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SpecialitiesController#index (for 127.0.0.1 at 2011-04-16 17:08:46) [GET]
+  [4;36;1mSpeciality Load (0.0ms)[0m   [0;1mSELECT * FROM `specialities` [0m
+Rendering specialities/index
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Completed in 71ms (View: 32, DB: 3) | 200 OK [http://localhost/specialities]

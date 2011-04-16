@@ -1,0 +1,20 @@
+<h1>Студентики</h1>
+<p>Find me in app/views/students/index.html.erb</p>
+
+<table>
+  <tr>
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Отчество</th>
+  </tr>
+
+<% @students.each do |stud| %>
+  <tr>
+    <td><%=h stud.person.last_name %></td>
+    <td><%=h stud.person.first_name %></td>
+    <td><%=h stud.person.patronymic %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Добавить студента', new_student_path %>

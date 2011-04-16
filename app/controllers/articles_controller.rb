@@ -21,6 +21,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @comments = Comment.all
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @article }
@@ -69,5 +70,10 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def comment
+    Article.find(params[:id]).comments.create(params[:comment])
+    flash[:notice] = "Added your comment"
+    redirect_to :action => "show", :id => params[:id]
+  end
 
 end

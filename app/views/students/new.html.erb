@@ -1,0 +1,31 @@
+<h1>Students#new</h1>
+<p>Find me in app/views/students/new.html.erb</p>
+<% form_for(@student.person) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    Год поступления:<br />
+    <%=h f.text_field :year_income %>
+  </p>
+  <p>
+    Фамилия:<br />
+    <%=h f.text_field :last_name %>
+  </p>
+  <p>
+    Имя<br />
+    <%=h f.text_field :first_name %>
+  </p>
+  <p>
+    Отчество:<br />
+    <%=h f.text_field :patronymic_name %>
+  </p>
+  <p>
+    Препод или студент:<br />
+    <%=h f.text_field :nature %>
+  </p>
+  <p>
+    <%= f.submit 'Добавить' %>
+  </p>
+<% end %>
+
+<%= link_to 'Назад', students_path %>
