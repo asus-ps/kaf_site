@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def index
-    @students = Student.all(:include => :person)
+    @students = Student.all(:include => :person, :include => :speciality)
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @students }
@@ -10,6 +10,7 @@ class StudentsController < ApplicationController
   def new
     @student = Student.new
     @student.build_person
+    @specialities = Speciality.all
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @student }
@@ -17,24 +18,40 @@ class StudentsController < ApplicationController
   end
 
   def edit
+    @student = Student.find(params[:id])
+    @student.person.update_attributes(params[:student])
+    @specialities = Speciality.all
+    respond_to do |format|
+      format.html
+      format.xml { render_to :xml => @student }
+    end
   end
 
   def show
+    @student = Student.find(params[:id],:include => :person, :include => :speciality)
+    respond_to do |format|
+      format.html
+      format.xml { render_to :xml => @student }
+    end
   end
 
   def create
     @student = Student.new(params[:student])
-    @student.person_id = (params[:person])
+    @student.save ? redirect_to(student_path(@student)) : render(:action => "new")  
+  end
+
+  def update
+    @student = Student.find(params[:id])
+    @student.update_attributes(params[:student]) ? redirect_to(student_path(@student)) : render(:action => :edit)
+  end
+
+  def destroy
+    @student = Student.find(params[:id])
+    @student.destroy
 
     respond_to do |format|
-      if @student.save
-        #flash[:notice] = 'Студент успешно занесён в базу'
-        format.html { redirect_to(@student, :notice => 'Информация о студенте успешно добавлен!') }
-        format.xml  { render :xml => @student, :status => :created, :location => @student }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @student.errors, :status => :unprocessable_entity }
-      end
+      format.html { redirect_to(students_url) }
+      format.xml  { head :ok }
     end
   end
 

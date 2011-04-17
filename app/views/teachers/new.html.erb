@@ -1,6 +1,7 @@
-<h1>Students#edit</h1>
-<p>Find me in app/views/students/edit.html.erb</p>
-<% form_for @student do |f| %>
+<h1>Teachers#new</h1>
+<p>Find me in app/views/teachers/new.html.erb</p>
+
+<% form_for @teacher do |f| %>
   <%= f.error_messages %>
 
   <% f.fields_for :person do |per| %>
@@ -40,13 +41,12 @@
   <% end %>
 
   <p>
-    Специальность:<br />
-    <%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name", selected_value=@student.speciality.id)) %>
+    Должность:<br />
+    <%=h f.select(:position_id, options_from_collection_for_select(@positions, "id", "name")) %>
   </p>
-
   <p>
-    Год поступления:<br />
-    <%=h f.text_field :year_income %>
+    Должность:<br />
+    <%=h f.select(:degree_id, options_from_collection_for_select(@degrees, "id", "name")) %>
   </p>
 
   <p>
@@ -54,4 +54,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Назад', students_path %>
+<%= link_to 'Назад', teachers_path %>

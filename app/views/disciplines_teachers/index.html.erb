@@ -1,0 +1,16 @@
+<h1>DisciplinesTeachers#index</h1>
+<p>Find me in app/views/disciplines_teachers/index.html.erb</p>
+
+<p>
+  <% form_for (@newdt) do |f| %>
+    <% f.error_messages %>
+<p>
+  <%= f.select(:discipline_id, options_from_collection_for_select(@disciplines, "id", "name")) %>
+  <!-- f.select(:teacher_id, options_from_collection_for_select(@teachers, "person_id",  :last_name )) %> -->
+  <%= f.text_field :teacher_id %>
+  <%= f.submit 'Добавить' %>
+
+
+</p>
+  <% end %>
+</p>

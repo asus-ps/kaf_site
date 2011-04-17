@@ -10,6 +10,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :positions
   map.resources :disciplines
   map.resources :specialities
+  map.resources :disciplines_teachers
+  map.resources :teachers
+  map.resources :diplomas
 
   # The priority is based upon order of creation: first created -> highest priority.
 

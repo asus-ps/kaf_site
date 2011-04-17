@@ -1,28 +1,54 @@
 <h1>Students#new</h1>
 <p>Find me in app/views/students/new.html.erb</p>
-<% form_for(@student.person) do |f| %>
+<% form_for @student do |f| %>
   <%= f.error_messages %>
+
+  <% f.fields_for :person do |per| %>
+  <p>
+    Фамилия
+    <%=h per.text_field :last_name %>
+
+    Имя
+    <%=h per.text_field :first_name %>
+
+    Отчество
+    <%=h per.text_field :patronymic_name %>
+  </p>
+  <p>
+    День рождения:<br />
+    <%=h per.date_select :birthday %>
+  </p>
+  <p>
+    Преподаватель или студент:<br />
+    <%=h per.text_field :nature %>
+  </p>
+    <p>
+    Телефон:
+    <%=h per.text_field :phone %>
+
+    E-mail:
+    <%=h per.text_field :email %>
+  </p>
+  <p>
+    Фото:<br />
+    <%=h per.text_field :photo %>
+  </p>
+  <p>
+    Информация:<br />
+    <%=h per.text_area :info %>
+  </p>
+  <% end %>
+
+  <p>
+    Специальность:<br />
+    <%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name")) %>
+  </p>
 
   <p>
     Год поступления:<br />
     <%=h f.text_field :year_income %>
   </p>
-  <p>
-    Фамилия:<br />
-    <%=h f.text_field :last_name %>
-  </p>
-  <p>
-    Имя<br />
-    <%=h f.text_field :first_name %>
-  </p>
-  <p>
-    Отчество:<br />
-    <%=h f.text_field :patronymic_name %>
-  </p>
-  <p>
-    Препод или студент:<br />
-    <%=h f.text_field :nature %>
-  </p>
+
   <p>
     <%= f.submit 'Добавить' %>
   </p>

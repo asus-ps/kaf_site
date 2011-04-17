@@ -1,0 +1,33 @@
+<h1>Teachers#index</h1>
+<p>Find me in app/views/teachers/index.html.erb</p>
+<table>
+  <tr>
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Отчество</th>
+    <th>Cтепень</th>
+    <th>Должность</th>
+    <th>День рождения</th>
+    <th>Телефон</th>
+    <th>E-mail</th>
+
+  </tr>
+
+<% @teachers.each do |t| %>
+  <tr>
+    <td><%=h t.person.last_name %></td>
+    <td><%=h t.person.first_name %></td>
+    <td><%=h t.person.patronymic_name %></td>
+    <td><%=h t.degree.name %></td>
+    <td><%=h t.position.name %></td>
+    <td><%=h t.person.birthday %></td>
+    <td><%=h t.person.phone %></td>
+    <td><%=h t.person.email %></td>
+    <td><%= link_to 'Show', t %></td>
+    <td><%= link_to 'Edit', edit_teacher_path(t) %></td>
+      <td><%= link_to 'Destroy', t, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Добавить преподавателя', new_teacher_path %>

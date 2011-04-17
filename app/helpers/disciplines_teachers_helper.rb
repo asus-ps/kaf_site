@@ -1,0 +1,2 @@
+module DisciplinesTeachersHelper
+end

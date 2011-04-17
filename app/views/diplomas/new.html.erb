@@ -1,0 +1,28 @@
+<h1>Diplomas#new</h1>
+<p>Find me in app/views/diplomas/new.html.erb</p>
+<% form_for @diploma do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    Тема диплома:
+    <%=h f.text_field :name %>
+
+    Год защиты:
+    <%=h f.text_field :protection_year %>
+
+    Выполнил
+    <%=h f.select(:student_id, options_from_collection_for_select(@students, "person_id", @students.last_name)) %>
+
+    Руководитель
+    <%=h f.select(:teacher_id, options_from_collection_for_select(@teacher, "id", "last_name")) %>
+
+    Аннотация:
+    <%=h f.text_area :summary %>
+
+
+  </p>
+  
+  <p>
+    <%= f.submit 'Добавить' %>
+  </p>
+<% end %>
