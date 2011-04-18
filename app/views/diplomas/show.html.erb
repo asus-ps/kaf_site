@@ -1,2 +1,16 @@
 <h1>Diplomas#show</h1>
 <p>Find me in app/views/diplomas/show.html.erb</p>
+
+<br>Название</br>
+    <br><%=h @diploma.name %></br>
+Исполнитель:<br>
+    <%=h @diploma.student.person.last_name %><br>
+Руководитель:<br>
+    <br>
+  <%=h @diploma.teacher.person.last_name %></br>
+<br>Год:</br>
+    <br><%=h @diploma.protection_year %></br>
+<br>Аннотация:</br>
+    <br><%=h @diploma.summary %></br>
+<%= link_to 'Edit', edit_diploma_path(@diploma) %>
+<%= link_to 'Назад', diplomas_path %>

@@ -6,20 +6,22 @@
   <p>
     Тема диплома:
     <%=h f.text_field :name %>
-
+    <br>
     Год защиты:
-    <%=h f.text_field :protection_year %>
-
+    <%=h f.select(:protection_year, (Time.now.year - 30)..Time.now.year) %>
+    <br>
     Выполнил
-    <%=h f.select(:student_id, options_from_collection_for_select(@students, "person_id", @students.last_name)) %>
+    <%=h f.select(:student_id, options_for_select( Student.all.collect { |p| [p.person.last_name, p.person.id]})) %>
+    <br>
 
     Руководитель
-    <%=h f.select(:teacher_id, options_from_collection_for_select(@teacher, "id", "last_name")) %>
+    <%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| [p.person.last_name, p.person.id]})) %>
+    <br>
 
     Аннотация:
     <%=h f.text_area :summary %>
-
-
+    <br></br>
+    <br>
   </p>
   
   <p>

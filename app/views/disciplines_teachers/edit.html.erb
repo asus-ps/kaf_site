@@ -1,2 +1,31 @@
 <h1>DisciplinesTeachers#edit</h1>
 <p>Find me in app/views/disciplines_teachers/edit.html.erb</p>
+<p>
+  <% form_for (@newdt) do |f| %>
+    <% f.error_messages %>
+<p>
+  <!--%= f.select(:discipline_id, options_from_collection_for_select(@disciplines, "id", "name")) %-->
+  <%=h f.select(:discipline_id, options_for_select( Discipline.all.collect { |p| [p.name, p.id]}, selected_value=@newdt.discipline_id)) %>
+  <%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| [p.person.last_name, p.person.id]}, selected_value=@newdt.teacher_id)) %>
+
+  <%= f.submit 'Изменить' %>
+</p>
+  <% end %>
+</p>
+
+<table>
+  <tr>
+    <th>Предмет</th>
+    <th>Ведёт</th>
+
+  </tr>
+
+<% @dts.each do |d| %>
+  <tr>
+    <td><%=h d.discipline.name %></td>
+    <td><%=h d.teacher.person.last_name %></td>
+    <td><%= link_to 'Edit', edit_disciplines_teacher_path(d) %></td>
+      <td><%= link_to 'Destroy', d, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

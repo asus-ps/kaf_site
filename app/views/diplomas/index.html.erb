@@ -1,2 +1,28 @@
 <h1>Diplomas#index</h1>
 <p>Find me in app/views/diplomas/index.html.erb</p>
+<table>
+  <tr>
+    <th>Название</th>
+    <th>Выполнил</th>
+    <th>Руководитель</th>
+    <th>Год</th>
+    <th>Аннотация</th>
+
+
+  </tr>
+
+<% @diplomas.each do |d| %>
+  <tr>
+    <td><%=h d.name %></td>
+    <td><%=h d.student.person.last_name %></td>
+    <td><%=h d.teacher.person.last_name %></td>
+    <td><%=h d.protection_year %></td>
+    <td><%=h d.summary %></td>
+    <td><%= link_to 'Show', d %></td>
+    <td><%= link_to 'Edit', edit_diploma_path(d) %></td>
+      <td><%= link_to 'Destroy', d, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Добавить диплом', new_diploma_path %>

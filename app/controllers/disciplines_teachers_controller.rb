@@ -11,6 +11,14 @@ class DisciplinesTeachersController < ApplicationController
   end
 
   def edit
+    @dts= DisciplinesTeacher.all
+    @newdt = DisciplinesTeacher.find(params[:id])
+    @disciplines = Discipline.all
+    @teachers = Teacher.all( :include => :person )
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @dts }
+    end
   end
 
   def new
