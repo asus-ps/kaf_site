@@ -18,7 +18,7 @@
   </p>
   <p>
     Количество лет:<br />
-    <%= f.text_field :count_years %>
+    <%= f.select(:count_years, 1..6,:prompt => @speciality.count_years) %>
   </p>
   <p>
     По диплому:<br />
@@ -29,4 +29,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Назад', articles_path %>
+<%= link_to 'Назад', specialities_path %>

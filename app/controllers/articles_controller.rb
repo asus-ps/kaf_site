@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(params[:article])
-
+    @article.published_at = Time.now
     respond_to do |format|
       if @article.save
         format.html { redirect_to(@article, :notice => 'Новость успешно добавлена!') }
@@ -72,6 +72,7 @@ class ArticlesController < ApplicationController
 
   def comment
     Article.find(params[:id]).comments.create(params[:comment])
+
     flash[:notice] = "Added your comment"
     redirect_to :action => "show", :id => params[:id]
   end

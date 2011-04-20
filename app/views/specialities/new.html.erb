@@ -18,7 +18,7 @@
   </p>
   <p>
     Количество лет:<br />
-    <%= f.text_field :count_years %>
+    <%= f.select(:count_years, 1..6,:prompt => '4') %>
   </p>
   <p>
     По диплому:<br />

@@ -29,15 +29,15 @@
 <p>
 <% for comment in @article.comments %>
 <div>
-  <%= comment.name_author %><br>
-<%= comment.email_author %><br>
+  <%= comment.author_name %><br>
+<%= comment.author_email %><br>
 <%= comment.body %>
 </div>
 <% end %>
 </p>
-<%= form_tag :action => "comment", :id => @article %>
-  <%= text_field "comment", "name_author" %>
-  <%= text_field "comment", "email_author" %><br>
+<%= form_tag :action => "comment", :id => @article , :published_at => Time.now %><br>
+  <%= text_field "comment", "author_name" %><br>
+  <%= text_field "comment", "author_email" %><br>
   <%= text_area "comment", "body" %>
-<%= submit_tag "Comment!" %>
+<%= submit_tag "Comment!"  %>
 </form>

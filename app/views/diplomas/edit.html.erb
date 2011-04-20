@@ -9,14 +9,17 @@
     <%=h f.text_field :name %>
     <br>
     Год защиты:
-    <%=h f.text_field :protection_year %>
     <br>
+
+    <%=h f.select(:protection_year,  (Time.now.year - 30)..Time.now.year , :prompt => @diploma.protection_year ) %>
     Выполнил
-    <%=h f.select(:student_id, options_for_select( Student.all.collect { |p| [p.person.last_name, p.person.id]}, selected_value=@diploma.student_id)) %>
+    <!--%=h f.select(:student_id, options_for_select( Student.all.collect { |p| [p.person.last_name, p.person.id]}, selected_value=@diploma.student_id)) %-->
+    <%=h f.select(:student_id, options_for_select( Student.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.speciality.short_name}", p.person.id]}, selected_value=@diploma.student_id)) %>
     <br>
 
     Руководитель
-    <%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| [p.person.last_name, p.person.id]}, selected_value=@diploma.teacher_id)) %>
+    <!--%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| [p.person.last_name, p.person.id]}, selected_value=@diploma.teacher_id)) %-->
+    <%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]}, selected_value=@diploma.teacher_id)) %>
     <br>
 
     Аннотация:

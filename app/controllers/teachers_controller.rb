@@ -39,11 +39,13 @@ class TeachersController < ApplicationController
 
   def create
     @teacher = Teacher.new(params[:teacher])
+    @teacher.person.nature = 't'
     @teacher.save ? redirect_to(teacher_path(@teacher)) : render(:action => "new")
   end
 
   def update
     @teacher = Teacher.find(params[:id])
+    @teacher.person.nature = 't'
     @teacher.update_attributes(params[:teacher]) ? redirect_to(teacher_path(@teacher)) : render(:action => :edit)
   end
 

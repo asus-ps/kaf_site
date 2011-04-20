@@ -18,10 +18,6 @@
     День рождения:<br />
     <%=h per.date_select :birthday %>
   </p>
-  <p>
-    Преподаватель или студент:<br />
-    <%=h per.text_field :nature %>
-  </p>
     <p>
     Телефон:
     <%=h per.text_field :phone %>
@@ -46,7 +42,7 @@
 
   <p>
     Год поступления:<br />
-    <%=h f.text_field :year_income %>
+    <%=h f.select(:year_income,  (Time.now.year - 15)..Time.now.year , :prompt => Time.now.year.to_s ) %>
   </p>
 
   <p>

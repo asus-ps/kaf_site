@@ -12,10 +12,10 @@
     Текст<br />
     <%= f.text_area :body %>
   </p>
-  <p>
+  <!--p>
     Дата публикации:<br />
-    <%= f.text_field :published_at %>
-  </p>
+    <!--%= f.datetime_select(:published_at,:default => Time.now, :disabled => true) %>
+  </p-->
   <p>
     Приоритет:<br />
     <%= f.text_field :priority %>

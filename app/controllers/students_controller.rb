@@ -37,11 +37,13 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(params[:student])
+    @student.person.nature = 's'
     @student.save ? redirect_to(student_path(@student)) : render(:action => "new")  
   end
 
   def update
     @student = Student.find(params[:id])
+    @student.person.nature = 's'
     @student.update_attributes(params[:student]) ? redirect_to(student_path(@student)) : render(:action => :edit)
   end
 

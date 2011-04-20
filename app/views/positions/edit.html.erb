@@ -4,17 +4,24 @@
   <% form_for (@newposition) do |f| %>
     <% f.error_messages %>
 <p>
-  <%= f.text_field :name %>
-  <br>
-  <%= f.text_field :short_name %>
-
-    <%= f.submit 'Изменить' %>
-
+<table>
+  <tr>
+    <td>Полное название:</td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td>Сокращённое название:</td>
+    <td><%= f.text_field :short_name %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right"><%= f.submit 'Изменить' %></td>
+  </tr>
+</table>
 
 </p>
   <% end %>
 </p>
-
 <p>
 <table>
   <tr>
