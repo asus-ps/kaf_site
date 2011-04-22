@@ -123,7 +123,7 @@ CREATE  TABLE IF NOT EXISTS `kafedra`.`articles` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `title` VARCHAR(255) NOT NULL ,
   `body` TEXT NOT NULL ,
-  `published_at` DATETIME NOT NULL ,
+  `created_at` DATETIME NOT NULL ,
   `priority` INT NULL ,
   `image` VARCHAR(255) NULL ,
   PRIMARY KEY (`id`) )
@@ -215,7 +215,7 @@ CREATE  TABLE IF NOT EXISTS `kafedra`.`comments` (
   `body` TEXT NOT NULL ,
   `author_name` VARCHAR(63) NOT NULL ,
   `author_email` VARCHAR(63) NOT NULL ,
-  `published_at` DATETIME NOT NULL ,
+  `created_at` DATETIME NOT NULL ,
   `article_id` INT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_comments_articles1` (`article_id` ASC) ,

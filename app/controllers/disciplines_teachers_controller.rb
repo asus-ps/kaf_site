@@ -12,12 +12,12 @@ class DisciplinesTeachersController < ApplicationController
 
   def edit
     @dts= DisciplinesTeacher.all
-    @newdt = DisciplinesTeacher.find(params[:id])
+    @dt = DisciplinesTeacher.find(params[:id])
     @disciplines = Discipline.all
     @teachers = Teacher.all( :include => :person )
     respond_to do |format|
       format.html
-      format.xml { render :xml => @dts }
+      format.xml { render :xml => @dt }
     end
   end
 

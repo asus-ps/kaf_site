@@ -23,9 +23,9 @@
     <td><%=h t.person.birthday %></td>
     <td><%=h t.person.phone %></td>
     <td><%=h t.person.email %></td>
-    <td><%= link_to 'Show', t %></td>
-    <td><%= link_to 'Edit', edit_teacher_path(t) %></td>
-      <td><%= link_to 'Destroy', t, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Показать', t %></td>
+    <td><%= link_to 'Редактировать', edit_teacher_path(t) %></td>
+      <td><%= link_to 'Удалить', t, :confirm => 'Удалить запись?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

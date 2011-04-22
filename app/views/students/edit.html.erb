@@ -3,52 +3,75 @@
 <% form_for @student do |f| %>
   <%= f.error_messages %>
 
+<table>
+
   <% f.fields_for :person do |per| %>
-  <p>
-    Фамилия
-    <%=h per.text_field :last_name %>
 
-    Имя
-    <%=h per.text_field :first_name %>
+  <tr>
+    <td>Фамилия</td>
+    <td><%=h per.text_field :last_name %></td>
+  </tr>
+  <tr>
+    <td>Имя</td>
+    <td><%=h per.text_field :first_name %></td>
+  </tr>
+  <tr>
+    <td>Отчество</td>
+    <td><%=h per.text_field :patronymic_name %></td>
 
-    Отчество
-    <%=h per.text_field :patronymic_name %>
-  </p>
-  <p>
-    День рождения:<br />
-    <%=h per.date_select :birthday %>
-  </p>
-
-    <p>
-    Телефон:
-    <%=h per.text_field :phone %>
-
-    E-mail:
-    <%=h per.text_field :email %>
-  </p>
-  <p>
-    Фото:<br />
-    <%=h per.text_field :photo %>
-  </p>
-  <p>
-    Информация:<br />
-    <%=h per.text_area :info %>
-  </p>
+  </tr>
+  <tr>
+    <td>День рождения:</td>
+    <td><%=h per.date_select(:birthday,:start_year => Date.today.year, :end_year => (Date.today.year - 80)) %></td>
+  </tr>
+  <tr>
+    <td>Телефон:</td>
+    <td><%=h per.text_field :phone %></td>
+  </tr>
+  <tr>
+    <td>E-mail:</td>
+    <td><%=h per.text_field :email %></td>
+  </tr>
   <% end %>
 
-  <p>
-    Специальность:<br />
-    <%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name", selected_value=@student.speciality.id)) %>
-  </p>
 
-  <p>
-    Год поступления:<br />
-    <%=h f.select(:year_income,  (Time.now.year - 15)..Time.now.year , :prompt => @student.year_income ) %>
-  </p>
+  <tr>
+    <td>Специальность:</td>
+    <td><%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name",selected_value=@student.speciality.id)) %></td>
+  </tr>
+  <tr>
+    <td>Год поступления:</td>
+        <% i = Time.now.year  %>
+    <% k = 0 %>
+    <% years = Array.new %>
+    <% while k!=30 %>
+    <% years[k] = i-k %>
+    <% k = k + 1 %>
+    <% end %>
+    <td><%=h f.select(:year_income,  years , :prompt => @student.year_income ) %></td>
+  </tr>
 
-  <p>
-    <%= f.submit 'Изменить' %>
-  </p>
+
+
+  <% f.fields_for :person do |per| %>
+  <tr>
+    <td>Фото:</td>
+    <td><%=h per.text_field :photo %></td>
+  </tr>
+  <tr>
+    <td>Информация:</td>
+    <td><%=h per.text_area :info %></td>
+  </tr>
+
+  <% end %>
+
+
+  <tr>
+    <td></td>
+    <td align="right"><%= f.submit 'Изменить' %></td>
+  </tr>
+
+</table>
 <% end %>
 
 <%= link_to 'Назад', students_path %>

@@ -5,16 +5,23 @@
 <% form_for(@historie) do |c| %>
   <%= c.error_messages %>
 
-<p>
-  <b>История:</b>
-  <%= c.text_area :body %>
-</p>
+<table>
+  <tr>
+    <td>История:</td>
+  </tr>
+  <tr>
+    <td><%= c.text_area :body %></td>
+  </tr>
+  <tr>
+    <td>Изображение:</td>
+  </tr>
+  <tr>
+    <td><%= c.text_field :image %></td>
+  </tr>
+  <tr>
+    <td align="right"><%= c.submit 'Записать' %></td>
+  </tr>
+</table>
 
-<p>
-  <b>Изображение</b>
-  <%= c.text_field :image %>
-</p>
-<p>
-  <%= c.submit 'Записать' %>
-</p>
+
 <% end %>

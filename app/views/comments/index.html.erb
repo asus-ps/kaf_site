@@ -12,9 +12,9 @@
     <td><%=h art.author_name %></td>
     <td><%=h art.author_email %></td>
     <td><%=h art.body %></td>
-    <td><%= link_to 'Show', art %></td>
-    <td><%= link_to 'Edit', edit_comment_path(art) %></td>
-    <td><%= link_to 'Destroy', art, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Показать', art %></td>
+    <td><%= link_to 'Редактировать', edit_comment_path(art) %></td>
+    <td><%= link_to 'Удалить', art, :confirm => 'Удалить запись?', :method => :delete %></td>
 
   </tr>
 <% end %>

@@ -17,8 +17,8 @@
     <td><%=h s.short_name %></td>
     <td><%=h s.count_years %></td>
     <td><%=h s.in_diploma %></td>
-    <td><%= link_to 'Edit', edit_speciality_path(s) %></td>
-    <td><%= link_to 'Destroy', s, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Редактировать', edit_speciality_path(s) %></td>
+    <td><%= link_to 'Удалить', s, :confirm => 'Удалить запись?', :method => :delete %></td>
 
   </tr>
 <% end %>

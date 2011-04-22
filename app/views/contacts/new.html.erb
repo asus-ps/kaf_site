@@ -5,28 +5,31 @@
 <% form_for(@contact) do |c| %>
   <%= c.error_messages %>
 
-<p>
-  <b>Адрес:</b>
-  <%= c.text_field :address %>
-</p>
+<table>
+  <tr>
+    <td>Адрес:</td>
+    <td><%= c.text_field :address %></td>
+  </tr>
+  <tr>
+    <td>Телефоны:</td>
+    <td><%= c.text_field :phones %></td>
+  </tr>
+  <tr>
+    <td>E-mail:</td>
+    <td><%= c.text_field :email %></td>
+  </tr>
+  <tr>
+    <td>Сайт:</td>
+    <td><%= c.text_field :url %></td>
+  </tr>
+  <tr>
+    <td>Изображение:</td>
+    <td><%= c.text_field :image %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right"><%= c.submit 'Записать' %></td>
+  </tr>
+</table>
 
-<p>
-  <b>Телефоны:</b>
-  <%= c.text_field :phones %>
-</p>
-<p>
-  <b>E-mail:</b>
-  <%= c.text_field :email %>
-</p>
-<p>
-  <b>Сайт:</b>
-  <%= c.text_field :url %>
-</p>
-<p>
-  <b>Изображение:</b>
-  <%= c.text_field :image %>
-</p>
-<p>
-  <%= c.submit 'Записать' %>
-</p>
 <% end %>

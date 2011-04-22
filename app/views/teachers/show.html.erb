@@ -1,25 +1,49 @@
 <h1>Teachers#show</h1>
 <p>Find me in app/views/teachers/show.html.erb</p>
 
-<br>Фото</br>
-    <br><%=h @teacher.person.photo %></br>
-Фамилия:<br>
-    <%=h @teacher.person.last_name %><br>
-Имя:<br>
-    <br><%=h @teacher.person.first_name %></br>
-<br>Отчество:</br>
-    <br><%=h @teacher.person.patronymic_name %></br>
-<br>Учёная степень:</br>
-    <br><%=h @teacher.degree.name %></br>
-<br>Должность:</br>
-    <br><%=h @teacher.position.name %></br>
-<br>День рождения:</br>
-    <br><%=h @teacher.person.birthday %></br>
-<br>Телефон:</br>
-    <br><%=h @teacher.person.phone %></br>
-<br>Email</br>
-    <br><%=h @teacher.person.email %></br>
-<br>Информация:</br>
-    <br><%=h @teacher.person.info %></br>
-<%= link_to 'Edit', edit_teacher_path(@teacher) %>
+<table>
+    <tr>
+      <td>Фамилия:</td>
+      <td><%=h @teacher.person.last_name %></td>
+    </tr>
+    <tr>
+      <td>Имя:</td>
+      <td><%=h @teacher.person.first_name %></td>
+    </tr>
+    <tr>
+      <td>Отчество:</td>
+      <td><%=h @teacher.person.patronymic_name %></td>
+    </tr>
+    <tr>
+      <td>День рождения:</td>
+      <td><%=h @teacher.person.birthday %></td>
+    </tr>
+    <tr>
+      <td>Телефон:</td>
+      <td><%=h @teacher.person.phone %></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><%=h @teacher.person.email %></td>
+    </tr>
+    <tr>
+      <td>Учёная степень:</td>
+      <td><%=h @teacher.degree.name %></td>
+    </tr>
+    <tr>
+      <td>Должность:</td>
+      <td><%=h @teacher.position.name %></td>
+    </tr>
+    <tr>
+      <td>Фото</td>
+      <td><%=h @teacher.person.photo %></td>
+    </tr>
+    <tr>
+      <td>Информация:</td>
+      <td><%=h @teacher.person.info %></td>
+    </tr>
+
+</table>
+
+<%= link_to 'Редактировать', edit_teacher_path(@teacher) %> |
 <%= link_to 'Назад', teachers_path %>

@@ -3,18 +3,20 @@
 <p>
   <% form_for (@newlink) do |f| %>
     <% f.error_messages %>
-<p>
-  <%= f.text_field :url %>
-  <br>
-  <%= f.text_area :description %>
-
-    <%= f.submit 'Update' %>
-
-
-</p>
+<table>
+  <tr>
+    <td>Ссылка</td>
+    <td>Описание</td>
+  </tr>
+  <tr>
+    <td><%= f.text_field :url %></td>
+    <td><%= f.text_area :description %></td>
+    <td><%= f.submit 'Изменить' %></td>
+  </tr>
+</table>
   <% end %>
 </p>
-
+<td><%= link_to 'Назад', links_path %></td>
 <p>
 <table>
   <tr>
@@ -26,8 +28,10 @@
     <tr>
       <td><%=h kfl.url %> </td>
       <td><%=h kfl.description %> </td>
-      <td><%= link_to 'Edit', edit_link_path(kfl) %></td>
+      <td><%= link_to 'Редактировать', edit_link_path(kfl) %></td>
+      <td><%= link_to 'Удалить', kfl, :confirm => 'Удалить запись?', :method => :delete %></td>
     </tr>
   <%  end %>
 </table>
 </p>
+

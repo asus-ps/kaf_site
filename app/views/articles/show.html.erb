@@ -12,7 +12,7 @@
 
 <p>
   <b>Дата публикации:</b>
-  <%=h @article.published_at %>
+  <%=h @article.created_at %>
 </p>
 
 <p>
@@ -27,17 +27,34 @@
 <%= link_to 'Изменить', edit_article_path(@article) %> |
 <%= link_to 'Назад', articles_path %>
 <p>
-<% for comment in @article.comments %>
-<div>
-  <%= comment.author_name %><br>
-<%= comment.author_email %><br>
-<%= comment.body %>
-</div>
+
+  <% for comment in @article.comments %>
+  <table>
+  <tr>
+      <td><%= comment.author_name %></td>
+      <td><%= comment.author_email %></td>
+      <td><%= comment.created_at %></td>
+  </tr>
+  <tr>
+    <td colspan="3"><%= comment.body %></td>
+  </tr>
+  
+</table>
 <% end %>
 </p>
-<%= form_tag :action => "comment", :id => @article , :published_at => Time.now %><br>
-  <%= text_field "comment", "author_name" %><br>
-  <%= text_field "comment", "author_email" %><br>
-  <%= text_area "comment", "body" %>
-<%= submit_tag "Comment!"  %>
+<%= form_tag :action => "comment", :id => @article %><br>
+<table>
+  <tr>
+    <td>Автор:</td>
+    <td><%= text_field "comment", "author_name" %></td>
+    <td>Email:</td>
+    <td><%= text_field "comment", "author_email" %></td>
+  </tr>
+  <tr>
+    <td colspan="4"><%= text_area "comment", "body" %></td>
+  </tr>
+  <tr>
+    <td colspan="4" align="right"><%= submit_tag "Comment!"  %></td>
+  </tr>
+</table>
 </form>

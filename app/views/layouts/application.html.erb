@@ -1,6 +1,13 @@
-<h1>Привет, Администратор!</h1>
-<p>Find me in app/views/admin/index.html.erb</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Hello world: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
 <%= link_to 'Контакты', contacts_path %>
 <%= link_to 'Полезные ссылки', links_path %>
 <%= link_to 'Новости', articles_path %>
@@ -14,3 +21,9 @@
 <%= link_to 'Кто что ведёт', disciplines_teachers_url %>
 <%= link_to 'Дипломы', diplomas_url %>
 <%= link_to 'Людишки', people_url %>
+<p style="color: green"><%= notice %></p>
+
+<%= yield %>
+
+</body>
+</html>

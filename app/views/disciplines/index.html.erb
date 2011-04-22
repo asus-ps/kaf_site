@@ -25,8 +25,8 @@
     <tr>
       <td><%=h d.id %> </td>
       <td><%=h d.name %> </td>
-      <td><%= link_to 'Edit', edit_discipline_path(d) %></td>
-      <td><%= link_to 'Destroy', d, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to 'Редактировать', edit_discipline_path(d) %></td>
+      <td><%= link_to 'Удалить', d, :confirm => 'Удалить запись?', :method => :delete %></td>
     </tr>
   <%  end %>
 </table>

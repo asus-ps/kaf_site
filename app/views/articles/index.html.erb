@@ -14,12 +14,12 @@
   <tr>
     <td><%=h art.title %></td>
     <td><%=h art.body %></td>
-    <td><%=h art.published_at %></td>
+    <td><%=h art.created_at %></td>
     <td><%=h art.priority %></td>
     <td><%=h art.image %></td>
-    <td><%= link_to 'Show', art %></td>
-    <td><%= link_to 'Edit', edit_article_path(art) %></td>
-    <td><%= link_to 'Destroy', art, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Показать', art %></td>
+    <td><%= link_to 'Редактировать', edit_article_path(art) %></td>
+    <td><%= link_to 'Удалить', art, :confirm => 'Удалить запись?', :method => :delete %></td>
 
   </tr>
 <% end %>

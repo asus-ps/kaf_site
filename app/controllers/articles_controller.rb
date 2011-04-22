@@ -29,8 +29,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(params[:article])
-    @article.published_at = Time.now
+    @article = Article.new(params[:article])    
     respond_to do |format|
       if @article.save
         format.html { redirect_to(@article, :notice => 'Новость успешно добавлена!') }

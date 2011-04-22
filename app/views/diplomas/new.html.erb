@@ -2,31 +2,41 @@
 <p>Find me in app/views/diplomas/new.html.erb</p>
 <% form_for @diploma do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    Тема диплома:
-    <%=h f.text_field :name %>
-    <br>
-    Год защиты:
-     <!--%=h f.date_select(:protection_year, :start_year => Time.now.year, :end_year => (Time.now.year - 30), :discard_day => true, :discard_month => true, :include_blank => false) %-->
-     <%=h f.select(:protection_year,  (Time.now.year - 30)..Time.now.year , :prompt => Time.now.year.to_s ) %>
-    
-    <br>
-    Выполнил
-    <%=h f.select(:student_id, options_for_select( Student.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name} , #{p.speciality.short_name}", p.person.id]})) %>
-    <br>
-
-    Руководитель
-    <%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]})) %>
-    <br>
-
-    Аннотация:
-    <%=h f.text_area :summary %>
-    <br></br>
-    <br>
-  </p>
+<table>
+  <tr>
+    <td>Тема диплома:</td>
+    <td><%=h f.text_field :name %></td>
+  </tr>
   
-  <p>
-    <%= f.submit 'Добавить' %>
-  </p>
+  <tr>
+    <td>Год защиты:</td>
+    <% i = Time.now.year  %>
+    <% k = 0 %>
+    <% years = Array.new %>
+    <% while k!=30 %>
+    <% years[k] = i-k %>
+    <% k = k + 1 %>
+    <% end %>
+    <td><%=h f.select(:protection_year,  years) %></td>
+  </tr>
+    
+  <tr>
+    <td>Выполнил</td>
+    <td><%=h f.select(:student_id, options_for_select( Student.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name} , #{p.speciality.short_name}", p.person.id]})) %></td>
+  </tr>
+
+  <tr>
+    <td>Руководитель</td>
+    <td><%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]})) %></td>
+  </tr>
+
+  <tr>
+    <td>Аннотация:</td>
+      <td><%=h f.text_area :summary %></td>
+    </tr>
+  <tr>
+    <td></td>
+    <td align="right"><%= f.submit 'Добавить' %></td>
+  </tr>
+</table>
 <% end %>
