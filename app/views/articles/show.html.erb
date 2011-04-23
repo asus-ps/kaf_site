@@ -12,7 +12,7 @@
 
 <p>
   <b>Дата публикации:</b>
-  <%=h @article.created_at %>
+  <%=h @article.created_at.to_s %>
 </p>
 
 <p>
@@ -28,15 +28,18 @@
 <%= link_to 'Назад', articles_path %>
 <p>
 
-  <% for comment in @article.comments %>
+  <% for comment in @article.comments.reverse %>
   <table>
   <tr>
       <td><%= comment.author_name %></td>
       <td><%= comment.author_email %></td>
-      <td><%= comment.created_at %></td>
+      <td><%= comment.created_at.to_s %></td>
   </tr>
   <tr>
     <td colspan="3"><%= comment.body %></td>
+  </tr>
+  <tr>
+    <td><%= link_to 'Удалить',  comment, :confirm => 'Удалить запись?', :action => "deleteComment"  %></td>
   </tr>
   
 </table>

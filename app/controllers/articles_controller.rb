@@ -76,4 +76,13 @@ class ArticlesController < ApplicationController
     redirect_to :action => "show", :id => params[:id]
   end
 
+  def deleteComment
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    respond_to do |format|
+      format.html { redirect_to(articles_url) }
+      format.xml  { head :ok }
+    end
+  end
+
 end

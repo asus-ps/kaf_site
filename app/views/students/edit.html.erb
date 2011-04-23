@@ -37,7 +37,7 @@
 
   <tr>
     <td>Специальность:</td>
-    <td><%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name",selected_value=@student.speciality.id)) %></td>
+    <td><%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name",selected_value=@student.speciality.id)) %> <%= link_to 'New', new_speciality_path %></td>
   </tr>
   <tr>
     <td>Год поступления:</td>

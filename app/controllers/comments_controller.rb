@@ -62,12 +62,9 @@ class CommentsController < ApplicationController
   # DELETE /kafnews/1
   # DELETE /kafnews/1.xml
   def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
 
     respond_to do |format|
-      format.html { redirect_to(comments_url) }
-      format.xml  { head :ok }
+      format.html
     end
   end
 

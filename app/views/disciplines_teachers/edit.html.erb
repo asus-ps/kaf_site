@@ -1,11 +1,11 @@
 <h1>DisciplinesTeachers#edit</h1>
 <p>Find me in app/views/disciplines_teachers/edit.html.erb</p>
 <p>
-  <% form_for (@dt) do |f| %>
+  <% form_for (@newdt) do |f| %>
     <% f.error_messages %>
 <p>
-  <%=h f.select(:discipline_id, options_for_select( Discipline.all.collect { |p| [p.name, p.id]}, selected_value=@dt.discipline_id)) %>
-  <%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]},selected_value=@dt.teacher.id)) %>
+  <%=h f.select(:discipline_id, options_for_select( Discipline.all.collect { |p| [p.name, p.id]}, selected_value=@newdt.discipline_id)) %>
+  <%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]},selected_value=@newdt.teacher.id)) %>
 
   <%= f.submit 'Изменить' %>
 </p>

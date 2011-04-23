@@ -5,6 +5,7 @@
   <% form_for (@newdiscipline) do |f| %>
     <% f.error_messages %>
 <p>
+  Название дисциплины:
   <%= f.text_field :name %>
 
   <%= f.submit 'Добавить' %>

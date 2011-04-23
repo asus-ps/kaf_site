@@ -10,7 +10,7 @@
     <th>Изображение</th>
   </tr>
 
-<% @articles.each do |art| %>
+<% @articles.reverse.each do |art| %>
   <tr>
     <td><%=h art.title %></td>
     <td><%=h art.body %></td>

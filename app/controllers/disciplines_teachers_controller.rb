@@ -12,12 +12,12 @@ class DisciplinesTeachersController < ApplicationController
 
   def edit
     @dts= DisciplinesTeacher.all
-    @dt = DisciplinesTeacher.find(params[:id])
+    @newdt = DisciplinesTeacher.find(params[:id])
     @disciplines = Discipline.all
     @teachers = Teacher.all( :include => :person )
     respond_to do |format|
       format.html
-      format.xml { render :xml => @dt }
+      format.xml { render :xml => @newdt }
     end
   end
 
@@ -41,15 +41,15 @@ class DisciplinesTeachersController < ApplicationController
 
 
   def update
-    @dt = DisciplinesTeacher.find(params[:id])
+    @disciplines_teacher = DisciplinesTeacher.find(params[:id])
 
     respond_to do |format|
-      if @dt.update_attributes(params[:dt])
+      if @disciplines_teacher.update_attributes(params[:disciplines_teacher])
         format.html { redirect_to(disciplines_teachers_path, :notice => 'URL was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "index" }
-        format.xml  { render :xml => @dt.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @disciplines_teacher.errors, :status => :unprocessable_entity }
       end
     end
   end

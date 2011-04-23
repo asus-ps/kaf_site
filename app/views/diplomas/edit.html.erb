@@ -23,12 +23,12 @@
 
   <tr>
     <td>Выполнил</td>
-    <td><%=h f.select(:student_id, options_for_select( Student.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name} , #{p.speciality.short_name}", p.person.id]}, selected_value=@diploma.student_id)) %></td>
+    <td><%=h f.select(:student_id, options_for_select( Student.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name} , #{p.speciality.short_name}", p.person.id]}, selected_value=@diploma.student_id)) %> <%= link_to 'New', new_student_path %></td>
   </tr>
 
   <tr>
     <td>Руководитель</td>
-    <td><%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]}, selected_value=@diploma.teacher_id)) %></td>
+    <td><%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]}, selected_value=@diploma.teacher_id)) %> <%= link_to 'New', new_teacher_path %></td>
   </tr>
 
   <tr>

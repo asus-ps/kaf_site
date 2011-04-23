@@ -7,16 +7,13 @@
 <table>
   <tr>
     <td>Учёная степень:</td>
-    <td><%= f.text_field :name %></td>
-  </tr>
-  <tr>
     <td>Сокращение:</td>
-    <td><%= f.text_field :short_name %></td>
   </tr>
   <tr>
-    <td></td>
-    <td align="right"><%= f.submit 'Добавить' %></td>
-  </tr>
+    <td><%= f.text_field :name %></td>
+    <td><%= f.text_field :short_name %></td>
+    <td align="left"><%= f.submit 'Добавить' %></td>
+  </tr>  
 </table>
 </p>
   <% end %>
