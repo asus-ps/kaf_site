@@ -34,7 +34,7 @@ class Manage::CommentsController < Manage::BaseController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to(@comment, :notice => 'Комментарий успешно добавлен!') }
+        format.html { redirect_to(manage_comment_path(@comment), :notice => 'Комментарий успешно добавлен!') }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
       else
         format.html { render :action => "new" }
@@ -50,7 +50,7 @@ class Manage::CommentsController < Manage::BaseController
 
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
-        format.html { redirect_to(@comment, :notice => 'Комментарий успешно изменен') }
+        format.html { redirect_to(manage_comment_path(@comment), :notice => 'Комментарий успешно изменен') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

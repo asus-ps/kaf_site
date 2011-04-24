@@ -2,7 +2,7 @@
 <p>Find me in app/views/positions/index.html.erb</p>
 
 <p>
-  <% form_for (@newposition) do |f| %>
+  <% form_for ([:manage,@newposition]) do |f| %>
     <% f.error_messages %>
 <p>
 <table>

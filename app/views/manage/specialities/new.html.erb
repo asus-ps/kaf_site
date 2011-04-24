@@ -1,7 +1,7 @@
 <h1>Specialities#new</h1>
 <p>Find me in app/views/specialities/new.html.erb</p>
 
-<% form_for(@speciality) do |f| %>
+<% form_for([:manage,@speciality]) do |f| %>
   <%= f.error_messages %>
 <table>
   <tr>
@@ -18,7 +18,7 @@
   </tr>
   <tr>
     <td>Количество лет:</td>
-    <td><%= f.select(:count_years, 1..6,:prompt => '4') %></td>
+    <td><%= f.select(:count_years, 1..6, :default => "4") %></td>
   </tr>
   <tr>
     <td>По диплому:</td>

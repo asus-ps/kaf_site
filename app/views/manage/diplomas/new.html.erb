@@ -1,6 +1,6 @@
 <h1>Diplomas#new</h1>
 <p>Find me in app/views/diplomas/new.html.erb</p>
-<% form_for @diploma do |f| %>
+<% form_for ([:manage,@diploma]) do |f| %>
   <%= f.error_messages %>
 <table>
   <tr>
@@ -22,12 +22,12 @@
     
   <tr>
     <td>Выполнил</td>
-    <td><%=h f.select(:student_id, options_for_select( Student.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name} , #{p.speciality.short_name}", p.person.id]})) %> <%= link_to 'New', new_student_path %></td>
+    <td><%=h f.select(:student_id, options_for_select( Student.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name} , #{p.speciality.short_name}", p.person.id]})) %> <%= link_to 'New', new_manage_student_path %></td>
   </tr>
 
   <tr>
     <td>Руководитель</td>
-    <td><%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]})) %> <%= link_to 'New', new_teacher_path %></td>
+    <td><%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]})) %> <%= link_to 'New', new_manage_teacher_path %></td>
   </tr>
 
   <tr>

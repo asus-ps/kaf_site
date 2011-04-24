@@ -26,7 +26,7 @@ class Manage::DisciplinesController < Manage::BaseController
 
     respond_to do |format|
       if @discipline.save
-        format.html { redirect_to(disciplines_path, :notice => 'Учёная степень была успешно создана') }
+        format.html { redirect_to(manage_disciplines_path, :notice => 'Учёная степень была успешно создана') }
         format.xml  { render :xml => @discipline, :status => :created, :location => @discipline }
       else
         format.html { render :action => "index" }
@@ -40,7 +40,7 @@ class Manage::DisciplinesController < Manage::BaseController
 
     respond_to do |format|
       if @discipline.update_attributes(params[:discipline])
-        format.html { redirect_to(disciplines_path, :notice => 'Учёная степень была успешно изменена') }
+        format.html { redirect_to(manage_disciplines_path, :notice => 'Учёная степень была успешно изменена') }
         format.xml  { head :ok }
       else
         format.html { render :action => "index" }
@@ -54,7 +54,7 @@ class Manage::DisciplinesController < Manage::BaseController
     @discipline.destroy
 
     respond_to do |format|
-      format.html { redirect_to(disciplines_url) }
+      format.html { redirect_to(manage_disciplines_url) }
       format.xml  { head :ok }
     end
   end

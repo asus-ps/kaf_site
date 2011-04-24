@@ -1,7 +1,7 @@
 <h1>Specialities#edit</h1>
 <p>Find me in app/views/specialities/edit.html.erb</p>
 
-<% form_for(@speciality) do |f| %>
+<% form_for([:manage,@speciality]) do |f| %>
   <%= f.error_messages %>
 <table>
   <tr>

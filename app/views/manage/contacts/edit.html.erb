@@ -1,7 +1,7 @@
 <h1>Изменение контактной информации</h1>
 <p>Find me in app/views/contacts/edit.html.erb</p>
 
-<% form_for(@contact) do |c| %>
+<% form_for([:manage,@contact]) do |c| %>
   <%= c.error_messages %>
 
 <table>

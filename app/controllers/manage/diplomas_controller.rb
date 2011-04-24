@@ -41,7 +41,7 @@ class Manage::DiplomasController < Manage::BaseController
     @diploma = Diploma.new(params[:diploma])
     respond_to do |format|
       if @diploma.save
-        format.html { redirect_to(diplomas_path, :notice => 'Учёная степень была успешно создана') }
+        format.html { redirect_to(manage_diplomas_path, :notice => 'Учёная степень была успешно создана') }
         format.xml  { render :xml => @diploma, :status => :created, :location => @diploma }
       else
         format.html { render :action => "index" }
@@ -52,7 +52,7 @@ class Manage::DiplomasController < Manage::BaseController
 
   def update
     @diploma = Diploma.find(params[:id])
-    @diploma.update_attributes(params[:diploma]) ? redirect_to(diploma_path(@diploma)) : render(:action => :edit)
+    @diploma.update_attributes(params[:diploma]) ? redirect_to(manage_diploma_path(@diploma)) : render(:action => :edit)
   end
 
 
@@ -60,7 +60,7 @@ class Manage::DiplomasController < Manage::BaseController
     @diploma = Diploma.find(params[:id])
     @diploma.destroy
     respond_to do |format|
-      format.html { redirect_to(diplomas_url) }
+      format.html { redirect_to(manage_diplomas_url) }
       format.xml  { head :ok }
     end
   end

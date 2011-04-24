@@ -8,7 +8,7 @@ class Manage::ContactsController < Manage::BaseController
       end
     else
       respond_to do |format|
-        format.html { redirect_to(new_contact_path) }
+        format.html { redirect_to(new_manage_contact_path) }
         format.xml { head :ok }
       end
     end
@@ -19,7 +19,7 @@ class Manage::ContactsController < Manage::BaseController
       @contact = Contact.find(1)
     else
       respond_to do |format|
-        format.html {redirect_to(new_contact_path) }
+        format.html {redirect_to(new_manage_contact_path) }
         format.xml {head :ok}
       end
     end
@@ -34,7 +34,7 @@ class Manage::ContactsController < Manage::BaseController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to(contacts_path, :notice => 'Contacts was successfully created.') }
+        format.html { redirect_to(manage_contacts_path, :notice => 'Contacts was successfully created.') }
         format.xml  { render :xml => @contact, :status => :created, :location => @contact }
       else
         format.html { render :action => "new" }
@@ -49,7 +49,7 @@ class Manage::ContactsController < Manage::BaseController
 
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
-        format.html { redirect_to(contacts_path, :notice => 'Contacts was successfully updated.') }
+        format.html { redirect_to(manage_contacts_path, :notice => 'Contacts was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

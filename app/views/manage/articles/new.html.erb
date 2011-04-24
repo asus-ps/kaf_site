@@ -1,7 +1,7 @@
 <h1>Добавление новости</h1>
 <p>Find me in app/views/articles/new.html.erb</p>
 
-<% form_for(@article) do |f| %>
+<% form_for([:manage,@article]) do |f| %>
   <%= f.error_messages %>
 
   <p>

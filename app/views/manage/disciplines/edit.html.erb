@@ -2,7 +2,7 @@
 <p>Find me in app/views/disciplines/edit.html.erb</p>
 
 <p>
-  <% form_for (@newdiscipline) do |f| %>
+  <% form_for ([:manage,@newdiscipline]) do |f| %>
     <% f.error_messages %>
 <p>
   Название дисциплины:
@@ -11,7 +11,7 @@
 </p>
   <% end %>
 </p>
-<%= link_to 'Назад', disciplines_path %>
+<%= link_to 'Назад', manage_disciplines_path %>
 <p>
 <table>
   <tr>

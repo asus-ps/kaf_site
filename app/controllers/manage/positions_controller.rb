@@ -26,7 +26,7 @@ class Manage::PositionsController < Manage::BaseController
 
     respond_to do |format|
       if @position.save
-        format.html { redirect_to(positions_path, :notice => 'Учёная степень была успешно создана') }
+        format.html { redirect_to(manage_positions_path, :notice => 'Учёная степень была успешно создана') }
         format.xml  { render :xml => @position, :status => :created, :location => @position }
       else
         format.html { render :action => "index" }
@@ -40,7 +40,7 @@ class Manage::PositionsController < Manage::BaseController
 
     respond_to do |format|
       if @position.update_attributes(params[:position])
-        format.html { redirect_to(positions_path, :notice => 'Учёная степень была успешно изменена') }
+        format.html { redirect_to(manage_positions_path, :notice => 'Учёная степень была успешно изменена') }
         format.xml  { head :ok }
       else
         format.html { render :action => "index" }
@@ -54,7 +54,7 @@ class Manage::PositionsController < Manage::BaseController
     @position.destroy
 
     respond_to do |format|
-      format.html { redirect_to(positions_url) }
+      format.html { redirect_to(manage_positions_url) }
       format.xml  { head :ok }
     end
   end

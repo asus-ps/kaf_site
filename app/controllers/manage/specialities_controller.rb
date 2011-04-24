@@ -28,8 +28,8 @@ class Manage::SpecialitiesController < Manage::BaseController
 
     respond_to do |format|
       if @speciality.save
-        format.html { redirect_to(specialities_path, :notice => 'Новость успешно добавлена!') }
-        format.xml  { render :xml => specialities_path, :status => :created, :location => @speciality }
+        format.html { redirect_to(manage_specialities_path, :notice => 'Новость успешно добавлена!') }
+        format.xml  { render :xml => manage_specialities_path, :status => :created, :location => @speciality }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @speciality.errors, :status => :unprocessable_entity }
@@ -44,7 +44,7 @@ class Manage::SpecialitiesController < Manage::BaseController
 
     respond_to do |format|
       if @speciality.update_attributes(params[:speciality])
-        format.html { redirect_to(specialities_path, :notice => 'Новость успешно изменена') }
+        format.html { redirect_to(manage_specialities_path, :notice => 'Новость успешно изменена') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -60,7 +60,7 @@ class Manage::SpecialitiesController < Manage::BaseController
     @speciality.destroy
 
     respond_to do |format|
-      format.html { redirect_to(specialities_url) }
+      format.html { redirect_to(manage_specialities_url) }
       format.xml  { head :ok }
     end
   end

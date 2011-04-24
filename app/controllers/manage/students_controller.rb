@@ -8,9 +8,9 @@ class Manage::StudentsController < Manage::BaseController
   end
 
   def new
-    @manage_student = Student.new
-    @manage_student.build_person
-    @manage_specialities = Speciality.all
+    @student = Student.new
+    @student.build_person
+    @specialities = Speciality.all
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @student }
@@ -38,13 +38,13 @@ class Manage::StudentsController < Manage::BaseController
   def create
     @student = Student.new(params[:student])
     @student.person.nature = 's'
-    @student.save ? redirect_to(student_path(@student)) : render(:action => "new")  
+    @student.save ? redirect_to(manage_student_path(@student)) : render(:action => "new")
   end
 
   def update
     @student = Student.find(params[:id])
     @student.person.nature = 's'
-    @student.update_attributes(params[:student]) ? redirect_to(student_path(@student)) : render(:action => :edit)
+    @student.update_attributes(params[:student]) ? redirect_to(manage_student_path(@student)) : render(:action => :edit)
   end
 
   def destroy
@@ -52,7 +52,7 @@ class Manage::StudentsController < Manage::BaseController
     @student.destroy
 
     respond_to do |format|
-      format.html { redirect_to(students_url) }
+      format.html { redirect_to(manage_students_url) }
       format.xml  { head :ok }
     end
   end

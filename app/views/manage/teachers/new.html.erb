@@ -1,7 +1,7 @@
 <h1>Teachers#new</h1>
 <p>Find me in app/views/teachers/new.html.erb</p>
 
-<% form_for @teacher do |f| %>
+<% form_for ([:manage,@teacher]) do |f| %>
   <%= f.error_messages %>
 <table>
   <% f.fields_for :person do |per| %>
@@ -34,11 +34,11 @@
 
   <tr>
     <td>Учёная степень:</td>
-    <td><%=h f.select(:degree_id, options_from_collection_for_select(@degrees, "id", "name")) %> <%= link_to 'New', degrees_path %></td>
+    <td><%=h f.select(:degree_id, options_from_collection_for_select(@degrees, "id", "name")) %> <%= link_to 'New', manage_degrees_path %></td>
   </tr>
   <tr>
     <td>Должность:</td>
-    <td><%=h f.select(:position_id, options_from_collection_for_select(@positions, "id", "name")) %> <%= link_to 'New', positions_path %></td>
+    <td><%=h f.select(:position_id, options_from_collection_for_select(@positions, "id", "name")) %> <%= link_to 'New', manage_positions_path %></td>
   </tr>
 
   <% f.fields_for :person do |per| %>

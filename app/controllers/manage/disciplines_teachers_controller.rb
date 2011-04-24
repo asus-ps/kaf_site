@@ -30,7 +30,7 @@ class Manage::DisciplinesTeachersController < Manage::BaseController
 
     respond_to do |format|
       if @disciplines_teacher.save
-        format.html { redirect_to(disciplines_teachers_path, :notice => 'Учёная степень была успешно создана') }
+        format.html { redirect_to(manage_disciplines_teachers_path, :notice => 'Учёная степень была успешно создана') }
         format.xml  { render :xml => @disciplines_teacher, :status => :created, :location => @disciplines_teacher }
       else
         format.html { render :action => "index" }
@@ -45,7 +45,7 @@ class Manage::DisciplinesTeachersController < Manage::BaseController
 
     respond_to do |format|
       if @disciplines_teacher.update_attributes(params[:disciplines_teacher])
-        format.html { redirect_to(disciplines_teachers_path, :notice => 'URL was successfully updated.') }
+        format.html { redirect_to(manage_disciplines_teachers_path, :notice => 'URL was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "index" }
@@ -59,7 +59,7 @@ class Manage::DisciplinesTeachersController < Manage::BaseController
     @dt.destroy
 
     respond_to do |format|
-      format.html { redirect_to(disciplines_teachers_url) }
+      format.html { redirect_to(manage_disciplines_teachers_url) }
       format.xml  { head :ok }
     end
   end

@@ -1,6 +1,6 @@
 <h1>Students#edit</h1>
 <p>Find me in app/views/students/edit.html.erb</p>
-<% form_for @student do |f| %>
+<% form_for ([:manage,@student]) do |f| %>
   <%= f.error_messages %>
 
 <table>
@@ -37,7 +37,7 @@
 
   <tr>
     <td>Специальность:</td>
-    <td><%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name",selected_value=@student.speciality.id)) %> <%= link_to 'New', new_speciality_path %></td>
+    <td><%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name",selected_value=@student.speciality.id)) %> <%= link_to 'New', new_manage_speciality_path %></td>
   </tr>
   <tr>
     <td>Год поступления:</td>

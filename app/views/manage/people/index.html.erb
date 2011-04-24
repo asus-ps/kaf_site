@@ -22,7 +22,7 @@
     <td><%=h p.nature=='t' ? 'Преподаватель' : 'Студент' %></td>
     <td><%=h p.phone %></td>
     <td><%=h p.email %></td>
-    <td><%= link_to 'Show', p %></td>
+    <td><%= link_to 'Show', manage_teacher_path(p) %></td>
     <td><%=h p.nature=='t' ? (link_to 'Edit', edit_manage_teacher_path(p.id)) : (link_to 'Edit', edit_manage_student_path(p.id))  %></td>
       <td><%= link_to 'Destroy', manage_teacher_path(p), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

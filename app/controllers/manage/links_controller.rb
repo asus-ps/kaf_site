@@ -25,7 +25,7 @@ class Manage::LinksController < Manage::BaseController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to(links_path, :notice => 'URL was successfully created.') }
+        format.html { redirect_to(manage_links_path, :notice => 'URL was successfully created.') }
         format.xml  { render :xml => @link, :status => :created, :location => @link }
       else
         format.html { render :action => "index" }
@@ -39,7 +39,7 @@ class Manage::LinksController < Manage::BaseController
 
     respond_to do |format|
       if @link.update_attributes(params[:link])
-        format.html { redirect_to(links_path, :notice => 'URL was successfully updated.') }
+        format.html { redirect_to(manage_links_path, :notice => 'URL was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "index" }
@@ -53,7 +53,7 @@ class Manage::LinksController < Manage::BaseController
     @link.destroy
 
     respond_to do |format|
-      format.html { redirect_to(links_url) }
+      format.html { redirect_to(manage_links_url) }
       format.xml  { head :ok }
     end
   end

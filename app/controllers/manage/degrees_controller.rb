@@ -26,7 +26,7 @@ class Manage::DegreesController < Manage::BaseController
 
     respond_to do |format|
       if @degree.save
-        format.html { redirect_to(degrees_path, :notice => 'Учёная степень была успешно создана') }
+        format.html { redirect_to(manage_degrees_path, :notice => 'Учёная степень была успешно создана') }
         format.xml  { render :xml => @degree, :status => :created, :location => @degree }
       else
         format.html { render :action => "index" }
@@ -40,7 +40,7 @@ class Manage::DegreesController < Manage::BaseController
 
     respond_to do |format|
       if @degree.update_attributes(params[:degree])
-        format.html { redirect_to(degrees_path, :notice => 'Учёная степень была успешно изменена') }
+        format.html { redirect_to(manage_degrees_path, :notice => 'Учёная степень была успешно изменена') }
         format.xml  { head :ok }
       else
         format.html { render :action => "index" }
@@ -54,7 +54,7 @@ class Manage::DegreesController < Manage::BaseController
     @degree.destroy
 
     respond_to do |format|
-      format.html { redirect_to(degrees_url) }
+      format.html { redirect_to(manage_degrees_url) }
       format.xml  { head :ok }
     end
   end

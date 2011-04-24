@@ -8,7 +8,7 @@ class Manage::HistoriesController < Manage::BaseController
       end
     else
       respond_to do |format|
-        format.html { redirect_to(new_history_path) }
+        format.html { redirect_to(new_manage_history_path) }
         format.xml { head :ok }
       end
     end
@@ -19,7 +19,7 @@ class Manage::HistoriesController < Manage::BaseController
       @historie = Historie.find(1)
     else
       respond_to do |format|
-        format.html {redirect_to(new_history_path) }
+        format.html {redirect_to(new_manage_history_path) }
         format.xml {head :ok}
       end
     end
@@ -35,7 +35,7 @@ class Manage::HistoriesController < Manage::BaseController
 
     respond_to do |format|
       if @historie.save
-        format.html { redirect_to(histories_path, :notice => 'История кафедры успешно создана') }
+        format.html { redirect_to(manage_histories_path, :notice => 'История кафедры успешно создана') }
         format.xml  { render :xml => @historie, :status => :created, :location => @historie }
       else
         format.html { render :action => "new" }
@@ -50,7 +50,7 @@ class Manage::HistoriesController < Manage::BaseController
 
     respond_to do |format|
       if @historie.update_attributes(params[:historie])
-        format.html { redirect_to(histories_path, :notice => 'История кафедры успешно обновлена') }
+        format.html { redirect_to(manage_histories_path, :notice => 'История кафедры успешно обновлена') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

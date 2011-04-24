@@ -1,7 +1,7 @@
 <h1>DisciplinesTeachers#edit</h1>
 <p>Find me in app/views/disciplines_teachers/edit.html.erb</p>
 <p>
-  <% form_for (@newdt) do |f| %>
+  <% form_for ([:manage,@newdt]) do |f| %>
     <% f.error_messages %>
 <p>
   <%=h f.select(:discipline_id, options_for_select( Discipline.all.collect { |p| [p.name, p.id]}, selected_value=@newdt.discipline_id)) %>

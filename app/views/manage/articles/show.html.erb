@@ -45,7 +45,7 @@
 </table>
 <% end %>
 </p>
-<%= form_tag :action => "comment", :id => @article %><br>
+<%= form_tag :action => "comment", :id => ([:manage,@article]) %><br>
 <table>
   <tr>
     <td>Автор:</td>
