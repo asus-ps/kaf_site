@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Hello world: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+<%= link_to 'Контакты', manage_contacts_path %>
+<%= link_to 'Полезные ссылки', manage_links_path %>
+<%= link_to 'Новости', manage_articles_path %>
+<%= link_to 'История', manage_histories_path %>
+<%= link_to 'Студенты', manage_students_path %>
+<%= link_to 'Преподаватели', manage_teachers_path %>
+<%= link_to 'Учёные степени', manage_degrees_url %>
+<%= link_to 'Должности', manage_positions_url %>
+<%= link_to 'Дисциплины', manage_disciplines_url %>
+<%= link_to 'Специальности', manage_specialities_url %>
+<%= link_to 'Кто что ведёт', manage_disciplines_teachers_url %>
+<%= link_to 'Дипломы', manage_diplomas_url %>
+<%= link_to 'Людишки', manage_people_url %>
+<p style="color: green"><%= notice %></p>
+
+<%= yield %>
+
+</body>
+</html>

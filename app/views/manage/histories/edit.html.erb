@@ -1,0 +1,26 @@
+<h1>Histories#edit</h1>
+<p>Find me in app/views/histories/edit.html.erb</p>
+
+<% form_for(@historie) do |c| %>
+  <%= c.error_messages %>
+
+<table>
+  <tr>
+    <td>История:</td>
+  </tr>
+  <tr>
+    <td><%= c.text_area :body %></td>
+  </tr>
+  <tr>
+    <td>Изображение:</td>
+  </tr>
+  <tr>
+    <td><%= c.text_field :image %></td>
+  </tr>
+  <tr>
+    <td align="right"><%= c.submit 'Изменить' %></td>
+  </tr>
+</table>
+<% end %>
+
+<%= link_to 'Назад', manage_histories_path  %>

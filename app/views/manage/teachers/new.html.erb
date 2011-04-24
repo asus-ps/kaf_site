@@ -1,0 +1,61 @@
+<h1>Teachers#new</h1>
+<p>Find me in app/views/teachers/new.html.erb</p>
+
+<% form_for @teacher do |f| %>
+  <%= f.error_messages %>
+<table>
+  <% f.fields_for :person do |per| %>
+  <p>
+  <tr>
+    <td>Фамилия</td>
+    <td><%=h per.text_field :last_name %></td>
+  </tr>
+  <tr>
+    <td>Имя</td>
+    <td><%=h per.text_field :first_name %></td>
+  </tr>
+  <tr>
+    <td>Отчество</td>
+    <td><%=h per.text_field :patronymic_name %></td>
+  </tr>
+  <tr>
+    <td>День рождения:</td>
+    <td><%=h per.date_select(:birthday,:start_year => Date.today.year, :end_year => (Date.today.year - 80)) %></td>
+  </tr>
+  <tr>
+    <td>Телефон:</td>
+    <td><%=h per.text_field :phone %></td>
+  </tr>
+  <tr>
+    <td>E-mail:</td>
+    <td><%=h per.text_field :email %></td>
+  </tr>
+  <% end %>
+
+  <tr>
+    <td>Учёная степень:</td>
+    <td><%=h f.select(:degree_id, options_from_collection_for_select(@degrees, "id", "name")) %> <%= link_to 'New', degrees_path %></td>
+  </tr>
+  <tr>
+    <td>Должность:</td>
+    <td><%=h f.select(:position_id, options_from_collection_for_select(@positions, "id", "name")) %> <%= link_to 'New', positions_path %></td>
+  </tr>
+
+  <% f.fields_for :person do |per| %>
+  <tr>
+    <td>Фото:</td>
+    <td><%=h per.text_field :photo %></td>
+  </tr>
+  <tr>
+    <td>Информация:</td>
+    <td><%=h per.text_area :info %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td></td>
+    <td align="right"><%= f.submit 'Добавить' %></td>
+  </tr>
+</table>
+<% end %>
+
+<%= link_to 'Назад', manage_teachers_path %>

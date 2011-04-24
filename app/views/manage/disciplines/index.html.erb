@@ -1,0 +1,34 @@
+<h1>Disciplines#index</h1>
+<p>Find me in app/views/disciplines/index.html.erb</p>
+
+<p>
+  <% form_for (@newdiscipline) do |f| %>
+    <% f.error_messages %>
+<p>
+  Название дисциплины:
+  <%= f.text_field :name %>
+
+  <%= f.submit 'Добавить' %>
+
+
+</p>
+  <% end %>
+</p>
+
+<p>
+<table>
+  <tr>
+    <th>Индекс</th>
+    <th>Название дисциплины</th>
+  </tr>
+
+  <% @disciplines.each do |d| %>
+    <tr>
+      <td><%=h d.id %> </td>
+      <td><%=h d.name %> </td>
+      <td><%= link_to 'Редактировать', edit_manage_discipline_path(d) %></td>
+      <td><%= link_to 'Удалить', manage_discipline_path(d), :confirm => 'Удалить запись?', :method => :delete %></td>
+    </tr>
+  <%  end %>
+</table>
+</p>

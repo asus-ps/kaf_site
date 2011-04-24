@@ -1,0 +1,30 @@
+<h1>DisciplinesTeachers#edit</h1>
+<p>Find me in app/views/disciplines_teachers/edit.html.erb</p>
+<p>
+  <% form_for (@newdt) do |f| %>
+    <% f.error_messages %>
+<p>
+  <%=h f.select(:discipline_id, options_for_select( Discipline.all.collect { |p| [p.name, p.id]}, selected_value=@newdt.discipline_id)) %>
+  <%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name}", p.person.id]},selected_value=@newdt.teacher.id)) %>
+
+  <%= f.submit 'Изменить' %>
+</p>
+  <% end %>
+</p>
+<%= link_to 'Назад', manage_disciplines_teachers_path %>
+<table>
+  <tr>
+    <th>Предмет</th>
+    <th>Ведёт</th>
+
+  </tr>
+
+<% @dts.each do |d| %>
+  <tr>
+    <td><%=h d.discipline.name %></td>
+    <td><%=h "#{d.teacher.person.last_name}  #{d.teacher.person.first_name} #{d.teacher.person.patronymic_name}, #{d.teacher.degree.short_name}" %></td>
+    <td><%= link_to 'Редактировать', edit_manage_disciplines_teacher_path(d) %></td>
+      <td><%= link_to 'Удалить', manage_disciplines_teacher_path(d), :confirm => 'Удалить запись?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,37 @@
+<h1>Links#edit</h1>
+<p>Find me in app/views/links/edit.html.erb</p>
+<p>
+  <% form_for (@newlink) do |f| %>
+    <% f.error_messages %>
+<table>
+  <tr>
+    <td>Ссылка</td>
+    <td>Описание</td>
+  </tr>
+  <tr>
+    <td><%= f.text_field :url %></td>
+    <td><%= f.text_area :description %></td>
+    <td><%= f.submit 'Изменить' %></td>
+  </tr>
+</table>
+  <% end %>
+</p>
+<td><%= link_to 'Назад', manage_links_path %></td>
+<p>
+<table>
+  <tr>
+    <th>Ресурс</th>
+    <th>Описание</th>
+  </tr>
+
+  <% @links.each do |kfl| %>
+    <tr>
+      <td><%=h kfl.url %> </td>
+      <td><%=h kfl.description %> </td>
+      <td><%= link_to 'Редактировать', edit_manage_link_path(kfl) %></td>
+      <td><%= link_to 'Удалить', manage_link_path(kfl), :confirm => 'Удалить запись?', :method => :delete %></td>
+    </tr>
+  <%  end %>
+</table>
+</p>
+

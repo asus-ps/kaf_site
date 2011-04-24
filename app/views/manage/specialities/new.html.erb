@@ -1,0 +1,34 @@
+<h1>Specialities#new</h1>
+<p>Find me in app/views/specialities/new.html.erb</p>
+
+<% form_for(@speciality) do |f| %>
+  <%= f.error_messages %>
+<table>
+  <tr>
+    <td>Код:</td>
+    <td><%= f.text_field :code %></td>
+  </tr>
+  <tr>
+    <td>Название:</td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td>Сокращение:</td>
+    <td><%= f.text_field :short_name %></td>
+  </tr>
+  <tr>
+    <td>Количество лет:</td>
+    <td><%= f.select(:count_years, 1..6,:prompt => '4') %></td>
+  </tr>
+  <tr>
+    <td>По диплому:</td>
+    <td><%= f.text_field :in_diploma %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right"><%= f.submit 'Добавить' %></td>
+  </tr>
+  </table>
+<% end %>
+
+<%= link_to 'Назад', manage_specialities_path %>

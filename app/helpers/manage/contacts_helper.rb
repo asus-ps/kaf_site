@@ -1,0 +1,2 @@
+module Manage::ContactsHelper
+end

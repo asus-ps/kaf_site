@@ -1,0 +1,28 @@
+<h1>Новости кафедры</h1>
+<p>Find me in app/views/articles/index.html.erb</p>
+
+<table>
+  <tr>
+    <th>Название новости</th>
+    <th>Текст новости</th>
+    <th>Дата публикации</th>
+    <th>Приоритет</th>
+    <th>Изображение</th>
+  </tr>
+
+<% @articles.reverse.each do |art| %>
+  <tr>
+    <td><%=h art.title %></td>
+    <td><%=h art.body %></td>
+    <td><%=h art.created_at %></td>
+    <td><%=h art.priority %></td>
+    <td><%=h art.image %></td>
+    <td><%= link_to 'Показать', manage_article_path(art) %></td>
+    <td><%= link_to 'Редактировать', edit_manage_article_path(art) %></td>
+    <td><%= link_to 'Удалить', manage_article_path(art), :confirm => 'Удалить запись?', :method => :delete %></td>
+
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Добавить новость', new_manage_article_path %>

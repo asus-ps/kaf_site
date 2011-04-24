@@ -1,0 +1,28 @@
+<h1>Contacts#index</h1>
+<p>Find me in app/views/contacts/index.html.erb</p>
+
+<table>
+  <tr>
+    <td>Адрес</td>
+    <td><%=h @contact.address %></td>
+  </tr>
+
+  <tr>
+    <td>Телефоны</td>
+    <td><%=h @contact.phones %></td>
+  </tr>
+  <tr>
+    <td>E-mail</td>
+    <td><%=h @contact.email %></td>
+  </tr>
+  <tr>
+    <td>Сайт</td>
+    <td><%=h @contact.url %></td>
+  </tr>
+  <tr>
+    <td>Изображение</td>
+    <td><%=h @contact.image %></td>
+  </tr>
+
+</table>
+<%= link_to 'Изменить', edit_manage_contact_path(@contact)  %>
