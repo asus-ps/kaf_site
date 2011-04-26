@@ -39822,3 +39822,1364 @@ Rendering template within layouts/manage
 Rendering manage/people/index
   [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
 Completed in 103ms (View: 54, DB: 6) | 200 OK [http://localhost/manage/people]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#index (for 127.0.0.1 at 2011-04-26 21:14:06) [GET]
+  [4;35;1mDiploma Load (10.7ms)[0m   [0mSELECT * FROM `diplomas` [0m
+  [4;36;1mDiploma Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `diplomas`[0m
+  [4;35;1mTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` IN (1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/index
+  [4;35;1mStudent Columns (13.7ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 3) [0m
+  [4;35;1mPerson Columns (14.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+  [4;35;1mSpeciality Columns (9.8ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+Completed in 580ms (View: 370, DB: 62) | 200 OK [http://localhost/manage/diplomas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-26 21:14:11) [GET]
+  [4;35;1mDegree Load (16.6ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 99ms (View: 13, DB: 20) | 200 OK [http://localhost/manage/degrees]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 21:17:03) [GET]
+  [4;36;1mPosition Load (14.6ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 108ms (View: 27, DB: 18) | 200 OK [http://localhost/manage/positions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#create (for 127.0.0.1 at 2011-04-26 21:17:06) [POST]
+  Parameters: {"position"=>{"name"=>"", "short_name"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/manage/positions/index.html.erb:
+2: <p>Find me in app/views/positions/index.html.erb</p>
+3: 
+4: <p>
+5:   <% form_for ([:manage,@newposition]) do |f| %>
+6:     <% f.error_messages %>
+7: <p>
+8: <table>
+
+    app/views/manage/positions/index.html.erb:5
+    app/controllers/manage/positions_controller.rb:32:in `create'
+    app/controllers/manage/positions_controller.rb:27:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 21:18:10) [GET]
+  [4;35;1mPosition Load (0.0ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mPosition Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 87ms (View: 12, DB: 3) | 200 OK [http://localhost/manage/positions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#create (for 127.0.0.1 at 2011-04-26 21:18:11) [POST]
+  Parameters: {"position"=>{"name"=>"", "short_name"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mPosition Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/manage/positions/index.html.erb:
+2: <p>Find me in app/views/positions/index.html.erb</p>
+3: 
+4: <p>
+5:   <% form_for ([:manage,@newposition]) do |f| %>
+6:     <%= f.error_messages %>
+7: <p>
+8: <table>
+
+    app/views/manage/positions/index.html.erb:5
+    app/controllers/manage/positions_controller.rb:32:in `create'
+    app/controllers/manage/positions_controller.rb:27:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 21:20:26) [GET]
+  [4;36;1mPosition Load (1.0ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 83ms (View: 9, DB: 3) | 200 OK [http://localhost/manage/positions]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#create (for 127.0.0.1 at 2011-04-26 21:20:27) [POST]
+  Parameters: {"position"=>{"name"=>"", "short_name"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPosition Create (1.0ms)[0m   [0mINSERT INTO `positions` (`name`, `short_name`) VALUES('', '')[0m
+  [4;36;1mSQL (35.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/manage/positions
+Completed in 77ms (DB: 39) | 302 Found [http://localhost/manage/positions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 21:20:28) [GET]
+  [4;36;1mPosition Load (0.0ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 77ms (View: 10, DB: 3) | 200 OK [http://localhost/manage/positions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#destroy (for 127.0.0.1 at 2011-04-26 21:20:32) [DELETE]
+  Parameters: {"authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"3"}
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.0ms)[0m   [0;1mSELECT * FROM `positions` WHERE (`positions`.`id` = 3) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPosition Destroy (1.0ms)[0m   [0;1mDELETE FROM `positions` WHERE `id` = 3[0m
+  [4;35;1mSQL (30.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/manage/positions
+Completed in 108ms (DB: 34) | 302 Found [http://localhost/manage/positions/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 21:20:32) [GET]
+  [4;35;1mPosition Load (1.0ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mPosition Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 74ms (View: 9, DB: 3) | 200 OK [http://localhost/manage/positions]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#create (for 127.0.0.1 at 2011-04-26 21:23:20) [POST]
+  Parameters: {"position"=>{"name"=>"", "short_name"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mPosition Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/manage/positions/index.html.erb:
+2: <p>Find me in app/views/positions/index.html.erb</p>
+3: 
+4: <p>
+5:   <% form_for ([:manage,@newposition]) do |f| %>
+6:     <%= f.error_messages %>
+7: <p>
+8: <table>
+
+    app/views/manage/positions/index.html.erb:5
+    app/controllers/manage/positions_controller.rb:32:in `create'
+    app/controllers/manage/positions_controller.rb:27:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ContactsController#index (for 127.0.0.1 at 2011-04-26 21:26:49) [GET]
+  [4;36;1mContact Load (19.5ms)[0m   [0;1mSELECT `contacts`.id FROM `contacts` LIMIT 1[0m
+  [4;35;1mContact Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (1.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/contacts/index
+Completed in 142ms (View: 8, DB: 24) | 200 OK [http://localhost/manage/contacts]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ContactsController#edit (for 127.0.0.1 at 2011-04-26 21:26:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mContact Load (1.0ms)[0m   [0;1mSELECT `contacts`.id FROM `contacts` LIMIT 1[0m
+  [4;35;1mContact Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (1.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/contacts/edit
+Completed in 110ms (View: 19, DB: 5) | 200 OK [http://localhost/manage/contacts/1/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ContactsController#update (for 127.0.0.1 at 2011-04-26 21:26:56) [PUT]
+  Parameters: {"commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "contact"=>{"address"=>"ddd", "url"=>"he", "phones"=>"", "image"=>"ddd.jpg", "email"=>"psjob@bk.ru"}, "id"=>"1"}
+  [4;36;1mContact Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (1.0ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/contacts/edit
+Completed in 86ms (View: 13, DB: 5) | 200 OK [http://localhost/manage/contacts/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 21:28:01) [GET]
+  [4;35;1mPosition Load (1.0ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mPosition Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 76ms (View: 8, DB: 4) | 200 OK [http://localhost/manage/positions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#create (for 127.0.0.1 at 2011-04-26 21:28:02) [POST]
+  Parameters: {"position"=>{"name"=>"", "short_name"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mPosition Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/manage/positions_controller.rb:27:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 21:35:37) [GET]
+  [4;36;1mPosition Load (0.0ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 84ms (View: 8, DB: 2) | 200 OK [http://localhost/manage/positions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#create (for 127.0.0.1 at 2011-04-26 21:35:57) [POST]
+  Parameters: {"position"=>{"name"=>"", "short_name"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/manage/positions/index.html.erb:
+2: <p>Find me in app/views/positions/index.html.erb</p>
+3: 
+4: <p>
+5:   <% form_for ([:manage,@newposition]) do |f| %>
+6:     <%= f.error_messages %>
+7: <p>
+8: <table>
+
+    app/views/manage/positions/index.html.erb:5
+    app/controllers/manage/positions_controller.rb:32:in `create'
+    app/controllers/manage/positions_controller.rb:27:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#create (for 127.0.0.1 at 2011-04-26 21:37:01) [POST]
+  Parameters: {"position"=>{"name"=>"", "short_name"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mPosition Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/manage/positions/index.html.erb:
+2: <p>Find me in app/views/positions/index.html.erb</p>
+3: 
+4: <p>
+5:   <% form_for ([:manage,@newposition]) do |f| %>
+6:     <%= f.error_messages %>
+7: <p>
+8: <table>
+
+    app/views/manage/positions/index.html.erb:5
+    app/controllers/manage/positions_controller.rb:32:in `create'
+    app/controllers/manage/positions_controller.rb:27:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#create (for 127.0.0.1 at 2011-04-26 21:42:30) [POST]
+  Parameters: {"position"=>{"name"=>"hello", "short_name"=>"hello"}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mPosition Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPosition Create (0.0ms)[0m   [0mINSERT INTO `positions` (`name`, `short_name`) VALUES('hello', 'hello')[0m
+  [4;36;1mSQL (41.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/manage/positions
+Completed in 92ms (DB: 46) | 302 Found [http://localhost/manage/positions]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 21:42:30) [GET]
+  [4;36;1mPosition Load (1.0ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 87ms (View: 10, DB: 4) | 200 OK [http://localhost/manage/positions]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#edit (for 127.0.0.1 at 2011-04-26 21:42:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPosition Load (0.0ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mPosition Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (0.0ms)[0m   [0mSELECT * FROM `positions` WHERE (`positions`.`id` = 4) [0m
+Rendering template within layouts/manage
+Rendering manage/positions/edit
+Completed in 121ms (View: 24, DB: 3) | 200 OK [http://localhost/manage/positions/4/edit]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#update (for 127.0.0.1 at 2011-04-26 21:42:47) [PUT]
+  Parameters: {"position"=>{"name"=>"", "short_name"=>"hello"}, "commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"4"}
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (1.0ms)[0m   [0;1mSELECT * FROM `positions` WHERE (`positions`.`id` = 4) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/manage/positions/index.html.erb:
+2: <p>Find me in app/views/positions/index.html.erb</p>
+3: 
+4: <p>
+5:   <% form_for ([:manage,@newposition]) do |f| %>
+6:     <%= f.error_messages %>
+7: <p>
+8: <table>
+
+    app/views/manage/positions/index.html.erb:5
+    app/controllers/manage/positions_controller.rb:46:in `update'
+    app/controllers/manage/positions_controller.rb:41:in `update'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#destroy (for 127.0.0.1 at 2011-04-26 21:42:54) [DELETE]
+  Parameters: {"authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"4"}
+  [4;36;1mPosition Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (2.9ms)[0m   [0mSELECT * FROM `positions` WHERE (`positions`.`id` = 4) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPosition Destroy (0.0ms)[0m   [0mDELETE FROM `positions` WHERE `id` = 4[0m
+  [4;36;1mSQL (35.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/manage/positions
+Completed in 123ms (DB: 42) | 302 Found [http://localhost/manage/positions/4]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 21:42:54) [GET]
+  [4;36;1mPosition Load (1.0ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 76ms (View: 9, DB: 4) | 200 OK [http://localhost/manage/positions]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#index (for 127.0.0.1 at 2011-04-26 22:00:34) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/manage
+Rendering manage/articles/index
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 138ms (View: 74, DB: 4) | 200 OK [http://localhost/manage/articles]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#new (for 127.0.0.1 at 2011-04-26 22:00:36) [GET]
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/manage
+Rendering manage/articles/new
+Completed in 48ms (View: 9, DB: 3) | 200 OK [http://localhost/manage/articles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#create (for 127.0.0.1 at 2011-04-26 22:00:39) [POST]
+  Parameters: {"article"=>{"body"=>"", "title"=>"", "priority"=>"1", "image"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/articles/new
+Completed in 60ms (View: 17, DB: 4) | 200 OK [http://localhost/manage/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#create (for 127.0.0.1 at 2011-04-26 22:01:17) [POST]
+  Parameters: {"article"=>{"body"=>"Новость с валидацией", "title"=>"Новость", "priority"=>"2", "image"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/articles/new
+Completed in 57ms (View: 14, DB: 4) | 200 OK [http://localhost/manage/articles]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#create (for 127.0.0.1 at 2011-04-26 22:01:42) [POST]
+  Parameters: {"article"=>{"body"=>"Новость с валидацией", "title"=>"Новость", "priority"=>"2", "image"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Create (1.0ms)[0m   [0;1mINSERT INTO `articles` (`created_at`, `title`, `body`, `priority`, `image`) VALUES('2011-04-26 18:01:43', 'Новость', 'Новость с валидацией', 2, '')[0m
+  [4;35;1mSQL (36.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/manage/articles/11
+Completed in 80ms (DB: 40) | 302 Found [http://localhost/manage/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#show (for 127.0.0.1 at 2011-04-26 22:01:43) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 11) [0m
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM `comments` [0m
+Rendering template within layouts/manage
+Rendering manage/articles/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 11) [0m
+Completed in 143ms (View: 39, DB: 7) | 200 OK [http://localhost/manage/articles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#index (for 127.0.0.1 at 2011-04-26 22:01:49) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/manage
+Rendering manage/articles/index
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 96ms (View: 54, DB: 4) | 200 OK [http://localhost/manage/articles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#edit (for 127.0.0.1 at 2011-04-26 22:01:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/articles/edit
+Completed in 78ms (View: 10, DB: 5) | 200 OK [http://localhost/manage/articles/1/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#update (for 127.0.0.1 at 2011-04-26 22:02:00) [PUT]
+  Parameters: {"article"=>{"body"=>"Вот и настала Сессия №Last для ИВТ-Д-4", "title"=>"", "priority"=>"2", "image"=>""}, "commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/articles/edit
+Completed in 84ms (View: 13, DB: 6) | 200 OK [http://localhost/manage/articles/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ArticlesController#index (for 127.0.0.1 at 2011-04-26 22:02:08) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/manage
+Rendering manage/articles/index
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 96ms (View: 55, DB: 4) | 200 OK [http://localhost/manage/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-26 22:03:50) [GET]
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` [0m
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 80ms (View: 12, DB: 4) | 200 OK [http://localhost/manage/degrees]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#create (for 127.0.0.1 at 2011-04-26 22:07:48) [POST]
+  Parameters: {"commit"=>"Добавить", "degree"=>{"name"=>"", "short_name"=>""}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #4 of app/views/manage/degrees/index.html.erb:
+1: <h1>Degrees#index</h1>
+2: <p>Find me in app/views/degrees/index.html.erb</p>
+3: <p>
+4:   <% form_for ([:manage,@newdegree]) do |f| %>
+5:     <% f.error_messages %>
+6: <p>
+7: <table>
+
+    app/views/manage/degrees/index.html.erb:4
+    app/controllers/manage/degrees_controller.rb:32:in `create'
+    app/controllers/manage/degrees_controller.rb:27:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-26 22:09:18) [GET]
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 87ms (View: 12, DB: 5) | 200 OK [http://localhost/manage/degrees]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#create (for 127.0.0.1 at 2011-04-26 22:09:20) [POST]
+  Parameters: {"commit"=>"Добавить", "degree"=>{"name"=>"", "short_name"=>""}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #4 of app/views/manage/degrees/index.html.erb:
+1: <h1>Degrees#index</h1>
+2: <p>Find me in app/views/degrees/index.html.erb</p>
+3: <p>
+4:   <% form_for([:manage,@newdegree]) do |f| %>
+5:     <%= f.error_messages %>
+6: <p>
+7: <table>
+
+    app/views/manage/degrees/index.html.erb:4
+    app/controllers/manage/degrees_controller.rb:32:in `create'
+    app/controllers/manage/degrees_controller.rb:27:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#edit (for 127.0.0.1 at 2011-04-26 22:10:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` [0m
+  [4;35;1mDegree Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Rendering template within layouts/manage
+Rendering manage/degrees/edit
+Completed in 118ms (View: 13, DB: 3) | 200 OK [http://localhost/manage/degrees/2/edit]
+  [4;35;1mSQL (3.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#update (for 127.0.0.1 at 2011-04-26 22:10:23) [PUT]
+  Parameters: {"commit"=>"Изменить", "degree"=>{"name"=>"", "short_name"=>"к.м.н"}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"2"}
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #4 of app/views/manage/degrees/index.html.erb:
+1: <h1>Degrees#index</h1>
+2: <p>Find me in app/views/degrees/index.html.erb</p>
+3: <p>
+4:   <% form_for([:manage,@newdegree]) do |f| %>
+5:     <%= f.error_messages %>
+6: <p>
+7: <table>
+
+    app/views/manage/degrees/index.html.erb:4
+    app/controllers/manage/degrees_controller.rb:46:in `update'
+    app/controllers/manage/degrees_controller.rb:41:in `update'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-26 22:10:33) [GET]
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 84ms (View: 8, DB: 3) | 200 OK [http://localhost/manage/degrees]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::HistoriesController#index (for 127.0.0.1 at 2011-04-26 22:18:30) [GET]
+  [4;36;1mHistorie Load (29.3ms)[0m   [0;1mSELECT `histories`.id FROM `histories` LIMIT 1[0m
+  [4;35;1mHistorie Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `histories`[0m
+  [4;36;1mHistorie Load (1.0ms)[0m   [0;1mSELECT * FROM `histories` WHERE (`histories`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/histories/index
+Completed in 131ms (View: 7, DB: 33) | 200 OK [http://localhost/manage/histories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-26 22:26:03) [GET]
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` [0m
+  [4;35;1mDegree Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 78ms (View: 8, DB: 2) | 200 OK [http://localhost/manage/degrees]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#create (for 127.0.0.1 at 2011-04-26 22:26:05) [POST]
+  Parameters: {"commit"=>"Добавить", "degree"=>{"name"=>"", "short_name"=>""}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #4 of app/views/manage/degrees/index.html.erb:
+1: <h1>Degrees#index</h1>
+2: <p>Find me in app/views/degrees/index.html.erb</p>
+3: <p>
+4:   <% form_for([:manage,@newdegree]) do |f| %>
+5:     <%= f.error_messages %>
+6: <p>
+7: <table>
+
+    app/views/manage/degrees/index.html.erb:4
+    app/controllers/manage/degrees_controller.rb:33:in `create'
+    app/controllers/manage/degrees_controller.rb:28:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::HistoriesController#index (for 127.0.0.1 at 2011-04-26 22:26:37) [GET]
+  [4;35;1mHistorie Load (1.0ms)[0m   [0mSELECT `histories`.id FROM `histories` LIMIT 1[0m
+  [4;36;1mHistorie Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistorie Load (1.0ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/histories/index
+Completed in 116ms (View: 4, DB: 5) | 200 OK [http://localhost/manage/histories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::HistoriesController#edit (for 127.0.0.1 at 2011-04-26 22:26:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mHistorie Load (1.0ms)[0m   [0mSELECT `histories`.id FROM `histories` LIMIT 1[0m
+  [4;36;1mHistorie Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistorie Load (1.0ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/histories/edit
+Completed in 104ms (View: 10, DB: 4) | 200 OK [http://localhost/manage/histories/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::HistoriesController#update (for 127.0.0.1 at 2011-04-26 22:26:42) [PUT]
+  Parameters: {"historie"=>{"body"=>"", "image"=>"hello"}, "commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;35;1mHistorie Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `histories`[0m
+  [4;36;1mHistorie Load (1.0ms)[0m   [0;1mSELECT * FROM `histories` WHERE (`histories`.`id` = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/histories/edit
+Completed in 82ms (View: 13, DB: 4) | 200 OK [http://localhost/manage/histories/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::HistoriesController#index (for 127.0.0.1 at 2011-04-26 22:26:48) [GET]
+  [4;36;1mHistorie Load (1.0ms)[0m   [0;1mSELECT `histories`.id FROM `histories` LIMIT 1[0m
+  [4;35;1mHistorie Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `histories`[0m
+  [4;36;1mHistorie Load (0.0ms)[0m   [0;1mSELECT * FROM `histories` WHERE (`histories`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/histories/index
+Completed in 100ms (View: 4, DB: 4) | 200 OK [http://localhost/manage/histories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::LinksController#index (for 127.0.0.1 at 2011-04-26 22:26:52) [GET]
+  [4;36;1mLink Load (86.9ms)[0m   [0;1mSELECT * FROM `links` [0m
+  [4;35;1mLink Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `links`[0m
+Rendering template within layouts/manage
+Rendering manage/links/index
+Completed in 168ms (View: 15, DB: 90) | 200 OK [http://localhost/manage/links]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::LinksController#create (for 127.0.0.1 at 2011-04-26 22:26:54) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "link"=>{"url"=>"", "description"=>""}}
+  [4;35;1mLink Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `links`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/links/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #4 of app/views/manage/links/index.html.erb:
+1: <h1>Links#index</h1>
+2: <p>Find me in app/views/links/index.html.erb</p>
+3: <p>
+4:   <% form_for ([:manage,@newlink]) do |f| %>
+5:     <% f.error_messages %>
+6: <table>
+7:   <tr>
+
+    app/views/manage/links/index.html.erb:4
+    app/controllers/manage/links_controller.rb:31:in `create'
+    app/controllers/manage/links_controller.rb:26:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-26 22:30:12) [GET]
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 84ms (View: 9, DB: 3) | 200 OK [http://localhost/manage/degrees]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#create (for 127.0.0.1 at 2011-04-26 22:30:13) [POST]
+  Parameters: {"commit"=>"Добавить", "degree"=>{"name"=>"", "short_name"=>""}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #4 of app/views/manage/degrees/index.html.erb:
+1: <h1>Degrees#index</h1>
+2: <p>Find me in app/views/degrees/index.html.erb</p>
+3: <p>
+4:   <% form_for([:manage,@newdegree]) do |f| %>
+5:     <%= f.error_messages %>
+6: <p>
+7: <table>
+
+    app/views/manage/degrees/index.html.erb:4
+    app/controllers/manage/degrees_controller.rb:37:in `create'
+    app/controllers/manage/degrees_controller.rb:32:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#index (for 127.0.0.1 at 2011-04-26 22:30:31) [GET]
+  [4;36;1mDiploma Load (1.0ms)[0m   [0;1mSELECT * FROM `diplomas` [0m
+  [4;35;1mDiploma Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `diplomas`[0m
+  [4;36;1mTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `teachers`[0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` IN (1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/index
+  [4;36;1mStudent Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mStudent Load (1.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`person_id` = 3) [0m
+  [4;36;1mSQL (21.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPerson Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+
+ActionView::TemplateError (undefined method `validates' for #<Class:0x9288af8>) on line #18 of app/views/manage/diplomas/index.html.erb:
+15: <% @diplomas.each do |d| %>
+16:   <tr>
+17:     <td><%=h d.name %></td>
+18:     <td><%=h "#{d.student.person.last_name} #{d.student.person.first_name} #{d.student.person.patronymic_name}" %></td>
+19:     <td><%=h d.student.speciality.short_name %></td>
+20:     <td><%=h "#{d.teacher.person.last_name} #{d.teacher.person.first_name} #{d.teacher.person.patronymic_name}" %></td>
+21:     <td><%=h d.protection_year %></td>
+
+    app/models/person.rb:6
+    app/views/manage/diplomas/index.html.erb:18
+    app/views/manage/diplomas/index.html.erb:15:in `each'
+    app/views/manage/diplomas/index.html.erb:15
+    app/controllers/manage/diplomas_controller.rb:4:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#index (for 127.0.0.1 at 2011-04-26 22:32:13) [GET]
+  [4;35;1mDiploma Load (1.0ms)[0m   [0mSELECT * FROM `diplomas` [0m
+  [4;36;1mDiploma Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `diplomas`[0m
+  [4;35;1mTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` IN (1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/index
+  [4;35;1mStudent Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 3) [0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (2.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+Completed in 495ms (View: 334, DB: 23) | 200 OK [http://localhost/manage/diplomas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#new (for 127.0.0.1 at 2011-04-26 22:32:15) [GET]
+  [4;35;1mDiploma Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `diplomas`[0m
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+  [4;35;1mStudent Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (2.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (6,9,2,3)) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Load (2.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+  [4;35;1mPerson Load (2.0ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mSpeciality Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mDegree Load (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 759ms (View: 428, DB: 29) | 200 OK [http://localhost/manage/diplomas/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#create (for 127.0.0.1 at 2011-04-26 22:32:17) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "diploma"=>{"student_id"=>"2", "name"=>"", "protection_year"=>"2011", "teacher_id"=>"1", "summary"=>""}}
+  [4;35;1mDiploma Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `diplomas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #15 of app/views/manage/diplomas/index.html.erb:
+12: 
+13:   </tr>
+14: 
+15: <% @diplomas.each do |d| %>
+16:   <tr>
+17:     <td><%=h d.name %></td>
+18:     <td><%=h "#{d.student.person.last_name} #{d.student.person.first_name} #{d.student.person.patronymic_name}" %></td>
+
+    app/views/manage/diplomas/index.html.erb:15
+    app/controllers/manage/diplomas_controller.rb:47:in `create'
+    app/controllers/manage/diplomas_controller.rb:42:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#create (for 127.0.0.1 at 2011-04-26 22:32:37) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "diploma"=>{"student_id"=>"2", "name"=>"", "protection_year"=>"2011", "teacher_id"=>"1", "summary"=>""}}
+  [4;35;1mDiploma Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `diplomas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #15 of app/views/manage/diplomas/index.html.erb:
+12: 
+13:   </tr>
+14: 
+15: <% @diplomas.each do |d| %>
+16:   <tr>
+17:     <td><%=h d.name %></td>
+18:     <td><%=h "#{d.student.person.last_name} #{d.student.person.first_name} #{d.student.person.patronymic_name}" %></td>
+
+    app/views/manage/diplomas/index.html.erb:15
+    app/controllers/manage/diplomas_controller.rb:47:in `create'
+    app/controllers/manage/diplomas_controller.rb:42:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#edit (for 127.0.0.1 at 2011-04-26 22:33:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mDiploma Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `diplomas`[0m
+  [4;36;1mDiploma Load (0.0ms)[0m   [0;1mSELECT * FROM `diplomas` WHERE (`diplomas`.`id` = 3) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` [0m
+  [4;36;1mStudent Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mPerson Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (6,9,2,3)) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `teachers`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+  [4;36;1mPerson Load (2.0ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/edit
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `students` [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 777ms (View: 426, DB: 31) | 200 OK [http://localhost/manage/diplomas/3/edit]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#update (for 127.0.0.1 at 2011-04-26 22:33:24) [PUT]
+  Parameters: {"commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "diploma"=>{"student_id"=>"2", "name"=>"", "protection_year"=>"1996", "teacher_id"=>"5", "summary"=>"Да! Такое совпадение"}, "id"=>"3"}
+  [4;36;1mDiploma Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `diplomas`[0m
+  [4;35;1mDiploma Load (1.0ms)[0m   [0mSELECT * FROM `diplomas` WHERE (`diplomas`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/edit
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mSpeciality Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+  [4;35;1mSpeciality Load (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mDegree Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 701ms (View: 603, DB: 29) | 200 OK [http://localhost/manage/diplomas/3]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#edit (for 127.0.0.1 at 2011-04-26 22:33:39) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mDiploma Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `diplomas`[0m
+  [4;35;1mDiploma Load (1.0ms)[0m   [0mSELECT * FROM `diplomas` WHERE (`diplomas`.`id` = 3) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (6,9,2,3)) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Load (2.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+  [4;35;1mPerson Load (2.0ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `students` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mSpeciality Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 798ms (View: 441, DB: 37) | 200 OK [http://localhost/manage/diplomas/3/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#update (for 127.0.0.1 at 2011-04-26 22:33:43) [PUT]
+  Parameters: {"commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "diploma"=>{"student_id"=>"2", "name"=>"Сайт на руби", "protection_year"=>"1996", "teacher_id"=>"5", "summary"=>""}, "id"=>"3"}
+  [4;35;1mDiploma Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `diplomas`[0m
+  [4;36;1mDiploma Load (1.0ms)[0m   [0;1mSELECT * FROM `diplomas` WHERE (`diplomas`.`id` = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDiploma Update (0.0ms)[0m   [0;1mUPDATE `diplomas` SET `summary` = '' WHERE `id` = 3[0m
+  [4;35;1mSQL (26.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/manage/diplomas/3
+Completed in 102ms (DB: 29) | 302 Found [http://localhost/manage/diplomas/3]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#show (for 127.0.0.1 at 2011-04-26 22:33:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mDiploma Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `diplomas`[0m
+  [4;36;1mDiploma Load (1.0ms)[0m   [0;1mSELECT * FROM `diplomas` WHERE (`diplomas`.`id` = 3) [0m
+  [4;35;1mStudent Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/show
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;35;1mSpeciality Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+Completed in 378ms (View: 233, DB: 19) | 200 OK [http://localhost/manage/diplomas/3]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::SpecialitiesController#index (for 127.0.0.1 at 2011-04-26 22:34:08) [GET]
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` [0m
+Rendering template within layouts/manage
+Rendering manage/specialities/index
+  [4;36;1mSpeciality Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+Completed in 82ms (View: 41, DB: 4) | 200 OK [http://localhost/manage/specialities]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::SpecialitiesController#new (for 127.0.0.1 at 2011-04-26 22:34:10) [GET]
+  [4;36;1mSpeciality Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+Rendering template within layouts/manage
+Rendering manage/specialities/new
+Completed in 49ms (View: 10, DB: 3) | 200 OK [http://localhost/manage/specialities/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::SpecialitiesController#create (for 127.0.0.1 at 2011-04-26 22:34:11) [POST]
+  Parameters: {"commit"=>"Добавить", "speciality"=>{"name"=>"", "code"=>"", "count_years"=>"1", "short_name"=>"", "in_diploma"=>""}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mSpeciality Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/specialities/new
+Completed in 59ms (View: 16, DB: 4) | 200 OK [http://localhost/manage/specialities]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-26 22:34:27) [GET]
+  [4;36;1mDisciplinesTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` [0m
+  [4;35;1mDisciplinesTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `teachers`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (2.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+Completed in 626ms (View: 373, DB: 24) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::SpecialitiesController#index (for 127.0.0.1 at 2011-04-26 22:34:32) [GET]
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` [0m
+Rendering template within layouts/manage
+Rendering manage/specialities/index
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Completed in 78ms (View: 34, DB: 5) | 200 OK [http://localhost/manage/specialities]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::SpecialitiesController#new (for 127.0.0.1 at 2011-04-26 22:34:34) [GET]
+  [4;35;1mSpeciality Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Rendering template within layouts/manage
+Rendering manage/specialities/new
+Completed in 47ms (View: 6, DB: 2) | 200 OK [http://localhost/manage/specialities/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#index (for 127.0.0.1 at 2011-04-26 22:34:38) [GET]
+  [4;35;1mPosition Load (1.0ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mPosition Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+Completed in 81ms (View: 13, DB: 3) | 200 OK [http://localhost/manage/positions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::PositionsController#create (for 127.0.0.1 at 2011-04-26 22:34:39) [POST]
+  Parameters: {"position"=>{"name"=>"", "short_name"=>""}, "commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mPosition Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/positions/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/manage/positions/index.html.erb:
+2: <p>Find me in app/views/positions/index.html.erb</p>
+3: 
+4: <p>
+5:   <% form_for ([:manage,@newposition]) do |f| %>
+6:     <%= f.error_messages %>
+7: <p>
+8: <table>
+
+    app/views/manage/positions/index.html.erb:5
+    app/controllers/manage/positions_controller.rb:32:in `create'
+    app/controllers/manage/positions_controller.rb:27:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)

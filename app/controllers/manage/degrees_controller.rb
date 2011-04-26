@@ -9,6 +9,11 @@ class Manage::DegreesController < Manage::BaseController
   end
 
   def new
+    @degree = Degree.new
+    respond_to do |format|
+      format.html
+      format.xml { render_to :xml => @degree }
+    end
   end
 
   def edit
