@@ -41456,3 +41456,844 @@ The error occurred while evaluating nil.map) on line #40 of app/views/manage/stu
 Rendered rescues/_trace (35.2ms)
 Rendered rescues/_request_and_response (1.0ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::SpecialitiesController#new (for 127.0.0.1 at 2011-04-29 17:52:34) [GET]
+  [4;35;1mSpeciality Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+Rendering template within layouts/manage
+Rendering manage/specialities/new
+Completed in 62ms (View: 11, DB: 2) | 200 OK [http://localhost/manage/specialities/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::SpecialitiesController#create (for 127.0.0.1 at 2011-04-29 17:52:37) [POST]
+  Parameters: {"commit"=>"Добавить", "speciality"=>{"name"=>"", "code"=>"", "count_years"=>"1", "short_name"=>"", "in_diploma"=>""}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;35;1mSpeciality Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/specialities/new
+Completed in 67ms (View: 20, DB: 3) | 200 OK [http://localhost/manage/specialities]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::SpecialitiesController#index (for 127.0.0.1 at 2011-04-29 17:52:53) [GET]
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` [0m
+Rendering template within layouts/manage
+Rendering manage/specialities/index
+  [4;36;1mSpeciality Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+Completed in 81ms (View: 40, DB: 4) | 200 OK [http://localhost/manage/specialities]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::SpecialitiesController#edit (for 127.0.0.1 at 2011-04-29 17:53:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSpeciality Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+Rendering template within layouts/manage
+Rendering manage/specialities/edit
+Completed in 78ms (View: 10, DB: 3) | 200 OK [http://localhost/manage/specialities/2/edit]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:53:07) [GET]
+  [4;35;1mDisciplinesTeacher Load (12.7ms)[0m   [0mSELECT * FROM `disciplines_teachers` [0m
+  [4;36;1mDisciplinesTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mDiscipline Load (11.7ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mTeacher Load (6.8ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (2.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+Completed in 656ms (View: 372, DB: 55) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#create (for 127.0.0.1 at 2011-04-29 17:53:13) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "disciplines_teacher"=>{"teacher_id"=>"7", "discipline_id"=>"1"}}
+  [4;35;1mDisciplinesTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDisciplinesTeacher Create (1.0ms)[0m   [0mINSERT INTO `disciplines_teachers` (`teacher_id`, `discipline_id`) VALUES(7, 1)[0m
+  [4;36;1mSQL (41.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/manage/disciplines_teachers
+Completed in 85ms (DB: 44) | 302 Found [http://localhost/manage/disciplines_teachers]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:53:14) [GET]
+  [4;36;1mDisciplinesTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` [0m
+  [4;35;1mDisciplinesTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `teachers`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mDegree Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 661ms (View: 412, DB: 26) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#create (for 127.0.0.1 at 2011-04-29 17:53:19) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "disciplines_teacher"=>{"teacher_id"=>"12", "discipline_id"=>"1"}}
+  [4;36;1mDisciplinesTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDisciplinesTeacher Create (0.0ms)[0m   [0;1mINSERT INTO `disciplines_teachers` (`teacher_id`, `discipline_id`) VALUES(12, 1)[0m
+  [4;35;1mSQL (24.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/manage/disciplines_teachers
+Completed in 68ms (DB: 26) | 302 Found [http://localhost/manage/disciplines_teachers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:53:19) [GET]
+  [4;35;1mDisciplinesTeacher Load (1.0ms)[0m   [0mSELECT * FROM `disciplines_teachers` [0m
+  [4;36;1mDisciplinesTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 689ms (View: 438, DB: 25) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#edit (for 127.0.0.1 at 2011-04-29 17:53:21) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mDisciplinesTeacher Load (1.0ms)[0m   [0mSELECT * FROM `disciplines_teachers` [0m
+  [4;36;1mDisciplinesTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mDisciplinesTeacher Load (1.0ms)[0m   [0mSELECT * FROM `disciplines_teachers` WHERE (`disciplines_teachers`.`id` = 13) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `teachers`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/edit
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 12) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 740ms (View: 460, DB: 28) | 200 OK [http://localhost/manage/disciplines_teachers/13/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#update (for 127.0.0.1 at 2011-04-29 17:53:26) [PUT]
+  Parameters: {"commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"13", "disciplines_teacher"=>{"teacher_id"=>"5", "discipline_id"=>"1"}}
+  [4;35;1mDisciplinesTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDisciplinesTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` WHERE (`disciplines_teachers`.`id` = 13) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDisciplinesTeacher Update (1.0ms)[0m   [0;1mUPDATE `disciplines_teachers` SET `teacher_id` = 5 WHERE `id` = 13[0m
+  [4;35;1mSQL (30.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/manage/disciplines_teachers
+Completed in 104ms (DB: 33) | 302 Found [http://localhost/manage/disciplines_teachers/13]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:53:27) [GET]
+  [4;35;1mDisciplinesTeacher Load (1.0ms)[0m   [0mSELECT * FROM `disciplines_teachers` [0m
+  [4;36;1mDisciplinesTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 642ms (View: 398, DB: 25) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#destroy (for 127.0.0.1 at 2011-04-29 17:53:46) [DELETE]
+  Parameters: {"authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"13"}
+  [4;35;1mDisciplinesTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDisciplinesTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` WHERE (`disciplines_teachers`.`id` = 13) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDisciplinesTeacher Destroy (1.0ms)[0m   [0;1mDELETE FROM `disciplines_teachers` WHERE `id` = 13[0m
+  [4;35;1mSQL (27.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/manage/disciplines_teachers
+Completed in 103ms (DB: 33) | 302 Found [http://localhost/manage/disciplines_teachers/13]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:53:46) [GET]
+  [4;35;1mDisciplinesTeacher Load (1.0ms)[0m   [0mSELECT * FROM `disciplines_teachers` [0m
+  [4;36;1mDisciplinesTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mDegree Load (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 646ms (View: 403, DB: 24) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:55:04) [GET]
+  [4;35;1mSQL (76.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mDisciplinesTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mDisciplinesTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+
+NoMethodError (undefined method `validates_uniques_of' for #<Class:0x95809e0>):
+  app/models/disciplines_teacher.rb:6
+  app/controllers/manage/disciplines_teachers_controller.rb:3:in `index'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:56:54) [GET]
+  [4;36;1mDisciplinesTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` [0m
+  [4;35;1mDisciplinesTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `teachers`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (2.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mDegree Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 653ms (View: 400, DB: 24) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#create (for 127.0.0.1 at 2011-04-29 17:57:00) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "disciplines_teacher"=>{"teacher_id"=>"1", "discipline_id"=>"1"}}
+  [4;36;1mDisciplinesTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDisciplinesTeacher Load (1.0ms)[0m   [0;1mSELECT `disciplines_teachers`.id FROM `disciplines_teachers` WHERE (`disciplines_teachers`.`id` IS NULL AND `disciplines_teachers`.teacher_id = 1 AND `disciplines_teachers`.discipline_id = 1) LIMIT 1[0m
+  [4;35;1mDisciplinesTeacher Create (1.0ms)[0m   [0mINSERT INTO `disciplines_teachers` (`teacher_id`, `discipline_id`) VALUES(1, 1)[0m
+  [4;36;1mSQL (33.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/manage/disciplines_teachers
+Completed in 110ms (DB: 39) | 302 Found [http://localhost/manage/disciplines_teachers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:57:00) [GET]
+  [4;36;1mDisciplinesTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` [0m
+  [4;35;1mDisciplinesTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `teachers`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mDegree Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+Completed in 650ms (View: 408, DB: 20) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#create (for 127.0.0.1 at 2011-04-29 17:57:10) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "disciplines_teacher"=>{"teacher_id"=>"1", "discipline_id"=>"1"}}
+  [4;36;1mDisciplinesTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDisciplinesTeacher Load (1.0ms)[0m   [0;1mSELECT `disciplines_teachers`.id FROM `disciplines_teachers` WHERE (`disciplines_teachers`.`id` IS NULL AND `disciplines_teachers`.teacher_id = 1 AND `disciplines_teachers`.discipline_id = 1) LIMIT 1[0m
+  [4;35;1mDisciplinesTeacher Create (0.0ms)[0m   [0mINSERT INTO `disciplines_teachers` (`teacher_id`, `discipline_id`) VALUES(1, 1)[0m
+  [4;36;1mSQL (26.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/manage/disciplines_teachers
+Completed in 100ms (DB: 30) | 302 Found [http://localhost/manage/disciplines_teachers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:57:10) [GET]
+  [4;36;1mDisciplinesTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` [0m
+  [4;35;1mDisciplinesTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `teachers`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+Completed in 649ms (View: 404, DB: 26) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:57:45) [GET]
+  [4;36;1mDisciplinesTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` [0m
+  [4;35;1mDisciplinesTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mTeacher Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `teachers`[0m
+  [4;35;1mPerson Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (2.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mDiscipline Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `disciplines`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (2.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mDiscipline Load (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+Completed in 652ms (View: 403, DB: 26) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#create (for 127.0.0.1 at 2011-04-29 17:57:49) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "disciplines_teacher"=>{"teacher_id"=>"1", "discipline_id"=>"1"}}
+  [4;36;1mDisciplinesTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDisciplinesTeacher Load (7.8ms)[0m   [0;1mSELECT `disciplines_teachers`.id FROM `disciplines_teachers` WHERE (`disciplines_teachers`.`teacher_id` = 1 AND `disciplines_teachers`.discipline_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/manage/disciplines_teachers/index.html.erb:
+2: <p>Find me in app/views/disciplines_teachers/index.html.erb</p>
+3: 
+4: <p>
+5:   <% form_for ([:manage,@newdt]) do |f| %>
+6:     <% f.error_messages %>
+7: <p>
+8: 
+
+    app/views/manage/disciplines_teachers/index.html.erb:5
+    app/controllers/manage/disciplines_teachers_controller.rb:36:in `create'
+    app/controllers/manage/disciplines_teachers_controller.rb:31:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:58:22) [GET]
+  [4;35;1mDisciplinesTeacher Load (1.0ms)[0m   [0mSELECT * FROM `disciplines_teachers` [0m
+  [4;36;1mDisciplinesTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mDegree Load (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (2.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+Completed in 666ms (View: 408, DB: 22) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#destroy (for 127.0.0.1 at 2011-04-29 17:58:25) [DELETE]
+  Parameters: {"authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"15"}
+  [4;35;1mDisciplinesTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDisciplinesTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` WHERE (`disciplines_teachers`.`id` = 15) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDisciplinesTeacher Destroy (1.0ms)[0m   [0;1mDELETE FROM `disciplines_teachers` WHERE `id` = 15[0m
+  [4;35;1mSQL (57.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/manage/disciplines_teachers
+Completed in 135ms (DB: 63) | 302 Found [http://localhost/manage/disciplines_teachers/15]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:58:25) [GET]
+  [4;35;1mDisciplinesTeacher Load (1.0ms)[0m   [0mSELECT * FROM `disciplines_teachers` [0m
+  [4;36;1mDisciplinesTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+Completed in 774ms (View: 399, DB: 26) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#destroy (for 127.0.0.1 at 2011-04-29 17:58:30) [DELETE]
+  Parameters: {"authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"14"}
+  [4;35;1mDisciplinesTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;36;1mDisciplinesTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines_teachers` WHERE (`disciplines_teachers`.`id` = 14) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDisciplinesTeacher Destroy (1.0ms)[0m   [0;1mDELETE FROM `disciplines_teachers` WHERE `id` = 14[0m
+  [4;35;1mSQL (51.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/manage/disciplines_teachers
+Completed in 125ms (DB: 57) | 302 Found [http://localhost/manage/disciplines_teachers/14]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DisciplinesTeachersController#index (for 127.0.0.1 at 2011-04-29 17:58:30) [GET]
+  [4;35;1mDisciplinesTeacher Load (1.0ms)[0m   [0mSELECT * FROM `disciplines_teachers` [0m
+  [4;36;1mDisciplinesTeacher Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `disciplines_teachers`[0m
+  [4;35;1mDiscipline Load (1.0ms)[0m   [0mSELECT * FROM `disciplines` [0m
+  [4;36;1mTeacher Load (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` IN (12,7,1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/disciplines_teachers/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` [0m
+  [4;35;1mDiscipline Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `disciplines`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `teachers` [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mDegree Load (2.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 2) [0m
+  [4;35;1mTeacher Load (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+  [4;36;1mDiscipline Load (1.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `disciplines` WHERE (`disciplines`.`id` = 1) [0m
+  [4;35;1mTeacher Load (1.0ms)[0m   [0mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 2) [0m
+Completed in 646ms (View: 396, DB: 24) | 200 OK [http://localhost/manage/disciplines_teachers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#index (for 127.0.0.1 at 2011-04-29 17:58:38) [GET]
+  [4;35;1mDiploma Load (1.0ms)[0m   [0mSELECT * FROM `diplomas` [0m
+  [4;36;1mDiploma Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `diplomas`[0m
+  [4;35;1mTeacher Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` IN (1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/index
+  [4;35;1mStudent Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 3) [0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+  [4;35;1mSpeciality Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+Completed in 510ms (View: 357, DB: 21) | 200 OK [http://localhost/manage/diplomas]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DiplomasController#index (for 127.0.0.1 at 2011-04-29 19:35:11) [GET]
+  [4;35;1mDiploma Load (1.0ms)[0m   [0mSELECT * FROM `diplomas` [0m
+  [4;36;1mDiploma Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `diplomas`[0m
+  [4;35;1mTeacher Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `teachers`[0m
+  [4;36;1mTeacher Load (1.0ms)[0m   [0;1mSELECT * FROM `teachers` WHERE (`teachers`.`person_id` IN (1,5)) [0m
+Rendering template within layouts/manage
+Rendering manage/diplomas/index
+  [4;35;1mStudent Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (1.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 3) [0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+  [4;35;1mSpeciality Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (0.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 5) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mSpeciality Load (1.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`person_id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `specialities` WHERE (`specialities`.`id` = 1) [0m
+Completed in 493ms (View: 343, DB: 21) | 200 OK [http://localhost/manage/diplomas]
