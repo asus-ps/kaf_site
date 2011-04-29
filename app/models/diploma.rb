@@ -3,6 +3,6 @@ class Diploma < ActiveRecord::Base
   belongs_to :teacher, :foreign_key => 'teacher_id'
   accepts_nested_attributes_for :student
   accepts_nested_attributes_for :teacher
-  validates_presence_of :name, :message => 'У диплома должна быть тема'
-  validates_length_of :name, :maximum => 254 , :message => 'Слишком длинная тема диплома'
+  validates_presence_of :name
+  validates_length_of :name, :maximum => 254
 end

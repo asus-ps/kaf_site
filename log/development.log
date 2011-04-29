@@ -41183,3 +41183,276 @@ ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if 
 Rendered rescues/_trace (37.1ms)
 Rendered rescues/_request_and_response (1.0ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::BaseController#index (for 127.0.0.1 at 2011-04-29 16:50:40) [GET]
+
+ActionView::MissingTemplate (Missing template manage/base/index.erb in view path app/views):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::BaseController#index (for 127.0.0.1 at 2011-04-29 16:52:48) [GET]
+Rendering template within layouts/manage
+Rendering manage/base/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-29 16:52:52) [GET]
+  [4;35;1mDegree Load (23.4ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 162ms (View: 13, DB: 27) | 200 OK [http://localhost/manage/degrees]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#create (for 127.0.0.1 at 2011-04-29 16:53:01) [POST]
+  Parameters: {"commit"=>"Добавить", "degree"=>{"name"=>"", "short_name"=>""}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c="}
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #4 of app/views/manage/degrees/index.html.erb:
+1: <h1>Degrees#index</h1>
+2: <p>Find me in app/views/degrees/index.html.erb</p>
+3: <p>
+4:   <% form_for([:manage,@newdegree]) do |f| %>
+5:     <%= f.error_messages %>
+6: <p>
+7: <table>
+
+    app/views/manage/degrees/index.html.erb:4
+    app/controllers/manage/degrees_controller.rb:37:in `create'
+    app/controllers/manage/degrees_controller.rb:32:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-29 16:53:18) [GET]
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` [0m
+  [4;35;1mDegree Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 83ms (View: 9, DB: 5) | 200 OK [http://localhost/manage/degrees]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-29 16:59:44) [GET]
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 76ms (View: 9, DB: 3) | 200 OK [http://localhost/manage/degrees]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#edit (for 127.0.0.1 at 2011-04-29 16:59:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` [0m
+  [4;35;1mDegree Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/degrees/edit
+Completed in 113ms (View: 15, DB: 4) | 200 OK [http://localhost/manage/degrees/1/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#update (for 127.0.0.1 at 2011-04-29 16:59:48) [PUT]
+  Parameters: {"commit"=>"Изменить", "degree"=>{"name"=>"кандидат технических наук", "short_name"=>"к.т.н"}, "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "id"=>"1"}
+  [4;36;1mDegree Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+  [4;35;1mDegree Load (1.0ms)[0m   [0mSELECT * FROM `degrees` WHERE (`degrees`.`id` = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/manage/degrees
+Completed in 72ms (DB: 4) | 302 Found [http://localhost/manage/degrees/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-29 16:59:48) [GET]
+  [4;35;1mDegree Load (0.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 77ms (View: 9, DB: 3) | 200 OK [http://localhost/manage/degrees]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-29 17:03:31) [GET]
+  [4;35;1mDegree Load (0.0ms)[0m   [0mSELECT * FROM `degrees` [0m
+  [4;36;1mDegree Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 110ms (View: 22, DB: 3) | 200 OK [http://localhost/manage/degrees]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::DegreesController#index (for 127.0.0.1 at 2011-04-29 17:12:54) [GET]
+  [4;36;1mDegree Load (1.0ms)[0m   [0;1mSELECT * FROM `degrees` [0m
+  [4;35;1mDegree Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `degrees`[0m
+Rendering template within layouts/manage
+Rendering manage/degrees/index
+Completed in 81ms (View: 13, DB: 4) | 200 OK [http://localhost/manage/degrees]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ContactsController#index (for 127.0.0.1 at 2011-04-29 17:12:57) [GET]
+  [4;35;1mContact Load (22.5ms)[0m   [0mSELECT `contacts`.id FROM `contacts` LIMIT 1[0m
+  [4;36;1mContact Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (1.0ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/contacts/index
+Completed in 126ms (View: 8, DB: 27) | 200 OK [http://localhost/manage/contacts]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ContactsController#edit (for 127.0.0.1 at 2011-04-29 17:12:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (1.0ms)[0m   [0mSELECT `contacts`.id FROM `contacts` LIMIT 1[0m
+  [4;36;1mContact Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (1.0ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/contacts/edit
+Completed in 111ms (View: 15, DB: 6) | 200 OK [http://localhost/manage/contacts/1/edit]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ContactsController#update (for 127.0.0.1 at 2011-04-29 17:13:04) [PUT]
+  Parameters: {"commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "contact"=>{"address"=>"ddd", "url"=>"he", "phones"=>"", "image"=>"ddd.jpg", "email"=>"psjob@bk.ru"}, "id"=>"1"}
+  [4;35;1mContact Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (1.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/contacts/edit
+Completed in 82ms (View: 13, DB: 4) | 200 OK [http://localhost/manage/contacts/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ContactsController#update (for 127.0.0.1 at 2011-04-29 17:14:06) [PUT]
+  Parameters: {"commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "contact"=>{"address"=>"ddd", "url"=>"he", "phones"=>"", "image"=>"ddd.jpg", "email"=>"psjob@bk.ru"}, "id"=>"1"}
+  [4;36;1mContact Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (1.0ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/contacts/edit
+Completed in 90ms (View: 14, DB: 8) | 200 OK [http://localhost/manage/contacts/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ContactsController#update (for 127.0.0.1 at 2011-04-29 17:14:18) [PUT]
+  Parameters: {"commit"=>"Изменить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "contact"=>{"address"=>"ddd", "url"=>"he", "phones"=>"", "image"=>"ddd.jpg", "email"=>"psjobbk.ru"}, "id"=>"1"}
+  [4;35;1mContact Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (1.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/contacts/edit
+Completed in 95ms (View: 21, DB: 5) | 200 OK [http://localhost/manage/contacts/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::ContactsController#edit (for 127.0.0.1 at 2011-04-29 17:44:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (1.0ms)[0m   [0mSELECT `contacts`.id FROM `contacts` LIMIT 1[0m
+  [4;36;1mContact Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (1.0ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendering template within layouts/manage
+Rendering manage/contacts/edit
+Completed in 121ms (View: 22, DB: 5) | 200 OK [http://localhost/manage/contacts/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::StudentsController#index (for 127.0.0.1 at 2011-04-29 17:45:08) [GET]
+  [4;35;1mStudent Load (11.7ms)[0m   [0mSELECT * FROM `students` [0m
+  [4;36;1mStudent Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mSpeciality Columns (6.8ms)[0m   [0mSHOW FIELDS FROM `specialities`[0m
+  [4;36;1mSpeciality Load (2.0ms)[0m   [0;1mSELECT * FROM `specialities` WHERE (`specialities`.`id` IN (1,2)) [0m
+Rendering template within layouts/manage
+Rendering manage/students/index
+  [4;35;1mPerson Columns (12.7ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 6) [0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 9) [0m
+Completed in 367ms (View: 170, DB: 40) | 200 OK [http://localhost/manage/students]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::StudentsController#new (for 127.0.0.1 at 2011-04-29 17:45:10) [GET]
+  [4;35;1mStudent Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mPerson Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSpeciality Load (1.0ms)[0m   [0mSELECT * FROM `specialities` [0m
+Rendering template within layouts/manage
+Rendering manage/students/new
+  [4;36;1mSpeciality Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `specialities`[0m
+Completed in 196ms (View: 86, DB: 9) | 200 OK [http://localhost/manage/students/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Manage::StudentsController#create (for 127.0.0.1 at 2011-04-29 17:45:13) [POST]
+  Parameters: {"commit"=>"Добавить", "authenticity_token"=>"YHMJ1hhYvsc5h4MwARZc8Z1GqCDuEVZQAvCKbLer80c=", "student"=>{"year_income"=>"2011", "person_attributes"=>{"photo"=>"", "birthday(1i)"=>"2011", "birthday(2i)"=>"4", "birthday(3i)"=>"29", "info"=>"", "last_name"=>"", "patronymic_name"=>"", "phone"=>"", "first_name"=>"", "email"=>""}, "speciality_id"=>"1"}}
+  [4;36;1mStudent Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mPerson Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/manage
+Rendering manage/students/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #40 of app/views/manage/students/new.html.erb:
+37: 
+38:   <tr>
+39:     <td>Специальность:</td>
+40:     <td><%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name")) %> <%= link_to 'New', new_manage_speciality_path %></td>
+41:   </tr>
+42:   <tr>
+43:     <td>Год поступления:</td>
+
+    app/views/manage/students/new.html.erb:40
+    app/views/manage/students/new.html.erb:3
+    app/controllers/manage/students_controller.rb:41:in `create'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
