@@ -9,6 +9,11 @@ class Manage::PositionsController < Manage::BaseController
   end
 
   def new
+    @newposition = Position.new
+    respond_to do |format|
+      format.html
+      format.xml { render_to :xml => @newposition }
+    end
   end
 
   def edit
@@ -23,14 +28,15 @@ class Manage::PositionsController < Manage::BaseController
 
   def create
     @position = Position.new(params[:position])
-
     respond_to do |format|
       if @position.save
         format.html { redirect_to(manage_positions_path, :notice => 'Учёная степень была успешно создана') }
         format.xml  { render :xml => @position, :status => :created, :location => @position }
       else
-        format.html { render :action => "index" }
+        format.html { redirect_to(manage_positions_path, :notice => 'Учёная степень не добавлена') }
         format.xml  { render :xml => @position.errors, :status => :unprocessable_entity }
+        #format.html { render :action => "new" }
+        #format.xml  { render :xml => @position.errors, :status => :unprocessable_entity }
       end
     end
   end

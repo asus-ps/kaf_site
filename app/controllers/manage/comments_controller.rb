@@ -30,15 +30,24 @@ class Manage::CommentsController < Manage::BaseController
 
 
   def create
-    @comment = Comment.new(params[:comment])
+#    @comment = Comment.new(params[:comment])
+#
+#    respond_to do |format|
+#      if @comment.save
+#        format.html { redirect_to(manage_comment_path(@comment), :notice => 'Комментарий успешно добавлен!') }
+#        format.xml  { render :xml => @comment, :status => :created, :location => @comment }
+#      else
+##        format.html { render :action => "new" }
+ #       format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
+ #     end
+ #   end
 
+        @comment = Comment.new(params[:comment])
+    @comment.article_id = @article
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to(manage_comment_path(@comment), :notice => 'Комментарий успешно добавлен!') }
-        format.xml  { render :xml => @comment, :status => :created, :location => @comment }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
+      flash[:notice] = "Added your comment"
+      redirect_to :action => "show", :id => params[:id]
       end
     end
   end

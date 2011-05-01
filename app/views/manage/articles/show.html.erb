@@ -39,13 +39,18 @@
     <td colspan="3"><%= comment.body %></td>
   </tr>
   <tr>
-    <td><%= link_to 'Удалить',  manage_comment_path(comment), :confirm => 'Удалить запись?', :action => "deleteComment"  %></td>
+    <td><%= link_to 'Удалить', manage_article_path(comment.id), :confirm => 'Are you sure?', :method => :deleteComment %></td>
+    <td><%= link_to("Удалить2",manage_article_path(comment.id), :method => :delete, :action => "deleteComment", :confirm => 'Are you sure?') %></td>
   </tr>
   
 </table>
 <% end %>
 </p>
-<%= form_tag :action => "comment", :id => ([:manage,@article]) %><br>
+
+
+
+
+<%= form_tag :action => "comment", :id => (@article) %><br>
 <table>
   <tr>
     <td>Автор:</td>

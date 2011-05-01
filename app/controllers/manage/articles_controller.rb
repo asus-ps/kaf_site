@@ -22,6 +22,7 @@ class Manage::ArticlesController < Manage::BaseController
   def show
     @article = Article.find(params[:id])
     @comments = Comment.all
+    @comm = Comment.new
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @article }
@@ -71,9 +72,14 @@ class Manage::ArticlesController < Manage::BaseController
 
   def comment
     Article.find(params[:id]).comments.create(params[:comment])
-
-    flash[:notice] = "Added your comment"
-    redirect_to :action => "show", :id => params[:id]
+    #@comment = Comment.new(params[:comment])
+    #@comment.article_id = @article
+    #respond_to do |format|
+    #  if @comment.save
+      flash[:notice] = "Added your comment"
+      redirect_to :action => "show", :id => params[:id]
+    #  end
+    #end
   end
 
   def deleteComment

@@ -8,6 +8,7 @@
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>
+
 <%= link_to 'Контакты', manage_contacts_path %>
 <%= link_to 'Полезные ссылки', manage_links_path %>
 <%= link_to 'Новости', manage_articles_path %>
@@ -21,7 +22,7 @@
 <%= link_to 'Кто что ведёт', manage_disciplines_teachers_url %>
 <%= link_to 'Дипломы', manage_diplomas_url %>
 <%= link_to 'Людишки', manage_people_url %>
-<p style="color: green"><%= notice %></p>
+</p>
 
 <%= yield %>
 
