@@ -1,5 +1,4 @@
-<h1>Diplomas#show</h1>
-<p>Find me in app/views/diplomas/show.html.erb</p>
+<h1>Информация о дипломе</h1>
 
 <table>
   <tr>
@@ -12,7 +11,7 @@
   </tr>
   <tr>
     <td>Группа:</td>
-    <td><%=h @diploma.student.speciality.short_name %></td>
+    <td><%=h @diploma.student.speciality.short_name.empty? ? @diploma.student.speciality.name : @diploma.student.speciality.short_name %></td>
   </tr>
   <tr>
     <td>Руководитель:</td>

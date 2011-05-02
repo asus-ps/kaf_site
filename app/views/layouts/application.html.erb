@@ -8,22 +8,48 @@
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>
-<%= link_to 'Контакты', contacts_path %>
-<%= link_to 'Полезные ссылки', links_path %>
-<%= link_to 'Новости', articles_path %>
-<%= link_to 'История', histories_path %>
-<%= link_to 'Студенты', students_path %>
-<%= link_to 'Преподаватели', teachers_path %>
-<%= link_to 'Учёные степени', degrees_url %>
-<%= link_to 'Должности', positions_url %>
-<%= link_to 'Дисциплины', disciplines_url %>
-<%= link_to 'Специальности', specialities_url %>
-<%= link_to 'Кто что ведёт', disciplines_teachers_url %>
-<%= link_to 'Дипломы', diplomas_url %>
-<%= link_to 'Людишки', people_url %>
+<%#= link_to 'Контакты', contacts_path %>
+<%#= link_to 'Полезные ссылки', links_path %>
+<%#= link_to 'Новости', articles_path %>
+<%#= link_to 'История', histories_path %>
+<%#= link_to 'Студенты', students_path %>
+<%#= link_to 'Преподаватели', teachers_path %>
+<%#= link_to 'Учёные степени', degrees_url %>
+<%#= link_to 'Должности', positions_url %>
+<%#= link_to 'Дисциплины', disciplines_url %>
+<%#= link_to 'Специальности', specialities_url %>
+<%#= link_to 'Кто что ведёт', disciplines_teachers_url %>
+<%#= link_to 'Дипломы', diplomas_url %>
+<%#= link_to 'Людишки', people_url %>
 
 
-<%= yield %>
+<%#= yield %>
+  <table>
+    <tr>
+      <td>
+        <%= link_to 'Контакты', manage_contacts_path %>
+<%= link_to 'Полезные ссылки', manage_links_path %>
+<%= link_to 'Новости', manage_articles_path %>
+<%= link_to 'История', manage_histories_path %>
+<%= link_to 'Студенты', manage_students_path %>
+<%= link_to 'Преподаватели', manage_teachers_path %>
+<%= link_to 'Учёные степени', manage_degrees_url %>
+<%= link_to 'Должности', manage_positions_url %>
+<%= link_to 'Дисциплины', manage_disciplines_url %>
+<%= link_to 'Специальности', manage_specialities_url %>
+<%= link_to 'Кто что ведёт', manage_disciplines_teachers_url %>
+<%= link_to 'Дипломы', manage_diplomas_url %>
+<%= link_to 'Людишки', manage_people_url %>
 
+
+
+      </td>
+    <td>
+      <%= yield %>
+    </td>
+    </tr>
+    
+
+  </table>
 </body>
 </html>

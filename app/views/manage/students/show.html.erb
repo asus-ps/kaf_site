@@ -1,5 +1,4 @@
-<h1>Students#show</h1>
-<p>Find me in app/views/students/show.html.erb</p>
+<h1>Студенты | Показать</h1>
 
 <table>
   <tr>
@@ -9,11 +8,6 @@
   <tr>
     <td>Имя:</td>
     <td><%=h @student.person.first_name %></td>
-  </tr>
-
-  <tr>
-    <td>Отчество:</td>
-    <td><%=h @student.person.patronymic_name %></td>
   </tr>
 
   <tr>
@@ -52,7 +46,7 @@
   </tr>
 </table>
 <br>Информация:</br>
-<br><%=h @student.person.info %></br>
-    
+<%=h @student.person.info %>
+<br>
 <%= link_to 'Редактировать', edit_manage_student_path(@student) %> |
 <%= link_to 'Назад', manage_students_path %>

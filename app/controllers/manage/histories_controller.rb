@@ -35,7 +35,7 @@ class Manage::HistoriesController < Manage::BaseController
 
     respond_to do |format|
       if @historie.save
-        format.html { redirect_to(manage_histories_path, :notice => 'История кафедры успешно создана') }
+        format.html { redirect_to(manage_histories_path, :notice => 'История кафедры успешно добавлена') }
         format.xml  { render :xml => @historie, :status => :created, :location => @historie }
       else
         format.html { render :action => "new" }

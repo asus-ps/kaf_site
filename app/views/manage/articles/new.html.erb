@@ -1,11 +1,10 @@
-<h1>Добавление новости</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<h1>Новости кафедры | Добавить</h1>
 
 <% form_for([:manage,@article]) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    Название:<br />
+    Заголовок:<br />
     <%= f.text_field :title %>
   </p>
   <p>

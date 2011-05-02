@@ -52,3 +52,53 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+
+/* MY STYLES*/
+.BodyDescription {
+    height: 50px;
+    width: 400px;
+}
+
+.BodyComment {
+    height: 120px;
+    width: 99%;
+}
+
+.simpleTable{
+
+    border: 1px;
+    border-style: solid;
+    border-spacing: 1px;
+    border-color: black;
+    margin-left: 15px;
+    cellpadding: 4px;
+    cellspacing: 0px;
+}
+
+.textContacts {
+    width: 350px;
+}
+
+.mainArea {  
+    width: 99%;
+    height: 99%;
+
+}
+
+.tdRight {
+
+    padding-left: 10px;
+    padding-top:15px;
+    border-right-style: solid;
+    border-right-width: 8px;
+    border-right-color: green;
+}
+
+.tdLeft {
+
+    padding-left: 20px;
+/*    padding-top:15px;
+    border-right-style: solid;
+    border-right-width: 8px;
+    border-right-color: green;*/
+}

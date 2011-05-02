@@ -1,6 +1,4 @@
-<h1>Specialities#index</h1>
-<p>Find me in app/views/specialities/index.html.erb</p>
-
+<h1>Список специальностей</h1>
 <table>
   <tr>
     <th>Код</th>
@@ -10,7 +8,7 @@
     <th>По диплому</th>
   </tr>
 
-<% @specialities.each do |s| %>
+  <% @specialities.each do |s| %>
   <tr>
     <td><%=h s.code %></td>
     <td><%=h s.name %></td>

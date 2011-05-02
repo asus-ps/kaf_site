@@ -1,5 +1,5 @@
-<h1>Diplomas#index</h1>
-<p>Find me in app/views/diplomas/index.html.erb</p>
+<h1>Информация о дипломах</h1>
+
 <table>
   <tr>
     <th>Название</th>
@@ -15,14 +15,14 @@
 <% @diplomas.each do |d| %>
   <tr>
     <td><%=h d.name %></td>
-    <td><%=h "#{d.student.person.last_name} #{d.student.person.first_name} #{d.student.person.patronymic_name}" %></td>
-    <td><%=h d.student.speciality.short_name %></td>
-    <td><%=h "#{d.teacher.person.last_name} #{d.teacher.person.first_name} #{d.teacher.person.patronymic_name}" %></td>
+    <td><%=h "#{d.student.person.last_name} #{d.student.person.first_name.chars.first}.#{d.student.person.patronymic_name.chars.first}." %></td>
+    <td><%=h d.student.speciality.short_name.empty? ? d.student.speciality.name : d.student.speciality.short_name %></td>
+    <td><%=h "#{d.teacher.person.last_name} #{d.teacher.person.first_name.chars.first}.#{d.teacher.person.patronymic_name.chars.first}." %></td>
     <td><%=h d.protection_year %></td>
-    <td><%=h d.summary %></td>
+    <td><%=h d.summary.chars.first(100) %></td>
     <td><%= link_to 'Показать', manage_diploma_path(d) %></td>
     <td><%= link_to 'Редактировать', edit_manage_diploma_path(d) %></td>
-      <td><%= link_to 'Удалить', manage_diploma_path(d), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to 'Удалить', manage_diploma_path(d), :confirm => 'Удалить запись?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

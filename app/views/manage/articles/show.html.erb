@@ -1,7 +1,7 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<h1>Новость кафедры</h1>
+
 <p>
-  <b>Название новости:</b>
+  <b>Заголовок:</b>
   <%=h @article.title %>
 </p>
 
@@ -28,6 +28,24 @@
 <%= link_to 'Назад', manage_articles_path %>
 <p>
 
+<h2>Комментарии</h2>
+<%= form_tag :action => "comment", :id => (@article) %><br>
+<table>
+  <tr>
+    <td>Автор:</td>
+    <td><%= text_field "comment", "author_name" %></td>
+    <td>Email:</td>
+    <td><%= text_field "comment", "author_email" %></td>
+  </tr>
+  <tr>
+    <td colspan="4"><%= text_area "comment", "body", :class => 'BodyComment' %></td>
+  </tr>
+  <tr>
+    <td colspan="4" align="right"><%= submit_tag "Comment!"  %></td>
+  </tr>
+</table>
+</form>
+
   <% for comment in @article.comments.reverse %>
   <table>
   <tr>
@@ -50,19 +68,3 @@
 
 
 
-<%= form_tag :action => "comment", :id => (@article) %><br>
-<table>
-  <tr>
-    <td>Автор:</td>
-    <td><%= text_field "comment", "author_name" %></td>
-    <td>Email:</td>
-    <td><%= text_field "comment", "author_email" %></td>
-  </tr>
-  <tr>
-    <td colspan="4"><%= text_area "comment", "body" %></td>
-  </tr>
-  <tr>
-    <td colspan="4" align="right"><%= submit_tag "Comment!"  %></td>
-  </tr>
-</table>
-</form>

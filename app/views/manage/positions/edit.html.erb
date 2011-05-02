@@ -1,5 +1,5 @@
-<h1>Positions#edit</h1>
-<p>Find me in app/views/positions/edit.html.erb</p>
+<h1>Должности | Изменить</h1>
+
 <p>
   <% form_for ([:manage,@newposition]) do |f| %>
     <% f.error_messages %>
@@ -19,11 +19,12 @@
 </p>
   <% end %>
 </p>
+<p style="color: red"><%= notice %></p>
 <%= link_to 'Назад', manage_positions_path %>
 <p>
 <table>
   <tr>
-    <th>Индекс</th>
+    <th>№</th>
     <th>Должность</th>
     <th>Сокращение</th>
   </tr>

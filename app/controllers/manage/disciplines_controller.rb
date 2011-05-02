@@ -26,10 +26,11 @@ class Manage::DisciplinesController < Manage::BaseController
 
     respond_to do |format|
       if @discipline.save
-        format.html { redirect_to(manage_disciplines_path, :notice => 'Учёная степень была успешно создана') }
+        format.html { redirect_to(manage_disciplines_path, :notice => 'Дисциплина была успешно создана') }
         format.xml  { render :xml => @discipline, :status => :created, :location => @discipline }
       else
-        format.html { render :action => "index" }
+        #format.html { render :action => "index" }
+        format.html { redirect_to(manage_disciplines_path, :notice => 'Дисциплина не была создана') }
         format.xml  { render :xml => @discipline.errors, :status => :unprocessable_entity }
       end
     end
@@ -40,10 +41,11 @@ class Manage::DisciplinesController < Manage::BaseController
 
     respond_to do |format|
       if @discipline.update_attributes(params[:discipline])
-        format.html { redirect_to(manage_disciplines_path, :notice => 'Учёная степень была успешно изменена') }
+        format.html { redirect_to(manage_disciplines_path, :notice => 'Дисциплина была успешно изменена') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "index" }
+        #format.html { render :action => "index" }
+        format.html { redirect_to(edit_manage_discipline_path(@discipline), :notice => 'Дисциплина не была изменена') }
         format.xml  { render :xml => @discipline.errors, :status => :unprocessable_entity }
       end
     end

@@ -46,7 +46,7 @@ class Manage::CommentsController < Manage::BaseController
     @comment.article_id = @article
     respond_to do |format|
       if @comment.save
-      flash[:notice] = "Added your comment"
+      flash[:notice] = "Ваш комментарий добавлен"
       redirect_to :action => "show", :id => params[:id]
       end
     end

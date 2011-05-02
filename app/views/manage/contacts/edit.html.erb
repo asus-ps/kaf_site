@@ -1,5 +1,4 @@
-<h1>Изменение контактной информации</h1>
-<p>Find me in app/views/contacts/edit.html.erb</p>
+<h1>Контактная информация | Изменить</h1>
 
 <% form_for([:manage,@contact]) do |c| %>
   <%= c.error_messages %>
@@ -7,23 +6,23 @@
 <table>
   <tr>
     <td>Адрес:</td>
-    <td><%= c.text_field :address %></td>
+    <td><%= c.text_field(:address,:class => 'textContacts') %></td>
   </tr>
   <tr>
     <td>Телефоны:</td>
-    <td><%= c.text_field :phones %></td>
+    <td><%= c.text_field(:phones,:class => 'textContacts')  %></td>
   </tr>
   <tr>
     <td>E-mail:</td>
-    <td><%= c.text_field :email %></td>
+    <td><%= c.text_field(:email,:class => 'textContacts')  %></td>
   </tr>
   <tr>
     <td>Сайт:</td>
-    <td><%= c.text_field :url %></td>
+    <td><%= c.text_field(:url,:class => 'textContacts')  %></td>
   </tr>
   <tr>
     <td>Изображение:</td>
-    <td><%= c.text_field :image %></td>
+    <td><%= c.text_field(:image,:class => 'textContacts')  %></td>
   </tr>
   <tr>
     <td></td>

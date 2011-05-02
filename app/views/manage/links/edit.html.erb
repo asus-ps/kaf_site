@@ -1,5 +1,5 @@
-<h1>Links#edit</h1>
-<p>Find me in app/views/links/edit.html.erb</p>
+<h1>Полезные ссылки | Измененить</h1> 
+
 <p>
   <% form_for ([:manage,@newlink]) do |f| %>
     <% f.error_messages %>
@@ -9,19 +9,20 @@
     <td>Описание</td>
   </tr>
   <tr>
-    <td><%= f.text_field :url %></td>
-    <td><%= f.text_area :description %></td>
+    <td valign="top"><%= f.text_field :url %></td>
+    <td><%= f.text_area(:description, :class => 'BodyDescription') %></td>
     <td><%= f.submit 'Изменить' %></td>
   </tr>
 </table>
   <% end %>
 </p>
-<td><%= link_to 'Назад', manage_links_path %></td>
+<p style="color: red"><%= notice %></p>
+<%= link_to 'Назад', manage_links_path %>
 <p>
 <table>
   <tr>
-    <th>Ресурс</th>
-    <th>Описание</th>
+    <th width="200">Ресурс</th>
+    <th width="400">Описание</th>
   </tr>
 
   <% @links.each do |kfl| %>

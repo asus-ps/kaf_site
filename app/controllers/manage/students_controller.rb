@@ -38,7 +38,18 @@ class Manage::StudentsController < Manage::BaseController
   def create
     @student = Student.new(params[:student])
     @student.person.nature = 's'
-    @student.save ? redirect_to(manage_student_path(@student)) : render(:action => "new")
+    respond_to do |format|
+      if @student.save
+        format.html { redirect_to(manage_student_path(@student), :notice => 'Сведения о студенте были успешно добавлены') }
+        format.xml  { render :xml => @student, :status => :created, :location => @diploma }
+      else
+        #format.html { render :action => "new" }
+        format.html { redirect_to(new_manage_student_path(@student), :notice => 'Сведения о студенте не были добавлены') }
+        format.xml  { render :xml => @student.errors, :status => :unprocessable_entity }
+      end
+    end
+
+    #@student.save ? redirect_to(manage_student_path(@student)) : render(:action => "new")
   end
 
   def update

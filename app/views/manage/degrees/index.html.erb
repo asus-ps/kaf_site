@@ -1,5 +1,5 @@
-<h1>Degrees#index</h1>
-<p>Find me in app/views/degrees/index.html.erb</p>
+<h1>Учёные степени</h1>
+
 <p>
   <% form_for([:manage,@newdegree]) do |f| %>
     <%= f.error_messages %>
@@ -18,7 +18,7 @@
 </p>
   <% end %>
 </p>
-
+<p style="color: red"><%= notice %></p>
 <p>
 <table>
   <tr>

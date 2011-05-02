@@ -1,5 +1,4 @@
-<h1>Diplomas#edit</h1>
-<p>Find me in app/views/diplomas/edit.html.erb</p>
+<h1>Информация о дипломах | Изменить</h1>
 
 <% form_for ([:manage,@diploma]) do |f| %>
   <%= f.error_messages %>
@@ -23,7 +22,7 @@
 
   <tr>
     <td>Выполнил</td>
-    <td><%=h f.select(:student_id, options_for_select( Student.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name} , #{p.speciality.short_name}", p.person.id]}, selected_value=@diploma.student_id)) %> <%= link_to 'New', new_manage_student_path %></td>
+    <td><%=h f.select(:student_id, options_for_select( Student.all.collect { |p| ["#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name} , #{p.speciality.short_name.empty? ? (p.speciality.name) : (p.speciality.short_name)}", p.person.id]}, selected_value=@diploma.student_id)) %> <%= link_to 'New', new_manage_student_path %></td>
   </tr>
 
   <tr>
@@ -32,8 +31,8 @@
   </tr>
 
   <tr>
-    <td>Аннотация:</td>
-      <td><%=h f.text_area :summary %></td>
+    <td valign="top">Аннотация:</td>
+      <td><%=h f.text_area(:summary,:class => 'BodyComment') %></td>
     </tr>
   <tr>
     <td></td>
@@ -41,5 +40,5 @@
   </tr>
 </table>
 <% end %>
-
+<%= link_to 'Назад', manage_diplomas_path %>
 

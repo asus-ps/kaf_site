@@ -1,3 +1,5 @@
+<h1>Ученые степени | Изменить</h1>
+
 <p>
   <% form_for([:manage,@newdegree]) do |f| %>
     <%= f.error_messages %>
@@ -16,6 +18,7 @@
 </p>
   <% end %>
 </p>
+<p style="color: red"><%= notice %></p>
 <%= link_to 'Назад', manage_degrees_path %>
 <p>
 <table>

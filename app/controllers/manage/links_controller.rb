@@ -25,10 +25,11 @@ class Manage::LinksController < Manage::BaseController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to(manage_links_path, :notice => 'URL was successfully created.') }
+        format.html { redirect_to(manage_links_path, :notice => 'Ссылка была успешно добавлена') }
         format.xml  { render :xml => @link, :status => :created, :location => @link }
       else
-        format.html { render :action => "index" }
+        #format.html { render :action => "index" }
+        format.html { redirect_to(manage_links_path, :notice => 'Ссылка не была добавлена') }
         format.xml  { render :xml => @link.errors, :status => :unprocessable_entity }
       end
     end
@@ -39,10 +40,11 @@ class Manage::LinksController < Manage::BaseController
 
     respond_to do |format|
       if @link.update_attributes(params[:link])
-        format.html { redirect_to(manage_links_path, :notice => 'URL was successfully updated.') }
+
+        format.html { redirect_to(manage_links_path, :notice => 'Ссылка была успешно изменена') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "index" }
+        format.html { redirect_to(edit_manage_link_path(@link), :notice => 'Ссылка не была изменена') }
         format.xml  { render :xml => @link.errors, :status => :unprocessable_entity }
       end
     end

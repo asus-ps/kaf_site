@@ -1,16 +1,14 @@
-<h1>Изменение новости</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
-
+<h1>Новости кафедры | Измененить</h1>
 
 <% form_for([:manage,@article]) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    Название:<br />
+    Заголовок:<br />
     <%= f.text_field :title %>
   </p>
   <p>
-    Текст<br />
+    Текст:<br />
     <%= f.text_area :body %>
   </p>
   <p>
@@ -18,7 +16,7 @@
     <%= f.select(:priority, 1..10)%>
   </p>
   <p>
-    Изображение<br />
+    Изображение:<br />
     <%= f.text_field :image %>
   </p>
   <p>

@@ -33,7 +33,7 @@ class Manage::ArticlesController < Manage::BaseController
     @article = Article.new(params[:article])    
     respond_to do |format|
       if @article.save
-        format.html { redirect_to(manage_article_path(@article), :notice => 'Новость успешно добавлена!') }
+        format.html { redirect_to(manage_article_path(@article), :notice => 'Новость успешно добавлена') }
         format.xml  { render :xml => @article, :status => :created, :location => @article }
       else
         format.html { render :action => "new" }
@@ -76,7 +76,7 @@ class Manage::ArticlesController < Manage::BaseController
     #@comment.article_id = @article
     #respond_to do |format|
     #  if @comment.save
-      flash[:notice] = "Added your comment"
+      flash[:notice] = "Ваш комментарий добавлен"
       redirect_to :action => "show", :id => params[:id]
     #  end
     #end

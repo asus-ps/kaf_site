@@ -30,13 +30,12 @@ class Manage::PositionsController < Manage::BaseController
     @position = Position.new(params[:position])
     respond_to do |format|
       if @position.save
-        format.html { redirect_to(manage_positions_path, :notice => 'Учёная степень была успешно создана') }
+        format.html { redirect_to(manage_positions_path, :notice => 'Должность была успешно добавлена') }
         format.xml  { render :xml => @position, :status => :created, :location => @position }
       else
-        format.html { redirect_to(manage_positions_path, :notice => 'Учёная степень не добавлена') }
+        format.html { redirect_to(manage_positions_path, :notice => 'Должность не добавлена') }
         format.xml  { render :xml => @position.errors, :status => :unprocessable_entity }
-        #format.html { render :action => "new" }
-        #format.xml  { render :xml => @position.errors, :status => :unprocessable_entity }
+
       end
     end
   end
@@ -46,10 +45,11 @@ class Manage::PositionsController < Manage::BaseController
 
     respond_to do |format|
       if @position.update_attributes(params[:position])
-        format.html { redirect_to(manage_positions_path, :notice => 'Учёная степень была успешно изменена') }
+        format.html { redirect_to(manage_positions_path, :notice => 'Должность была успешно изменена') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "index" }
+        #format.html { render :action => "index" }
+        format.html { redirect_to(edit_manage_position_path(@position), :notice => 'Должность не была изменена') }
         format.xml  { render :xml => @position.errors, :status => :unprocessable_entity }
       end
     end

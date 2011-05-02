@@ -34,7 +34,8 @@ class Manage::DegreesController < Manage::BaseController
         format.html { redirect_to(manage_degrees_path, :notice => 'Учёная степень была успешно создана') }
         format.xml  { render :xml => @degree, :status => :created, :location => @degree }
       else
-        format.html { render :action => "index" }
+        #format.html { render :action => "index" }
+        format.html { redirect_to(manage_degrees_path, :notice => 'Учёная степень не была создана') }
         format.xml  { render :xml => @degree.errors, :status => :unprocessable_entity }
       end
     end
@@ -48,7 +49,8 @@ class Manage::DegreesController < Manage::BaseController
         format.html { redirect_to(manage_degrees_path, :notice => 'Учёная степень была успешно изменена') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "index" }
+        #format.html { render :action => "index" }
+        format.html { redirect_to(edit_manage_degree_path(@degree), :notice => 'Учёная степень не была изменена') }
         format.xml  { render :xml => @degree.errors, :status => :unprocessable_entity }
       end
     end
