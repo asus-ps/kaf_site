@@ -71,7 +71,7 @@ class Manage::ArticlesController < Manage::BaseController
   end
 
   def comment
-    Article.find(params[:id]).comments.create(params[:comment])
+      Article.find(params[:id]).comments.create(params[:comment])
     #@comment = Comment.new(params[:comment])
     #@comment.article_id = @article
     #respond_to do |format|

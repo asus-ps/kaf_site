@@ -27,7 +27,7 @@
 
   <% @links.each do |kfl| %>
     <tr>
-      <td><%=h kfl.url %> </td>
+      <td><%=h link_to kfl.url, url_with_protocol(kfl.url), :target => :blank %> </td>
       <td><%=h kfl.description %> </td>
       <td><%= link_to 'Редактировать', edit_manage_link_path(kfl) %></td>
       <td><%= link_to 'Удалить', manage_link_path(kfl), :confirm => 'Удалить запись?', :method => :delete %></td>

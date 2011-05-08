@@ -40,13 +40,35 @@ class Manage::TeachersController < Manage::BaseController
   def create
     @teacher = Teacher.new(params[:teacher])
     @teacher.person.nature = 't'
-    @teacher.save ? redirect_to(manage_teacher_path(@teacher)) : render(:action => "new")
+
+    respond_to do |format|
+      if @teacher.save
+        format.html { redirect_to(manage_teacher_path(@teacher), :notice => 'Сведения о преподавателе были успешно добавлены') }
+        format.xml  { render :xml => @teacher, :status => :created, :location => @teacher }
+      else
+
+        format.html { redirect_to( new_manage_teacher_path,:notice => 'Сведения о преподавателе не были добавлены. Ошибка в данных') }
+        format.xml  { render :xml => @teacher.errors, :status => :unprocessable_entity }
+      end
+    end
   end
 
   def update
     @teacher = Teacher.find(params[:id])
     @teacher.person.nature = 't'
-    @teacher.update_attributes(params[:teacher]) ? redirect_to(manage_teacher_path(@teacher)) : render(:action => :edit)
+
+    respond_to do |format|
+      if @teacher.update_attributes(params[:teacher])
+        format.html { redirect_to(manage_teacher_path(@teacher)) }
+        format.xml  { render :xml => @teacher, :status => :created, :location => @teacher }
+      else
+
+        format.html { redirect_to( edit_manage_teacher_path(@teacher),:notice => 'Сведения о преподавателе не были изменены. Ошибка в данных') }
+        format.xml  { render :xml => @teacher.errors, :status => :unprocessable_entity }
+      end
+    end
+
+   # @teacher.update_attributes(params[:teacher]) ? redirect_to(manage_teacher_path(@teacher)) : render(:action => :edit)
   end
 
   def destroy

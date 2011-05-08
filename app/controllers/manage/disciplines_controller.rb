@@ -1,6 +1,10 @@
 class Manage::DisciplinesController < Manage::BaseController
+  #paginate :disciplines, :per_page => 3
+
   def index
+    
     @disciplines = Discipline.all
+    #@discipline_pages,@disciplines = paginate(:discipline,:order => 'name')
     @newdiscipline = Discipline.new
     respond_to do |format|
       format.html

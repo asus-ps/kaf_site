@@ -1,5 +1,6 @@
 <h1>Студенты | Изменить</h1>
 
+<p style="color: red"><%= notice %></p>
 <% form_for ([:manage,@student]) do |f| %>
   <%= f.error_messages %>
 
@@ -59,7 +60,7 @@
     <td><%=h per.text_field :photo %></td>
   </tr>
   <tr>
-    <td>Информация:</td>
+    <td valign="top">Информация:</td>
     <td><%=h per.text_area :info %></td>
   </tr>
 

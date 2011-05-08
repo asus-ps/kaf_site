@@ -71,9 +71,12 @@ class Manage::CommentsController < Manage::BaseController
   # DELETE /kafnews/1
   # DELETE /kafnews/1.xml
   def destroy
-
+    @comment = Comment.find(params[:id])
+    @hh = @comment.article
+    @comment.destroy
     respond_to do |format|
-      format.html
+      format.html { redirect_to(manage_article_path(@hh)) }
+      format.xml  { head :ok }
     end
   end
 

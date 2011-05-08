@@ -4,5 +4,6 @@ class Diploma < ActiveRecord::Base
   accepts_nested_attributes_for :student
   accepts_nested_attributes_for :teacher
   validates_presence_of :name
-  validates_length_of :name, :maximum => 254
+  validates_presence_of :protection_year
+  validates_length_of :name, :maximum => 255
 end

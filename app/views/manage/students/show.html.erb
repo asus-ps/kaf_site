@@ -17,7 +17,7 @@
 
   <tr>
     <td>День рождения:</td>
-    <td><%=h @student.person.birthday %></td>
+    <td><%=h "#{Russian::strftime(@student.person.birthday,'%d.%m.%Y')}" %></td>
   </tr>
 
   <tr>

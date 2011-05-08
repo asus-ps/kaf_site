@@ -20,7 +20,7 @@
     <td><%=h t.person.patronymic_name %></td>
     <td><%=h t.degree.name %></td>
     <td><%=h t.position.name %></td>
-    <td><%=h t.person.birthday %></td>
+    <td><%=h "#{Russian::strftime(t.person.birthday,'%d.%m.%Y')}" %></td>
     <td><%=h t.person.phone %></td>
     <td><%=h t.person.email %></td>
     <td><%= link_to 'Показать', manage_teacher_path(t) %></td>

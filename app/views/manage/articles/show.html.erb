@@ -12,7 +12,7 @@
 
 <p>
   <b>Дата публикации:</b>
-  <%=h @article.created_at.to_s %>
+  <%=h "#{Russian::strftime(@article.created_at,'%d %B %Y | %H:%M')}" %>
 </p>
 
 <p>
@@ -41,24 +41,26 @@
     <td colspan="4"><%= text_area "comment", "body", :class => 'BodyComment' %></td>
   </tr>
   <tr>
-    <td colspan="4" align="right"><%= submit_tag "Comment!"  %></td>
+    <td colspan="4" align="right"><%= submit_tag 'Комментировать'  %></td>
   </tr>
 </table>
 </form>
 
   <% for comment in @article.comments.reverse %>
-  <table>
+<table class="TableComment" width="440px" >
   <tr>
+      <td width="50px">Автор:</td>
       <td><%= comment.author_name %></td>
-      <td><%= comment.author_email %></td>
-      <td><%= comment.created_at.to_s %></td>
+      <td align="center"><%= comment.author_email %></td>
   </tr>
   <tr>
     <td colspan="3"><%= comment.body %></td>
   </tr>
   <tr>
-    <td><%= link_to 'Удалить', manage_article_path(comment.id), :confirm => 'Are you sure?', :method => :deleteComment %></td>
-    <td><%= link_to("Удалить2",manage_article_path(comment.id), :method => :delete, :action => "deleteComment", :confirm => 'Are you sure?') %></td>
+    <td colspan="3" align="right"><small><%= "#{Russian::strftime(comment.created_at,'%d %B %Y | %H:%M')}" %></small></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="right"><%= link_to 'Удалить', manage_comment_path(comment), :confirm => 'Удалить запись?', :method => :delete %></td>
   </tr>
   
 </table>

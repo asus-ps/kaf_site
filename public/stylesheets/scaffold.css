@@ -102,3 +102,15 @@ a:hover { color: #fff; background-color:#000; }
     border-right-width: 8px;
     border-right-color: green;*/
 }
+
+.TableComment{
+    border-top-style: solid;
+    border-top-width: 2px;
+    margin-left: 80px;
+}
+
+.LineTopComment{
+    border-top-style: solid;
+    border-top-width: 2 px;
+}
+

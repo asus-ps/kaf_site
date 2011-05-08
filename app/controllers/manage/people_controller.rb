@@ -10,7 +10,7 @@ class Manage::PeopleController < Manage::BaseController
 
     def create
     @person = Person.new(params[:person])
-
+    if @people.valid?
     respond_to do |format|
       if @person.save
         #flash[:notice] = 'Студент успешно занесён в базу'
@@ -20,6 +20,7 @@ class Manage::PeopleController < Manage::BaseController
         format.html { render :action => "new" }
         format.xml  { render :xml => @person.errors, :status => :unprocessable_entity }
       end
+    end
     end
   end
 end

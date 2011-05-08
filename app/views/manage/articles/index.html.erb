@@ -13,7 +13,7 @@
   <tr>
     <td><%=h art.title %></td>
     <td><%=h art.body.chars.first(300) %></td>
-    <td><%=h art.created_at.to_s %></td>
+    <td><%=h "#{Russian::strftime(art.created_at,'%d.%m.%Y %H:%M')}" %></td>
     <td align="center"><%=h art.priority %></td>
     <td><%=h art.image %></td>
     <td><%= link_to 'Показать', manage_article_path(art) %></td>
