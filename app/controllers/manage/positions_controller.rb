@@ -1,6 +1,6 @@
 class Manage::PositionsController < Manage::BaseController
   def index
-    @positions = Position.all
+    @positions = Position.search(params[:search])
     @newposition = Position.new
     respond_to do |format|
       format.html

@@ -6,4 +6,5 @@ class Diploma < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :protection_year
   validates_length_of :name, :maximum => 255
+  validates_uniqueness_of :name, :scope => [:student_id,:teacher_id,:protection_year]
 end

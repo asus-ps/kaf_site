@@ -1,6 +1,6 @@
 class Manage::DegreesController < Manage::BaseController
   def index
-    @degrees = Degree.all
+    @degrees = Degree.search(params[:search],params[:page])
     @newdegree = Degree.new
     respond_to do |format|
       format.html

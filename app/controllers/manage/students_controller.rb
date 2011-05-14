@@ -1,6 +1,6 @@
 class Manage::StudentsController < Manage::BaseController
   def index
-    @students = Student.all(:include => :person, :include => :speciality)
+    @students = Student.search(params[:search])
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @students }

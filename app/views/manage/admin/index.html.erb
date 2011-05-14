@@ -1,5 +1,13 @@
 <h1>Привет, Администратор!</h1>
 
+<h1>File Upload</h1>
+<%= form_tag ({:action => 'uploadFile'},
+                        :multipart => true) %>
+<p><label for="upload_file">Select File</label> :
+<%= file_field 'upload', 'datafile' %></p>
+<%= submit_tag "Upload" %>
+</form>
+
 <%= link_to 'Контакты', manage_contacts_path %>
 <%= link_to 'Полезные ссылки', manage_links_path %>
 <%= link_to 'Новости', manage_articles_path %>

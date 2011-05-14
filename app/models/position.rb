@@ -3,4 +3,12 @@ class Position < ActiveRecord::Base
   validates_presence_of :name
   validates_length_of :name, :maximum => 127
   validates_length_of :short_name, :maximum => 63
+
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}])
+    else
+      find(:all)
+    end
+  end
 end

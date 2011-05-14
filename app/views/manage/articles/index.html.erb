@@ -9,6 +9,13 @@
     <th>Изображение</th>
   </tr>
 
+<% form_tag manage_articles_path, :method => 'get' do %>
+  <p>
+    <%=  text_field_tag :search,params[:search] %>
+    <%= submit_tag 'Поиск', :name => nil %>
+  </p>
+<% end %>
+
 <% @articles.reverse.each do |art| %>
   <tr>
     <td><%=h art.title %></td>

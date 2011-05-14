@@ -1,5 +1,10 @@
 <h1>Студенты</h1>
-
+<% form_tag manage_students_path, :method => 'get' do %>
+  <p>
+    <%=  text_field_tag :search,params[:search] %>
+    <%= submit_tag 'Поиск', :name => nil %>
+  </p>
+<% end %>
 <table>
   <tr>
     <th>Фамилия</th>

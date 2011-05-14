@@ -1,6 +1,6 @@
 class Manage::PeopleController < Manage::BaseController
   def index
-    @people = Person.all
+    @people = Person.search(params[:search])
     respond_to do |format|
       format.html
       format.xml { render :xml => @people }

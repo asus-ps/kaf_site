@@ -3,7 +3,7 @@ class Manage::DisciplinesController < Manage::BaseController
 
   def index
     
-    @disciplines = Discipline.all
+    @disciplines = Discipline.search(params[:search])
     #@discipline_pages,@disciplines = paginate(:discipline,:order => 'name')
     @newdiscipline = Discipline.new
     respond_to do |format|

@@ -1,6 +1,6 @@
 class Manage::ArticlesController < Manage::BaseController
   def index
-    @articles = Article.all
+    @articles = Article.search(params[:search])
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @articles }
@@ -71,13 +71,18 @@ class Manage::ArticlesController < Manage::BaseController
   end
 
   def comment
-      Article.find(params[:id]).comments.create(params[:comment])
+     article = Article.find(params[:id])
+     if article.comments.create(params[:comment])
     #@comment = Comment.new(params[:comment])
     #@comment.article_id = @article
     #respond_to do |format|
     #  if @comment.save
       flash[:notice] = "Ваш комментарий добавлен"
       redirect_to :action => "show", :id => params[:id]
+     else
+       flash[:notice] = "Ваш комментарий не был добавлен"
+      redirect_to :action => "show", :id => params[:id]
+     end
     #  end
     #end
   end

@@ -1,6 +1,6 @@
 class Manage::LinksController < Manage::BaseController
   def index
-    @links = Link.all
+    @links = Link.search(params[:search])
     @newlink = Link.new
     respond_to do |format|
       format.html

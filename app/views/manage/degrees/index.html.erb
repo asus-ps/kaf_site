@@ -18,7 +18,14 @@
 </p>
   <% end %>
 </p>
+
 <p style="color: red"><%= notice %></p>
+<% form_tag manage_degrees_path, :method => 'get' do %>
+  <p>
+    <%=  text_field_tag :search,params[:search] %>
+    <%= submit_tag 'Поиск', :name => nil %>
+  </p>
+<% end %>
 <p>
 <table>
   <tr>
@@ -37,4 +44,5 @@
     </tr>
   <%  end %>
 </table>
+<%= will_paginate @degrees %>
 </p>

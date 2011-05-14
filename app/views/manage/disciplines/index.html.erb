@@ -12,6 +12,14 @@
 </p>
   <% end %>
 </p>
+
+<% form_tag manage_disciplines_path, :method => 'get' do %>
+  <p>
+    <%=  text_field_tag :search,params[:search] %>
+    <%= submit_tag 'Поиск', :name => nil %>
+  </p>
+<% end %>
+
 <p style="color: red"><%= notice %></p>
 <p>
 <table>

@@ -29,7 +29,9 @@
 <p>
 
 <h2>Комментарии</h2>
+<p style="color: red"><%= notice %></p>
 <%= form_tag :action => "comment", :id => (@article) %><br>
+<%= error_messages_for :comment %>
 <table>
   <tr>
     <td>Автор:</td>
