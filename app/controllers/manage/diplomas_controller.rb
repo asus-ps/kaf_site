@@ -1,6 +1,6 @@
 class Manage::DiplomasController < Manage::BaseController
   def index
-    @diplomas = Diploma.all(:include => :student, :include => :teacher)
+    @diplomas = Diploma.search(params[:search],params[:page])#(:include => :student, :include => :teacher)
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @diplomas }

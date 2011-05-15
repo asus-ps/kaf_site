@@ -4,11 +4,14 @@ class Position < ActiveRecord::Base
   validates_length_of :name, :maximum => 127
   validates_length_of :short_name, :maximum => 63
 
-  def self.search(search)
+  def self.search(search,page)
     if search
-      find(:all, :conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}])
+      paginate :per_page => 20, :page => page,
+               :conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}],
+               :order => 'name'
     else
-      find(:all)
+      paginate :per_page => 20, :page => page,
+               :order => 'name'
     end
   end
 end

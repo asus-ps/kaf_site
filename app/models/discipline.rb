@@ -4,11 +4,14 @@ class Discipline < ActiveRecord::Base
   validates_length_of :name, :maximum => 127
   validates_uniqueness_of :name
 
-  def self.search(search)
+  def self.search(search,page)
     if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+      paginate :per_page => 20, :page => page,
+               :conditions => ['name LIKE ?', "%#{search}%"],
+               :order => 'name'
     else
-      find(:all)
+      paginate :per_page => 20, :page => page,
+               :order => 'name'
     end
   end
 end

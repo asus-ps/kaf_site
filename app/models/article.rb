@@ -6,11 +6,15 @@ class Article < ActiveRecord::Base
   validates_length_of :image, :maximum => 255
   validates_format_of :image, :allow_blank => true, :with =>%r{\.(gif|jpg|png)$}i
   validates_uniqueness_of :body, :scope => [:title]
-  def self.search(search)
+
+  def self.search(search,page)
     if search
-      find(:all, :conditions => ['title LIKE :q OR body LIKE :q OR priority=:q',{:q => "%#{search}%"}])
+      paginate  :per_page => 20, :page => page,
+                :conditions => ['title LIKE :q OR body LIKE :q OR priority=:t',{:q => "%#{search}%",:t => "#{search}"}],
+                :order => :created_at
     else
-      find(:all)
+      paginate  :per_page => 20, :page => page,
+                :order => :created_at
     end
   end
 end

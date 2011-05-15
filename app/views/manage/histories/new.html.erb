@@ -16,7 +16,10 @@
     <td>Изображение:</td>
   </tr>
   <tr>
-    <td><%= c.text_field :image %></td>
+    <%= form_tag ({:action => 'uploadFile'},:multipart => true) %>
+      <p><label for="upload_file">Select File</label> :
+      <%= file_field 'upload', 'datafile' %></p>
+      <td><%= c.text_field :image %></td>
   </tr>
   <tr>
     <td align="right"><%= c.submit 'Записать' %></td>

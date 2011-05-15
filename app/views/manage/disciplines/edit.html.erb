@@ -1,13 +1,14 @@
 <h1>Список дисциплин | Измененить</h1>
-
 <p>
-  <% form_for ([:manage,@newdiscipline]) do |f| %>
-    <% f.error_messages %>
-<p>
-  Название дисциплины:
-  <%= f.text_field :name %>
-  <%= f.submit 'Изменить' %>
-</p>
+  <% form_for ([:manage,@discipline]) do |f| %>
+    <%= f.error_messages %>
+<table>
+  <tr>
+    <td>Название дисциплины:</td>
+    <td><%= f.text_field :name %></td>
+    <td><%= f.submit 'Изменить' %></td>
+  </tr>
+</table>
   <% end %>
 </p>
 <p style="color: red"><%= notice %></p>

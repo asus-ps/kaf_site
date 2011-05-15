@@ -8,13 +8,11 @@ class Degree < ActiveRecord::Base
   def self.search(search,page)
     if search
       paginate :per_page => 5, :page => page,
-        :conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}],
-        :order => 'name'
-      #find(:all, :conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}])
+               :conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}],
+               :order => 'name'
     else
       paginate :per_page => 5, :page => page,
-                :order => 'name'
-      #find(:all)
+               :order => 'name'      
     end
   end
 end

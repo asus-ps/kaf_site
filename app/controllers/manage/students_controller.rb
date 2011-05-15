@@ -1,6 +1,6 @@
 class Manage::StudentsController < Manage::BaseController
   def index
-    @students = Student.search(params[:search])
+    @students = Student.search(params[:search],params[:page])
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @students }
@@ -38,14 +38,14 @@ class Manage::StudentsController < Manage::BaseController
   def create
     @student = Student.new(params[:student])
     @student.person.nature = 's'
-    
+    @specialities = Speciality.all
     respond_to do |format|
       if @student.save
         format.html { redirect_to(manage_student_path(@student), :notice => 'Сведения о студенте были успешно добавлены') }
         format.xml  { render :xml => @student, :status => :created, :location => @student }
       else
-        
-        format.html { redirect_to( new_manage_student_path,:notice => 'Сведения о студенте не были добавлены. Ошибка в данных') }
+        format.html { render :action => :new }
+        #format.html { redirect_to( new_manage_student_path,:notice => 'Сведения о студенте не были добавлены. Ошибка в данных') }
         format.xml  { render :xml => @student.errors, :status => :unprocessable_entity, :notice => 'Сведения о студенте не были добавлены' }
       end
     end
@@ -61,12 +61,14 @@ class Manage::StudentsController < Manage::BaseController
   def update
     @student = Student.find(params[:id])
     @student.person.nature = 's'
+    @specialities = Speciality.all
     respond_to do |format|
       if @student.update_attributes(params[:student])
         format.html { redirect_to(manage_student_path(@student))}
         format.xml { render :xml => @student, :status => :created, :location => @student }
       else
-        format.html { redirect_to( edit_manage_student_path(@student),:notice => 'Сведения о студенте не были изменены. Ошибка в данных') }
+        format.html { render :action => :edit }
+        #format.html { redirect_to( edit_manage_student_path(@student),:notice => 'Сведения о студенте не были изменены. Ошибка в данных') }
         format.xml  { render :xml => @student.errors, :status => :unprocessable_entity }
       end
     end

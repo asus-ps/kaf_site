@@ -1,6 +1,6 @@
 class Manage::SpecialitiesController < Manage::BaseController
   def index
-    @specialities = Speciality.search(params[:search])
+    @specialities = Speciality.search(params[:search],params[:page])
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @specialities }

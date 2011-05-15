@@ -32,7 +32,7 @@ class Manage::HistoriesController < Manage::BaseController
 
   def create
     @historie = Historie.new(params[:historie])
-
+    post = Historie.uploadfile(params[:upload])
     respond_to do |format|
       if @historie.save
         format.html { redirect_to(manage_histories_path, :notice => 'История кафедры успешно добавлена') }

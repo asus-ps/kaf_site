@@ -7,7 +7,7 @@ class Manage::AdminController < Manage::BaseController
   end
 
   def uploadFile
-    post = Admin.save(params[:upload])
+    post = Admin.uploadfile(params[:upload])
     render :text => "File has been uploaded successfully"
   end
 

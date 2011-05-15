@@ -4,4 +4,17 @@ class DisciplinesTeacher < ActiveRecord::Base
   validates_presence_of :teacher_id
   validates_presence_of :discipline_id
   validates_uniqueness_of :teacher_id, :scope => [:discipline_id]
+
+  def self.search(search,page)
+    if search
+      paginate :per_page => 20, :page => page,
+               :include =>  [{:teacher => :person}, :discipline] ,
+               :conditions => ['people.last_name LIKE :q OR disciplines.name LIKE :q  ',{:q => "%#{search}%"}],
+               :order => 'disciplines.name'
+    else
+      paginate :per_page => 20, :page => page,
+               :include =>  [{:teacher => :person}, :discipline] ,
+               :order => 'disciplines.name'
+    end
+  end
 end

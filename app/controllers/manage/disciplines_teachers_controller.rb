@@ -1,6 +1,6 @@
 class Manage::DisciplinesTeachersController < Manage::BaseController
   def index
-    @dts= DisciplinesTeacher.all
+    @dts= DisciplinesTeacher.search(params[:search],params[:page])
     @newdt = DisciplinesTeacher.new
     @disciplines = Discipline.all
     @teachers = Teacher.all( :include => :person )
@@ -27,13 +27,14 @@ class Manage::DisciplinesTeachersController < Manage::BaseController
 
   def create
     @disciplines_teacher = DisciplinesTeacher.new(params[:disciplines_teacher])
-
+    @dts= DisciplinesTeacher.search(params[:search],params[:page])
     respond_to do |format|
       if @disciplines_teacher.save
         format.html { redirect_to(manage_disciplines_teachers_path, :notice => 'Связь была успешно создана') }
         format.xml  { render :xml => @disciplines_teacher, :status => :created, :location => @disciplines_teacher }
       else
-        format.html { redirect_to(manage_disciplines_teachers_path, :notice => 'Связь не была создана') }
+        format.html { render :action => :index }
+        #format.html { redirect_to(manage_disciplines_teachers_path, :notice => 'Связь не была создана') }
         format.xml  { render :xml => @disciplines_teacher.errors, :status => :unprocessable_entity }
       end
     end
@@ -42,14 +43,14 @@ class Manage::DisciplinesTeachersController < Manage::BaseController
 
   def update
     @disciplines_teacher = DisciplinesTeacher.find(params[:id])
-
+    @dts= DisciplinesTeacher.search(params[:search],params[:page])
     respond_to do |format|
       if @disciplines_teacher.update_attributes(params[:disciplines_teacher])
         format.html { redirect_to(manage_disciplines_teachers_path, :notice => 'Связь была успешно изменена') }
         format.xml  { head :ok }
       else
-        #format.html { render :action => "index" }
-        format.html { redirect_to(edit_manage_disciplines_teacher_path(@disciplines_teacher), :notice => 'Связь не была изменена') }
+        format.html { render :action => :edit }
+        #format.html { redirect_to(edit_manage_disciplines_teacher_path(@disciplines_teacher), :notice => 'Связь не была изменена') }
         format.xml  { render :xml => @disciplines_teacher.errors, :status => :unprocessable_entity }
       end
     end

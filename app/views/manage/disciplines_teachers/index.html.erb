@@ -1,8 +1,10 @@
 <h1>Преподаватели-дисциплины</h1>
 
+
+
 <p>
   <% form_for ([:manage,@newdt]) do |f| %>
-    <% f.error_messages %>
+    <%= f.error_messages %>
 <table>
   <tr>
     <td>Дисциплина</td>
@@ -21,6 +23,12 @@
   <% end %>
 </p>
 <p style="color: red"><%= notice %></p>
+<% form_tag manage_disciplines_teachers_path, :method => 'get' do %>
+  <p>
+    <%=  text_field_tag :search,params[:search] %>
+    <%= submit_tag 'Поиск', :name => nil %>
+  </p>
+<% end %>
 <table>
   <tr>
     <th>Предмет</th>

@@ -1,5 +1,5 @@
 class Admin < ActiveRecord::Base
-  def self.save(upload)
+  def self.uploadfile(upload)
     name =  upload['datafile'].original_filename
     directory = "public/data"
     # create the file path

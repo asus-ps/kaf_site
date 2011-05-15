@@ -1,6 +1,6 @@
 class Manage::ArticlesController < Manage::BaseController
   def index
-    @articles = Article.search(params[:search])
+    @articles = Article.search(params[:search],params[:page])
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @articles }

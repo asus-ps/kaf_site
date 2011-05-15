@@ -1,7 +1,7 @@
 class Manage::PositionsController < Manage::BaseController
   def index
-    @positions = Position.search(params[:search])
-    @newposition = Position.new
+    @positions = Position.search(params[:search],params[:page])
+    @position = Position.new
     respond_to do |format|
       format.html
       format.xml { render :xml => @position }
@@ -9,7 +9,7 @@ class Manage::PositionsController < Manage::BaseController
   end
 
   def new
-    @newposition = Position.new
+    @position = Position.new
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @newposition }
@@ -18,7 +18,7 @@ class Manage::PositionsController < Manage::BaseController
 
   def edit
     @positions = Position.all
-    @newposition = Position.find(params[:id])
+    @position = Position.find(params[:id])
     respond_to do |format|
       format.html
       format.xml { render :xml => @position }
@@ -28,12 +28,14 @@ class Manage::PositionsController < Manage::BaseController
 
   def create
     @position = Position.new(params[:position])
+    @positions = Position.search(params[:search],params[:page])
     respond_to do |format|
       if @position.save
         format.html { redirect_to(manage_positions_path, :notice => 'Должность была успешно добавлена') }
         format.xml  { render :xml => @position, :status => :created, :location => @position }
       else
-        format.html { redirect_to(manage_positions_path, :notice => 'Должность не добавлена') }
+        format.html { render :action => :index }
+        #format.html { redirect_to(manage_positions_path, :notice => 'Должность не добавлена') }
         format.xml  { render :xml => @position.errors, :status => :unprocessable_entity }
 
       end
@@ -42,14 +44,14 @@ class Manage::PositionsController < Manage::BaseController
 
   def update
     @position = Position.find(params[:id])
-
+    @positions = Position.search(params[:search],params[:page])
     respond_to do |format|
       if @position.update_attributes(params[:position])
         format.html { redirect_to(manage_positions_path, :notice => 'Должность была успешно изменена') }
         format.xml  { head :ok }
       else
-        #format.html { render :action => "index" }
-        format.html { redirect_to(edit_manage_position_path(@position), :notice => 'Должность не была изменена') }
+        format.html { render :action => :edit }
+        #format.html { redirect_to(edit_manage_position_path(@position), :notice => 'Должность не была изменена') }
         format.xml  { render :xml => @position.errors, :status => :unprocessable_entity }
       end
     end

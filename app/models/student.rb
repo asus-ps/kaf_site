@@ -6,11 +6,16 @@ class Student < ActiveRecord::Base
   accepts_nested_attributes_for :person
   validates_presence_of :year_income
 
-  def self.search(search)
+  def self.search(search,page)
     if search
-      find(:all,:include => :person, :include => :speciality, :conditions => ['first_name LIKE :q OR last_name LIKE :q OR patronimyc_name LIKE :q OR phone LIKE :q OR email LIKE :q ',{:q => "%#{search}%"}])
+      paginate :per_page => 25, :page => page,
+               :include => [:person, :speciality],
+               :conditions => ['people.first_name LIKE :q OR people.last_name LIKE :q OR people.patronymic_name LIKE :q OR people.phone LIKE :q OR people.email LIKE :q OR specialities.name LIKE :q OR year_income=:t',{:q => "%#{search}%",:t => "#{search}"}],
+               :order => 'people.last_name'
     else
-      find(:all,:include => :person, :include => :speciality)
+      paginate :per_page => 25, :page => page,
+               :include => [:person, :speciality], 
+               :order => 'people.last_name'
     end
   end
 end
