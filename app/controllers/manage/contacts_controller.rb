@@ -30,8 +30,10 @@ class Manage::ContactsController < Manage::BaseController
   end
 
   def create
+#    if (params[:contact] and params[:contact][:image])
+#      params[:contact][:image] = params[:contact][:image].read
+#    end
     @contact = Contact.new(params[:contact])
-
     respond_to do |format|
       if @contact.save
         format.html { redirect_to(manage_contacts_path, :notice => 'Контактная информация успешно добавлена') }
@@ -58,4 +60,11 @@ class Manage::ContactsController < Manage::BaseController
     end
   end
 
+
+  def upload
+    uploaded_io = params[:person][:image]
+    File.open(Rails.root.join('public/data', uploaded_io.original_filename), 'w') do |file|
+    file.write(uploaded_io.read)
+    end
+  end
 end

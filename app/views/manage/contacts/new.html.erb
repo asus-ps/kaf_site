@@ -1,6 +1,6 @@
 <h1>Контактная информация | Добавить</h1>
 
-<% form_for([:manage,@contact]) do |c| %>
+<% form_for [:manage,@contact] , :html => {:multipart => true } do |c| %>
   <%= c.error_messages %>
 
 <table>
@@ -22,7 +22,8 @@
   </tr>
   <tr>
     <td>Изображение:</td>
-    <td><%= c.text_field(:image,:class => 'textContacts')  %></td>
+    <td><%= c.file_field  :image %></td>
+    <!--td<!%= c.text_field(:image,:class => 'textContacts')  %></td-->
   </tr>
     <td></td>
     <td align="right"><%= c.submit 'Записать' %></td>
