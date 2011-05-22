@@ -22,7 +22,7 @@
 
 <p>
   <b>Изображение:</b>
-  <%=h @article.image %>
+  <%= image_tag(@article.image) %>
 </p>
 <%= link_to 'Изменить', edit_manage_article_path(@article) %> |
 <%= link_to 'Назад', manage_articles_path %>

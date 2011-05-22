@@ -30,12 +30,11 @@ class Manage::ContactsController < Manage::BaseController
   end
 
   def create
-#    if (params[:contact] and params[:contact][:image])
-#      params[:contact][:image] = params[:contact][:image].read
-#    end
     @contact = Contact.new(params[:contact])
+    @contact.id = 1
     respond_to do |format|
       if @contact.save
+        post = Contact.uploadfile(params[:contact])
         format.html { redirect_to(manage_contacts_path, :notice => 'Контактная информация успешно добавлена') }
         format.xml  { render :xml => @contact, :status => :created, :location => @contact }
       else

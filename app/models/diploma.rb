@@ -19,9 +19,14 @@ class Diploma < ActiveRecord::Base
 #               #:include =>  [{ :teacher => :person } ],
 #               #:conditions => ['people.last_name LIKE :q OR name LIKE :q OR protection_year=:t ',{:q => "%#{search}%",:t => "#{search}"}],
 #               :order => 'name'
-      @t = Diploma.all(:include => { :student => :person }, :conditions => ['people.last_name LIKE :q OR name LIKE :q OR protection_year=:t ',{:q => "%#{search}%",:t => "#{search}"}])
-      @s = Diploma.all(:include => { :teacher => :person }, :conditions => ['people.last_name LIKE :q OR name LIKE :q OR protection_year=:t ',{:q => "%#{search}%",:t => "#{search}"}])
-      @all = @t + @s
+#      @t = Diploma.all(:include => { :student => :person }, :conditions => ['people.last_name LIKE :q OR name LIKE :q OR protection_year=:t ',{:q => "%#{search}%",:t => "#{search}"}])
+#      @s = Diploma.all(:include => { :teacher => :person }, :conditions => ['people.last_name LIKE :q OR name LIKE :q OR protection_year=:t ',{:q => "%#{search}%",:t => "#{search}"}])
+#      @all = @t + @s
+
+Diploma.all(:include =>  [{:student => :person}, {:teacher => :person}] ,
+               :conditions => ['people.last_name LIKE :q OR diplomas.name LIKE :q OR people_teachers.last_name like :q OR protection_year=:t',{:q => "%#{search}%",:t => "#{search}"}]).paginate(
+                          :per_page => 20, :page => page,
+                          :order => 'name')
     else
       paginate :per_page => 20, :page => page,
                :include =>  [ {:student => :person},{:teacher => :person}] ,
