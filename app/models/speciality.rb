@@ -10,12 +10,11 @@ class Speciality < ActiveRecord::Base
 
   def self.search(search,page)
     if search
-      paginate :per_page => 20, :page => page,
-               :conditions => ['code LIKE :q OR name LIKE :q OR short_name LIKE :q OR in_diploma LIKE :q OR count_years=:t',{:q => "%#{search}%",:t => "#{search}"}],
-               :order => 'name'
+      Speciality.all(:conditions => ['code LIKE :q OR name LIKE :q OR short_name LIKE :q OR in_diploma LIKE :q OR count_years=:t',{:q => "%#{search}%",:t => "#{search}"}]).paginate(:per_page => 20, :page => page,
+               :order => 'name')
     else
-      paginate :per_page => 20, :page => page,
-               :order => 'name'
+      Speciality.all.paginate(:per_page => 20, :page => page,
+               :order => 'name')
     end
   end
 end

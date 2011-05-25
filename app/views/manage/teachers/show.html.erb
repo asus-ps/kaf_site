@@ -36,7 +36,7 @@
     </tr>
     <tr>
       <td>Фото</td>
-      <td><%=h @teacher.person.photo %></td>
+      <td><%= image_tag(@teacher.person.picture_path) %></td>
     </tr>
     <tr>
       <td>Информация:</td>

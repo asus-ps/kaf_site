@@ -1,0 +1,28 @@
+  <%= c.error_messages %>
+
+<table>
+   <tr>
+    <td>Адрес:</td>
+    <td><%= c.text_field(:address,:class => 'textContacts') %></td>
+  </tr>
+  <tr>
+    <td>Телефоны:</td>
+    <td><%= c.text_field(:phones,:class => 'textContacts')  %></td>
+  </tr>
+  <tr>
+    <td>E-mail:</td>
+    <td><%= c.text_field(:email,:class => 'textContacts')  %></td>
+  </tr>
+  <tr>
+    <td>Сайт:</td>
+    <td><%= c.text_field(:url,:class => 'textContacts')  %></td>
+  </tr>
+  <tr>
+    <td>Изображение:</td>
+    <td><%= link_to(contact.picture_name, contact.picture_path) if contact.picture_exists? %><br /><%= c.file_field :picture %></td>
+   </tr>
+  <tr>
+    <td></td>
+    <td align="right"><%= c.submit 'Записать' %></td>
+  </tr>
+</table>

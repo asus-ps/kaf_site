@@ -12,12 +12,7 @@
   <% end %>
 </p>
 
-<% form_tag manage_disciplines_path, :method => 'get' do %>
-  <p>
-    <%=  text_field_tag :search,params[:search] %>
-    <%= submit_tag 'Поиск', :name => nil %>
-  </p>
-<% end %>
+<%= render :partial => 'manage/shares/search_form',:locals => { :path => manage_disciplines_path } %>
 
 <p style="color: red"><%= notice %></p>
 <p>

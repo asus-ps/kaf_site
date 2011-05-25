@@ -6,12 +6,11 @@ class Discipline < ActiveRecord::Base
 
   def self.search(search,page)
     if search
-      paginate :per_page => 20, :page => page,
-               :conditions => ['name LIKE ?', "%#{search}%"],
-               :order => 'name'
+      Discipline.all(:conditions => ['name LIKE ?', "%#{search}%"]).paginate(:per_page => 20, :page => page,
+               :order => 'name')
     else
-      paginate :per_page => 20, :page => page,
-               :order => 'name'
+      Discipline.all.paginate(:per_page => 20, :page => page,
+               :order => 'name')
     end
   end
 end

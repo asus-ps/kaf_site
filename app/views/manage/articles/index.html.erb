@@ -6,15 +6,9 @@
     <th>Текст новости</th>
     <th>Дата публикации</th>
     <th>Приоритет</th>
-    <th>Изображение</th>
   </tr>
 
-<% form_tag manage_articles_path, :method => 'get' do %>
-  <p>
-    <%=  text_field_tag :search,params[:search] %>
-    <%= submit_tag 'Поиск', :name => nil %>
-  </p>
-<% end %>
+<%= render :partial => 'manage/shares/search_form',:locals => { :path => manage_articles_path } %>
 
 <% @articles.reverse.each do |art| %>
   <tr>
@@ -22,7 +16,6 @@
     <td><%=h art.body.chars.first(300) %></td>
     <td><%=h "#{Russian::strftime(art.created_at,'%d.%m.%Y %H:%M')}" %></td>
     <td align="center"><%=h art.priority %></td>
-    <td><%=h art.image %></td>
     <td><%= link_to 'Показать', manage_article_path(art) %></td>
     <td><%= link_to 'Редактировать', edit_manage_article_path(art) %></td>
     <td><%= link_to 'Удалить', manage_article_path(art), :confirm => 'Удалить запись?', :method => :delete %></td>

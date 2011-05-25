@@ -1,5 +1,4 @@
 <h1>История кафедры</h1>
-<p>Find me in app/views/histories/index.html.erb</p>
 
 <table>
   <tr>
@@ -12,7 +11,7 @@
     <td>Изображение:</td>
   </tr>
   <tr>
-    <td><%=h @historie.image %></td>
+    <td><%= image_tag(@historie.picture_path) %></td>
   </tr>
 </table>
 

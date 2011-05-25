@@ -1,0 +1,16 @@
+ <%= c.error_messages %>
+<table>
+  <tr>
+    <td>История:</td>
+  </tr>
+  <tr>
+    <td><%= c.text_area(:body) %></td>
+  </tr>
+  <tr>
+    <td>Изображение:</td>
+  </tr>
+<td><%= link_to(historie.picture_name, historie.picture_path) if historie.picture_exists? %><br /><%= c.file_field :picture %></td>
+  <tr>
+    <td align="right"><%= c.submit 'Записать' %></td>
+  </tr>
+</table>

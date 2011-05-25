@@ -1,34 +1,5 @@
 <h1>Контактная информация | Добавить</h1>
 
 <% form_for [:manage,@contact] , :html => {:multipart => true } do |c| %>
-  <%= c.error_messages %>
-
-<table>
-   <tr>
-    <td>Адрес:</td>
-    <td><%= c.text_field(:address,:class => 'textContacts') %></td>
-  </tr>
-  <tr>
-    <td>Телефоны:</td>
-    <td><%= c.text_field(:phones,:class => 'textContacts')  %></td>
-  </tr>
-  <tr>
-    <td>E-mail:</td>
-    <td><%= c.text_field(:email,:class => 'textContacts')  %></td>
-  </tr>
-  <tr>
-    <td>Сайт:</td>
-    <td><%= c.text_field(:url,:class => 'textContacts')  %></td>
-  </tr>
-  <tr>
-    <td>Изображение:</td>
-    <td><%= c.file_field  :datafile %></td>
-    <!--td<!%= c.text_field(:image,:class => 'textContacts')  %></td-->
-  </tr>
-  <tr>
-    <td></td>
-    <td align="right"><%= c.submit 'Записать' %></td>
-  </tr>
-</table>
-
+  <%= render :partial => 'form', :locals => {:c => c, :contact => @contact } %>
 <% end %>

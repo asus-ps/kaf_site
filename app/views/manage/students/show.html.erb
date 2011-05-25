@@ -42,11 +42,11 @@
 
   <tr>
     <td>Фото:</td>
-    <td><%=h @student.person.photo %></td>
+    <td><%= image_tag(@student.person.picture_path) %></td>
   </tr>
 </table>
 <br>Информация:</br>
 <%=h @student.person.info %>
-<br>
+<br />
 <%= link_to 'Редактировать', edit_manage_student_path(@student) %> |
 <%= link_to 'Назад', manage_students_path %>

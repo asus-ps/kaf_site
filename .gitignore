@@ -2,3 +2,7 @@
 /config/database.yml
 /public/data
 /log/
+/public/articles
+/public/contacts
+/public/histories
+/public/people

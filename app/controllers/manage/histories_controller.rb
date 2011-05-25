@@ -27,12 +27,16 @@ class Manage::HistoriesController < Manage::BaseController
 
   def new
     @historie = Historie.new
+    respond_to do |format|
+      format.html
+      format.xml { render_to :xml => @historie }
+    end
   end
 
 
   def create
     @historie = Historie.new(params[:historie])
-    post = Historie.uploadfile(params[:upload])
+    @historie.id = 1
     respond_to do |format|
       if @historie.save
         format.html { redirect_to(manage_histories_path, :notice => 'История кафедры успешно добавлена') }
@@ -42,12 +46,10 @@ class Manage::HistoriesController < Manage::BaseController
         format.xml  { render :xml => @historie.errors, :status => :unprocessable_entity }
       end
     end
-
   end
 
   def update
     @historie = Historie.find(1)
-
     respond_to do |format|
       if @historie.update_attributes(params[:historie])
         format.html { redirect_to(manage_histories_path, :notice => 'История кафедры успешно обновлена') }

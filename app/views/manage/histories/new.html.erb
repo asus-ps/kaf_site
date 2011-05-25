@@ -1,30 +1,5 @@
-<h1>Histories#new</h1>
-<p>Find me in app/views/histories/new.html.erb</p>
+<h1>История кафедры | Заполнение</h1>
 
-
-<% form_for([:manage,@historie]) do |c| %>
-  <%= c.error_messages %>
-
-<table>
-  <tr>
-    <td>История:</td>
-  </tr>
-  <tr>
-    <td><%= c.text_area :body %></td>
-  </tr>
-  <tr>
-    <td>Изображение:</td>
-  </tr>
-  <tr>
-    <%= form_tag ({:action => 'uploadFile'},:multipart => true) %>
-      <p><label for="upload_file">Select File</label> :
-      <%= file_field 'upload', 'datafile' %></p>
-      <td><%= c.text_field :image %></td>
-  </tr>
-  <tr>
-    <td align="right"><%= c.submit 'Записать' %></td>
-  </tr>
-</table>
-
-
+<% form_for([:manage,@historie], :html => {:multipart => true }) do |c| %>
+ <%= render :partial => 'form', :locals => {:c => c, :historie => @historie } %>
 <% end %>

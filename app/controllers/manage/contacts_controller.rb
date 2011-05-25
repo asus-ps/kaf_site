@@ -34,7 +34,6 @@ class Manage::ContactsController < Manage::BaseController
     @contact.id = 1
     respond_to do |format|
       if @contact.save
-        post = Contact.uploadfile(params[:contact])
         format.html { redirect_to(manage_contacts_path, :notice => 'Контактная информация успешно добавлена') }
         format.xml  { render :xml => @contact, :status => :created, :location => @contact }
       else
@@ -60,10 +59,4 @@ class Manage::ContactsController < Manage::BaseController
   end
 
 
-  def upload
-    uploaded_io = params[:person][:image]
-    File.open(Rails.root.join('public/data', uploaded_io.original_filename), 'w') do |file|
-    file.write(uploaded_io.read)
-    end
-  end
 end

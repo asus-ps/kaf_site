@@ -6,12 +6,12 @@ class Position < ActiveRecord::Base
 
   def self.search(search,page)
     if search
-      paginate :per_page => 20, :page => page,
-               :conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}],
-               :order => 'name'
+      Position.all(:conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}]).paginate(
+               :per_page => 20, :page => page,
+               :order => 'name')
     else
-      paginate :per_page => 20, :page => page,
-               :order => 'name'
+      Position.all.paginate(:per_page => 20, :page => page, :order => 'name')
+               
     end
   end
 end

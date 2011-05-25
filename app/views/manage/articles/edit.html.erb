@@ -1,27 +1,7 @@
 <h1>Новости кафедры | Измененить</h1>
 
-<% form_for([:manage,@article]) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    Заголовок:<br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    Текст:<br />
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    Приоритет:<br />
-    <%= f.select(:priority, 1..10)%>
-  </p>
-  <p>
-    Изображение:<br />
-    <%= f.text_field :image %>
-  </p>
-  <p>
-    <%= f.submit 'Изменить' %>
-  </p>
+<% form_for([:manage,@article], :html => {:multipart => true }) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f, :article => @article } %>
 <% end %>
 
 <%= link_to 'Назад', manage_articles_path %>

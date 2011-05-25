@@ -7,14 +7,12 @@ class DisciplinesTeacher < ActiveRecord::Base
 
   def self.search(search,page)
     if search
-      paginate :per_page => 20, :page => page,
-               :include =>  [{:teacher => :person}, :discipline] ,
-               :conditions => ['people.last_name LIKE :q OR disciplines.name LIKE :q  ',{:q => "%#{search}%"}],
-               :order => 'disciplines.name'
+      DisciplinesTeacher.all(:include =>  [{:teacher => :person}, :discipline] ,
+               :conditions => ['people.last_name LIKE :q OR disciplines.name LIKE :q  ',{:q => "%#{search}%"}]).paginate(:per_page => 20, :page => page,
+               :order => 'disciplines.name')
     else
-      paginate :per_page => 20, :page => page,
-               :include =>  [{:teacher => :person}, :discipline] ,
-               :order => 'disciplines.name'
+      DisciplinesTeacher.all(:include =>  [{:teacher => :person}, :discipline]).paginate(:per_page => 20, :page => page,
+               :order => 'disciplines.name')
     end
   end
 end

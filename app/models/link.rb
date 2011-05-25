@@ -7,10 +7,10 @@ class Link < ActiveRecord::Base
 
   def self.search(search, page)
     if search
-      paginate :per_page => 20, :page => page,
-               :conditions => ['url LIKE :q OR description LIKE :q ',{:q => "%#{search}%"}]
+      Link.all(:conditions => ['url LIKE :q OR description LIKE :q ',{:q => "%#{search}%"}]).paginate(
+              :per_page => 20, :page => page)               
     else
-      paginate :per_page => 20, :page => page
+      Link.all.paginate(:per_page => 20, :page => page)
     end
   end
 end

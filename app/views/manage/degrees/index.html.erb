@@ -20,12 +20,8 @@
 </p>
 
 <p style="color: red"><%= notice %></p>
-<% form_tag manage_degrees_path, :method => 'get' do %>
-  <p>
-    <%=  text_field_tag :search,params[:search] %>
-    <%= submit_tag 'Поиск', :name => nil %>
-  </p>
-<% end %>
+<%= render :partial => 'manage/shares/search_form',:locals => { :path => manage_degrees_path } %>
+
 <p>
 <table>
   <tr>

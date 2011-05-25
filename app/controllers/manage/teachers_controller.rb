@@ -20,7 +20,6 @@ class Manage::TeachersController < Manage::BaseController
 
   def edit
     @teacher = Teacher.find(params[:id])
-    @teacher.person.update_attributes(params[:teacher])
     @degrees = Degree.all
     @positions = Position.all
     respond_to do |format|
@@ -48,7 +47,6 @@ class Manage::TeachersController < Manage::BaseController
         format.xml  { render :xml => @teacher, :status => :created, :location => @teacher }
       else
         format.html { render :action => :new }
-        #format.html { redirect_to( new_manage_teacher_path,:notice => 'Сведения о преподавателе не были добавлены. Ошибка в данных') }
         format.xml  { render :xml => @teacher.errors, :status => :unprocessable_entity }
       end
     end
@@ -65,7 +63,6 @@ class Manage::TeachersController < Manage::BaseController
         format.xml  { render :xml => @teacher, :status => :created, :location => @teacher }
       else
         format.html { render :action => :edit }
-        #format.html { redirect_to( edit_manage_teacher_path(@teacher),:notice => 'Сведения о преподавателе не были изменены. Ошибка в данных') }
         format.xml  { render :xml => @teacher.errors, :status => :unprocessable_entity }
       end
     end
