@@ -1,6 +1,7 @@
 class Manage::CommentsController < Manage::BaseController
   def index
     @comments = Comment.all
+
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @comments }
@@ -13,6 +14,7 @@ class Manage::CommentsController < Manage::BaseController
 
   def new
     @comment = Comment.new
+
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @comment }
@@ -21,6 +23,7 @@ class Manage::CommentsController < Manage::BaseController
 
   def show
     @comment = Comment.find(params[:id])
+
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @comment }
@@ -30,20 +33,9 @@ class Manage::CommentsController < Manage::BaseController
 
 
   def create
-#    @comment = Comment.new(params[:comment])
-#
-#    respond_to do |format|
-#      if @comment.save
-#        format.html { redirect_to(manage_comment_path(@comment), :notice => 'Комментарий успешно добавлен!') }
-#        format.xml  { render :xml => @comment, :status => :created, :location => @comment }
-#      else
-##        format.html { render :action => "new" }
- #       format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
- #     end
- #   end
-
-        @comment = Comment.new(params[:comment])
+    @comment = Comment.new(params[:comment])
     @comment.article_id = @article
+
     respond_to do |format|
       if @comment.save
       flash[:notice] = "Ваш комментарий добавлен"
@@ -52,8 +44,7 @@ class Manage::CommentsController < Manage::BaseController
     end
   end
 
-  # PUT /kafnews/1
-  # PUT /kafnews/1.xml
+
   def update
     @comment = Comment.find(params[:id])
 
@@ -68,8 +59,6 @@ class Manage::CommentsController < Manage::BaseController
     end
   end
 
-  # DELETE /kafnews/1
-  # DELETE /kafnews/1.xml
   def destroy
     @comment = Comment.find(params[:id])
     @hh = @comment.article

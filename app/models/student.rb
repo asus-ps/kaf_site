@@ -13,11 +13,9 @@ class Student < ActiveRecord::Base
   def self.search(search,page)
     if search
       Student.all(:include => [:person, :speciality],
-               :conditions => ['people.first_name LIKE :q OR people.last_name LIKE :q OR people.patronymic_name LIKE :q OR people.phone LIKE :q OR people.email LIKE :q OR specialities.name LIKE :q OR year_income=:t',{:q => "%#{search}%",:t => "#{search}"}]).paginate(:per_page => 25, :page => page,
-               :order => 'people.last_name')
+               :conditions => ['people.first_name LIKE :q OR people.last_name LIKE :q OR people.patronymic_name LIKE :q OR people.phone LIKE :q OR people.email LIKE :q OR specialities.name LIKE :q OR year_income=:t',{:q => "%#{search}%",:t => "#{search}"}], :order => 'people.last_name').paginate(:per_page => 25, :page => page)
     else
-      Student.all(:include => [:person, :speciality]).paginate(:per_page => 25, :page => page,
-               :order => 'people.last_name')
+      Student.all(:include => [:person, :speciality], :order => 'people.last_name').paginate(:per_page => 25, :page => page)
     end
   end
 end

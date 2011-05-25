@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Индекс</th>
+    <th>Степень</th>
+    <th>Сокращение</th>
+  </tr>
+
+  <% @degrees.each do |d| %>
+    <tr>
+      <td><%=h d.id %> </td>
+      <td><%=h d.name %> </td>
+      <td><%=h d.short_name %> </td>
+      <td><%= link_to 'Редактировать', edit_manage_degree_path(d) %></td>
+      <td><%= link_to 'Удалить', manage_degree_path(d), :confirm => 'Удалить запись?', :method => :delete %></td>
+    </tr>
+  <%  end %>
+</table>
+<%= will_paginate @degrees %>

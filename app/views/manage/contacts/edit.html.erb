@@ -1,5 +1,5 @@
 <h1>Контактная информация | Изменить</h1>
 
 <% form_for [:manage,@contact] , :html => {:multipart => true } do |c| %>
-  <%= render :partial => 'form', :locals => {:c => c, :contact => @contact } %>
+  <%= render :partial => 'form', :locals => {:c => c, :contact => @contact, :but => 'Изменить' } %>
 <% end %>

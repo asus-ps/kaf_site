@@ -20,7 +20,6 @@ class Manage::SpecialitiesController < Manage::BaseController
   end
 
   def show
-
   end
 
   def create
@@ -28,7 +27,7 @@ class Manage::SpecialitiesController < Manage::BaseController
 
     respond_to do |format|
       if @speciality.save
-        format.html { redirect_to(manage_specialities_path, :notice => 'Специальность была успешно добавлена') }
+        format.html { redirect_to(manage_specialities_path) }
         format.xml  { render :xml => manage_specialities_path, :status => :created, :location => @speciality }
       else
         format.html { render :action => "new" }
@@ -37,14 +36,13 @@ class Manage::SpecialitiesController < Manage::BaseController
     end
   end
 
-  # PUT /kafnews/1
-  # PUT /kafnews/1.xml
+
   def update
     @speciality = Speciality.find(params[:id])
 
     respond_to do |format|
       if @speciality.update_attributes(params[:speciality])
-        format.html { redirect_to(manage_specialities_path, :notice => 'Специальность успешно изменена') }
+        format.html { redirect_to(manage_specialities_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -53,8 +51,6 @@ class Manage::SpecialitiesController < Manage::BaseController
     end
   end
 
-  # DELETE /kafnews/1
-  # DELETE /kafnews/1.xml
   def destroy
     @speciality = Speciality.find(params[:id])
     @speciality.destroy

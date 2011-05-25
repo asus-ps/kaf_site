@@ -1,5 +1,5 @@
 <h1>История кафедры | Заполнение</h1>
 
 <% form_for([:manage,@historie], :html => {:multipart => true }) do |c| %>
- <%= render :partial => 'form', :locals => {:c => c, :historie => @historie } %>
+ <%= render :partial => 'form', :locals => {:c => c, :historie => @historie, :but => 'Добавить' } %>
 <% end %>

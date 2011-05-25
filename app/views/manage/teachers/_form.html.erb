@@ -1,5 +1,5 @@
   <%= f.error_messages %>
-<table>
+<table class="FormTitle">
   <%= render :partial => 'manage/people/form', :locals => {:f => f, :person => @teacher.person } %>
   <tr>
     <td>Учёная степень:</td>
@@ -12,6 +12,6 @@
 
   <tr>
     <td></td>
-    <td align="right"><%= f.submit 'Изменить' %></td>
+    <td align="right"><%= f.submit but %></td>
   </tr>
 </table>

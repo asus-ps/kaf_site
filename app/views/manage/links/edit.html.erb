@@ -2,37 +2,11 @@
 
 <p>
   <% form_for ([:manage,@link]) do |f| %>
-    <%= f.error_messages %>
-<table>
-  <tr>
-    <td>Ссылка</td>
-    <td>Описание</td>
-  </tr>
-  <tr>
-    <td valign="top"><%= f.text_field :url %></td>
-    <td><%= f.text_area(:description, :class => 'BodyDescription') %></td>
-    <td><%= f.submit 'Изменить' %></td>
-  </tr>
-</table>
+    <%= render :partial => 'form',:locals => { :f => f, :but => 'Изменить' } %>
   <% end %>
 </p>
-<p style="color: red"><%= notice %></p>
+<p style="color: green"><%= notice %></p>
 <%= link_to 'Назад', manage_links_path %>
-<p>
-<table>
-  <tr>
-    <th width="200">Ресурс</th>
-    <th width="400">Описание</th>
-  </tr>
 
-  <% @links.each do |kfl| %>
-    <tr>
-      <td><%=h link_to kfl.url, url_with_protocol(kfl.url), :target => :blank %> </td>
-      <td><%=h kfl.description %> </td>
-      <td><%= link_to 'Редактировать', edit_manage_link_path(kfl) %></td>
-      <td><%= link_to 'Удалить', manage_link_path(kfl), :confirm => 'Удалить запись?', :method => :delete %></td>
-    </tr>
-  <%  end %>
-</table>
-</p>
+<%= render :partial => 'all_links' %>
 

@@ -1,36 +1,39 @@
 <h1>Новость кафедры</h1>
 
-<p>
-  <b>Заголовок:</b>
-  <%=h @article.title %>
-</p>
+<table>
+  <tr>
+    <td>Заголовок:</td>
+    <td><%=h @article.title %></td>
+  </tr>
 
-<p>
-  <b>Текст:</b>
-  <%=h @article.body %>
-</p>
+  <tr>
+    <td>Текст:</td>
+    <td><%=h @article.body %></td>
+  </tr>
 
-<p>
-  <b>Дата публикации:</b>
-  <%=h "#{Russian::strftime(@article.created_at,'%d %B %Y | %H:%M')}" %>
-</p>
+  <tr>
+    <td>Дата публикации:</td>
+    <td><%=h "#{Russian::strftime(@article.created_at,'%d %B %Y | %H:%M')}" %></td>
+  </tr>
 
-<p>
-  <b>Приоритет:</b>
-  <%=h @article.priority %>
-</p>
+  <tr>
+    <td>Приоритет:</td>
+    <td><%=h @article.priority %></td>
+  </tr>
 
-<p>
-  <b>Изображение:</b>
-  <%= image_tag(@article.picture_path) %>
-</p>
+  <tr>
+    <td valign="top">Изображение:</td>
+    <td><%= image_tag(@article.picture_path, :width => '350px') %></td>
+  </tr>
+</table>
+
 <%= link_to 'Изменить', edit_manage_article_path(@article) %> |
 <%= link_to 'Назад', manage_articles_path %>
-<p>
 
 <h2>Комментарии</h2>
-<p style="color: red"><%= notice %></p>
-<%= form_tag :action => "comment", :id => (@article) %><br>
+<p style="color: green"><%= notice %></p>
+
+<%= form_tag :action => "comment", :id => (@article) %><br />
 <%= error_messages_for :comment %>
 <table>
   <tr>
@@ -67,7 +70,7 @@
   
 </table>
 <% end %>
-</p>
+
 
 
 

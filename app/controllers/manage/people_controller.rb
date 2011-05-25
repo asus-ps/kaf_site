@@ -13,8 +13,7 @@ class Manage::PeopleController < Manage::BaseController
     if @people.valid?
     respond_to do |format|
       if @person.save
-        #flash[:notice] = 'Студент успешно занесён в базу'
-        format.html { redirect_to(manage_students_path, :notice => 'Информация о студенте успешно добавлен!') }
+        format.html { redirect_to(manage_students_path) }
         format.xml  { render :xml => @person, :status => :created, :location => @person }
       else
         format.html { render :action => "new" }

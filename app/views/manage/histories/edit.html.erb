@@ -1,7 +1,7 @@
 <h1>История кафедры | Изменить</h1>
 
 <% form_for([:manage,@historie], :html => {:multipart => true }) do |c| %>
- <%= render :partial => 'form', :locals => {:c => c, :historie => @historie } %>
+ <%= render :partial => 'form', :locals => {:c => c, :historie => @historie, :but => 'Изменить' } %>
 <% end %>
 
 <%= link_to 'Назад', manage_histories_path  %>

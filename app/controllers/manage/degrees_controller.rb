@@ -2,6 +2,7 @@ class Manage::DegreesController < Manage::BaseController
   def index
     @degrees = Degree.search(params[:search],params[:page])
     @degree = Degree.new
+
     respond_to do |format|
       format.html
       format.xml { render :xml => @degrees }
@@ -10,6 +11,7 @@ class Manage::DegreesController < Manage::BaseController
 
   def new
     @degree = Degree.new
+
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @degree }
@@ -17,8 +19,9 @@ class Manage::DegreesController < Manage::BaseController
   end
 
   def edit
-    @degrees = Degree.all
+    @degrees = Degree.search(params[:search],params[:page])
     @degree = Degree.find(params[:id])
+
     respond_to do |format|
       format.html
       format.xml { render :xml => @degree }
@@ -29,13 +32,13 @@ class Manage::DegreesController < Manage::BaseController
   def create
     @degree = Degree.new(params[:degree])
     @degrees = Degree.search(params[:search],params[:page])
+
     respond_to do |format|
       if @degree.save
         format.html { redirect_to(manage_degrees_path, :notice => 'Учёная степень была успешно создана') }
         format.xml  { render :xml => @degree, :status => :created, :location => @degree }
       else
         format.html { render :action => :index }
-        #format.html { redirect_to(manage_degrees_path, :notice => 'Учёная степень не была создана') }
         format.xml  { render :xml => @degree.errors, :status => :unprocessable_entity }
       end
     end
@@ -44,13 +47,13 @@ class Manage::DegreesController < Manage::BaseController
   def update
     @degree = Degree.find(params[:id])
     @degrees = Degree.search(params[:search],params[:page])
+
     respond_to do |format|
       if @degree.update_attributes(params[:degree])
         format.html { redirect_to(manage_degrees_path, :notice => 'Учёная степень была успешно изменена') }
         format.xml  { head :ok }
       else
         format.html { render :action => :edit }
-        #format.html { redirect_to(edit_manage_degree_path(@degree), :notice => 'Учёная степень не была изменена') }
         format.xml  { render :xml => @degree.errors, :status => :unprocessable_entity }
       end
     end

@@ -15,13 +15,11 @@ class Teacher < ActiveRecord::Base
   
   def self.search(search,page)
     if search
-      Teacher.all(:include => [:person, :degree, :position], :conditions => ['people.first_name LIKE :q OR people.last_name LIKE :q OR people.patronymic_name LIKE :q OR people.phone LIKE :q OR people.email LIKE :q OR degrees.name LIKE :q OR positions.name LIKE :q ',{:q => "%#{search}%"}]).paginate(
-        :per_page => 25, :page => page,
-        :order => 'people.last_name')
+      Teacher.all(:include => [:person, :degree, :position], :conditions => ['people.first_name LIKE :q OR people.last_name LIKE :q OR people.patronymic_name LIKE :q OR people.phone LIKE :q OR people.email LIKE :q OR degrees.name LIKE :q OR positions.name LIKE :q ',{:q => "%#{search}%"}], :order => 'people.last_name').paginate(
+        :per_page => 25, :page => page)
     else
-      Teacher.all(:include => [:person, :degree, :position]).paginate(
-        :per_page => 25, :page => page,
-        :order => 'people.last_name')
+      Teacher.all(:include => [:person, :degree, :position], :order => 'people.last_name').paginate(
+        :per_page => 25, :page => page)
     end
   end
 

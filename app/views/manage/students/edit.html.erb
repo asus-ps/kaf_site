@@ -1,9 +1,8 @@
 <h1>Студенты | Изменить</h1>
 
-<p style="color: red"><%= notice %></p>
-<% form_for([:manage,@student], :html => { :multipart => true }) do |f| %>
-  <%= render :partial => 'form', :locals => {:f => f} %>
 
+<% form_for([:manage,@student], :html => { :multipart => true }) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f, :but => 'Изменить'} %>
 <% end %>
 
 <%= link_to 'Назад', manage_teachers_path %>

@@ -27,7 +27,7 @@ class Manage::StudentsController < Manage::BaseController
   end
 
   def show
-    @student = Student.find(params[:id],:include => :person, :include => :speciality)
+    @student = Student.find(params[:id],:include => [:person, :speciality])
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @student }
@@ -40,11 +40,11 @@ class Manage::StudentsController < Manage::BaseController
     @specialities = Speciality.all
     respond_to do |format|
       if @student.save
-        format.html { redirect_to(manage_student_path(@student), :notice => 'Сведения о студенте были успешно добавлены') }
+        format.html { redirect_to(manage_student_path(@student)) }
         format.xml  { render :xml => @student, :status => :created, :location => @student }
       else
         format.html { render :action => :new }
-        format.xml  { render :xml => @student.errors, :status => :unprocessable_entity, :notice => 'Сведения о студенте не были добавлены' }
+        format.xml  { render :xml => @student.errors, :status => :unprocessable_entity }
       end
     end
    end

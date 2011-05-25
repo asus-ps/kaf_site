@@ -2,25 +2,25 @@
 
 <table>
   <tr>
-    <td>Адрес</td>
+    <th>Адрес:</th>
     <td><%=h @contact.address %></td>
   </tr>
 
   <tr>
-    <td>Телефоны</td>
+    <th>Телефоны:</th>
     <td><%=h @contact.phones %></td>
   </tr>
   <tr>
-    <td>E-mail</td>
+    <th>E-mail:</th>
     <td><%=h @contact.email %></td>
   </tr>
   <tr>
-    <td>Сайт</td>
+    <th>Сайт:</th>
     <td><%=h @contact.url %></td>
   </tr>
   <tr>
-    <td>Изображение</td>
-    <td><%= image_tag(@contact.picture_path) %></td>
+    <th valign="top">Изображение:</th>
+    <td><%= image_tag(@contact.picture_path, :width => '400px') %></td>
   </tr>
 
 </table>

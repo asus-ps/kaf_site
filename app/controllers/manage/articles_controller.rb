@@ -1,6 +1,7 @@
 class Manage::ArticlesController < Manage::BaseController
   def index
     @articles = Article.search(params[:search],params[:page])
+
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @articles }
@@ -13,6 +14,7 @@ class Manage::ArticlesController < Manage::BaseController
 
   def new
     @article = Article.new
+
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @article }
@@ -23,6 +25,7 @@ class Manage::ArticlesController < Manage::BaseController
     @article = Article.find(params[:id])
     @comments = Comment.all
     @comm = Comment.new
+
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @article }
@@ -31,9 +34,10 @@ class Manage::ArticlesController < Manage::BaseController
 
   def create
     @article = Article.new(params[:article])    
+
     respond_to do |format|
       if @article.save
-        format.html { redirect_to(manage_article_path(@article), :notice => 'Новость успешно добавлена') }
+        format.html { redirect_to(manage_article_path(@article)) }
         format.xml  { render :xml => @article, :status => :created, :location => @article }
       else
         format.html { render :action => "new" }
@@ -42,14 +46,13 @@ class Manage::ArticlesController < Manage::BaseController
     end
   end
 
-  # PUT /kafnews/1
-  # PUT /kafnews/1.xml
+
   def update
     @article = Article.find(params[:id])
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
-        format.html { redirect_to(manage_article_path(@article), :notice => 'Новость успешно изменена') }
+        format.html { redirect_to(manage_article_path(@article)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -58,8 +61,6 @@ class Manage::ArticlesController < Manage::BaseController
     end
   end
 
-  # DELETE /kafnews/1
-  # DELETE /kafnews/1.xml
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
@@ -70,23 +71,19 @@ class Manage::ArticlesController < Manage::BaseController
     end
   end
 
+
   def comment
-     article = Article.find(params[:id])
-     if article.comments.create(params[:comment])
-    #@comment = Comment.new(params[:comment])
-    #@comment.article_id = @article
-    #respond_to do |format|
-    #  if @comment.save
-      flash[:notice] = "Ваш комментарий добавлен"
+    article = Article.find(params[:id])
+    if article.comments.create(params[:comment])
+      flash[:notice] = 'Ваш комментарий добавлен'
       redirect_to :action => "show", :id => params[:id]
-     else
-       flash[:notice] = "Ваш комментарий не был добавлен"
+    else
+      flash[:notice] = 'Ваш комментарий не был добавлен'
       redirect_to :action => "show", :id => params[:id]
-     end
-    #  end
-    #end
+    end
   end
 
+  
   def deleteComment
     @comment = Comment.find(params[:id])
     @comment.destroy

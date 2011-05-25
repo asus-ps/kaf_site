@@ -1,52 +1,17 @@
 <h1>Студенты | Показать</h1>
 
 <table>
+<%= render :partial => 'manage/people/show_form',:locals => { :p => @student } %>
   <tr>
-    <td>Фамилия:</td>
-    <td><%=h @student.person.last_name %><br></td>
-  </tr>
-  <tr>
-    <td>Имя:</td>
-    <td><%=h @student.person.first_name %></td>
-  </tr>
-
-  <tr>
-    <td>Отчество:</td>
-    <td><%=h @student.person.patronymic_name %></td>
-  </tr>
-
-  <tr>
-    <td>День рождения:</td>
-    <td><%=h "#{Russian::strftime(@student.person.birthday,'%d.%m.%Y')}" %></td>
-  </tr>
-
-  <tr>
-    <td>Телефон:</td>
-    <td><%=h @student.person.phone %></td>
-  </tr>
-
-  <tr>
-    <td>E-mail:</td>
-    <td><%=h @student.person.email %></td>
-  </tr>
-
-  <tr>
-    <td>Специальность:</td>
+    <th>Специальность:</th>
     <td><%=h @student.speciality.name %></td>
   </tr>
 
   <tr>
-    <td>Год поступления:</td>
+    <th>Год поступления:</th>
     <td><%=h @student.year_income %></td>
   </tr>
-
-  <tr>
-    <td>Фото:</td>
-    <td><%= image_tag(@student.person.picture_path) %></td>
-  </tr>
 </table>
-<br>Информация:</br>
-<%=h @student.person.info %>
-<br />
+
 <%= link_to 'Редактировать', edit_manage_student_path(@student) %> |
 <%= link_to 'Назад', manage_students_path %>

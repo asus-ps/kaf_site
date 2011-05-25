@@ -6,7 +6,7 @@
     <th>Код</th>
     <th>Название</th>
     <th>Сокращение</th>
-    <th>Количество лет обучения</th>
+    <th  width="50px">Количество лет обучения</th>
     <th>По диплому</th>
   </tr>
 
@@ -15,7 +15,7 @@
     <td><%=h s.code %></td>
     <td><%=h s.name %></td>
     <td><%=h s.short_name %></td>
-    <td><%=h s.count_years %></td>
+    <td align="center"><%=h s.count_years %></td>
     <td><%=h s.in_diploma %></td>
     <td><%= link_to 'Редактировать', edit_manage_speciality_path(s) %></td>
     <td><%= link_to 'Удалить', manage_speciality_path(s), :confirm => 'Удалить запись?', :method => :delete %></td>

@@ -27,6 +27,7 @@ class Manage::HistoriesController < Manage::BaseController
 
   def new
     @historie = Historie.new
+
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @historie }
@@ -37,9 +38,10 @@ class Manage::HistoriesController < Manage::BaseController
   def create
     @historie = Historie.new(params[:historie])
     @historie.id = 1
+
     respond_to do |format|
       if @historie.save
-        format.html { redirect_to(manage_histories_path, :notice => 'История кафедры успешно добавлена') }
+        format.html { redirect_to(manage_histories_path) }
         format.xml  { render :xml => @historie, :status => :created, :location => @historie }
       else
         format.html { render :action => "new" }
@@ -50,9 +52,10 @@ class Manage::HistoriesController < Manage::BaseController
 
   def update
     @historie = Historie.find(1)
+
     respond_to do |format|
       if @historie.update_attributes(params[:historie])
-        format.html { redirect_to(manage_histories_path, :notice => 'История кафедры успешно обновлена') }
+        format.html { redirect_to(manage_histories_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

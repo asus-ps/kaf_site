@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Индекс</th>
+    <th>Название дисциплины</th>
+  </tr>
+
+  <% @disciplines.each do |d| %>
+    <tr>
+      <td><%=h d.id %> </td>
+      <td><%=h d.name %> </td>
+      <td><%= link_to 'Редактировать', edit_manage_discipline_path(d) %></td>
+      <td><%= link_to 'Удалить', manage_discipline_path(d), :confirm => 'Удалить запись?', :method => :delete %></td>
+    </tr>
+  <%  end %>
+</table>

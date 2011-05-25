@@ -2,27 +2,27 @@
 
 <table>
   <tr>
-    <td>Название</td>
+    <th>Название</th>
     <td><%=h @diploma.name %></td>
   </tr>
   <tr>
-    <td>Исполнитель:</td>
+    <th>Исполнитель:</th>
     <td><%=h "#{@diploma.student.person.last_name} #{@diploma.student.person.first_name} #{@diploma.student.person.patronymic_name}" %></td>
   </tr>
   <tr>
-    <td>Группа:</td>
+    <th>Группа:</th>
     <td><%=h @diploma.student.speciality.short_name.empty? ? @diploma.student.speciality.name : @diploma.student.speciality.short_name %></td>
   </tr>
   <tr>
-    <td>Руководитель:</td>
+    <th>Руководитель:</th>
     <td><%=h "#{@diploma.teacher.person.last_name} #{@diploma.teacher.person.first_name} #{@diploma.teacher.person.patronymic_name}" %></td>
   </tr>
   <tr>
-    <td>Год:</td>
+    <th>Год:</th>
     <td><%=h @diploma.protection_year %></td>
   </tr>
   <tr>
-    <td>Аннотация:</td>
+    <th>Аннотация:</th>
     <td><%=h @diploma.summary %></td>
   </tr>
 </table>

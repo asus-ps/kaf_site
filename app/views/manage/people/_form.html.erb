@@ -1,35 +1,35 @@
 
   <% f.fields_for :person do |per| %>
   <tr>
-    <td>Фамилия</td>
+    <th>Фамилия:</th>
     <td><%=h per.text_field :last_name %></td>
   </tr>
   <tr>
-    <td>Имя</td>
+    <th>Имя:</th>
     <td><%=h per.text_field :first_name %></td>
   </tr>
   <tr>
-    <td>Отчество</td>
+    <th>Отчество:</th>
     <td><%=h per.text_field :patronymic_name %></td>
   </tr>
   <tr>
-    <td>День рождения:</td>
+    <th>День рождения:</th>
     <td><%=h per.date_select(:birthday,:start_year => Date.today.year, :end_year => (Date.today.year - 80))%></td>
   </tr>
   <tr>
-    <td>Телефон:</td>
+    <th>Телефон:</th>
     <td><%=h per.text_field :phone %></td>
   </tr>
   <tr>
-    <td>E-mail:</td>
+    <th>E-mail:</th>
     <td><%=h per.text_field :email %></td>
   </tr>
   <tr>
-    <td>Фото:</td>
+    <th>Фото:</th>
     <td><%= link_to(person.picture_name, person.picture_path) if person.picture_exists? %><br /><%= per.file_field :picture %></td>
   </tr>
   <tr>
-    <td valign="top">Информация:</td>
+    <th valign="top">Информация:</th>
     <td><%=h per.text_area :info, :rows => 5 %></td>
   </tr>
   <% end %>

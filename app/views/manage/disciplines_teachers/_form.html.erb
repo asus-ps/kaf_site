@@ -1,0 +1,16 @@
+<%= f.error_messages %>
+<table>
+  <tr>
+    <th>Дисциплина</th>
+    <th>Преподаватель</th>
+  </tr>
+  <tr>
+    <td><%=h f.select(:discipline_id, options_for_select( Discipline.all.collect { |p| [p.name, p.id]})) %></td>
+    <td><%=h f.select(:teacher_id, options_for_select( Teacher.all.collect { |p| ["#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name.empty? ? (p.degree.name) : (p.degree.short_name)}", p.person_id]},selected_value=@newdt.teacher_id)) %></td>
+    <td><%= f.submit but %></td>
+  </tr>
+  <tr>
+    <td> <%= link_to 'New', manage_disciplines_path %> </td>
+    <td> <%= link_to 'New', new_manage_teacher_path %> </td>
+  </tr>
+</table>

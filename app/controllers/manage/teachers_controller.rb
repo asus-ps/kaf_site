@@ -29,7 +29,7 @@ class Manage::TeachersController < Manage::BaseController
   end
 
   def show
-    @teacher = Teacher.find(params[:id], :include => :person, :include => :speciality, :include => :position, :include => :degree)
+    @teacher = Teacher.find(params[:id], :include => [:person, :position, :degree])
     respond_to do |format|
       format.html
       format.xml { render_to :xml => @teacher }
@@ -43,7 +43,7 @@ class Manage::TeachersController < Manage::BaseController
     @positions = Position.all
     respond_to do |format|
       if @teacher.save
-        format.html { redirect_to(manage_teacher_path(@teacher), :notice => 'Сведения о преподавателе были успешно добавлены') }
+        format.html { redirect_to(manage_teacher_path(@teacher)) }
         format.xml  { render :xml => @teacher, :status => :created, :location => @teacher }
       else
         format.html { render :action => :new }
@@ -66,8 +66,6 @@ class Manage::TeachersController < Manage::BaseController
         format.xml  { render :xml => @teacher.errors, :status => :unprocessable_entity }
       end
     end
-
-   # @teacher.update_attributes(params[:teacher]) ? redirect_to(manage_teacher_path(@teacher)) : render(:action => :edit)
   end
 
   def destroy

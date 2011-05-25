@@ -1,48 +1,15 @@
 <h1>Преподаватели | Показать</h1>
-<p>Find me in app/views/teachers/show.html.erb</p>
 
 <table>
+<%= render :partial => 'manage/people/show_form', :locals => {:p => @teacher } %>
     <tr>
-      <td>Фамилия:</td>
-      <td><%=h @teacher.person.last_name %></td>
-    </tr>
-    <tr>
-      <td>Имя:</td>
-      <td><%=h @teacher.person.first_name %></td>
-    </tr>
-    <tr>
-      <td>Отчество:</td>
-      <td><%=h @teacher.person.patronymic_name %></td>
-    </tr>
-    <tr>
-      <td>День рождения:</td>
-      <td><%=h "#{Russian::strftime(@teacher.person.birthday,'%d.%m.%Y')}" %></td>
-    </tr>
-    <tr>
-      <td>Телефон:</td>
-      <td><%=h @teacher.person.phone %></td>
-    </tr>
-    <tr>
-      <td>Email</td>
-      <td><%=h @teacher.person.email %></td>
-    </tr>
-    <tr>
-      <td>Учёная степень:</td>
+      <th>Учёная степень:</th>
       <td><%=h @teacher.degree.name %></td>
     </tr>
     <tr>
-      <td>Должность:</td>
+      <th>Должность:</th>
       <td><%=h @teacher.position.name %></td>
     </tr>
-    <tr>
-      <td>Фото</td>
-      <td><%= image_tag(@teacher.person.picture_path) %></td>
-    </tr>
-    <tr>
-      <td>Информация:</td>
-      <td><%=h @teacher.person.info %></td>
-    </tr>
-
 </table>
 
 <%= link_to 'Редактировать', edit_manage_teacher_path(@teacher) %> |

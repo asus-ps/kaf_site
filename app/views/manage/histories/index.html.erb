@@ -2,16 +2,16 @@
 
 <table>
   <tr>
-    <td>История:</td>
+    <th>История:</th>
   </tr>
   <tr>
     <td><%=h @historie.body %></td>
   </tr>
   <tr>
-    <td>Изображение:</td>
+    <th>Изображение:</th>
   </tr>
   <tr>
-    <td><%= image_tag(@historie.picture_path) %></td>
+    <td><%= image_tag(@historie.picture_path, :width => '350px') %></td>
   </tr>
 </table>
 

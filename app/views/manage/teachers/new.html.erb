@@ -1,8 +1,7 @@
 <h1>Преподаватели | Добавить</h1>
 
-<p style="color: red"><%= notice %></p>
 <% form_for([:manage,@teacher], :html => {:multipart => true })  do |f| %>
- <%= render( :partial => 'form', :locals => {:f => f} ) %>
+ <%= render( :partial => 'form', :locals => {:f => f, :but => 'Добавить'} ) %>
 <% end %>
 
 <%= link_to 'Назад', manage_teachers_path %>

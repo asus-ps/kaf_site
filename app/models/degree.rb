@@ -9,11 +9,9 @@ class Degree < ActiveRecord::Base
 
   def self.search(search,page)
     if search
-      Degree.all(:conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}]).paginate(:per_page => 5, :page => page,
-                 :order => 'name')
+      Degree.all(:conditions => ['name LIKE :q OR short_name LIKE :q ',{:q => "%#{search}%"}],:order => 'name').paginate(:per_page => 5, :page => page)
     else
-      Degree.all.paginate(:per_page => 5, :page => page,
-                 :order => 'name')
+      Degree.all(:order => 'name').paginate(:per_page => 5, :page => page)
     end
   end
 end

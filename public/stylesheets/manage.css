@@ -1,8 +1,7 @@
 body { background-color: #fff; color: #333; }
 
-body, p, ol, ul, td {
+body {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
   line-height: 18px;
 }
 
@@ -12,7 +11,11 @@ pre {
   font-size: 11px;
 }
 
-a { color: #000; }
+a { color: #000;
+    font-weight: normal;
+    font-family: Verdana;
+    font-size: 14px;
+}
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
@@ -54,6 +57,18 @@ a:hover { color: #fff; background-color:#000; }
 
 
 /* MY STYLES*/
+th{
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+}
+
+td{
+    font-family: verdana;  
+    font-size: 14px;
+}
+
 .BodyDescription {
     height: 50px;
     width: 400px;
@@ -107,6 +122,12 @@ a:hover { color: #fff; background-color:#000; }
 
 .LineTopComment{
     border-top-style: solid;
-    border-top-width: 2 px;
+    border-top-width: 2px;
 }
 
+.FormTitle{
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+}

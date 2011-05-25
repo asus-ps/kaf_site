@@ -1,0 +1,12 @@
+    <%= f.error_messages %>
+<table>
+  <tr>
+    <th>Ссылка</th>
+    <th>Описание</th>
+  </tr>
+  <tr>
+    <td valign="top"><%= f.text_field :url %></td>
+    <td><%= f.text_area(:description, :class => 'BodyDescription') %></td>
+    <td><%= f.submit but %></td>
+  </tr>
+</table>

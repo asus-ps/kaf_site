@@ -1,0 +1,37 @@
+  <tr>
+    <th>Фамилия:</th>
+    <td><%=h p.person.last_name %></td>
+  </tr>
+  <tr>
+    <th>Имя:</th>
+    <td><%=h p.person.first_name %></td>
+  </tr>
+
+  <tr>
+    <th>Отчество:</th>
+    <td><%=h p.person.patronymic_name %></td>
+  </tr>
+
+  <tr>
+    <th>День рождения:</th>
+    <td><%=h "#{Russian::strftime(p.person.birthday,'%d.%m.%Y')}" %></td>
+  </tr>
+
+  <tr>
+    <th>Телефон:</th>
+    <td><%=h p.person.phone %></td>
+  </tr>
+
+  <tr>
+    <th>E-mail:</th>
+    <td><%=h p.person.email %></td>
+  </tr>
+
+  <tr>
+    <th valign="top">Фото:</th>
+    <td><%= image_tag(p.person.picture_path, :width => '300px') %></td>
+  </tr>
+  <tr>
+    <th valign="top">Информация:</th>
+    <td><%=h p.person.info %></td>
+  </tr>

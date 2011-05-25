@@ -1,7 +1,7 @@
 <h1>Новости кафедры | Добавить</h1>
-
+<div class="FormTitle">
 <% form_for([:manage,@article], :html => {:multipart => true }) do |f| %>
-  <%= render :partial => 'form', :locals => {:f => f, :article => @article } %>
+  <%= render :partial => 'form', :locals => {:f => f, :article => @article, :but => 'Добавить'} %>
 <% end %>
-
+</div>
 <%= link_to 'Назад', manage_articles_path %>

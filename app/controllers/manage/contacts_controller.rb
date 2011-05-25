@@ -14,6 +14,7 @@ class Manage::ContactsController < Manage::BaseController
     end
   end
 
+
   def edit
     if Contact.exists?
       @contact = Contact.find(1)
@@ -32,9 +33,10 @@ class Manage::ContactsController < Manage::BaseController
   def create
     @contact = Contact.new(params[:contact])
     @contact.id = 1
+
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to(manage_contacts_path, :notice => 'Контактная информация успешно добавлена') }
+        format.html { redirect_to(manage_contacts_path) }
         format.xml  { render :xml => @contact, :status => :created, :location => @contact }
       else
         format.html { render :action => "new" }
@@ -49,7 +51,7 @@ class Manage::ContactsController < Manage::BaseController
 
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
-        format.html { redirect_to(manage_contacts_path, :notice => 'Контактная информация успешно изменена') }
+        format.html { redirect_to(manage_contacts_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
