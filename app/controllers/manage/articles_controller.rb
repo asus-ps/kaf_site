@@ -75,10 +75,8 @@ class Manage::ArticlesController < Manage::BaseController
   def comment
     article = Article.find(params[:id])
     if article.comments.create(params[:comment])
-      flash[:notice] = 'Ваш комментарий добавлен'
       redirect_to :action => "show", :id => params[:id]
     else
-      flash[:notice] = 'Ваш комментарий не был добавлен'
       redirect_to :action => "show", :id => params[:id]
     end
   end

@@ -1,6 +1,6 @@
 <% form_tag path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :search, params[:search], :size => '25', :style => 'background-color: #fbfae5' %>
     <%= submit_tag 'Поиск', :name => nil %>
   </p>
 <% end %>

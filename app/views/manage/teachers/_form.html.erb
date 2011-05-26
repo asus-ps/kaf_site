@@ -1,12 +1,12 @@
   <%= f.error_messages %>
-<table class="FormTitle">
+<table>
   <%= render :partial => 'manage/people/form', :locals => {:f => f, :person => @teacher.person } %>
   <tr>
-    <td>Учёная степень:</td>
+    <th>Учёная степень:</th>
     <td><%=h f.select(:degree_id, options_from_collection_for_select(@degrees, "id", "name", selected_value=@teacher.degree_id)) %> <%= link_to 'New', manage_degrees_path %></td>
   </tr>
   <tr>
-    <td>Должность:</td>
+    <th>Должность:</th>
     <td><%=h f.select(:position_id, options_from_collection_for_select(@positions, "id", "name", selected_value=@teacher.position_id)) %> <%= link_to 'New', manage_positions_path %></td>
   </tr>
 

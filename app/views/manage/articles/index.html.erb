@@ -1,11 +1,11 @@
 <h1>Новости кафедры</h1>
 
-<table>
+<table class="TableSimple">
   <tr>
-    <th>Заголовок</th>
-    <th>Текст новости</th>
-    <th>Дата публикации</th>
-    <th>Приоритет</th>
+    <th width="15%">Заголовок</th>
+    <th width="40%">Текст новости</th>
+    <th width="15%">Дата публикации</th>
+    <th width="5%">Приоритет</th>
   </tr>
 
 <%= render :partial => 'manage/shares/search_form',:locals => { :path => manage_articles_path } %>

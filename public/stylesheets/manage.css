@@ -80,7 +80,6 @@ td{
 }
 
 .simpleTable{
-
     border: 1px;
     border-style: solid;
     border-spacing: 1px;
@@ -97,7 +96,6 @@ td{
 .mainArea {  
     width: 99%;
     height: 99%;
-
 }
 
 .tdRight {
@@ -130,4 +128,31 @@ td{
     font-weight: bold;
     font-size: 15px;
     text-align: left;
+}
+
+.TableShow {
+    border-collapse: collapse;
+    max-width: 1000px;
+}
+
+.TableShow td, .TableShow th {
+    border-bottom: 1px solid black;
+    padding: 3px;
+}
+
+.TableSimple{
+    border-collapse: collapse;
+    border: 1px solid black;
+    max-width: 80%;
+}
+
+.TableSimple td, .TableSimple th {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 3px;
+    border-right: 1px solid black;
+}
+
+.TableSimple th {
+    background-color: #edfcc0;
 }

@@ -1,28 +1,28 @@
 <h1>Новость кафедры</h1>
 
-<table>
+<table class="TableShow">
   <tr>
-    <td>Заголовок:</td>
+    <th>Заголовок:</th>
     <td><%=h @article.title %></td>
   </tr>
 
   <tr>
-    <td>Текст:</td>
+    <th>Текст:</th>
     <td><%=h @article.body %></td>
   </tr>
 
   <tr>
-    <td>Дата публикации:</td>
+    <th>Дата публикации:</th>
     <td><%=h "#{Russian::strftime(@article.created_at,'%d %B %Y | %H:%M')}" %></td>
   </tr>
 
   <tr>
-    <td>Приоритет:</td>
+    <th>Приоритет:</th>
     <td><%=h @article.priority %></td>
   </tr>
 
   <tr>
-    <td valign="top">Изображение:</td>
+    <th valign="top">Изображение:</th>
     <td><%= image_tag(@article.picture_path, :width => '350px') %></td>
   </tr>
 </table>
