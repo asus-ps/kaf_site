@@ -14,11 +14,12 @@ CREATE  TABLE IF NOT EXISTS `kafedra`.`people` (
   `first_name` VARCHAR(63) NOT NULL ,
   `patronymic_name` VARCHAR(63) NOT NULL ,
   `birthday` DATE NOT NULL ,
-  `phone` VARCHAR(63) NULL ,
-  `email` VARCHAR(63) NULL ,
+  `phone` VARCHAR(63) NULL DEFAULT NULL ,
+  `email` VARCHAR(63) NULL DEFAULT NULL ,
   `nature` CHAR(1) NOT NULL ,
-  `photo` VARCHAR(255) NULL ,
-  `info` TEXT NULL ,
+  `info` TEXT NULL DEFAULT NULL ,
+  `picture_ext` VARCHAR(15) NULL DEFAULT NULL ,
+  `picture_name` VARCHAR(63) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -124,8 +125,9 @@ CREATE  TABLE IF NOT EXISTS `kafedra`.`articles` (
   `title` VARCHAR(255) NOT NULL ,
   `body` TEXT NOT NULL ,
   `created_at` DATETIME NOT NULL ,
-  `priority` INT NULL ,
-  `image` VARCHAR(255) NULL ,
+  `priority` INT NULL DEFAULT NULL ,
+  `picture_ext` VARCHAR(15) NULL DEFAULT NULL ,
+  `picture_name` VARCHAR(63) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -188,9 +190,10 @@ CREATE  TABLE IF NOT EXISTS `kafedra`.`contacts` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `address` VARCHAR(255) NOT NULL ,
   `phones` VARCHAR(255) NOT NULL ,
-  `email` VARCHAR(255) NULL ,
-  `url` VARCHAR(255) NULL ,
-  `image` VARCHAR(255) NULL ,
+  `email` VARCHAR(255) NULL DEFAULT NULL ,
+  `url` VARCHAR(255) NULL DEFAULT NULL ,
+  `picture_ext` VARCHAR(15) NULL DEFAULT NULL ,
+  `picture_name` VARCHAR(63) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -202,7 +205,8 @@ DEFAULT CHARACTER SET = utf8;
 CREATE  TABLE IF NOT EXISTS `kafedra`.`histories` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `body` TEXT NOT NULL ,
-  `image` VARCHAR(255) NULL ,
+  `picture_ext` VARCHAR(15) NULL DEFAULT NULL ,
+  `picture_name` VARCHAR(63) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
 
