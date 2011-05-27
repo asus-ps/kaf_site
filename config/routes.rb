@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-# Manage Area
+map.root :controller => "home"
+  # Manage Area
   map.namespace :manage do |manage|
     manage.root :controller => :base, :action => :index
 
@@ -22,4 +23,8 @@ ActionController::Routing::Routes.draw do |map|
     map.connect ':controller/:action/:id.:format'
     map.connect ':controller/:action.:format'
   end
+#User Area
+map.connect ':controller/:action/:id'
+map.connect ':controller/:action/:id.:format'
+
 end

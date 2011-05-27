@@ -4,52 +4,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Hello world: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <title><%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'user' %>
 </head>
 <body>
-<%#= link_to 'Контакты', contacts_path %>
-<%#= link_to 'Полезные ссылки', links_path %>
-<%#= link_to 'Новости', articles_path %>
-<%#= link_to 'История', histories_path %>
-<%#= link_to 'Студенты', students_path %>
-<%#= link_to 'Преподаватели', teachers_path %>
-<%#= link_to 'Учёные степени', degrees_url %>
-<%#= link_to 'Должности', positions_url %>
-<%#= link_to 'Дисциплины', disciplines_url %>
-<%#= link_to 'Специальности', specialities_url %>
-<%#= link_to 'Кто что ведёт', disciplines_teachers_url %>
-<%#= link_to 'Дипломы', diplomas_url %>
-<%#= link_to 'Людишки', people_url %>
+  <div align="center">
+ <div align="center">
+ <div class="divtop">
+      Кафедра Программного обеспечения вычислительной техники
+  <div class="divnavi" align="right">
+    <table class="tablenavi">
+      <tr>
+        <td>Преподаватели</td>
+        <td>Студенты</td>
+        <td>Архив новостей</td>
+        <td>Полезные ссылки</td>
+      </tr>
+    </table>
+  </div>
+ </div>
+ </div>
 
 
-<%#= yield %>
-  <table>
-    <tr>
-      <td>
-        <%= link_to 'Контакты', manage_contacts_path %>
-<%= link_to 'Полезные ссылки', manage_links_path %>
-<%= link_to 'Новости', manage_articles_path %>
-<%= link_to 'История', manage_histories_path %>
-<%= link_to 'Студенты', manage_students_path %>
-<%= link_to 'Преподаватели', manage_teachers_path %>
-<%= link_to 'Учёные степени', manage_degrees_url %>
-<%= link_to 'Должности', manage_positions_url %>
-<%= link_to 'Дисциплины', manage_disciplines_url %>
-<%= link_to 'Специальности', manage_specialities_url %>
-<%= link_to 'Кто что ведёт', manage_disciplines_teachers_url %>
-<%= link_to 'Дипломы', manage_diplomas_url %>
-<%= link_to 'Людишки', manage_people_url %>
+<div class="all" align="justify">
+  <%= yield %>
+</div>
 
-
-
-      </td>
-    <td>
-      <%= yield %>
-    </td>
-    </tr>
-    
-
-  </table>
+  <div align="center">
+    <div class="divbot1">
+      <%=  Contact.all.collect { |c|  ["Наш адрес: #{link_to(c.address, c.picture_path) if c.picture_exists?} | Телефоны: #{c.phones} | E-mail: #{c.email} | Сайт: #{link_to c.url, url_with_protocol(c.url), :target => :blank}"]} %>
+    </div>
+  </div>
+  <div align="center">
+    <div class="divbot2">
+      Разработчики: ... P.S.!
+    </div>
+  </div>
+  </div>
 </body>
 </html>
