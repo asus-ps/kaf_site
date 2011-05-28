@@ -1,5 +1,20 @@
 ActionController::Routing::Routes.draw do |map|
 map.root :controller => "home"
+  map.resources :contacts
+  map.resources :links
+  map.resources :articles
+  map.resources :histories
+  map.resources :comments
+  map.resources :people
+  map.resources :students
+  map.resources :degrees
+  map.resources :positions
+  map.resources :disciplines
+  map.resources :specialities
+  map.resources :disciplines_teachers
+  map.resources :teachers
+  map.resources :diplomas
+
   # Manage Area
   map.namespace :manage do |manage|
     manage.root :controller => :base, :action => :index
@@ -24,7 +39,7 @@ map.root :controller => "home"
     map.connect ':controller/:action.:format'
   end
 #User Area
-map.connect ':controller/:action/:id'
-map.connect ':controller/:action/:id.:format'
-
+  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
+  map.connect ':controller/:action.:format'
 end
