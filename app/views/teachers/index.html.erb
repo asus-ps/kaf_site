@@ -2,7 +2,7 @@
 <table class="tableAllTeachers">
   <% @teachers.each do |p| %>
     <tr>
-      <td><%=  link_to "#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name.empty? ? (p.degree.name) : (p.degree.short_name)}", teacher_path(p) %> </td>
+      <td><%=    link_to "#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name.empty? ? (p.degree.name) : (p.degree.short_name)}", teacher_path(p) %> </td>
     </tr>
   <%  end %>
 </table>

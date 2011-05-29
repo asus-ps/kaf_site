@@ -1,0 +1,8 @@
+<div class="leftpanel">
+<table class="tableAllTeachers">
+  <% @links.each do |l| %>
+      <td><%= link_to l.url, url_with_protocol(l.url), :target => :blank %> </td>
+      <td><%= l.description %> </td>
+  <%  end %>
+</table>
+</div>

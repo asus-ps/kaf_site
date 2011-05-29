@@ -1,5 +1,19 @@
 <div class="leftpanel">
-<div>
-  <%= image_tag(@teacher.person.picture_path, :width => '300px') %>
-</div>
+
+<table width="100%">
+  <tr>
+    <td style="max-width: 250px; width: 3%;"><%= (@teacher.person.picture_ext.nil? ) ? () : (image_tag(@teacher.person.picture_path, :width => '250px')) %></td>
+    <td style="width: 100%;">
+      <h3 style="text-align: center"><%= "#{@teacher.person.last_name} #{@teacher.person.first_name} #{@teacher.person.patronymic_name}" %></h3>
+      <h4 style="text-align: right"><%= "#{Russian::strftime(@teacher.person.birthday,'%d.%m.%Y')}" %></h4>
+      <h4 style="text-align: right"><%= "#{@teacher.degree.name}" %></h4>
+      <h4 style="text-align: right"><%= "#{@teacher.position.name}" %></h4>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><%=  @teacher.person.info %></td>
+
+  </tr>
+</table>
+
 </div>
