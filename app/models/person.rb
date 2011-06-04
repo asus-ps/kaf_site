@@ -18,7 +18,7 @@ class Person < ActiveRecord::Base
   before_save :prepare_picture_fields
   after_save :save_picture
 
-  attr_accessor :picture
+  attr_accessor :picture, :del
 
   named_scope :teachers, :conditions => ()
   named_scope :students, :conditions => ()
@@ -42,17 +42,16 @@ public
 
 private
   def prepare_picture_fields
-    if @picture
+    if @picture  && !@picture.eof?
       self.picture_ext = @picture.original_filename.split('.').last.mb_chars.downcase
       self.picture_name = @picture.original_filename.mb_chars.downcase
     else
-      self.picture_ext = ''
-      self.picture_name = ''
+
     end
   end
 
   def save_picture    
-    if @picture
+    if @picture && !@picture.eof?
       # create the file path
       path = File.join(RAILS_ROOT, 'public', self.class.name.pluralize.mb_chars.downcase, "#{self.id}.#{self.picture_ext}")
       # write the file

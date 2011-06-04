@@ -1,0 +1,9 @@
+<div class="rightpanel">
+<table class="tableAllTeachers">
+  <% @students.each do |p| %>
+    <tr>
+      <td><%=    link_to "#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name.empty? ? (p.degree.name) : (p.degree.short_name)}", student_path(p) %> </td>
+    </tr>
+  <%  end %>
+</table>
+</div>

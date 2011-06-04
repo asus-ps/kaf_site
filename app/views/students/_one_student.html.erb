@@ -1,0 +1,19 @@
+<div class="leftpanel">
+
+<table width="100%">
+  <tr>
+    <td style="max-width: 250px; width: 3%;"><%= (student.person.picture_ext.nil? ) ? () : (image_tag(student.person.picture_path, :width => '250px')) %></td>
+    <td style="width: 100%;">
+      <h3 style="text-align: center"><%= "#{student.person.last_name} #{student.person.first_name} #{student.person.patronymic_name}" %></h3>
+      <h4 style="text-align: right"><%= "#{Russian::strftime(student.person.birthday,'%d.%m.%Y')}" %></h4>
+      <h4 style="text-align: right"><%= "#{student.degree.name}" %></h4>
+      <h4 style="text-align: right"><%= "#{student.position.name}" %></h4>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><%=  student.person.info %></td>
+
+  </tr>
+</table>
+
+</div>

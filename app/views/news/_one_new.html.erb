@@ -1,0 +1,30 @@
+<div class="leftpanel">
+<table class="tableNews">
+  <% @articles.each do |n| %>
+    <tr>
+      <td class="NewsTdTop"><%=  n.title %> </td>
+    </tr>
+    <tr>
+      <td class="NewsTdBody"><%=  n.body %> </td>
+    </tr>
+    <tr>
+      <td  class="NewsTdBot"><%=  "#{Russian::strftime(n.created_at,'%d %B %Y | %H:%M')}" %> </td>
+    </tr>
+  <%  end %>
+</table>
+</div>
+<div class="rightpanel">
+<table class="tableNews">
+  <% @articles.each do |n| %>
+    <tr>
+      <td class="NewsTdTop"><%=  n.title %> </td>
+    </tr>
+    <tr>
+      <td class="NewsTdBody"><%=  n.body %> </td>
+    </tr>
+    <tr>
+      <td  class="NewsTdBot"><%=  "#{Russian::strftime(n.created_at,'%d %B %Y | %H:%M')}" %> </td>
+    </tr>
+  <%  end %>
+</table>
+</div>

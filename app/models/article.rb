@@ -34,8 +34,8 @@ private
       self.picture_ext = @picture.original_filename.split('.').last.mb_chars.downcase
       self.picture_name = @picture.original_filename.mb_chars.downcase
     else
-      self.picture_ext = ''
-      self.picture_name = ''
+    #  self.picture_ext = ''
+    #  self.picture_name = ''
     end
   end
 

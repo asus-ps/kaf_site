@@ -14,6 +14,7 @@ map.root :controller => "home"
   map.resources :disciplines_teachers
   map.resources :teachers
   map.resources :diplomas
+  map.resources :groups
 
   # Manage Area
   map.namespace :manage do |manage|

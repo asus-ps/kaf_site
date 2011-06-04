@@ -26,7 +26,7 @@
   </tr>
   <tr>
     <th>Фото:</th>
-    <td><%= link_to(person.picture_name, person.picture_path) if person.picture_exists? %><br /><%= per.file_field :picture %></td>
+    <td><%= "#{link_to(person.picture_name, person.picture_path)} | #{ } Удалить?" if person.picture_exists? %> <%= per.check_box(:del,:value => "1") %> <br /><%= per.file_field :picture %></td>
   </tr>
   <tr>
     <th valign="top">Информация:</th>
