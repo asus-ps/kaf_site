@@ -8,16 +8,16 @@
   <%= stylesheet_link_tag 'user' %>
 </head>
 <body>
-  <div align="center">
- <div align="center">
+  <div class="all">
+ <div class="header">
  <div class="divtop">
-      Кафедра Программного обеспечения вычислительной техники
+     Кафедра Программного обеспечения вычислительной техники
   <div class="divnavi" align="right">
     <table class="tablenavi">
       <tr>
         <td><%= link_to 'Преподаватели', teachers_path %></td>
-        <td><%= link_to 'Студенты', students_path %></td>
-        <td>Архив новостей</td>
+        <td><%= link_to 'Группы', groups_path %></td>
+        <td><%= link_to 'Архив новостей', url_for(:action => 'index', :controller => 'news') %></td>
         <td><%= link_to 'Полезные ссылки', links_path %></td>
       </tr>
     </table>
@@ -26,20 +26,23 @@
  </div>
 
 
-<div class="all" align="justify">
+<div class="main" align="justify">
   <%= yield %>
 </div>
 
-  <div align="center">
+<div class="footer">
+  <div align="center" style="position: relative;">
     <div class="divbot1">
       <%=  Contact.all.collect { |c|  ["Наш адрес: #{link_to(c.address, c.picture_path) if c.picture_exists?} | Телефоны: #{c.phones} | E-mail: #{c.email} | Сайт: #{link_to c.url, url_with_protocol(c.url), :target => :blank}"]} %>
     </div>
   </div>
-  <div align="center">
+  <div align="center" style="position: relative;">
     <div class="divbot2">
       Разработчики: Mega_programmers!
     </div>
   </div>
-  </div>
+</div>
+
+</div>
 </body>
 </html>

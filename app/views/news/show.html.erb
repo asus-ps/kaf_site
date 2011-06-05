@@ -1,2 +1,2 @@
-<h1>News#show</h1>
-<p>Find me in app/views/news/show.html.erb</p>
+<%= render(:partial => 'one_new', :locals => { :article => Article.find(params[:id]) }) %>
+<%= render(:partial => 'last_five_news', :locals => { :articles => Article.all(:order => 'created_at desc',:limit => 5)}) %>

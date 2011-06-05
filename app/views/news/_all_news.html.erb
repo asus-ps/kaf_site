@@ -1,0 +1,17 @@
+<div class="leftpanel">
+  <% @articles.reverse.each do |n| %>
+  <table class="tableNews">
+    <tr>
+      <td class="NewsTdTop" colspan="2"><%=  n.title %> </td>
+    </tr>
+    <tr>
+      <td class="NewsTdBody" colspan="2"><%=  n.body.chars.first(400) %> </td>
+    </tr>
+    <tr>
+      <td class="NewsTdBotLeft"> <%= link_to 'Читать далее', :controller => 'news', :action => 'show',:id => n %> </td>
+      <td  class="NewsTdBot"><%=  "#{Russian::strftime(n.created_at,'%d %B %Y | %H:%M')}" %> </td>
+    </tr>
+  </table>
+  <%  end %>
+
+</div>

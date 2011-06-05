@@ -1,0 +1,12 @@
+<div class="leftpanel">
+<table class="TableSimple">
+
+<% @specialities.each do |s| %>
+  <% (1..(s.count_years)).each do |i|  %>
+  <tr>
+    <td><%= "#{s.short_name}-#{i}" %></td>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+</div>
