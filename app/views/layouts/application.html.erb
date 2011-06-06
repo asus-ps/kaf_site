@@ -1,48 +1,53 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title><%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'user' %>
-</head>
-<body>
-  <div class="all">
- <div class="header">
- <div class="divtop">
-     Кафедра Программного обеспечения вычислительной техники
-  <div class="divnavi" align="right">
-    <table class="tablenavi">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title><%= controller.action_name %></title>
+    <%= stylesheet_link_tag 'user' %>
+  </head>
+  <body>
+    <table width="100%">
       <tr>
-        <td><%= link_to 'Преподаватели', teachers_path %></td>
-        <td><%= link_to 'Группы', groups_path %></td>
-        <td><%= link_to 'Архив новостей', url_for(:action => 'index', :controller => 'news') %></td>
-        <td><%= link_to 'Полезные ссылки', links_path %></td>
+        <td colspan="2" align="center">
+          <div class="divtop">
+            Кафедра Программного обеспечения вычислительной техники
+            <div class="divnavi" align="right">
+              <table class="tablenavi">
+                <tr>
+                  <td><%= link_to 'Преподаватели', teachers_path %></td>
+                  <td><%= link_to 'Группы', groups_path %></td>
+                  <td><%= link_to 'Архив новостей', url_for(:action => 'index', :controller => 'news') %></td>
+                  <td><%= link_to 'Полезные ссылки', links_path %></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+        </td>
       </tr>
+
+      <tr>
+
+        <%= yield %>
+
+      </tr>
+
+      <tr>
+        <td colspan="2" align="center">
+          <div class="divbot1">
+            <%=  Contact.all.collect { |c|  ["Наш адрес: #{link_to(c.address, c.picture_path) if c.picture_exists?} | Телефоны: #{c.phones} | E-mail: #{c.email} | Сайт: #{link_to c.url, url_with_protocol(c.url), :target => :blank}"]} %>
+          </div>
+
+
+          <div class="divbot2">
+            Разработчики: Mega_programmers!
+          </div>
+
+
+        </td>
+      </tr>  
     </table>
-  </div>
- </div>
- </div>
-
-
-<div class="main" align="justify">
-  <%= yield %>
-</div>
-
-<div class="footer">
-  <div align="center" style="position: relative;">
-    <div class="divbot1">
-      <%=  Contact.all.collect { |c|  ["Наш адрес: #{link_to(c.address, c.picture_path) if c.picture_exists?} | Телефоны: #{c.phones} | E-mail: #{c.email} | Сайт: #{link_to c.url, url_with_protocol(c.url), :target => :blank}"]} %>
-    </div>
-  </div>
-  <div align="center" style="position: relative;">
-    <div class="divbot2">
-      Разработчики: Mega_programmers!
-    </div>
-  </div>
-</div>
-
-</div>
-</body>
+  </body>
 </html>

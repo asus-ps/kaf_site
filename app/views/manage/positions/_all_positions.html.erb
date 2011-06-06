@@ -10,8 +10,8 @@
       <td><%=h p.id %> </td>
       <td><%=h p.name %> </td>
       <td><%=h p.short_name %> </td>
-      <td><%= link_to 'Редактировать', edit_manage_position_path(p) %></td>
-      <td><%= link_to 'Удалить', manage_position_path(p), :confirm => 'Удалить запись?', :method => :delete %></td>
+      <td><%= (link_to 'Редактировать', edit_manage_position_path(p)) if p.id!=3 %></td>
+      <td><%= (link_to 'Удалить', manage_position_path(p), :confirm => 'Удалить запись?', :method => :delete) if p.id!=3 %></td>
     </tr>
   <%  end %>
 </table>

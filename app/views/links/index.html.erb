@@ -1,10 +1,12 @@
-<div class="leftpanel">
-<table class="tableLinks">
-  <% @links.each do |l| %>
-    <tr>
-      <td class="tableLinksUrl"><%= link_to l.url, url_with_protocol(l.url), :target => :blank %> </td>
-      <td class="tableLinksDescr"><%= l.description %> </td>
-    </tr>
-  <%  end %>
-</table>
-</div>
+<td class="tdl" align="center">
+  <div class="leftpanel">
+    <table class="tableLinks">
+      <% @links.each do |l| %>
+        <tr>
+          <td class="tableLinksUrl"><%= link_to l.url, url_with_protocol(l.url), :target => :blank %> </td>
+          <td class="tableLinksDescr"><%= l.description %> </td>
+        </tr>
+      <%  end %>
+    </table>
+  </div>
+</td>

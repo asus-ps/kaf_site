@@ -93,10 +93,10 @@ body {
     position: relative;
     padding: 15px;
     background-color: #ffc659;
-    top: auto;
-    width: 50%;
-    left: 1%;
-
+    width: 90%;
+    
+    margin: 10px;
+    margin-top: 20px;
     border-radius:20px;
     -webkit-border-radius:20px;
     -moz-border-radius:20px;
@@ -108,8 +108,9 @@ body {
     position: relative;
     padding: 5px;
     background-color: #e8e8e8;
-    width: 40%;
-    left: 56%;
+    width: 90%;
+    margin: 10px;
+    margin-top: 20px;
     border-radius:20px;
     -webkit-border-radius:20px;
     -moz-border-radius:20px;
@@ -195,4 +196,14 @@ body {
 .tableLinksDescr, .tableLinksUrl{
     border-bottom:  solid black 2px;
     padding: 3px;
+}
+
+.tdr{
+     width: 46%;     
+     vertical-align: top;
+}
+
+.tdl{
+    width: 52%;
+    vertical-align: top;
 }
