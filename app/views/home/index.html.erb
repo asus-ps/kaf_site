@@ -1,2 +1,2 @@
-<%= render( :partial => 'teachers/one_teacher', :locals => {:teacher => Teacher.find(:position_id => 3)} ) %>
+<%= render( :partial => 'teachers/one_teacher', :locals => {:teacher => Teacher.first(:include => [:person, :degree, :position], :conditions => ['position_id = ?',3])})%>
 <%= render( :partial => 'news/last_five_news', :locals => {:articles => Article.all(:order => 'created_at desc', :limit => 5)} ) %>

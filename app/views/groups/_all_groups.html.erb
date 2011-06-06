@@ -4,7 +4,7 @@
 <% @specialities.each do |s| %>
   <% (1..(s.count_years)).each do |i|  %>
   <tr>
-    <td><%= "#{s.short_name}-#{i}" %></td>
+    <td><%= link_to ("#{s.short_name}-#{i}", :controller => 'students', :action => 'index', :speciality_id => s, :year_income => (Time.now.year - i)) %></td>
   </tr>
   <% end %>
 <% end %>
