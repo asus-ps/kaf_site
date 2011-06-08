@@ -11,7 +11,7 @@
         </td>
       </tr>
       <tr>
-        <td colspan="2"><%=  article.body %></td>
+        <td colspan="2"><%=  Maruku.new(article.body).to_html %></td>
 
       </tr>
     </table>
