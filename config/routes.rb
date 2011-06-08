@@ -17,6 +17,9 @@ map.root :controller => "home"
   map.resources :groups
   map.resources :news
 
+ map.with_options(:controller => 'students') do |students|
+     students.students_from_group '/students/:speciality_id/:year_income', :action => 'index', :conditions => { :method => :get }
+ end
   # Manage Area
   map.namespace :manage do |manage|
     manage.root :controller => :base, :action => :index
@@ -41,7 +44,10 @@ map.root :controller => "home"
     map.connect ':controller/:action.:format'
   end
 #User Area
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   map.connect ':controller/:action.:format'
+
+
 end

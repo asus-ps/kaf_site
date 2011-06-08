@@ -1,2 +1,2 @@
-<%= render(:partial => 'all_news') %>
-<%= render( :partial => 'news/last_five_news', :locals => {:articles => Article.all(:order => 'created_at desc', :limit => 5)} ) %>
+<%= render(:partial => 'all_news', :locals =>{ :articles => @articles}) %>
+<%= render( :partial => 'news/last_five_news', :locals => {:articles => Article.all(:order => 'priority desc, created_at desc', :limit => 5)} ) %>

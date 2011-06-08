@@ -1,4 +1,3 @@
-<h1>Список групп</h1>
 <td class="tdl" align="center">
   <div class="leftpanel">
     <table class="TableSimple">
@@ -6,7 +5,7 @@
       <% @specialities.each do |s| %>
         <% (1..(s.count_years)).each do |i|  %>
           <tr>
-            <td><%= link_to ("#{s.short_name}-#{i}", :controller => 'students', :action => 'index', :speciality_id => s, :year_income => (Time.now.year - i)) %></td>
+            <td><%= link_to("#{s.short_name}-#{i}", students_from_group_path(s,(Time.now.year - i))) %></td>
           </tr>
         <% end %>
       <% end %>

@@ -1,6 +1,6 @@
 class TeachersController < ApplicationController
   def index
-    @teachers = Teacher.all(:include => [:person, :degree, :position], :order => 'people.last_name')   
+    @teachers = Teacher.all(:include => [:person, :degree, :position], :order => 'people.last_name')
   end
 
   def show

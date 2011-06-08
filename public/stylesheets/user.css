@@ -211,3 +211,22 @@ body {
     width: 52%;
     vertical-align: top;
 }
+
+.tableDiscipline{
+    width: 98%;
+    color: black;
+    margin: 5px;
+    padding: 20px;
+}
+
+.tableDiscipline td{
+    text-align: center;
+}
+
+.TableComment{
+    width: 90%;
+    border-top-style: solid;
+    border-top-width: 2px;
+    right: 0px;
+/*    margin-left: 80px;*/
+}

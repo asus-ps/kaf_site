@@ -1,6 +1,6 @@
 <td class="tdl" align="center">
   <div class="leftpanel">
-    <% @articles.reverse.each do |n| %>
+    <% articles.each do |n| %>
       <table class="tableNews">
         <tr>
           <td class="NewsTdTop" colspan="2"><%=  n.title %> </td>
@@ -13,7 +13,8 @@
           <td  class="NewsTdBot"><%=  "#{Russian::strftime(n.created_at,'%d %B %Y | %H:%M')}" %> </td>
         </tr>
       </table>
-    <%  end %>
 
+<%  end %>
+<%= will_paginate articles %>
   </div>
 </td>

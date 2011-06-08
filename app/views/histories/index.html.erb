@@ -1,14 +1,14 @@
 <td class="tdl" align="center">
   <div class="leftpanel">
-    <table>
+    <table width="98%">
         <tr>
-          <td><%= (@history.picture_ext.nil? ) ? () : (image_tag(@history.picture_path, :width => '250px')) %> </td>
+          <td>
+          <%= (@history.picture_ext.nil? ) ? () : (image_tag(@history.picture_path, :width => '320px', :align => 'left', :hspace => '5px', :vspace => '5px')) %>
+          <%= @history.body %>
+          </td>
           
         </tr>
-        <tr>
-
-          <td><%= @history.body %> </td>
-        </tr>
+        
     </table>
   </div>
 </td>

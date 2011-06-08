@@ -1,12 +1,8 @@
 /nbproject
 /config/database.yml
 /public/data
-<<<<<<< HEAD
 /log/
 /public/articles
 /public/contacts
 /public/histories
 /public/people
-=======
-/log/
->>>>>>> 598ea402fcff46501616c2976e45e75beae69731

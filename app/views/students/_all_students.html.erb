@@ -1,9 +1,9 @@
 <td class="tdl" align="center">
-  <div class="lefttpanel">
+  <div class="leftpanel">
     <table class="tableAllTeachers">
-      <% @students.each do |p| %>
+      <% students.each do |p| %>
         <tr>
-          <td><%=    link_to "#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.speciality.short_name.empty? ? (p.speciality.name) : (p.speciality.short_name)}", student_path(p) %> </td>
+          <td><%= link_to("#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.speciality.short_name.empty? ? (p.speciality.name) : (p.speciality.short_name)}", student_path(p)) %> </td>
         </tr>
       <%  end %>
     </table>

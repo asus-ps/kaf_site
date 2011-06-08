@@ -15,9 +15,9 @@ class Diploma < ActiveRecord::Base
     if search
       Diploma.all(:include =>  [{:student => :person}, {:teacher => :person}] ,
                :conditions => ['people.last_name LIKE :q OR diplomas.name LIKE :q OR people_teachers.last_name like :q OR protection_year=:t',{:q => "%#{search}%",:t => "#{search}"}],:order => 'name').paginate(
-                          :per_page => 20, :page => page)
+                          :per_page => 25, :page => page)
     else
-      Diploma.all(:include =>  [ {:student => :person},{:teacher => :person}], :order => 'name').paginate(:per_page => 20, :page => page)
+      Diploma.all(:include =>  [ {:student => :person},{:teacher => :person}], :order => 'name').paginate(:per_page => 25, :page => page)
     end
   end
 end

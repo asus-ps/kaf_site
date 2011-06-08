@@ -13,9 +13,9 @@ class Article < ActiveRecord::Base
 
   def self.search(search,page)
     if search
-      Article.all(:conditions => ['title LIKE :q OR body LIKE :q OR priority=:t',{:q => "%#{search}%",:t => "#{search}"}],:order => :created_at).paginate( :per_page => 20, :page => page)
+      Article.all(:conditions => ['title LIKE :q OR body LIKE :q OR priority=:t',{:q => "%#{search}%",:t => "#{search}"}],:order => :created_at).paginate( :per_page => 10, :page => page)
     else
-      Article.all(:order => :created_at).paginate(:per_page => 20, :page => page)
+      Article.all(:order => :created_at).paginate(:per_page => 10, :page => page)
     end
   end
 
