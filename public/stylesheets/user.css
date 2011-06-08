@@ -118,11 +118,15 @@ body {
 }
 
 .tableAllTeachers{
-    text-align: left;
+    width: 98%;
     color: black;
     margin: 5px;
-    margin-left: 40px;
+
     padding: 5px;
+}
+
+.tableAllTeachers td{
+    text-align: left;
 }
 
 .tableAllTeachers a{

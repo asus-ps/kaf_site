@@ -16,6 +16,7 @@
             <div class="divnavi" align="right">
               <table class="tablenavi">
                 <tr>
+                  <td><%= link_to 'История кафедры', histories_path %></td>
                   <td><%= link_to 'Преподаватели', teachers_path %></td>
                   <td><%= link_to 'Группы', groups_path %></td>
                   <td><%= link_to 'Архив новостей', url_for(:action => 'index', :controller => 'news') %></td>
