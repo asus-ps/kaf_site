@@ -9,7 +9,7 @@
   <tr>
     <th><br />Изображение:</th>
   </tr>
-<td><%= link_to(historie.picture_name, historie.picture_path) if historie.picture_exists? %><br /><%= c.file_field :picture %></td>
+<td><%= "#{link_to(historie.picture_name, historie.picture_path)} | #{c.check_box(:del,{},:value => '1')} Удалить?" if historie.picture_exists? %>  <br /><%= c.file_field :picture %></td>
   <tr>
     <td align="right"><%= c.submit but %></td>
   </tr>

@@ -22,7 +22,7 @@
     <th>Изображение</th>
   </tr>
   <tr>
-    <td><%= link_to(article.picture_name, article.picture_path) if article.picture_exists? %><br /><%= f.file_field :picture %></td>
+    <td><%= "#{link_to(article.picture_name, article.picture_path)} | #{f.check_box(:del,{},:value => '1')} Удалить?" if article.picture_exists? %>  <br /><%= f.file_field :picture %></td>
   </tr>
   <tr>
     <td><%= f.submit but %></td>

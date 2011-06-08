@@ -23,7 +23,8 @@
 <%= link_to 'Дипломы', manage_diplomas_url %><br />
 <%= link_to 'История', manage_histories_path %><br />
 <%= link_to 'Контакты', manage_contacts_path %><br />
-<%= link_to 'Полезные ссылки', manage_links_path %><br />
+<%= link_to 'Полезные ссылки', manage_links_path %><br /><br />
+<%= link_to('На сайт', :controller => '/home', :action => 'index') %><br />
       </td>
     <td  valign="top" class="tdLeft">
       <%= yield %>

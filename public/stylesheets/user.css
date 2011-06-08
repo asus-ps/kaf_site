@@ -70,11 +70,20 @@ body {
     border-collapse: collapse;
 }
 
-.tablenavi td, .tablenave th{
+.tablenavi td, .tablenavi th{
     border: 1px solid black;
     background-color: #fafc57;
+    color: black;
     padding-left: 5px ;
     padding-right: 5px ;
+}
+
+.tablenavi td a{
+   color: black;
+}
+
+.tablenavi td a:hover{
+   text-decoration: underline;
 }
 
 .all{
@@ -229,4 +238,9 @@ body {
     border-top-width: 2px;
     right: 0px;
 /*    margin-left: 80px;*/
+}
+
+.divtop a{
+    color: white;
+    text-decoration: none;
 }

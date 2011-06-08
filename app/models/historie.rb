@@ -9,7 +9,7 @@ class Historie < ActiveRecord::Base
   after_save :save_picture
 
 
-  attr_accessor :picture
+  attr_accessor :picture,:del
 
 public
   def picture_path
@@ -26,8 +26,10 @@ private
       self.picture_ext = @picture.original_filename.split('.').last.mb_chars.downcase
       self.picture_name = @picture.original_filename.mb_chars.downcase
     else
-      self.picture_ext = ''
-      self.picture_name = ''
+      if @del!="0"
+        self.picture_ext = nil
+        self.picture_name = nil
+      end
     end
   end
 

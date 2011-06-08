@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <th>Изображение:</th>
-    <td><%= link_to(contact.picture_name, contact.picture_path) if contact.picture_exists? %><br /><%= c.file_field :picture %></td>
+    <td><%= "#{link_to(contact.picture_name, contact.picture_path)} | #{c.check_box(:del,{},:value => '1')} Удалить?" if contact.picture_exists? %>  <br /><%= c.file_field :picture %></td>
    </tr>
   <tr>
     <td></td>

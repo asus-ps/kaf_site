@@ -33,5 +33,5 @@
   </tr>
   <tr>
     <th valign="top">Информация:</th>
-    <td><%= p.person.info %></td>
+    <td><%= Maruku.new(p.person.info).to_html %></td>
   </tr>
