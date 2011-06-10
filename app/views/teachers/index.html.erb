@@ -1,6 +1,9 @@
 <td class="tdl" align="center">
   <div class="leftpanel">
     <table class="tableAllTeachers">
+      <td style="text-align: center;">
+          <h3>Преподаватели кафедры</h3>
+        </td>
       <% @teachers.each do |p| %>
         <tr>
           <td><%=    link_to "#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name.empty? ? (p.degree.name) : (p.degree.short_name)}", teacher_path(p) %> </td>

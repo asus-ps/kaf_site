@@ -15,6 +15,22 @@
         <td colspan="2"><%=  Maruku.new(teacher.person.info).to_html %></td>
 
       </tr>
+      <tr>
+        <td colspan="2" align="right">
+          <table>
+            <tr>
+              <td>
+                Преподаёт дисциплины:
+              </td>
+            </tr>
+            <% disc.each do |p| %>
+              <tr align="right">
+                <td><%= p.discipline.name %> </td>
+              </tr>
+            <%  end %>
+          </table>
+        </td>
+      </tr>
     </table>
 
   </div>

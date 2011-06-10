@@ -1,9 +1,14 @@
 <td class="tdl" align="center">
   <div class="leftpanel">
     <table class="tableAllTeachers">
+      <tr>
+        <td style="text-align: center;">
+          <h3><%= "#{Speciality.find(params[:speciality_id]).short_name}-#{Time.now.year - params[:year_income].to_i}" %></h3>
+        </td>
+      </tr>
       <% students.each do |p| %>
         <tr>
-          <td><%= link_to("#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}, #{p.speciality.short_name.empty? ? (p.speciality.name) : (p.speciality.short_name)}", student_path(p)) %> </td>
+          <td><%= link_to("#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}", student_path(p)) %> </td>
         </tr>
       <%  end %>
     </table>

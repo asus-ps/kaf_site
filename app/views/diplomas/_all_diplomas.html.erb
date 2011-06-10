@@ -1,0 +1,26 @@
+<td class="tdr" align="center">
+  <div class="rightpanel">
+    <table class="tableAllTeachers">
+      <tr>
+        <td style="text-align: center;">
+          <h4>Дипломы студента</h4>
+        </td>
+      </tr>
+      <% dipl.each do |p| %>
+        <tr>
+          <td><%= p.name %> </td>
+        </tr>
+        <tr>
+          <td><%= p.summary %> </td>
+        </tr>
+        <tr>
+          <td><%= p.protection_year %> </td>
+        </tr>
+        <tr>
+          <td><%= link_to("#{p.teacher.person.last_name} #{p.teacher.person.first_name} #{p.teacher.person.patronymic_name}", teacher_path(p.teacher)) %> </td>
+        </tr>
+
+      <%  end %>
+    </table>
+  </div>
+</td>
