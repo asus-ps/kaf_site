@@ -1,2 +1,11 @@
-<%= render(:partial => 'one_student', :locals => {:student => @student}) %>
-<%= render(:partial => '/diplomas/all_diplomas', :locals => {:dipl => @diplomas}) %>
+<td class="tdl" align="center">
+  <div class="leftpanel">
+    <%= render(:partial => 'one_student', :locals => {:student => @student}) %>
+  </div>
+</td>
+    
+<td class="tdr" align="center">
+  <div class="rightpanel">
+    <%= render(:partial => '/diplomas/all_diplomas', :locals => {:dipl => @diplomas}) %>
+  </div>
+</td>

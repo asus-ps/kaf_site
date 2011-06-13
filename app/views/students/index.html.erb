@@ -1,2 +1,12 @@
-<%= render(:partial => 'all_students', :locals => {:students => @students}) %>
-<%= render(:partial => '/groups/about_speciality', :locals => {:spec => @speciality}) %>
+<td class="tdl" align="center">
+  <div class="leftpanel">
+    <%= render(:partial => 'all_students', :locals => {:students => @students}) %>
+  </div>
+</td>
+
+
+<td class="tdr" align="center">
+  <div class="rightpanel">
+    <%= render(:partial => '/groups/about_speciality', :locals => {:spec => @speciality}) %>
+  </div>
+</td>

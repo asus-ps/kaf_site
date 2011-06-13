@@ -1,3 +1,15 @@
+#fullheight{
+    height: 100%;
+    width: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border: none;
+}
+
 body { background-color: #fff; color: #333; }
 
 body {
@@ -15,6 +27,7 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
     width: 98%;
+    top: 10px;
     line-height: 28px;
     position: relative;
     border-radius:20px;
@@ -59,8 +72,7 @@ body {
 
 .divnavi {
     width: 100%;
-    position: absolute;
-    top: 80%;
+    position: relative;
    }
 
 .tablenavi{
@@ -105,7 +117,7 @@ body {
     width: 90%;
     
     margin: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius:20px;
     -webkit-border-radius:20px;
     -moz-border-radius:20px;
@@ -119,7 +131,7 @@ body {
     background-color: #e8e8e8;
     width: 90%;
     margin: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius:20px;
     -webkit-border-radius:20px;
     -moz-border-radius:20px;
@@ -249,4 +261,21 @@ body {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     text-indent: 25px;
+}
+
+
+.divSearch{
+    position: relative;
+}
+
+.tableSearch{
+    width: 100%;
+}
+
+.tableSearch th{
+    text-align: left;
+}
+
+.tableSearch td{
+    padding-left: 20px;
 }

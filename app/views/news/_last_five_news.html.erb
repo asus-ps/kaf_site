@@ -1,5 +1,4 @@
-<td class="tdr" align="center">
-<div class="rightpanel">
+
   <table width="98%" style="margin: 10px;">
     <tr>
       <td>
@@ -12,7 +11,7 @@
       <td colspan="2"><%=  n.body.chars.first(200) %> </td>
     </tr>
     <tr>
-      <td class="NewsTdBotLeft"><%= link_to 'Читать далее', :controller => 'news', :action => 'show', :id => n %> </td>
+      <td class="NewsTdBotLeft"><%= link_to 'Читать полностью', :controller => 'news', :action => 'show', :id => n %> </td>
       <td class="NewsTdBot"><%=  "#{Russian::strftime(n.created_at,'%d %B %Y | %H:%M')}" %> </td>
     </tr>
 </table>
@@ -20,5 +19,3 @@
         </td>
   </tr>
 </table>
-</div>
-</td>

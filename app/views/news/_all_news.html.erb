@@ -1,5 +1,3 @@
-<td class="tdl" align="center">
-  <div class="leftpanel">
     <% articles.each do |n| %>
       <table class="tableNews">
         <tr>
@@ -9,12 +7,10 @@
           <td class="NewsTdBody" colspan="2"><%=  n.body.chars.first(400) %> </td>
         </tr>
         <tr>
-          <td class="NewsTdBotLeft"> <%= link_to 'Читать далее', :controller => 'news', :action => 'show',:id => n %> </td>
+          <td class="NewsTdBotLeft"> <%= link_to 'Читать полностью', :controller => 'news', :action => 'show',:id => n %> </td>
           <td  class="NewsTdBot"><%=  "#{Russian::strftime(n.created_at,'%d %B %Y | %H:%M')}" %> </td>
         </tr>
       </table>
 
 <%  end %>
 <%= will_paginate articles %>
-  </div>
-</td>

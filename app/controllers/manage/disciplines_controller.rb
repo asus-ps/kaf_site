@@ -14,7 +14,7 @@ class Manage::DisciplinesController < Manage::BaseController
   end
 
   def edit
-    @disciplines = Discipline.all
+    @disciplines = Discipline.search(params[:search],params[:page])
     @discipline = Discipline.find(params[:id])
 
     respond_to do |format|

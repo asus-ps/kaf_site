@@ -1,2 +1,11 @@
-<%= render( :partial => 'teachers/one_teacher', :locals => {:teacher => @teacher, :disc => @disc} ) %>
-<%= render( :partial => 'teachers/all_teachers' ) %>
+<td class="tdl" align="center">
+  <div class="leftpanel">
+    <%= render( :partial => 'teachers/one_teacher', :locals => {:teacher => @teacher, :disc => @disc} ) %>
+  </div>
+</td>
+
+<td class="tdr" align="center">
+  <div class="rightpanel">
+    <%= render( :partial => 'teachers/all_teachers', :locals => { :teachers => @teachers }) %>
+  </div>
+</td>

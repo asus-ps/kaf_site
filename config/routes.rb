@@ -16,10 +16,14 @@ map.root :controller => "home"
   map.resources :diplomas
   map.resources :groups
   map.resources :news
-
+  map.resources :search
+ map.with_options(:controller => 'search') do |search|
+     search.search_all '/search', :action => 'index', :conditions => { :method => :get }
+ end
  map.with_options(:controller => 'students') do |students|
      students.students_from_group '/students/:speciality_id/:year_income', :action => 'index', :conditions => { :method => :get }
  end
+
   # Manage Area
   map.namespace :manage do |manage|
     manage.root :controller => :base, :action => :index

@@ -1,2 +1,11 @@
-<%= render( :partial => 'groups/all_groups' ) %>
-<%= render(:partial => '/disciplines/all_disc', :locals => {:disc => @disciplines}) %>
+<td class="tdl" align="center">
+  <div class="leftpanel">
+    <%= render( :partial => 'groups/all_groups' ) %>
+  </div>
+</td>
+
+<td class="tdr" align="center">
+  <div class="rightpanel">
+    <%= render(:partial => '/disciplines/all_disc', :locals => {:disc => @disciplines}) %>
+  </div>
+</td>

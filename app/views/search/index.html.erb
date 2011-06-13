@@ -1,0 +1,33 @@
+<td class="tdl" align="center">
+  <div class="leftpanel">
+
+    <table class="tableSearch">
+      <tr>
+          <th><%= @students.count>0 ? 'Студенты' : ''  %></th>
+          </tr>
+      <% @students.each do |p| %>
+        <tr>
+          <td><%= link_to("#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}", student_path(p)) %> </td>
+        </tr>
+      <%  end %>
+        <tr>
+          <th><%= @teachers.count>0 ? 'Преподаватели' : ''  %></th>
+          </tr>
+      <% @teachers.each do |p| %>
+        <tr>
+          <td><%= link_to("#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}", teacher_path(p)) %> </td>
+        </tr>
+      <%  end %>
+        <tr>
+          <th><%= @articles.count>0 ? 'Новости' : ''  %></th>
+          </tr>
+      <% @articles.each do |p| %>
+        <tr>
+          <td><%= link_to("#{p.title.chars.first(150)}... ", :controller => 'news', :action => 'show',:id => p) %> </td>
+        </tr>
+      <%  end %>
+
+    </table>
+
+  </div>
+</td>

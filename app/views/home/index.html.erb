@@ -1,3 +1,13 @@
-<%= render( :partial => 'teachers/one_teacher', :locals => {:teacher => Teacher.first(:include => [:person, :degree, :position], :conditions => ['position_id = ?',1]),
+<td class="tdl" align="center">
+  <div class="leftpanel">
+    <%= render( :partial => 'teachers/one_teacher', :locals => {:teacher => Teacher.first(:include => [:person, :degree, :position], :conditions => ['position_id = ?',1]),
   :disc => DisciplinesTeacher.all(:include => [:teacher,:discipline], :conditions => ['teachers.position_id = ?', 1])})%>
-<%= render( :partial => 'news/last_five_news', :locals => {:articles => Article.all(:order => 'priority desc, created_at desc', :limit => 5)} ) %>
+  </div>
+</td>
+
+
+<td class="tdr" align="center">
+  <div class="rightpanel">
+    <%= render( :partial => 'news/last_five_news', :locals => {:articles => Article.all(:order => 'priority desc, created_at desc', :limit => 5)} ) %>
+  </div>
+</td>
