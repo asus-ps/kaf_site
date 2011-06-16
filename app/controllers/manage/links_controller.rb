@@ -10,7 +10,7 @@ class Manage::LinksController < Manage::BaseController
   end
 
   def edit
-    @links = Link.all
+    @links = Link.search(params[:search],params[:page])
     @link = Link.find(params[:id])
 
     respond_to do |format|

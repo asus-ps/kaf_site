@@ -2,7 +2,7 @@ class Manage::DisciplinesTeachersController < Manage::BaseController
   def index
     @dts= DisciplinesTeacher.search(params[:search],params[:page])
     @newdt = DisciplinesTeacher.new
-    @disciplines = Discipline.all
+    @disciplines = Discipline.all(:order => 'name')
     @teachers = Teacher.all( :include => :person )
 
     respond_to do |format|

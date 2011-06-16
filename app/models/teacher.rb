@@ -27,8 +27,8 @@ class Teacher < ActiveRecord::Base
 private
   def validates_uniqueness_of_head_department
 
-    if self.position_id == 3
-      c = Teacher.count(:conditions => ['position_id = ?', 3])
+    if self.position_id == 1
+      c = Teacher.count(:conditions => ['position_id = ?', 1])
       if c > 0
         self.errors.add(:position_id, 'Заведующий на кафедре может быть только один!')
       end

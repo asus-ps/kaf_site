@@ -3,12 +3,6 @@
     width: 100%;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    border: none;
-}
 
 body { background-color: #fff; color: #333; }
 
@@ -71,20 +65,22 @@ body {
 }
 
 .divnavi {
-    width: 100%;
+    width: 600px;
     position: relative;
+    background-color: #fafc57;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -khtml-border-radius:3px;
    }
 
 .tablenavi{
     color: black;
     font-size: 14px;
-    border: 1px solid;
     border-collapse: collapse;
 }
 
 .tablenavi td, .tablenavi th{
-    border: 1px solid black;
-    background-color: #fafc57;
     color: black;
     padding-left: 5px ;
     padding-right: 5px ;
@@ -264,8 +260,32 @@ body {
 }
 
 
+
 .divSearch{
     position: relative;
+    vertical-align: center;
+    background-color: #8ab2fc;
+    width: 100%;
+    padding: 3px;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -khtml-border-radius:5px;
+
+
+    text-align: center;
+    font-size: 12px;
+    
+
+
+
+    line-height: 0px;
+
+
+}
+
+.divSearch input{
+    margin: 3px 0;
 }
 
 .tableSearch{
@@ -278,4 +298,16 @@ body {
 
 .tableSearch td{
     padding-left: 20px;
+}
+
+.tableGroups{
+
+}
+
+.tableGroups a{
+    color: black;
+    text-decoration: none;
+}
+.tableGroups a:hover{
+   text-decoration: underline;
 }

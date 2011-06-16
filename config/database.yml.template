@@ -17,6 +17,7 @@
 development:
   adapter: mysql
   reconnect: false
+  encoding: utf8
   database: kafedra
   pool: 5
   username: root

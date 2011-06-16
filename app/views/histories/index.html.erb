@@ -4,6 +4,9 @@
         <tr>
           <td>
           <%= (@history.picture_ext.nil? ) ? () : (image_tag(@history.picture_path, :width => '320px', :align => 'left', :hspace => '5px', :vspace => '5px')) %>
+            <p>
+            <h2 style="text-align:center;">История кафедры</h2>
+            </p>
           <%= Maruku.new(@history.body).to_html %>
           </td>
           

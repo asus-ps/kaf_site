@@ -4,7 +4,7 @@
           <td class="NewsTdTop" colspan="2"><%=  n.title %> </td>
         </tr>
         <tr>
-          <td class="NewsTdBody" colspan="2"><%=  n.body.chars.first(400) %> </td>
+          <td class="NewsTdBody" colspan="2"><%=  Maruku.new("#{n.body.chars.first(400)}...").to_html %> </td>
         </tr>
         <tr>
           <td class="NewsTdBotLeft"> <%= link_to 'Читать полностью', :controller => 'news', :action => 'show',:id => n %> </td>
