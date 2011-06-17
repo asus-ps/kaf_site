@@ -29,6 +29,11 @@
     <td  valign="top" class="tdLeft">
       <%= yield %>
     </td>
+
+      <td valign="top" align="right" width="80px">
+        
+            <%= button_to('Выход',:controller => '/manage/auth', :action => 'logout') %>
+      </td>
     </tr>
 
 

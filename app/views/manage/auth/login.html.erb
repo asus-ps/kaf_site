@@ -1,0 +1,32 @@
+<h1 style="margin-bottom: 20px; font-size:16px; font-weight:bold;">:: система управления сайтом</h1>
+
+<% if flash[:notice] -%>
+<div style="
+  background:#E2F9E3 url(/images/alertgood_icon.gif) no-repeat scroll left center;
+  border:1px solid #9c9;
+  color:#060;
+  font-size:12px;
+  margin-top:12px;
+  margin-bottom:12px;
+  padding:5px 5px 5px 30px;
+  text-align:left;">
+  <%= flash[:notice] %>
+</div>
+<% end -%>
+
+<% form_tag do -%>
+  <dl style="margin:10px 0pt 0pt;">
+    <dt style="float:left; font-size:14px; line-height:24px; width:80px;">Логин:</dt>
+    <dd style="color:#666; font-size:11px; line-height:24px; margin:0pt 0pt 5px 80px;">
+      <%= text_field_tag "login", {}, {:style => 'font-size:14px; width:300px; padding:3px;'} %>
+    </dd>
+    <dt style="float:left; font-size:14px; line-height:24px; width:80px;">Пароль:</dt>
+    <dd style="color:#666; font-size:11px; line-height:24px; margin:0pt 0pt 5px 80px;">
+      <%= password_field_tag "password", {}, {:style => 'font-size:14px; width:300px; padding:3px;'} %>
+    </dd>
+    <dd style="color:#666; font-size:11px; line-height:24px; margin:0pt 0pt 5px 80px;">
+      <input type="submit" value="Войти" class="submit" style="font-size:14px; padding:3px;">
+    </dd>
+  </dl>
+<% end -%>
+<%= link_to('На сайт', :controller => '/home', :action => 'index') %>
