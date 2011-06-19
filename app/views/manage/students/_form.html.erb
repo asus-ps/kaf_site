@@ -3,7 +3,7 @@
   <%= render :partial => 'manage/people/form', :locals => {:f => f, :person => @student.person } %>
   <tr>
     <th>Специальность:</th>
-    <td><%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name")) %> <%= link_to 'New', new_manage_speciality_path %></td>
+    <td><%=h f.select(:speciality_id, options_from_collection_for_select(@specialities, "id", "name", selected_value=@student.speciality_id)) %> <%= link_to 'New', new_manage_speciality_path %></td>
   </tr>
   <tr>
     <th>Год поступления:</th>

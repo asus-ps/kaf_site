@@ -5,7 +5,7 @@
     <th>История:</th>
   </tr>
   <tr>
-    <td><%=h @historie.body %></td>
+    <td><%= Maruku.new(@historie.body).to_html %></td>
   </tr>
   <tr>
     <th>Изображение:</th>

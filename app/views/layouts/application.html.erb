@@ -4,13 +4,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title><%= controller.action_name %></title>
+    <title>Кафедра ПОВТ</title>
     <%= stylesheet_link_tag 'user' %>
   </head>
   <body>
     <table id="fullheight">
       <tr>
-        <td colspan="2" align="center">
+        <td colspan="2" align="center" style="height: 80px;">
           <div class="divtop">
             <%= link_to('Кафедра Программного обеспечения вычислительной техники', :controller => 'home', :action => 'index') %>
 
@@ -30,10 +30,10 @@
                     <table class="tablenavi">
                 <tr>
                   <td><%= link_to 'История кафедры', histories_path %></td>
-                  <td><%= link_to 'Преподаватели', teachers_path %></td>
-                  <td><%= link_to 'Группы', groups_path %></td>
-                  <td><%= link_to 'Архив новостей', url_for(:action => 'index', :controller => 'news') %></td>
-                  <td><%= link_to 'Полезные ссылки', links_path %></td>
+                  <td style="border-left: black solid 1px;"><%= link_to 'Преподаватели', teachers_path %></td>
+                  <td style="border-left: black solid 1px;"><%= link_to 'Группы', groups_path %></td>
+                  <td style="border-left: black solid 1px;"><%= link_to 'Архив новостей', url_for(:action => 'index', :controller => 'news') %></td>
+                  <td style="border-left: black solid 1px;"><%= link_to 'Полезные ссылки', links_path %></td>
                 </tr>
               </table>
                       </div>
@@ -44,18 +44,6 @@
                    </div>
                   </td>
                 </tr>                              
-              
-
-
-              
-            
-
-              
-            
-            
-
-          
-
         </td>
       </tr>
 
@@ -66,14 +54,27 @@
       </tr>
 
       <tr>
-        <td colspan="2" align="center">
+        <td colspan="2" align="center" style="height: 50px;">
           <div class="divbot1">
             <%=  Contact.all.collect { |c|  ["Наш адрес: #{link_to(c.address, c.picture_path) if c.picture_exists?} | Телефоны: #{c.phones} | E-mail: #{c.email} | Сайт: #{link_to c.url, url_with_protocol(c.url), :target => :blank}"]} %>
           </div>
 
 
           <div class="divbot2">
-            Разработчики: Mega_programmers!
+            <table width="100%">
+              <tr>
+                <td align="left">
+                  Пользовательский интерфейс: Телегина Мария
+                </td>
+                <td align="center">
+                  <ins>Разработчики проекта</ins>
+                </td>
+                <td align="right">
+                  Административная часть: Никитина Ирина
+                </td>
+              </tr>
+
+            </table>              
           </div>
 
 

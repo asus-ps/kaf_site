@@ -4,8 +4,3 @@
   </div>
 </td>
 
-<td class="tdr" align="center">
-  <div class="rightpanel">
-    <%= render( :partial => 'news/last_five_news', :locals => {:articles => Article.all(:order => 'priority desc, created_at desc', :limit => 5)} ) %>
-  </div>
-</td>

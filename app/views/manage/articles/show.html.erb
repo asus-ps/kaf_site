@@ -8,7 +8,7 @@
 
   <tr>
     <th>Текст:</th>
-    <td><%=h @article.body %></td>
+    <td><%= Maruku.new(@article.body).to_html %></td>
   </tr>
 
   <tr>

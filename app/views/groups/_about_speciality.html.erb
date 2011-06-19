@@ -1,27 +1,35 @@
-    <table class="TableSimple">
+<h3 style="text-align: center;">О специальности</h3>
+    <table class="tableAboutSpeciality">
       <tr>
-        <td>
+        <th colspan="2" style="text-align: center;font-weight: bold;">
           <%= spec.name %>
           <br />
           <%= "(#{spec.short_name})" %>
-        </td>
+        </th>
       </tr>
       <tr>
+        <th>
+          Код:
+        </th>
         <td>
           <%= spec.code %>
         </td>
       </tr>
 
       <tr>
-        <td>
+        <th>
           Количество лет обучения:
+        </th>
+        <td>
           <%= spec.count_years %>
         </td>
       </tr>
 
       <tr>
-        <td>
+        <th>
           Учёная степень:
+        </th>
+        <td>
           <%= spec.in_diploma %>
         </td>
       </tr>

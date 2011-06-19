@@ -1,0 +1,15 @@
+<h3 style="text-align: center;">Все специальности кафедры</h3>
+    
+
+      <% specialities.each do |spec| %>
+    <table class="tableAboutSpeciality" style="border-bottom: solid black 2px;">
+      <tr>
+        <th colspan="2" style="font-size: 20px;">
+          <%= spec.name %>
+          <br />
+          <%= "(#{spec.short_name})" %>
+        </th>
+      </tr>
+    </table>
+      <% end %>
+    

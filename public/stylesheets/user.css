@@ -3,6 +3,16 @@
     width: 100%;
 }
 
+html, body{
+    height:100%;
+}
+
+body{
+    background-image: url('/images/bg.png');
+    background-size: 100px;
+    min-height: 100%;
+    position:relative;
+}
 
 body { background-color: #fff; color: #333; }
 
@@ -111,7 +121,7 @@ body {
     padding: 15px;
     background-color: #ffc659;
     width: 90%;
-    
+    height: inherit;
     margin: 10px;
     margin-top: 30px;
     border-radius:20px;
@@ -126,6 +136,7 @@ body {
     padding: 5px;
     background-color: #e8e8e8;
     width: 90%;
+    
     margin: 10px;
     margin-top: 30px;
     border-radius:20px;
@@ -310,4 +321,22 @@ body {
 }
 .tableGroups a:hover{
    text-decoration: underline;
+}
+
+.tableAboutSpeciality{
+    color: black;
+    margin: 5px;
+    padding:5px;
+    width: 98%;
+}
+
+.tableAboutSpeciality th{
+    font-weight: normal;
+    font-size: 18px;
+    text-align: left;
+    width: 50%;
+}
+
+.tableAboutSpeciality tr,.tableAboutSpeciality th{
+    line-height: 25px;
 }

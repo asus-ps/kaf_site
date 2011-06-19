@@ -1,12 +1,13 @@
 
     <table class="tableAllTeachers">
       <tr>
-        <td style="text-align: center;">
-          <h4>Преподаватели кафедры</h4>
+        <td style="text-align: center;" colspan="2">
+          <h3>Преподаватели кафедры</h3>
         </td>
       </tr>
       <% teachers.each do |p| %>
         <tr>
+          <td style="width: 5%;"> <%= (p.person.picture_ext.nil? ) ? (image_tag('no.gif', :width => '30px')) : (image_tag(p.person.picture_path, :width => '30px'))  %> </td>
           <td><%=    link_to "#{p.person.last_name}  #{p.person.first_name} #{p.person.patronymic_name}, #{p.degree.short_name.empty? ? (p.degree.name) : (p.degree.short_name)}", teacher_path(p) %> </td>
         </tr>
       <%  end %>
