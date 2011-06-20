@@ -14,6 +14,13 @@ body{
     position:relative;
 }
 
+img{
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -khtml-border-radius:10px;
+}
+
 body { background-color: #fff; color: #333; }
 
 body {
@@ -164,10 +171,19 @@ body {
     font-size: 16px;
 }
 
+.tableAllTeachers td a:hover{
+   text-decoration: underline;
+}
+
 .tableNews{
     border: outset 5px;
-    border-color: green;
+    
+    border-color: #d2f5fc;
     width: 99%;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -khtml-border-radius:20px;
 }
 
 .NewsTdTop{
@@ -313,6 +329,20 @@ body {
 
 .tableGroups{
 
+    margin: 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;
+}
+
+.tableGroups td, .tableGroups th{
+    line-height: 50px;
+    width: 60px;
+}
+
+.tableGroups th{
+    width: 100px;
 }
 
 .tableGroups a{
@@ -339,4 +369,29 @@ body {
 
 .tableAboutSpeciality tr,.tableAboutSpeciality th{
     line-height: 25px;
+}
+
+.tableNews img, .tableAllTeachers img{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+}
+
+.tableNews a{
+    color: black;
+    text-decoration: none;
+}
+
+.tableNews a:hover{
+    text-decoration: underline;
+}
+
+.divbot2 a{
+    color: white;
+    text-decoration: none;
+}
+
+.divbot2 a:hover{
+    text-decoration: underline;
 }

@@ -1,6 +1,6 @@
 <table class="tableNews" width="100%">
   <tr>
-    <td style="max-width: 250px; width: 3%;"><%= (article.picture_ext.nil? ) ? () : (image_tag(article.picture_path, :width => '250px')) %></td>
+    <td style="max-width: 250px; width: 3%;"><%= link_to((article.picture_ext.nil? ) ? () : (image_tag(article.picture_path, :width => '250px')), article.picture_path) %></td>
     <td style="width: 100%;">
       <h3 style="text-align: center"><%= article.title %></h3>
       <h5 style="text-align: right"><%= "Опубликовано #{Russian::strftime(article.created_at,'%d.%m.%Y в %H:%M')}" %></h5>

@@ -1,11 +1,13 @@
 <h3 style="text-align: center;">Архив новостей</h3>
+<% i = 0 %>
 <% articles.each do |n| %>
-      <table class="tableNews">
+  <% i = i + 1 %>
+  <%= color_table(i) %>
         <tr>
-          <td class="NewsTdTop" colspan="2"><%=  n.title %> </td>
+          <td class="NewsTdTop" colspan="2"><%=  link_to(n.title, :controller => 'news', :action => 'show',:id => n) %> </td>
         </tr>
         <tr>
-          <td><%= (n.picture_ext.nil? ) ? (image_tag('no.gif', :width => '150px')) : (image_tag(n.picture_path, :width => '150px'))  %> </td>
+          <td><%= link_to("#{(n.picture_ext.nil? ) ? (image_tag('no.gif', :width => '150px')) : (image_tag(n.picture_path, :width => '150px'))}",:controller => 'news', :action => 'show',:id => n)  %> </td>
           <td class="NewsTdBody" colspan="2"><%=  Maruku.new("#{n.body.chars.first(400)}...").to_html %> </td>
         </tr>
         <tr>

@@ -10,4 +10,13 @@ module ApplicationHelper
     end
     years
   end
+
+  def color_table(i)
+  if i.even?
+    sprintf("%s",'<table class="tableNews" style="background-color: #d2f5fc;" >')
+  else
+    sprintf("%s",'<table class="tableNews" style="background-color: #d2fce3;" >')
+  end
+  end
+
 end

@@ -1,12 +1,17 @@
 
 <h2 style="text-align: center;">Группы</h2>
-    <table class="tableGroups">
+    
 
       <% @specialities.each do |s| %>
-        <% (1..(s.count_years)).each do |i|  %>
+          <table class="tableGroups">
           <tr>
-            <td><%= link_to("#{s.short_name}-#{i}", students_from_group_path(s,(Time.now.year - i))) %></td>
-          </tr>
+            <th style="text-align: left;"> <%=  s.short_name %> </th>
+            <% (1..(s.count_years)).each do |i|  %>
+
+            <td><%= link_to("курс #{i}", students_from_group_path(s,(Time.now.year - i))) %></td>
+          
         <% end %>
+        </tr>
+      </table>
       <% end %>
-    </table>
+

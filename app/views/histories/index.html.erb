@@ -3,7 +3,7 @@
     <table width="98%">
         <tr>
           <td style="text-align: justify;">
-          <%= (@history.picture_ext.nil? ) ? () : (image_tag(@history.picture_path, :width => '320px', :align => 'left', :hspace => '10px', :vspace => '10px')) %>
+          <%= link_to("#{(@history.picture_ext.nil? ) ? () : (image_tag(@history.picture_path, :width => '320px', :align => 'left', :hspace => '10px', :vspace => '10px'))}",@history.picture_path) %>
             <p>
             <h2 style="text-align:center;">История кафедры</h2>
             </p>

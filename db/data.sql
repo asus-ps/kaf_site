@@ -203,7 +203,7 @@ INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,ema
 
 
 
-Стаж работы в РГСУ – 2 года. Общий стаж работы – 33 года.
+Стаж работы в РГСУ – 4 года. Общий стаж работы – 33 года.
 
 ','jpg','mankovscii.jpg');
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (2,'Кораблин','Юрий','Прокофьевич','1946-07-15','','','t','Является действительным членом Международной Академии Информатизации. 
@@ -429,6 +429,8 @@ INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,ema
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (210,'Кондратенко','Татьяна','Алишеровна','1992-07-07','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (211,'Макарова','Мария','Валерьевна','1992-04-09','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (212,'Новиков','Павел','Александрович','1989-04-19','','','s','',NULL,NULL);
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (213,'Никитина','Ирина','Андреевна','1990-12-24','','','s','','jpg','111.jpg');
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (214,'Симонов','Павел','Владимирович','1989-11-17','','','s','','jpg','me.jpg');
 
 INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (9,2007,1);
 INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (10,2007,1);
@@ -634,6 +636,10 @@ INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (209,2009,1)
 INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (210,2009,1);
 INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (211,2009,1);
 INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (212,2009,1);
+INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (213,2007,1);
+INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (214,2007,1);
+
+
 
 INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (1,1,5);
 INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (2,2,4);
