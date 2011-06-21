@@ -5,6 +5,19 @@ RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
+
+if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.3.7')
+ module Rails
+   class GemDependency
+     def requirement
+       r = super
+       (r == Gem::Requirement.default) ? nil : r
+     end
+   end
+ end
+end
+
+
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
@@ -34,7 +47,8 @@ Rails::Initializer.run do |config|
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'Europe/Moscow'  #'UTC'
   config.gem 'russian'
-  config.gem 'will_paginate'
+#  config.gem 'will_paginate'
+  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
   config.gem 'maruku'
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
