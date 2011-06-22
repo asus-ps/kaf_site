@@ -690,11 +690,4 @@ INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (29,10,8
 INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (30,1,216);
 INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (31,4,216);
 INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (32,2,216);
-INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (33,29,217);
-INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (34,3,217);
-INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (35,5,217);
-INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (36,4,217);
-INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (37,3,218);
-INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (38,29,215);
-INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (39,20,215);
-
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (33,3,218);
