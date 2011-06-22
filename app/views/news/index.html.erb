@@ -1,4 +1,5 @@
 <td class="tdl" align="center">
+  <%= render(:partial => '/page_folder/folder', :locals => {:folder => "#{link_to('Главная','/')} > Архив новостей"}) %>
   <div class="leftpanel">
     <%= render(:partial => 'all_news', :locals =>{ :articles => @articles}) %>
   </div>

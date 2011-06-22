@@ -1,4 +1,5 @@
 <td class="tdl" align="center">
+  <%= render(:partial => '/page_folder/folder', :locals => {:folder => "#{link_to('Главная','/')} > #{link_to('Преподаватели',teachers_path)} > #{@teacher.person.last_name} #{@teacher.person.first_name.first}.#{@teacher.person.patronymic_name.first}."}) %>
   <div class="leftpanel">
     <%= render( :partial => 'teachers/one_teacher', :locals => {:teacher => @teacher, :disc => @disc} ) %>
   </div>

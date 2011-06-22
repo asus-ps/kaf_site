@@ -1,11 +1,14 @@
+
+
 <td class="tdl" align="center">
+  <%= render(:partial => '/page_folder/folder', :locals => {:folder => "#{link_to('Главная','/')} > История кафедры"}) %>
   <div class="leftpanel">
     <table width="98%">
         <tr>
           <td style="text-align: justify;">
           <%= link_to("#{(@history.picture_ext.nil? ) ? () : (image_tag(@history.picture_path, :width => '320px', :align => 'left', :hspace => '10px', :vspace => '10px'))}",@history.picture_path) %>
             <p>
-            <h2 style="text-align:center;">История кафедры</h2>
+            <h1 style="text-align:center;">История кафедры</h1>
             </p>
           <%= Maruku.new(@history.body).to_html %>
           </td>
@@ -21,3 +24,6 @@
     <%= render( :partial => 'news/last_five_news', :locals => {:articles => Article.all(:order => 'priority desc, created_at desc', :limit => 5)} ) %>
   </div>
 </td>
+
+
+

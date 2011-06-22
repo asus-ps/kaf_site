@@ -11,10 +11,11 @@ class NewsController < ApplicationController
 
   def comment
     article = Article.find(params[:id])
-    if article.comments.create(params[:comment])
-      redirect_to :action => "show", :id => params[:id]
+    c = article.comments.build(params[:comment])
+    if c.save
+      redirect_to :action => 'show', :id => params[:id]
     else
-      redirect_to :action => "show", :id => params[:id]
+      render :action => 'show', :id => params[:id]
     end
   end
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>The page you were looking for doesn't exist (404)</title>
+	<style type="text/css">
+		body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
+		div.dialog {
+			width: 25em;
+			padding: 0 4em;
+			margin: 4em auto 0 auto;
+			border: 1px solid #ccc;
+			border-right-color: #999;
+			border-bottom-color: #999;
+		}
+		h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+	</style>
+</head>
+
+<body>
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту  (начало) -->
+<script src="http://api-maps.yandex.ru/1.1/?key=ALrQAU4BAAAAvu67XAMAYVIo8bjuuzR813Zl-10JV4Z-0XsAAAAAAAAAAADnk9uHlBo27n3gUqdAoNZwiIAO4Q==&modules=pmap&wizard=constructor" type="text/javascript"></script>
+<script type="text/javascript">
+    YMaps.jQuery(window).load(function () {
+        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-4525")[0]);
+        map.setCenter(new YMaps.GeoPoint(37.635184,55.83612), 17, YMaps.MapType.MAP);
+        map.addControl(new YMaps.Zoom());
+        map.addControl(new YMaps.ToolBar());
+        YMaps.MapType.PMAP.getName = function () { return "Народная"; };
+        map.addControl(new YMaps.TypeControl([
+            YMaps.MapType.MAP,
+            YMaps.MapType.SATELLITE,
+            YMaps.MapType.HYBRID,
+            YMaps.MapType.PMAP
+        ], [0, 1, 2, 3]));
+
+        YMaps.Styles.add("constructor#pmdolPlacemark", {
+            iconStyle : {
+                href : "http://api-maps.yandex.ru/i/0.3/placemarks/pmdol.png",
+                size : new YMaps.Point(36,41),
+                offset: new YMaps.Point(-13,-40)
+            }
+        });
+
+
+        YMaps.Styles.add("constructor#pmbllPlacemark", {
+            iconStyle : {
+                href : "http://api-maps.yandex.ru/i/0.3/placemarks/pmbll.png",
+                size : new YMaps.Point(36,41),
+                offset: new YMaps.Point(-13,-40)
+            }
+        });
+
+
+        YMaps.Styles.add("constructor#FF3732c85Polyline", {
+            lineStyle : {
+                strokeColor : "FF3732c8",
+                strokeWidth : 5
+            }
+        });
+       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.63451,55.835361), "constructor#pmdolPlacemark", "ул. Вильгельма Пика, д.4, к.5"));
+       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.637636,55.843885), "constructor#pmbllPlacemark", "Выход из метро (Последний вагон из центра)"));
+       map.addOverlay(createObject("Polyline", [new YMaps.GeoPoint(37.637589,55.843873),new YMaps.GeoPoint(37.637461,55.843764),new YMaps.GeoPoint(37.637343,55.84368),new YMaps.GeoPoint(37.636806,55.843402),new YMaps.GeoPoint(37.636366,55.843197),new YMaps.GeoPoint(37.636216,55.843148),new YMaps.GeoPoint(37.63627,55.842696),new YMaps.GeoPoint(37.636438,55.841705),new YMaps.GeoPoint(37.636903,55.837926),new YMaps.GeoPoint(37.636506,55.837775),new YMaps.GeoPoint(37.636578,55.837058),new YMaps.GeoPoint(37.636599,55.836798),new YMaps.GeoPoint(37.636235,55.836659),new YMaps.GeoPoint(37.63631,55.835663),new YMaps.GeoPoint(37.63602,55.835476),new YMaps.GeoPoint(37.634851,55.835355),new YMaps.GeoPoint(37.634647,55.835047),new YMaps.GeoPoint(37.634528,55.835346)], "constructor#FF3732c85Polyline", ""));
+
+        function createObject (type, point, style, description) {
+            var allowObjects = ["Placemark", "Polyline", "Polygon"],
+                index = YMaps.jQuery.inArray( type, allowObjects),
+                constructor = allowObjects[(index == -1) ? 0 : index];
+                description = description || "";
+
+            var object = new YMaps[constructor](point, {style: style, hasBalloon : !!description});
+            object.description = description;
+
+            return object;
+        }
+    });
+</script>
+<div width="100%" align="center" style="vertical-align: middle;">
+    <div id="YMapsID-4525" style="width:640px;height:480px"></div>
+    <br /> Москва, ул. Вильгельма Пика, д.4, корпус 5, 410 ауд
+</div>
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
+</body>
+</html>

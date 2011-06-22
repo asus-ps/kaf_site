@@ -1,4 +1,5 @@
 <td class="tdl" align="center">
+  <%= render(:partial => '/page_folder/folder', :locals => {:folder => "#{link_to('Главная','/')} > #{link_to('Архив новостей',:controller => :news, :action => :index)} > #{@article.title.first(15)}..."}) %>
   <div class="leftpanel">
     <%= render(:partial => 'one_new', :locals => { :article => Article.find(params[:id]) }) %>
   </div>

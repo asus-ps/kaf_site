@@ -1,6 +1,7 @@
 <td class="tdl" align="center">
+  <%= render(:partial => '/page_folder/folder', :locals => {:folder => "#{link_to('Главная','/')} > Полезные ссылки"}) %>
   <div class="leftpanel">
-    <h3 style="text-align: center;">Полезные ссылки</h3>
+    <h1 style="text-align: center;">Полезные ссылки</h1>
     <table class="tableLinks">
       <% @links.each do |l| %>
         <tr>

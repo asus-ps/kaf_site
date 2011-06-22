@@ -115,7 +115,7 @@ INSERT INTO `degrees` (id,name,short_name) VALUES (2,'кандидат физи�
 INSERT INTO `degrees` (id,name,short_name) VALUES (3,'доктор физико-математических наук','д.ф.-м.н.');
 INSERT INTO `degrees` (id,name,short_name) VALUES (4,'доктор технических наук','д.т.н.');
 INSERT INTO `degrees` (id,name,short_name) VALUES (5,'кандидат педагогических наук','к.п.н.');
-
+INSERT INTO `degrees` (id,name,short_name) VALUES (6,'аспирант','асп.');
 
 
 INSERT INTO `disciplines` (id,name) VALUES (1,'Объектно-ориентированное программирование');
@@ -182,10 +182,12 @@ INSERT INTO `links` (id,url,description) VALUES (1,'http://rubyonrails.org/','С
 INSERT INTO `links` (id,url,description) VALUES (2,'http://htmlbook.ru/','Всё о вёрстке сайтов');
 INSERT INTO `links` (id,url,description) VALUES (3,'https://github.com/','GitHub — веб-сервис для хостинга проектов и их совместной разработки, основанный на системе контроля версий Git.');
 INSERT INTO `links` (id,url,description) VALUES (4,'http://basecamphq.com/','Онлайн-инструмент для управления проектами, совместной работы и постановки задач по проектам.');
+
+
 INSERT INTO `positions` (id,name,short_name) VALUES (1,'заведующий кафедрой','зав.каф.');
 INSERT INTO `positions` (id,name,short_name) VALUES (2,'профессор','проф.');
 INSERT INTO `positions` (id,name,short_name) VALUES (3,'доцент','доц.');
-
+INSERT INTO `positions` (id,name,short_name) VALUES (4,'преподаватель','преп.');
 
 
 INSERT INTO `specialities` (id,code,name,short_name,count_years,in_diploma) VALUES (1,'230100.63','Информатика и вычислительная техника (Бакалавр)','ИВТ-Д',4,'Бакалавр техники и технологии');
@@ -220,10 +222,10 @@ INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,ema
 
 
 Разработал систему автоматизации работы деканата вуза.',NULL,NULL);
-INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (4,'Ионин','Владимир','Кузьмич','1935-02-15','','Vladmir_ionin@mtu-net.ru','t','','jpg','ionin.jpg');
-INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (5,'Куликова','Наталья','Львовна','1948-03-22','','kulivovaNL@mpei.ru','t','Специалист в области информационных технологий и программирования.',NULL,NULL);
-INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (6,'Набебин','Алексей','Александрович','1940-01-01','+7(916)508-24-70','nabebinAA@mpei.ru','t','Научная работа за рубежом: Референт реферативного журнала Zentralblatt MATH (Германия) Европейского математического общества, с 1992 года по н.в.','jpg','5nabebin-2009[1].jpg');
-INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (7,'Ломазова','Ирина','Александровна','1958-08-05','','ilomazova@hse.ru','t','','jpg','5irina[1].jpg');
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (4,'Ионин','Владимир','Кузьмич','1935-02-15','','','t','','jpg','ionin.jpg');
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (5,'Куликова','Наталья','Львовна','1948-03-22','','','t','Специалист в области информационных технологий и программирования.',NULL,NULL);
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (6,'Набебин','Алексей','Александрович','1940-01-01','','','t','Научная работа за рубежом: Референт реферативного журнала Zentralblatt MATH (Германия) Европейского математического общества, с 1992 года по н.в.','jpg','5nabebin-2009[1].jpg');
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (7,'Ломазова','Ирина','Александровна','1958-08-05','','','t','','jpg','5irina[1].jpg');
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (8,'Чумакова','Екатерина','Витальевна','1981-04-16','','','t','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (9,'Телегина','Мария','Викторовна','1990-10-14','','','s','','jpg','telegina.jpg');
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (10,'Алексеев','Игорь','Сергеевич','1989-08-05','','','s','','jpg','alexseev.jpg');
@@ -344,7 +346,7 @@ INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,ema
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (125,'Цветкова','Анна','Владимировна','1993-03-31','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (126,'Сорокин','Александр','Владимирович','1993-04-08','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (127,'Раннев','Павел','Владиславович','1993-05-29','','','s','',NULL,NULL);
-INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (128,'Алейнов','Александр','Васильевич','1985-06-13','89096978252','','s','',NULL,NULL);
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (128,'Алейнов','Александр','Васильевич','1985-06-13','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (129,'Витов','Дмитрий','Борисович','1983-07-19','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (130,'Калинин','Дмитрий','Николаевич','1984-09-16','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (131,'Кулов','Станислав','Сергеевич','1986-10-10','','','s','',NULL,NULL);
@@ -357,7 +359,7 @@ INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,ema
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (138,'Власов','Илья','Валерьевич','1990-03-26','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (139,'Гнездарева','Антонина','Юрьевна','1991-04-29','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (140,'Зимин','Олег','Алексеевич','1990-05-05','','','s','',NULL,NULL);
-INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (141,'Талалаев','Александр','Николаевич','1989-06-30','89262348461','','s','',NULL,NULL);
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (141,'Талалаев','Александр','Николаевич','1989-06-30','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (142,'Сколков','Алексей','Викторович','1991-07-31','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (143,'Иванов','Александр','Алексеевич','1989-08-31','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (144,'Дмитриев','Сергей','Олегович','1989-09-28','','','s','',NULL,NULL);
@@ -431,6 +433,10 @@ INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,ema
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (212,'Новиков','Павел','Александрович','1989-04-19','','','s','',NULL,NULL);
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (213,'Никитина','Ирина','Андреевна','1990-12-24','','','s','','jpg','111.jpg');
 INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (214,'Симонов','Павел','Владимирович','1989-11-17','','','s','','jpg','me.jpg');
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (215,'Денисов','Алексей','Александрович','1988-08-06','','','t','',NULL,NULL);
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (216,'Пирский','Георгий','Владимирович','1987-10-01','','','t','',NULL,NULL);
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (217,'Новоселов','Юрий','Владимирович','1960-02-07','','','t','',NULL,NULL);
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (218,'Костарев','Александр','Николаевич','1977-05-05','','','t','','jpg','254403843[1].jpg');
 
 INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (9,2007,1);
 INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (10,2007,1);
@@ -639,8 +645,6 @@ INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (212,2009,1)
 INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (213,2007,1);
 INSERT INTO `students` (person_id,year_income,speciality_id) VALUES (214,2007,1);
 
-
-
 INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (1,1,5);
 INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (2,2,4);
 INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (3,2,3);
@@ -649,7 +653,10 @@ INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (5,3,1);
 INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (6,3,3);
 INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (7,2,3);
 INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (8,3,2);
-
+INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (215,4,6);
+INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (216,4,6);
+INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (217,4,1);
+INSERT INTO `teachers` (person_id,position_id,degree_id) VALUES (218,3,1);
 
 INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (1,6,1);
 INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (2,7,1);
@@ -680,4 +687,14 @@ INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (26,1,8)
 INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (27,9,8);
 INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (28,3,8);
 INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (29,10,8);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (30,1,216);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (31,4,216);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (32,2,216);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (33,29,217);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (34,3,217);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (35,5,217);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (36,4,217);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (37,3,218);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (38,29,215);
+INSERT INTO `disciplines_teachers` (id,discipline_id,teacher_id) VALUES (39,20,215);
 

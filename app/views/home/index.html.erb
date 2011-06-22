@@ -1,5 +1,6 @@
 <td class="tdl" align="center">
-  <div class="leftpanel">
+  
+  <div class="leftpanel" style="top: 30px;">
     <%= render( :partial => 'teachers/one_teacher', :locals => {:teacher => Teacher.first(:include => [:person, :degree, :position], :conditions => ['position_id = ?',1]),
   :disc => DisciplinesTeacher.all(:include => [:teacher,:discipline], :conditions => ['teachers.position_id = ?', 1])})%>
   </div>

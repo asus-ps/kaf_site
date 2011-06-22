@@ -1,4 +1,5 @@
 <td class="tdl" align="center">
+  <%= render(:partial => '/page_folder/folder', :locals => {:folder => "#{link_to('Главная','/')} > #{link_to('Группы',groups_path)} > #{Speciality.find(params[:speciality_id]).short_name}-#{Time.now.year - params[:year_income].to_i}"}) %>
   <div class="leftpanel">
     <%= render(:partial => 'all_students', :locals => {:students => @students}) %>
   </div>
