@@ -56,7 +56,7 @@
       <tr>
         <td colspan="2" align="center" style="height: 50px;">
           <div class="divbot1">
-            <%=  Contact.all.collect { |c|  ["Наш адрес: #{link_to(c.address, 'map.html', :target => '_blank')} | Телефоны: #{c.phones} | E-mail: #{c.email} | Сайт: #{link_to c.url, url_with_protocol(c.url), :target => :blank}"]} %>
+            <%=  Contact.all.collect { |c|  ["Наш адрес: #{link_to(c.address, '/map.html', :target => '_blank')} | Телефоны: #{c.phones} | E-mail: #{c.email} | Сайт: #{link_to c.url, url_with_protocol(c.url), :target => :blank}"]} %>
           </div>
 
 

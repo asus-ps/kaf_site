@@ -195,7 +195,7 @@ INSERT INTO `specialities` (id,code,name,short_name,count_years,in_diploma) VALU
 INSERT INTO `specialities` (id,code,name,short_name,count_years,in_diploma) VALUES (3,'230105.65','Программное обеспечение вычислительной техники и автоматизированных систем (Специалист)','ПОВТ-Д',5,'Инженер');
 INSERT INTO `specialities` (id,code,name,short_name,count_years,in_diploma) VALUES (4,'230105.65','Программное обеспечение вычислительной техники и автоматизированных систем (Специалист)','ПОВТ-З',6,'Инженер');
 
-INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (1,'Маньковский','Иван','Васильевич','1952-04-19','','','t','Доцент кафедры программирования объектов вычислительной техники.
+INSERT INTO `people` (id,last_name,first_name,patronymic_name,birthday,phone,email,nature,info,picture_ext,picture_name) VALUES (1,'Маньковский','Иван','Васильевич','1952-04-19','','','t','Доцент кафедры программного обеспечения вычислительной техники.
 
 
 

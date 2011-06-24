@@ -7,17 +7,17 @@
 
 <td class="tdr">
   <div class="rightpanel" align="center">
-  <%= form_tag :action => "comment", :id => (@article) %><br />
-<%= error_messages_for :comment %>
+  <%= form_tag :action => "comment", :id => (@comm) %><br />
+<%= error_messages_for :comm %>
 <table width="90%">
   <tr>
     <td>Автор:</td>
-    <td><%= text_field "comment", "author_name", :style => "width: 98%;" %></td>
+    <td><%= text_field "comm", "author_name", :style => "width: 98%;" %></td>
     <td>Email:</td>
-    <td><%= text_field "comment", "author_email", :style => "width: 100%;" %></td>
+    <td><%= text_field "comm", "author_email", :style => "width: 100%;" %></td>
   </tr>
   <tr>
-    <td colspan="4"><%= text_area "comment", "body", :style => "width: 100%;", :rows => 3 %></td>
+    <td colspan="4"><%= text_area "comm", "body", :style => "width: 100%;", :rows => 3 %></td>
   </tr>
   <tr>
     <td colspan="4" align="right"><%= submit_tag 'Комментировать'  %></td>
@@ -26,6 +26,8 @@
 </form>
 <br />
 <% for comment in @article.comments.reverse %>
+
+ <%  next  if comment.new_record? %>
 <table class="TableComment" width="440px" >
   <tr>    
       <td colspan="3" style="font-weight: bold; font-size: 14px;"><%= comment.author_name %></td>
@@ -34,7 +36,7 @@
     <td colspan="3"><%= comment.body %></td>
   </tr>
   <tr>
-    <td colspan="3" align="right"><small><%= "#{Russian::strftime(comment.created_at,'%d %B %Y | %H:%M')}" %></small></td>
+    <td colspan="3" align="right"><small><%= "#{Russian::strftime(comment.created_at,'%d %B %Y | %H:%M')}" if !comment.created_at.nil? %></small></td>
   </tr>
 
 </table>
