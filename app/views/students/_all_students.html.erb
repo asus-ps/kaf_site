@@ -6,7 +6,7 @@
       </tr>
       <% students.each do |p| %>
         <tr style="height:40px;">
-          <td style="width: 5%;"> <%= link_to("#{(p.person.picture_ext.nil? ) ? (image_tag('no.gif', :width => '30px')) : (image_tag(p.person.picture_path, :width => '30px', :style => 'max-height: 40px;'))}", student_path(p))  %> </td>
+          <td style="width: 5%;"> <%= link_to("#{(p.person.picture_ext.nil? ) ? (image_tag('no.gif', :width => '30px')) : (image_tag(p.person.picture_path, :width => '30px', :style => 'max-height: 40px;'))}", student_path(p), :style => 'border-bottom: none;')  %> </td>
           <td><%= link_to("#{p.person.last_name} #{p.person.first_name} #{p.person.patronymic_name}", student_path(p)) %> </td>
         </tr>
       <%  end %>

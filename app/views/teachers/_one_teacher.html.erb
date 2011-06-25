@@ -2,7 +2,7 @@
 
     <table width="100%">
       <tr>
-        <td style="max-width: 250px; width: 3%;"><%= link_to("#{(teacher.person.picture_ext.nil? ) ? () : (image_tag(teacher.person.picture_path, :width => '250px'))}", teacher.person.picture_path) %></td>
+        <td style="max-width: 250px; width: 3%;"><%= link_to("#{(teacher.person.picture_ext.nil? ) ? () : (image_tag(teacher.person.picture_path, :width => '250px'))}", teacher.person.picture_path, :style => 'border-bottom: none;') %></td>
         <td style="width: 100%;">
           <h1 style="text-align: center"><%= "#{teacher.person.last_name} #{teacher.person.first_name} #{teacher.person.patronymic_name}" %></h1>
           <h2 style="text-align: right"><%= "#{Russian::strftime(teacher.person.birthday,'%d.%m.%Y')}" %></h2>
@@ -16,6 +16,7 @@
       </tr>
       <tr>
         <td colspan="2" align="right">
+          <% if disc.count>0 %>
           <table style="font-style: italic;font-size: 14px;">
             <tr>
               <td>
@@ -28,6 +29,7 @@
               </tr>
             <%  end %>
           </table>
+          <% end %>
         </td>
       </tr>
     </table>

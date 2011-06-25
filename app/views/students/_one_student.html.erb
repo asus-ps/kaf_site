@@ -1,7 +1,7 @@
 
     <table width="100%">
       <tr>
-        <td style="max-width: 250px; width: 3%;"><%= link_to("#{(student.person.picture_ext.nil? ) ? () : (image_tag(student.person.picture_path, :width => '250px'))}", student.person.picture_path) %></td>
+        <td style="max-width: 250px; width: 3%;"><%= link_to("#{(student.person.picture_ext.nil? ) ? () : (image_tag(student.person.picture_path, :width => '250px'))}", student.person.picture_path, :style => 'border-bottom: none;') %></td>
         <td style="width: 100%;">
           <h1 style="text-align: center"><%= "#{student.person.last_name} #{student.person.first_name} #{student.person.patronymic_name}" %></h1>
           <h2 style="text-align: right"><%= "#{Russian::strftime(student.person.birthday,'%d.%m.%Y')}" %></h2>
