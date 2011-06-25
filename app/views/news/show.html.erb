@@ -1,5 +1,5 @@
 <td class="tdl" align="center">
-  <%= render(:partial => '/page_folder/folder', :locals => {:folder => "#{link_to('Главная','/')} > #{link_to('Архив новостей',:controller => :news, :action => :index)} > #{@article.title.first(15)}..."}) %>
+    <%= render(:partial => '/page_folder/folder', :locals => {:folder => "#{link_to('Главная','/')} > #{link_to('Архив новостей', :controller => :news, :action => :index)} > #{@article.title.first(15)}..."}) %>
   <div class="leftpanel">
     <%= render(:partial => 'one_new', :locals => { :article => Article.find(params[:id]) }) %>
   </div>
@@ -7,23 +7,23 @@
 
 <td class="tdr">
   <div class="rightpanel" align="center">
-  <%= form_tag :action => "comment", :id => (@comm) %><br />
-<%= error_messages_for :comm %>
-<table width="90%">
-  <tr>
-    <td>Автор:</td>
-    <td><%= text_field "comm", "author_name", :style => "width: 98%;" %></td>
-    <td>Email:</td>
-    <td><%= text_field "comm", "author_email", :style => "width: 100%;" %></td>
-  </tr>
-  <tr>
-    <td colspan="4"><%= text_area "comm", "body", :style => "width: 100%;", :rows => 3 %></td>
-  </tr>
-  <tr>
-    <td colspan="4" align="right"><%= submit_tag 'Комментировать'  %></td>
-  </tr>
-</table>
-</form>
+  <%= form_tag :action => :create_comment, :id => @article.id %><br />
+    <%= error_messages_for :new_comment %>
+    <table width="90%">
+      <tr>
+        <td>Автор:</td>
+        <td><%= text_field :new_comment, :author_name, :style => "width: 98%;" %></td>
+        <td>Email:</td>
+        <td><%= text_field :new_comment, :author_email, :style => "width: 100%;" %></td>
+      </tr>
+      <tr>
+        <td colspan="4"><%= text_area :new_comment, :body, :style => "width: 100%;", :rows => 3 %></td>
+      </tr>
+      <tr>
+        <td colspan="4" align="right"><%= submit_tag 'Комментировать'  %></td>
+      </tr>
+    </table>
+  </form>
 <br />
 <% for comment in @article.comments.reverse %>
 
