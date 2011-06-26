@@ -15,6 +15,7 @@ body{
 }
 
 img{
+    border: none;
     border-radius: 10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
@@ -523,3 +524,4 @@ img{
 .tableHistory a:hover{
 
 }
+
