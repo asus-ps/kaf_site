@@ -77,7 +77,7 @@ body {
 
 .divbot1 a:hover{
 /*    text-decoration: underline;*/
-    border-bottom: none;
+
 }
 
 .divbot1 a:visited{
@@ -126,7 +126,7 @@ body {
 
 .tablenavi td a:hover{
 /*   text-decoration: underline;*/
-   border-bottom: none;
+
 }
 
 .all{
@@ -194,7 +194,7 @@ body {
 
 .tableAllTeachers td a:hover{
 /*   text-decoration: underline;*/
-   border-bottom: none;
+
 }
 
 
@@ -270,7 +270,7 @@ body {
 }
 .tableLinks a:hover{
 /*    text-decoration: underline;*/
-    border-bottom: none;
+
 }
 .tableLinksDescr{
     padding-left: 5px;
@@ -377,7 +377,6 @@ body {
 
 .tableSearch a:hover{
     text-decoration: none;
-    border-bottom: none;
     color: #6b6a49;
 }
 
@@ -409,7 +408,7 @@ body {
 }
 .tableGroups a:hover{
 /*   text-decoration: underline;*/
-   border-bottom: none;
+
 }
 
 .tableAboutSpeciality{
@@ -445,7 +444,7 @@ body {
 
 .tableNews a:hover{
 /*    text-decoration: underline;*/
-    border-bottom: none;
+
 }
 
 
@@ -457,7 +456,7 @@ body {
 
 .divbot2 a:hover{
 /*    text-decoration: underline;*/
-    border-bottom: none;
+
 }
 
 .divPath{
@@ -488,7 +487,7 @@ body {
 
 .divPath a:hover{
     text-decoration: none;
-    border-bottom: none;
+
 }
 .leftpanel h1, .rightpanel h1{
     padding: 2px 0px;
@@ -509,7 +508,7 @@ body {
 
 img{
     text-decoration: none;
-    border-bottom: none;
+
 }
 
 .tableHistory{
@@ -519,9 +518,8 @@ img{
     color: black;
     text-decoration: none;
     border-bottom: 1px dashed black;
-
 }
 
 .tableHistory a:hover{
-    border-bottom: none;
+
 }
