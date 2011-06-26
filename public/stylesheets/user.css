@@ -70,13 +70,18 @@ body {
 }
 
 .divbot1 a{
+    color: black;
     text-decoration: none;
     border-bottom: 1px dashed;
 }
 
 .divbot1 a:hover{
-    text-decoration: underline;
+/*    text-decoration: underline;*/
     border-bottom: none;
+}
+
+.divbot1 a:visited{
+    color: #6b6a49;
 }
 
 .divbot2{
@@ -120,7 +125,7 @@ body {
 }
 
 .tablenavi td a:hover{
-   text-decoration: underline;
+/*   text-decoration: underline;*/
    border-bottom: none;
 }
 
@@ -188,7 +193,7 @@ body {
 }
 
 .tableAllTeachers td a:hover{
-   text-decoration: underline;
+/*   text-decoration: underline;*/
    border-bottom: none;
 }
 
@@ -217,11 +222,13 @@ body {
 .NewsTdBot{
     text-align: right;
     font-size: small;
+    padding-right: 10px;
 }
 
 .NewsTdBotLeft{
     text-align: left;
     font-size: small;
+    padding-left: 10px;
 }
 
 
@@ -262,7 +269,7 @@ body {
     color: #6b6a49;
 }
 .tableLinks a:hover{
-    text-decoration: underline;
+/*    text-decoration: underline;*/
     border-bottom: none;
 }
 .tableLinksDescr{
@@ -362,6 +369,21 @@ body {
     padding-left: 20px;
 }
 
+.tableSearch a{
+    text-decoration: none;
+    border-bottom: 1px dashed;
+    color: black;
+}
+
+.tableSearch a:hover{
+    text-decoration: none;
+    border-bottom: none;
+    color: #6b6a49;
+}
+
+.tableSearch a:visited{
+    color: #6b6a49;
+}
 .tableGroups{
 
     margin: 10px;
@@ -386,7 +408,7 @@ body {
     border-bottom: 1px dashed black;
 }
 .tableGroups a:hover{
-   text-decoration: underline;
+/*   text-decoration: underline;*/
    border-bottom: none;
 }
 
@@ -422,9 +444,10 @@ body {
 }
 
 .tableNews a:hover{
-    text-decoration: underline;
+/*    text-decoration: underline;*/
     border-bottom: none;
 }
+
 
 .divbot2 a{
     color: white;
@@ -433,7 +456,7 @@ body {
 }
 
 .divbot2 a:hover{
-    text-decoration: underline;
+/*    text-decoration: underline;*/
     border-bottom: none;
 }
 
@@ -463,6 +486,10 @@ body {
     font-size: 14px;
 }
 
+.divPath a:hover{
+    text-decoration: none;
+    border-bottom: none;
+}
 .leftpanel h1, .rightpanel h1{
     padding: 2px 0px;
     margin: 10px;
@@ -482,5 +509,19 @@ body {
 
 img{
     text-decoration: none;
+    border-bottom: none;
+}
+
+.tableHistory{
+
+}
+.tableHistory a{
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px dashed black;
+
+}
+
+.tableHistory a:hover{
     border-bottom: none;
 }

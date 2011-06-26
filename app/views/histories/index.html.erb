@@ -3,7 +3,7 @@
 <td class="tdl" align="center">
   <%= render(:partial => '/page_folder/folder', :locals => {:folder => "#{link_to('Главная','/')} > История кафедры"}) %>
   <div class="leftpanel">
-    <table width="98%">
+    <table width="98%" class="tableHistory">
         <tr>
           <td style="text-align: justify;">
           <%= link_to("#{(@history.picture_ext.nil? ) ? () : (image_tag(@history.picture_path, :width => '320px', :align => 'left', :hspace => '10px', :vspace => '10px'))}",@history.picture_path) %>

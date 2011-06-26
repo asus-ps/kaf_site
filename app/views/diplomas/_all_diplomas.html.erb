@@ -1,4 +1,4 @@
-    <table class="tableAllTeachers">
+    <table class="tableAllTeachers" style="border-bottom: 2px solid black;">
       <tr>
         <td style="text-align: center;">
           <h1>Дипломы студента</h1>
@@ -6,16 +6,16 @@
       </tr>
       <% dipl.each do |p| %>
         <tr>
-          <td><%= p.name %> </td>
+          <td><h2><%= p.name %></h2> </td>
         </tr>
         <tr>
-          <td><%= p.summary %> </td>
+          <td><b>Аннотация:</b> <br /><%= p.summary %> </td>
         </tr>
         <tr>
-          <td><%= p.protection_year %> </td>
+          <td><b>Год защиты:</b> <%= p.protection_year %> </td>
         </tr>
         <tr>
-          <td><%= link_to("#{p.teacher.person.last_name} #{p.teacher.person.first_name} #{p.teacher.person.patronymic_name}", teacher_path(p.teacher)) %> </td>
+          <td><b>Руководитель:</b> <%= link_to("#{p.teacher.person.last_name} #{p.teacher.person.first_name} #{p.teacher.person.patronymic_name}", teacher_path(p.teacher)) %> </td>
         </tr>
 
       <%  end %>
