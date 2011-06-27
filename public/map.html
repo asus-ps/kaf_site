@@ -22,11 +22,11 @@
 
 <body>
 <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту  (начало) -->
-<script src="http://api-maps.yandex.ru/1.1/?key=ALrQAU4BAAAAvu67XAMAYVIo8bjuuzR813Zl-10JV4Z-0XsAAAAAAAAAAADnk9uHlBo27n3gUqdAoNZwiIAO4Q==&modules=pmap&wizard=constructor" type="text/javascript"></script>
+<script src="http://api-maps.yandex.ru/1.1/?key=ADurCE4BAAAA08HXRQMArqTQIwH8_6UquC5POOf_9IUSb2IAAAAAAAAAAAAyjoNz03Nr4nSyIEfvP2dMKad0nw==&modules=pmap&wizard=constructor" type="text/javascript"></script>
 <script type="text/javascript">
     YMaps.jQuery(window).load(function () {
-        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-4525")[0]);
-        map.setCenter(new YMaps.GeoPoint(37.635184,55.83612), 17, YMaps.MapType.MAP);
+        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-932")[0]);
+        map.setCenter(new YMaps.GeoPoint(37.635479,55.83656), 16, YMaps.MapType.SATELLITE);
         map.addControl(new YMaps.Zoom());
         map.addControl(new YMaps.ToolBar());
         YMaps.MapType.PMAP.getName = function () { return "Народная"; };
@@ -37,18 +37,9 @@
             YMaps.MapType.PMAP
         ], [0, 1, 2, 3]));
 
-        YMaps.Styles.add("constructor#pmdolPlacemark", {
+        YMaps.Styles.add("constructor#pmgrlPlacemark", {
             iconStyle : {
-                href : "http://api-maps.yandex.ru/i/0.3/placemarks/pmdol.png",
-                size : new YMaps.Point(36,41),
-                offset: new YMaps.Point(-13,-40)
-            }
-        });
-
-
-        YMaps.Styles.add("constructor#pmbllPlacemark", {
-            iconStyle : {
-                href : "http://api-maps.yandex.ru/i/0.3/placemarks/pmbll.png",
+                href : "http://api-maps.yandex.ru/i/0.3/placemarks/pmgrl.png",
                 size : new YMaps.Point(36,41),
                 offset: new YMaps.Point(-13,-40)
             }
@@ -61,9 +52,9 @@
                 strokeWidth : 5
             }
         });
-       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.63451,55.835361), "constructor#pmdolPlacemark", "ул. Вильгельма Пика, д.4, к.5"));
-       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.637636,55.843885), "constructor#pmbllPlacemark", "Выход из метро (Последний вагон из центра)"));
-       map.addOverlay(createObject("Polyline", [new YMaps.GeoPoint(37.637589,55.843873),new YMaps.GeoPoint(37.637461,55.843764),new YMaps.GeoPoint(37.637343,55.84368),new YMaps.GeoPoint(37.636806,55.843402),new YMaps.GeoPoint(37.636366,55.843197),new YMaps.GeoPoint(37.636216,55.843148),new YMaps.GeoPoint(37.63627,55.842696),new YMaps.GeoPoint(37.636438,55.841705),new YMaps.GeoPoint(37.636903,55.837926),new YMaps.GeoPoint(37.636506,55.837775),new YMaps.GeoPoint(37.636578,55.837058),new YMaps.GeoPoint(37.636599,55.836798),new YMaps.GeoPoint(37.636235,55.836659),new YMaps.GeoPoint(37.63631,55.835663),new YMaps.GeoPoint(37.63602,55.835476),new YMaps.GeoPoint(37.634851,55.835355),new YMaps.GeoPoint(37.634647,55.835047),new YMaps.GeoPoint(37.634528,55.835346)], "constructor#FF3732c85Polyline", ""));
+       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.634537,55.835352), "constructor#pmgrlPlacemark", "РГСУ   Москва, ул. Вильгельма Пика, д. 4 к.5"));
+       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.637614,55.8439), "constructor#pmgrlPlacemark", "м. Ботанический сад (Выход из последнего вагона из центра)"));
+       map.addOverlay(createObject("Polyline", [new YMaps.GeoPoint(37.637676,55.843864),new YMaps.GeoPoint(37.637676,55.843447),new YMaps.GeoPoint(37.637709,55.842844),new YMaps.GeoPoint(37.637612,55.842596),new YMaps.GeoPoint(37.637365,55.841884),new YMaps.GeoPoint(37.637011,55.841256),new YMaps.GeoPoint(37.636593,55.840308),new YMaps.GeoPoint(37.636722,55.839095),new YMaps.GeoPoint(37.63684,55.837936),new YMaps.GeoPoint(37.636528,55.837676),new YMaps.GeoPoint(37.636625,55.836764),new YMaps.GeoPoint(37.636271,55.836698),new YMaps.GeoPoint(37.636346,55.835798),new YMaps.GeoPoint(37.636346,55.835684),new YMaps.GeoPoint(37.636024,55.835424),new YMaps.GeoPoint(37.634898,55.835321),new YMaps.GeoPoint(37.634672,55.835146),new YMaps.GeoPoint(37.634501,55.835327)], "constructor#FF3732c85Polyline", "пешком минут 10-15"));
 
         function createObject (type, point, style, description) {
             var allowObjects = ["Placemark", "Polyline", "Polygon"],
@@ -78,10 +69,9 @@
         }
     });
 </script>
-<div width="100%" align="center" style="vertical-align: middle;">
-    <div id="YMapsID-4525" style="width:640px;height:480px"></div>
-    <br /> Москва, ул. Вильгельма Пика, д.4, корпус 5, 410 ауд
-</div>
+
+<div id="YMapsID-932" style="width:450px;height:350px"></div>
+<p align="center">Москва, ул. Вильгельма Пика, д.4, корпус 5, 410 ауд</p>
 <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
 </body>
 </html>
